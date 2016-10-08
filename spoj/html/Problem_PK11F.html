@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="not-ie" lang="en"> <!--<![endif]-->
+<head>
+	<!-- main header -->
+	<meta charset="utf-8">
+	
+				<title>SPOJ.com - Problem PK11F</title>
+		  
+	<meta name="keywords" content="language, algorithm, spoj, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  		<meta property="og:title" content="SPOJ.com - Problem PK11F"/>
+    <meta property="fb:app_id"      content="321676846207" />
+	<meta property="og:type" content="spoj-pl:problem"/>
+	<meta property="og:url" content="http://www.spoj.com/problems/PK11F/"/>
+	<meta property="og:image" content="//stx1.spoj.com/gfx/logo-cr.png"/>
+	<meta property="og:description" content="..."/>
+	<meta name="description" content="..."/>
+		<meta property="og:site_name" content="spoj.com"/>
+
+  <!--[if (gte IE 9)|!(IE)]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" id="metatag">
+  <![endif]--> 
+
+	  <!-- Favicon -->
+	  <link href="//stx1.spoj.com/gfx/favicon_new.png" rel="shortcut icon" type="image/x-icon" />
+	  
+	  <!-- RSS -->
+	  <link href="/rss/" rel="alternate" type="application/rss+xml" title="RSS Feed">
+	
+	  <!-- Web Fonts -->
+	  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">  
+
+	<!-- Internet Explorer condition - HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]--> 
+	
+	
+	
+	<!-- CSS: Bootstrap, Font-awesome, Bootstrap libs,  -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+  	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  	<link href="//stx1.spoj.com/gfx/bootstrap-tour/build/css/bootstrap-tour.min.css" rel="stylesheet" />
+  	<link href="//stx1.spoj.com/themes/bootstrap-social.css" rel="stylesheet" type="text/css" />
+  	
+	<link href="//stx1.spoj.com/themes/common.css?4" rel="stylesheet" type="text/css" id="theme0" />
+	<link href="//stx1.spoj.com/themes/en_new.css?4" rel="stylesheet" type="text/css" id="theme" />
+	
+	<!-- JS -->
+	<script type="text/javascript" src='//code.jquery.com/jquery-1.11.1.min.js'></script>
+	<script type="text/javascript" src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+	
+		
+		
+	<script type="text/javascript" language="javascript">
+	$(function () { 
+		$("#profile-menu").popover();
+	});
+	function UnCryptMailto(s) {
+		var n=0;
+		var r="";
+		for(var i=0;i<s.length;i++) {		
+			n=s.charCodeAt(i); 
+			if (n>=8364) {n = 128;}
+			r += String.fromCharCode(n+(2));	
+		}
+		return r;
+	}
+	function linkTo_UnCryptMailto(s)	{
+		location.href=UnCryptMailto(s);
+	}
+	</script>
+	
+	<script type="text/javascript">
+	function recordOutboundLink(link, category, action) {
+	  try {
+	    var pageTracker=_gat._getTracker("UA-XXXXX-X");
+	    pageTracker._trackEvent(category, action);
+	    setTimeout('document.location = "' + link.href + '"', 100)
+	  }catch(err){}
+	}
+	</script>
+	
+</head>
+
+<body>
+
+	
+	<!-- <div class="space30"></div> -->
+	
+	<!-- Content -->
+	<div class="content">
+		<div class="container" id="header">
+			<div class="row">
+				<div class="col-md-12 text-right">
+										<form method="post" style="display: none;" action="/login/" id="login-form">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-2">
+								<input type="hidden" name="next_raw" value="/"/>
+								<input type="hidden" name="autologin" value="1"/>
+								<input type="text" name="login_user" placeholder="Username" class="form-control input-sm" style="display: inline-block; width: 25%;"/>
+								<input type="password" name="password" placeholder="Password" class="form-control input-sm" style="display: inline-block; width: 25%;"/>
+																<button type="submit" class="btn btn-default btn-sm" style="display: inline-block; margin-right: 10px;"><span class="fa fa-sign-in fa-lg"></span> <strong>sign in</strong></button>
+																<a href="/register"><i class="fa fa-user-plus"></i> sign up</a>
+				        									</div>
+						</div>
+					</form>
+										
+					
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-md-4">
+					<a href="/" class="navbar-brand">
+						<img src="//stx1.spoj.com/gfx/2015e.png" style="height: 40px;"/>
+					</a>
+					<div class="navbar-header">
+				      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+				        <span class="sr-only">Toggle navigation</span>
+				        <i class="fa fa-bars"></i>
+				      </button>
+				    </div>
+				</div>
+				<div class="col-md-8" id="menu">
+				
+					
+					<div class="row">
+					<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation"  style="border: 0px;">
+				      <ul class="nav navbar-nav" style="  float: right; margin-top: 10px;">
+				      						        <li class="active">
+					          <a href="/problems"><i class="fa fa-puzzle-piece"></i> PROBLEMS</a>
+					        </li>
+					        					        <li >
+					          <a href="/status"><i class="fa fa-circle"></i> STATUS</a>
+					        </li>
+					        <li >
+					          <a href="/ranks"><i class="fa fa-trophy"></i> RANKS</a>
+					        </li>
+					        <li >
+					          <a href="http://spoj.com/forum"><i class="fa fa-comments-o"></i> DISCUSS</a>
+					        </li>
+					        
+					        <li >
+					          <a href="/contests">CONTESTS</a>
+					        </li>
+					        <!-- 
+					        <li >
+					          <a href="/jobs"><i class="fa fa-briefcase"></i> JOBS</a>
+					        </li>
+						-->
+											        					        <li >
+					        	<a href="/login" class="text-success" onclick="$('#login-form').show(); $('input[name=login_user]').focus(); return false;"><i class="fa fa-sign-in"></i> sign in</a>
+					        </li>
+					        						
+				        
+				      </ul>
+				    </nav>
+				    </div>
+				    
+				    
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="container" id="menu">
+			
+		</div>
+		
+		<div class="container" id="content">
+		<script type='text/javascript' src='/gfx/jquery.cxhelp2.js'></script>
+
+
+
+ <!-- wykorzystywane w pcontent.html (by wiele) -->
+
+<div class="submenu">
+	
+		<ol class="breadcrumb">
+	  <li><a href="/problems">Problems</a></li>
+	  <li><a href="/problems/classical">classical</a></li>
+	  <li class="active">Spelling Suggestion</li>
+	</ol>
+		
+	<ol class="navbar-right">
+						
+				<li><a href="/status/PK11F/" class="">Status</li></a>
+		<li><a href="/ranks/PK11F/" class="">Ranking</li></a>
+	</ol>
+</div>
+
+
+	<script type="text/javascript">
+		var number_of_voteboxes = "";
+	</script>
+
+
+<div class="row first-row">
+	<div class="col-lg-8 col-md-8">
+		<div class="prob" style="position: relative">
+
+			<!-- google_ad_section_start -->
+			<!-- plik z pomoca kontekstowa (cxhelp_*) dziedziczony po pindex.html -->
+
+
+
+<script type="text/javascript" src="/gfx/jscripts/tiny_mce/plugins/asciimath/js/ASCIIMathMLwFallback.js"></script>
+<!--script type="text/javascript" src="/gfx/jscripts/tiny_mce/plugins/asciisvg/js/ASCIIsvgPI.js"></script-->
+<script type="text/javascript">
+<!--
+var AScgiloc = 'http://www.imathas.com/imathas/filter/graph/svgimg.php';
+var AMTcgiloc = "/files/gif/";
+-->
+</script>
+
+
+<div class="text-center"><center>
+	<div class="aProblemTop c728x90"><div class="no_a_info"></div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-4453360425583535"
+     data-ad-slot="1073332635"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+	</center>
+</div>
+<br/>
+
+<h2 id="problem-name" class="text-center">PK11F - Spelling Suggestion</h2>
+
+
+<div class="row">
+	<div id="problem-tags" class="col-lg-12 text-center">
+				<i>no tags</i>&nbsp;
+				</div>
+</div>
+<br/>
+
+<div id="problem-body">
+	<div>
+<p style="text-align: justify;"><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPSMT';">A spelling suggestion is a part of spelling correction program that generates a set of plausible replacements for words that are likely to be misspelled. One way to measure the plausibility of these replacements is to compute their edit distance against a given misspelled word. The edit distance between two words is the total number of edit operations that have to be done in order to transform one word into the other. Normally these edit operations are insertion, deletion and substitution of a single character including transposition of 2 consecutive characters. </span></p>
+<p style="text-align: justify;"><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPSMT';">For example, for a word &ldquo;wonder&rdquo;, if the deletion is applied at the character 'o', this word will transform into &ldquo;wnder&rdquo;. And if the substitution with 'a' is applied at 'o', it will become &ldquo;wander&rdquo;. And if the transposition is applied at &ldquo;er&rdquo;, it will become &ldquo;wondre&rdquo;. </span></p>
+<p style="text-align: justify;"><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPSMT';">In this edit distance strategy, the degree of similarity between two words is up to their minimum edit distance. If the minimum edit distance between </span><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPS'; font-style: italic;">word1 </span><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPSMT';">and </span><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPS'; font-style: italic;">word2 </span><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPSMT';">is lower than the distance between </span><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPS'; font-style: italic;">word1 </span><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPSMT';">and </span><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPS'; font-style: italic;">word3, </span><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPSMT';">then </span><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPS'; font-style: italic;">word1 </span><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPSMT';">is more similar to </span><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPS'; font-style: italic;">word2 </span><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPSMT';">than to </span><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPS'; font-style: italic;">word3. </span><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPSMT';">So the </span><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPS'; font-style: italic;">word2 </span><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPSMT';">is a better spelling suggestion for </span><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPS'; font-style: italic;">word1, </span><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPSMT';">comparing with </span><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPS'; font-style: italic;">word3. </span></p>
+<p style="text-align: justify;"><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPSMT';">Suppose that you are an employee of a software company which needs to build up a prototype of spelling suggestion program. This prototype tends to be a part of word processing software. The requirement is that it has to use the edit distance strategy for their spelling suggestion. But the substitution operation has to be redefined to match the behavior of mistyping. The cost of substitution of a character with another character depends on the position of them on the keyboard layout. If they are close to each other, the cost is only half of the normal one. For this purpose, the substitution is categorized into near-substitution and far-substitution. Their costs are defined as 1 and 2 respectively. And the costs for insertion, deletion and transposition are 2. In addition, this program must run fast enough to pass the time limit that is set by your manager. By the way for this prototype, an English QWERTY keyboard layout is chosen to be used. </span></p>
+<p style="text-align: justify;"><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPS'; font-weight: 700;">Goal </span></p>
+<p style="text-align: justify;"><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPSMT';">To generate optimum spelling suggestions for each input word, where each optimum spelling suggestion is a word in dictionary that has the least minimum edit distance from the given input word. The time limit for 5,000 misspelled words is less than or equal to 5 minutes.<br /> </span></p>
+</div>
+<div>
+<div>
+<div>
+<p><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPS'; font-weight: 700;">Input </span></p>
+<p><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPSMT';">Input is a standard input which contains 3 parts of data. Each of these three parts ends with a blank line.</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0.5in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-indent: -0.25in;"><span style="font-family: Symbol;">&middot;<span style="font: normal normal normal 7pt/normal 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>The first part is a set of near-substitution rules, where each rule is kept in one line. Each line has two fields. Each filed is separated by a space. The total no. of rules is less than or equal to 150</p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0.75in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-indent: -0.25in;"><span style="font-family: 'Courier New';">o<span style="font: normal normal normal 7pt/normal 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>The first field is a character where it can be near-substituted with other characters.</p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0.75in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-indent: -0.25in;"><span style="font-family: 'Courier New';">o<span style="font: normal normal normal 7pt/normal 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span>&nbsp;</span>The second field is a sequence of characters which can be near-substituted for the character in the previous field. There is no space in this field.</p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0.75in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-indent: -0.25in;"><span style="font-family: 'Courier New';">o<span style="font: normal normal normal 7pt/normal 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>The characters that may be contained in this part are characters that can be typed in using a generic English keyboard layout, which are alpha-numeric characters and some punctuations without space or tab.<span>&nbsp;&nbsp;</span>They are listed as the following.</p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">&nbsp;</span></p>
+<pre>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`~!@#$%^&amp;*()-_=+\|[{]};:'&rdquo;,&lt;.&gt;/?</pre>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;">&nbsp;</p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0.5in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-indent: -0.25in;"><span style="font-family: Symbol;">&middot;<span style="font: normal normal normal 7pt/normal 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>The second part is a sequence of words in dictionary, where each word is kept in one line. The total no. of words is less than or equal to 150,000.</p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 1in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-indent: -0.25in;"><span style="font-family: 'Courier New';">o<span style="font: normal normal normal 7pt/normal 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>The characters in dictionary are alphabetical characters with an apostrophe punctuation.</p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 1in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-indent: -0.25in;"><span style="font-family: 'Courier New';"><span style="font-size: 11.000000pt; font-family: 'CourierNewPSMT';">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&rsquo;</span></span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0.5in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-indent: -0.25in;"><span style="font-family: Symbol;">&middot;<span style="font: normal normal normal 7pt/normal 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>The third part is a sequence of words that need to be checked for their spellings. Each of these words is also kept in one line. The total no. of words is less than or equal to 5,000.</p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 1in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-indent: -0.25in;"><span style="font-family: 'Courier New';">o<span style="font: normal normal normal 7pt/normal 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>The characters that may be contained in this part are the same as characters in the first part, which are alpha-numeric characters and some punctuation. (See the first part.)</p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0.5in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-indent: -0.25in;"><span style="font-family: Symbol;">&middot;<span style="font: normal normal normal 7pt/normal 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>Since each of these three parts end with a blank line, the third blank line is the termination of the input.</p>
+<p>&nbsp;</p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><strong>Output</strong></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;">For each word in the third part, write a line which contains 3 parts of information, separated with a colon.</p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 1in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-indent: -0.25in;"><span style="font-family: Symbol;">&middot;<span style="font: normal normal normal 7pt/normal 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>The first part is the given input word.</p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 1in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-indent: -0.25in;"><span style="font-family: Symbol;">&middot;<span style="font: normal normal normal 7pt/normal 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>The second part is the minimum edit distance between the input word and suggestion word(s).</p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 1in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-indent: -0.25in;"><span style="font-family: Symbol;">&middot;<span style="font: normal normal normal 7pt/normal 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>The third part is an ascending sorted sequence of suggestion word(s), separated with a space. There is no space left after the last word.</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12.000000pt; font-family: 'TimesNewRomanPSMT';"><br /></span></p>
+<p><strong>Example</strong></p>
+</div>
+</div>
+</div>
+<pre><table style="margin-left: 16.25pt; border-collapse: collapse; font-family: Times; font-size: medium; width: 510px;" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="width: 45pt; border-top-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: black; border-bottom-color: black; border-left-color: black; border-top-width: 0.25pt; border-bottom-width: 0.25pt; border-left-width: 0.25pt; border-right-style: none; border-right-width: initial; border-right-color: initial; padding: 2.75pt;" width="60" valign="top">
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Liberation Serif'; margin-top: 0in; text-align: center;" align="center"><em><span style="font-family: 'Times New Roman';">Line no.</span></em></p>
+</td>
+<td style="width: 337.5pt; padding: 2.75pt; border: 0.25pt solid black;" width="450" valign="top">
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Liberation Serif'; margin-top: 0in; text-align: center;" align="center"><strong><span style="font-family: 'Times New Roman';">Sample Input</span></strong></p>
+</td>
+</tr>
+<tr>
+<td style="width: 45pt; border-top-style: none; border-top-width: initial; border-top-color: initial; border-left-style: solid; border-left-color: black; border-left-width: 0.25pt; border-bottom-style: solid; border-bottom-color: black; border-bottom-width: 0.25pt; border-right-style: none; border-right-width: initial; border-right-color: initial; padding: 2.75pt;" width="60" valign="top">
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">1</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">2</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">3</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">4</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">5</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">6</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">7</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">8</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">9</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">10</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">11</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">12</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">13</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">14</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">15</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">16</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">17</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">18</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">19</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">20</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">21</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">22</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">23</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">24</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">25</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">26</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">27</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">28</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">29</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">30</span></p>
+</td>
+<td style="width: 337.5pt; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-right-color: black; border-bottom-color: black; border-left-color: black; border-right-width: 0.25pt; border-bottom-width: 0.25pt; border-left-width: 0.25pt; border-top-style: none; border-top-width: initial; border-top-color: initial; padding: 2.75pt;" width="450" valign="top">
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">a AqQsSzZ</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">b BgGvVnN</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">p P0);:oO[{</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">r R4$fFeEtT</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">z ZaAxX</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">&nbsp;</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">a</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">A</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">b</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">B</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">Z</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">angel</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">angle</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">anger</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">angry</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">ABC</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">&nbsp;</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">x</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">s</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">z</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">xx</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">xxx</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">angre</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">angri</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">angrt</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">angel</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">ACB</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">BAC</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><span style="font-family: 'Courier New';">CAB</span></p>
+</td>
+</tr>
+<tr>
+<td style="width: 45pt; border-top-style: none; border-top-width: initial; border-top-color: initial; border-left-style: solid; border-left-color: black; border-left-width: 0.25pt; border-bottom-style: solid; border-bottom-color: black; border-bottom-width: 0.25pt; border-right-style: none; border-right-width: initial; border-right-color: initial; padding: 2.75pt;" width="60" valign="top">
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Liberation Serif'; margin-top: 0in; text-align: center;" align="center"><em><span style="font-family: 'Times New Roman';">Line no.</span></em></p>
+</td>
+<td style="width: 337.5pt; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-right-color: black; border-bottom-color: black; border-left-color: black; border-right-width: 0.25pt; border-bottom-width: 0.25pt; border-left-width: 0.25pt; border-top-style: none; border-top-width: initial; border-top-color: initial; padding: 2.75pt;" width="450" valign="top">
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Liberation Serif'; margin-top: 0in; text-align: center;" align="center"><strong><span style="font-family: 'Times New Roman';">Sample Output</span></strong></p>
+</td>
+</tr>
+<tr>
+<td style="width: 45pt; border-top-style: none; border-top-width: initial; border-top-color: initial; border-left-style: solid; border-left-color: black; border-left-width: 0.25pt; border-bottom-style: solid; border-bottom-color: black; border-bottom-width: 0.25pt; border-right-style: none; border-right-width: initial; border-right-color: initial; padding: 2.75pt;" width="60" valign="top">
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">1</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">2</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">3</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">4</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">5</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">6</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">7</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">8</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">9</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">10</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">11</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: right;" align="right"><span style="font-family: 'Courier New';">12</span></p>
+</td>
+<td style="width: 337.5pt; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-right-color: black; border-bottom-color: black; border-left-color: black; border-right-width: 0.25pt; border-bottom-width: 0.25pt; border-left-width: 0.25pt; border-top-style: none; border-top-width: initial; border-top-color: initial; padding: 2.75pt;" width="450" valign="top">
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Liberation Serif'; margin-top: 0in;"><span style="font-family: 'Courier New';">x:2:A B Z a b</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Liberation Serif'; margin-top: 0in;"><span style="font-family: 'Courier New';">s:1:a</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Liberation Serif'; margin-top: 0in;"><span style="font-family: 'Courier New';">z:1:A Z a</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Liberation Serif'; margin-top: 0in;"><span style="font-family: 'Courier New';">xx:4:A B Z a b</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Liberation Serif'; margin-top: 0in;"><span style="font-family: 'Courier New';">xxx:6:A ABC B Z a b</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Liberation Serif'; margin-top: 0in;"><span style="font-family: 'Courier New';">angre:2:anger angle angry</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Liberation Serif'; margin-top: 0in;"><span style="font-family: 'Courier New';">angri:2:angry</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Liberation Serif'; margin-top: 0in;"><span style="font-family: 'Courier New';">angrt:2:anger angry</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Liberation Serif'; margin-top: 0in;"><span style="font-family: 'Courier New';">angel:0:angel</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Liberation Serif'; margin-top: 0in;"><span style="font-family: 'Courier New';">ACB:2:ABC</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Liberation Serif'; margin-top: 0in;"><span style="font-family: 'Courier New';">BAC:2:ABC</span></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Liberation Serif'; margin-top: 0in;"><span style="font-family: 'Courier New';">CAB:4:A ABC B</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;">&nbsp;</p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><strong>More Explanations</strong></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;"><strong>&nbsp;</strong></p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;">In this sample input, there are 5 near-substitution rules (line no. 1-5), 10 words in dictionary (line no. 7-16) and 12 words looking for their suggestions (line no. 18-29).</p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;">In the sample output, there are 12 lines for each corresponding 12 words from the input.</p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;">For the 1<sup>st</sup>&nbsp;word, the minimum edit distance between&nbsp;<span style="font-family: FreeMono;">x</span>&nbsp;and its suggestions (<span style="font-family: FreeMono;">A B Z a b</span>) is 2. All of them are the (far) substitution costs.</p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;">For the 2<sup>nd</sup>&nbsp;word, the minimum edit distance between&nbsp;<span style="font-family: FreeMono;">s</span>&nbsp;and its suggestion (<span style="font-family: FreeMono;">a</span>) is 1, which is a near-substitution cost, guided by the 1<sup>st</sup>&nbsp;substitution rule.</p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;">For the 3<sup>rd</sup>&nbsp;word, the minimum edit distance between&nbsp;<span style="font-family: FreeMono;">z</span>&nbsp;and its suggestion (<span style="font-family: FreeMono;">A Z a</span>) are 1, which is a near-substitution cost, guided by the 1<sup>st</sup>&nbsp;or 5<sup>th</sup>substitution rule.</p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;">For the 4<sup>th</sup>&nbsp;word, the minimum edit distance is 4, which are summed from one far-substitution cost and one deletion cost.</p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;">For the 5<sup>th</sup>&nbsp;word, the minimum edit distance is 6. The costs between&nbsp;<span style="font-family: FreeMono;">xxx</span>&nbsp;and (<span style="font-family: FreeMono;">A B Z a b)</span>&nbsp;are from two deletion and one far-substitution costs.&nbsp;</p><p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;">The cost between&nbsp;<span style="font-family: FreeMono;">xxx</span>&nbsp;and&nbsp;<span style="font-family: FreeMono;">ABC</span>&nbsp;re from three far-substitution costs.</p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;">For the 6<sup>th</sup>&nbsp;word, the cost between&nbsp;<span style="font-family: FreeMono;">angre</span>&nbsp;and&nbsp;<span style="font-family: FreeMono;">anger</span>&nbsp;is from one transposition costs. The costs between&nbsp;<span style="font-family: FreeMono;">angre</span>&nbsp;and (<span style="font-family: FreeMono;">angle angry)</span>&nbsp;are from one far-substitution costs.</p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;">For the 7<sup>th</sup>&nbsp;word and 8<sup>th</sup>&nbsp;word, seem to be similar. But the cost of 7<sup>th</sup>&nbsp;word is from one far-substitution costs.&nbsp;</p><p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;">But the cost between&nbsp;<span style="font-family: FreeMono;">angrt</span>&nbsp;and&nbsp;<span style="font-family: FreeMono;">anger</span>&nbsp;is from 2 near-substitution costs (<span style="font-family: FreeMono;">r</span>&nbsp;substitutes with&nbsp;<span style="font-family: FreeMono;">e</span>&nbsp;and&nbsp;<span style="font-family: FreeMono;">t</span>&nbsp;substitutes with&nbsp;<span style="font-family: FreeMono;">r</span>) according to the near-substitution rule no. 4.</p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;">For the 9<sup>th</sup>&nbsp;word, the word is exactly matched within dictionary. So the cost is 0.</p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;">For the 10<sup>th</sup>&nbsp;and 11<sup>th</sup>&nbsp;words, each cost is from one transposition costs.</p>
+<p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in;">For the 12<sup>th</sup>&nbsp;words, the cost between&nbsp;<span style="font-family: FreeMono;">CAB</span>&nbsp;and (<span style="font-family: FreeMono;">A B</span>) is from two deletion costs. The cost between&nbsp;<span style="font-family: FreeMono;">CAB</span>&nbsp;and (<span style="font-family: FreeMono;">ABC</span>) is from one deletion and one insertion costs.&nbsp;</p><p style="margin-right: 0in; margin-bottom: 0.0001pt; margin-left: 0in; font-size: 12pt; font-family: 'Nimbus Roman No9 L'; margin-top: 0in; text-align: justify;">Please be notify that it is not from 2 transpositions of&nbsp;<span style="font-family: FreeMono;">CAB</span>&nbsp;to&nbsp;<span style="font-family: FreeMono;">ACB</span>&nbsp;and then&nbsp;<span style="font-family: FreeMono;">ACB</span>&nbsp;to&nbsp;<span style="font-family: FreeMono;">ABC</span>.<span>&nbsp; &nbsp;</span></p></pre>
+</div>
+
+<div class="text-center">
+	<a href="/submit/PK11F/" class="btn btn-primary btn-lg"><i class="fa fa-send"></i> Submit solution!</a>
+</div>
+			<!-- google_ad_section_end -->
+			
+			<div id="ccontent">
+			<!-- google_ad_section_start -->
+			
+<hr style="clear:both;"/>
+<a href="#" onclick="toggleComments(); return false;"><span id="comments_sh">hide</span> comments</a><br/>
+
+<a id="comments"></a>
+<table id="comments_table" width="100%">
+		<tr>
+		<td colspan="2">
+				</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+				</td>
+	</tr>
+	
+	<script language="JavaScript">
+	<!--
+	$(document).ready(function(){
+        $('.pager_link').bind('click', function(me){
+                var href=$(me.currentTarget).attr('href');
+		$('#ccontent').animate({opacity: 0.5},1);
+                $.ajax({
+                        type: "GET",
+                        url: href+",ajax=1",
+                        contentType: "application/x-www-form-urlencoded;charset=ISO-8859-2",
+                        success: function(data){
+                                $('#ccontent').html(data);
+				$('#ccontent').animate({opacity: 1.0},1);
+                        },
+                        error: function(err){
+                                alert('error');
+                        }
+                });
+                return false;
+        });
+	});
+	-->
+	</script>
+	
+
+
+
+			
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/5b682a24b0f2e9092ed54fe2bd6fd0fd?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/zukow">:D</a>: 
+								<span style="font-size: 10px; color: #666;">2012-11-21 21:48:23</span>
+		<br/>
+				<p>Description misses one extremely vital constraint. What are the limits for word lengths!?</p>
+						</td>
+	</tr>
+			
+</table>
+
+
+<script language="javascript" type="text/javascript">
+<!--
+function getCookieVal (offset) {
+        var endstr = document.cookie.indexOf (";", offset);
+        if (endstr == -1) { 
+                endstr = document.cookie.length; 
+        }
+        return unescape(document.cookie.substring(offset, endstr));
+}
+
+function GetCookie (name) {
+  var arg = name + "=";
+  var alen = arg.length;
+  var clen = document.cookie.length;
+  var i = 0;
+  while (i < clen) {
+    var j = i + alen;
+    if (document.cookie.substring(i, j) == arg) {
+      return getCookieVal (j);
+      }
+    i = document.cookie.indexOf(" ", i) + 1;
+    if (i == 0) break; 
+    }
+  return null;
+}
+
+function toggleComments() {
+        var a = document.getElementById('comments_table');
+        var d = a.style.display;
+        if( d == "" || d == "block" ){
+                d = "none";
+                document.getElementById('comments_sh').innerHTML = 'show';
+        } else {
+                d = "block";
+                document.getElementById('comments_sh').innerHTML = 'hide';
+        }
+        a.style.display = d;
+        document.cookie="comments_table="+d+"; path=/;";
+}
+
+if( GetCookie('comments_table') == 'none' ){
+        document.getElementById('comments_sh').innerHTML = 'show';
+        document.getElementById('comments_table').style.display = 'hide';
+}
+
+-->
+</script>
+
+
+			<!-- google_ad_section_end -->
+			</div>
+			<table width="100%">
+        </table>
+<br/>
+		</div>
+	</div><!-- endof col-lg-8 col-md-8 -->
+	
+	<div class="col-lg-4 col-md-4">
+	
+				<div id="problem-btn-submit-box">
+			<a href="/submit/PK11F/" id="problem-btn-submit" class="btn btn-primary" style="width: 100%; margin-bottom: 20px;"><i class="fa fa-send"></i> Submit solution!</a>
+		</div>
+				
+		<table border=0 cellspacing=0 cellpadding=0 style="margin-bottom:10px" class="probleminfo" id="problem-meta">
+			<colgroup>
+				<col width="120"/>
+				<col/>
+			</colgroup>
+			<tbody>
+			<tr><td>Added by:</td><td><a href="/users/racer">Race with time</a></td></tr>
+			<tr><td>Date:</td><td>2012-07-25</td></tr>
+			<tr><td>Time limit:</td><td>12.88s
+			</td></tr>
+			<tr><td>Source limit:</td><td>50000B</td></tr>
+						<tr><td>Memory limit:</td><td>1536MB</td></tr>
+										<tr>
+					<td>Cluster:</td>
+					<td>
+													<a href="/clusters/" target="_blank">Cube (Intel G860)</a>
+								
+					</td>
+				</tr>
+						<tr><td>Languages:</td><td>All </td></tr>
+			<tr><td>Resource:</td><td>ACM ICPC Regional Phuket 2011</td></tr>													</tbody>
+		</table>
+
+		<div class="right-box-hehe">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- spoj_problem_336x280_right2 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-4453360425583535"
+     data-ad-slot="3836605032"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+		</div>
+	
+		<!-- BEGIN: Voting for problem -->
+		
+				
+		<!-- END: Voting the problem -->
+		
+		<div class="right-box-hehe">
+							<div class="c336x280"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- spoj_problem_336x280_right -->
+	<ins class="adsbygoogle"
+			style="display:inline-block;width:336px;height:280px"
+					data-ad-client="ca-pub-4453360425583535"
+							data-ad-slot="7873511834"></ins>
+							<script>
+							(adsbygoogle = window.adsbygoogle || []).push({});
+	</script></div>
+						<br/>
+		</div>
+		
+				
+		
+		<script type="text/javascript">
+			function callback_after_vote(type, data)
+			{
+				var response = $.parseJSON(data);
+				manage_vote_interface(type);
+				//.html('<div class="vote-thank-you">Thank you!</div>');
+				
+
+				if (type == "problem" || type == "implementation") {
+					var progressBarValue = Math.round(2 + 98 * response.avg / 3);
+					var progressBarType;
+					if (progressBarValue < 25) progressBarType = "progress-bar-primary";
+					else if (progressBarValue < 50) progressBarType = "progress-bar-success";
+					else if (progressBarValue < 75) progressBarType = "progress-bar-warning";
+					else progressBarType = "progress-bar-danger";
+					
+					$("#rate-" + type + "-box .progress-bar").css("width", progressBarValue.toString() +"%");
+					$("#rate-" + type + "-box .progress-bar").attr("aria-valuenow", progressBarValue.toString());
+					$("#rate-" + type + "-box .progress-bar").attr("class", "progress-bar " + progressBarType);
+					$("#rate-" + type + "-box .progress-value").html(progressBarValue.toString() +"%");
+				}
+				else if (type == "quality") {
+					var quality_plus = response.sum_plus;
+					var quality_minus = response.sum_minus;
+
+					var box_content = '';
+
+					if (quality_plus > 0 || quality_minus > 0) {
+						if (quality_plus > 0) {
+							box_content += '<font size="+2"><span class="label label-success">' +
+								quality_plus.toString() + 
+								' <span class="fa fa-thumbs-o-up"></span></span></font>';
+						}
+						if (quality_minus > 0) {
+							box_content += '<font size="+2"><span class="label label-danger">' +
+								quality_minus.toString() + 
+								' <span class="fa fa-thumbs-o-down"></span></span></font>';
+						}
+					}
+
+					$( "#rate-" + type + "-box" ).empty().html(box_content);
+				}
+
+				// update count
+				if (response.update_count == 1) {
+					var count = parseInt($("#votes_count").html(), 10);
+					count++;
+					var votes_word = " vote";
+					if (count > 1) votes_word += "s";
+					$("#votes_count").empty().html(count.toString() + votes_word);
+				}
+			}
+			$( ".rate-btn" ).click(function() {
+				var rate_type = $(this).attr('data-rate-type').toString();
+				var rate_type_full = "";
+				var rate = $(this).attr('data-rate').toString();
+				if (rate_type == "p") rate_type_full = "problem";
+				else if (rate_type == "i") rate_type_full = "implementation";
+				else if (rate_type == "q") rate_type_full = "quality";
+				$.get( '/?a=vote&pid=11900&t=' + rate_type + '&r=' + rate, function( data ) {
+				  callback_after_vote(rate_type_full, data);
+				});
+			});
+			function manage_vote_interface(type) {
+				number_of_voteboxes--;
+				/*
+				if (number_of_voteboxes == 0) {
+					$( "#vote-box" ).fadeOut(1500, function() {
+						$(this).remove();
+					});
+				} else {
+					$( "#vote-" + type + "-box" ).fadeOut(1500, function() {
+						$(this).remove();
+					});
+				}
+				*/
+				var n = $('.vote-thank-you').length;
+				var offset = (n * 60).toString() + "px";
+				$(document.body).append(
+					'<div class="vote-thank-you" style="margin: 40%;">' +
+					'<div class="alert alert-success" style="position: fixed; top: '+offset+';">' +
+					'<strong>Thank you for voting!</strong>' +				
+					'</div></div>');
+				setTimeout(function(){$( ".vote-thank-you" ).fadeOut(1500, function() {
+					$(this).remove();
+				});},2000);
+			}
+		</script>
+		
+		
+	</div><!-- endof col-lg-4 col-md-4 -->
+</div>
+
+
+
+
+
+
+<style>
+ul.list-unstyled li{
+	margin-bottom: 5px;
+}
+ul.list-unstyled li a.btn{
+	width: 100%;
+}
+ul.ui-autocomplete{
+	z-index: 10000;
+	width: 200px !important;
+}
+</style>
+	<br/>
+</div>
+		
+		
+		<div class="container" id="footer">
+			<div class="row">
+				<div class="col-md-2">
+					
+				</div>
+				<div class="col-md-8 text-center">
+					<a href="/info">About</a> | <a href="/tutorials">Tutorial</a> | <a href="/tools">Tools</a> | <a href="/clusters">Clusters</a> | <a href="/credits">Credits</a> | <a href="/jobs">Jobs</a> | <a href="/sphereengine">API</a> | <a href="/gfx/spoj-terms.pdf" target="_blank">Terms</a>
+				</div>
+				<div class="col-md-2 text-right">
+					<a href="/rss/" ><img src="//stx1.spoj.com/gfx/rss10x10.gif" border=0>&nbsp;RSS</a>&nbsp;
+				</div>
+			</div>
+		</div>
+		
+		<div class="text-center" id="footer-srl">
+			
+	&copy; Spoj.com. All Rights Reserved. Spoj uses <a href="http://sphere-engine.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Engine</a>&trade; &copy; by <a href="http://sphere-research.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Research Labs</a>.
+
+		</div> 
+	</div>
+
+	<!-- JavaScripts -->
+	
+		
+	
+	<script type="text/javascript">
+	$(function(){
+		setTimeout(function(){
+			$('.no_a_info').css('visibility', 'visible');
+		}, 5000);
+		
+		if(!$('.aProblemTop').length && !$('.aProblemsTop').length && !$('.aSubmitTop').length && !$('.aStatusTop').length && !$('.aMainRight').length){
+			ga('send', 'event', 'ads', 'no-ads', 'main-contest');
+		}
+		if ($('.aProblemTop').height() == 0){
+			$('.aProblemTop').css({'border': '1px solid #ddd', 'background': '#f0f4e3', 'height': 90});
+			$('.aProblemTop').html($('<p class="text-center">using adblock?</p><h4 class="text-center">Online ads help us to maintain site.</h4><p class="text-center"><strong>please whitelist *.spoj.com</strong></p>'));
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemTop');
+		}
+		if ($('.aProblemsTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemsTop');
+		}
+		if ($('.aSubmitTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aSubmitTop');
+		}
+		if ($('.aStatusTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aStatusTop');
+		}
+		if ($('.aMainRight').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aMainRight');
+		}
+	});
+	</script>
+	
+	
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.timers.js"></script>
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.cookie.js"></script>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+	<script src="//crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
+	<script src="//stx1.spoj.com/gfx/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+	<script src="//stx1.spoj.com/gfx/scripts/tour.js"></script>
+	
+	
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&appId=321676846207&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	
+	
+
+
+<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-10507872-1', 'auto');
+	  ga('require', 'linkid', 'linkid.js');
+	  ga('send', 'pageview');
+	</script>
+<script type="text/javascript">
+	$(function(){
+		$(document).on('click', '.track', function(){
+			var event = $(this).attr('data-event');
+			var action = $(this).attr('data-action');
+			var value = $(this).attr('data-value');
+			ga('send', 'event', event, action, value);
+		});
+	});
+	</script>
+
+
+</body>
+</html>

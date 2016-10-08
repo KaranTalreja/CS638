@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="not-ie" lang="en"> <!--<![endif]-->
+<head>
+	<!-- main header -->
+	<meta charset="utf-8">
+	
+				<title>SPOJ.com - Problem OFORTUNE</title>
+		  
+	<meta name="keywords" content="language, algorithm, spoj, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  		<meta property="og:title" content="SPOJ.com - Problem OFORTUNE"/>
+    <meta property="fb:app_id"      content="321676846207" />
+	<meta property="og:type" content="spoj-pl:problem"/>
+	<meta property="og:url" content="http://www.spoj.com/problems/OFORTUNE/"/>
+	<meta property="og:image" content="//stx1.spoj.com/gfx/logo-cr.png"/>
+	<meta property="og:description" content="..."/>
+	<meta name="description" content="..."/>
+		<meta property="og:site_name" content="spoj.com"/>
+
+  <!--[if (gte IE 9)|!(IE)]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" id="metatag">
+  <![endif]--> 
+
+	  <!-- Favicon -->
+	  <link href="//stx1.spoj.com/gfx/favicon_new.png" rel="shortcut icon" type="image/x-icon" />
+	  
+	  <!-- RSS -->
+	  <link href="/rss/" rel="alternate" type="application/rss+xml" title="RSS Feed">
+	
+	  <!-- Web Fonts -->
+	  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">  
+
+	<!-- Internet Explorer condition - HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]--> 
+	
+	
+	
+	<!-- CSS: Bootstrap, Font-awesome, Bootstrap libs,  -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+  	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  	<link href="//stx1.spoj.com/gfx/bootstrap-tour/build/css/bootstrap-tour.min.css" rel="stylesheet" />
+  	<link href="//stx1.spoj.com/themes/bootstrap-social.css" rel="stylesheet" type="text/css" />
+  	
+	<link href="//stx1.spoj.com/themes/common.css?4" rel="stylesheet" type="text/css" id="theme0" />
+	<link href="//stx1.spoj.com/themes/en_new.css?4" rel="stylesheet" type="text/css" id="theme" />
+	
+	<!-- JS -->
+	<script type="text/javascript" src='//code.jquery.com/jquery-1.11.1.min.js'></script>
+	<script type="text/javascript" src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+	
+		
+		
+	<script type="text/javascript" language="javascript">
+	$(function () { 
+		$("#profile-menu").popover();
+	});
+	function UnCryptMailto(s) {
+		var n=0;
+		var r="";
+		for(var i=0;i<s.length;i++) {		
+			n=s.charCodeAt(i); 
+			if (n>=8364) {n = 128;}
+			r += String.fromCharCode(n+(2));	
+		}
+		return r;
+	}
+	function linkTo_UnCryptMailto(s)	{
+		location.href=UnCryptMailto(s);
+	}
+	</script>
+	
+	<script type="text/javascript">
+	function recordOutboundLink(link, category, action) {
+	  try {
+	    var pageTracker=_gat._getTracker("UA-XXXXX-X");
+	    pageTracker._trackEvent(category, action);
+	    setTimeout('document.location = "' + link.href + '"', 100)
+	  }catch(err){}
+	}
+	</script>
+	
+</head>
+
+<body>
+
+	
+	<!-- <div class="space30"></div> -->
+	
+	<!-- Content -->
+	<div class="content">
+		<div class="container" id="header">
+			<div class="row">
+				<div class="col-md-12 text-right">
+										<form method="post" style="display: none;" action="/login/" id="login-form">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-2">
+								<input type="hidden" name="next_raw" value="/"/>
+								<input type="hidden" name="autologin" value="1"/>
+								<input type="text" name="login_user" placeholder="Username" class="form-control input-sm" style="display: inline-block; width: 25%;"/>
+								<input type="password" name="password" placeholder="Password" class="form-control input-sm" style="display: inline-block; width: 25%;"/>
+																<button type="submit" class="btn btn-default btn-sm" style="display: inline-block; margin-right: 10px;"><span class="fa fa-sign-in fa-lg"></span> <strong>sign in</strong></button>
+																<a href="/register"><i class="fa fa-user-plus"></i> sign up</a>
+				        									</div>
+						</div>
+					</form>
+										
+					
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-md-4">
+					<a href="/" class="navbar-brand">
+						<img src="//stx1.spoj.com/gfx/2015e.png" style="height: 40px;"/>
+					</a>
+					<div class="navbar-header">
+				      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+				        <span class="sr-only">Toggle navigation</span>
+				        <i class="fa fa-bars"></i>
+				      </button>
+				    </div>
+				</div>
+				<div class="col-md-8" id="menu">
+				
+					
+					<div class="row">
+					<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation"  style="border: 0px;">
+				      <ul class="nav navbar-nav" style="  float: right; margin-top: 10px;">
+				      						        <li class="active">
+					          <a href="/problems"><i class="fa fa-puzzle-piece"></i> PROBLEMS</a>
+					        </li>
+					        					        <li >
+					          <a href="/status"><i class="fa fa-circle"></i> STATUS</a>
+					        </li>
+					        <li >
+					          <a href="/ranks"><i class="fa fa-trophy"></i> RANKS</a>
+					        </li>
+					        <li >
+					          <a href="http://spoj.com/forum"><i class="fa fa-comments-o"></i> DISCUSS</a>
+					        </li>
+					        
+					        <li >
+					          <a href="/contests">CONTESTS</a>
+					        </li>
+					        <!-- 
+					        <li >
+					          <a href="/jobs"><i class="fa fa-briefcase"></i> JOBS</a>
+					        </li>
+						-->
+											        					        <li >
+					        	<a href="/login" class="text-success" onclick="$('#login-form').show(); $('input[name=login_user]').focus(); return false;"><i class="fa fa-sign-in"></i> sign in</a>
+					        </li>
+					        						
+				        
+				      </ul>
+				    </nav>
+				    </div>
+				    
+				    
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="container" id="menu">
+			
+		</div>
+		
+		<div class="container" id="content">
+		<script type='text/javascript' src='/gfx/jquery.cxhelp2.js'></script>
+
+
+
+ <!-- wykorzystywane w pcontent.html (by wiele) -->
+
+<div class="submenu">
+	
+		<ol class="breadcrumb">
+	  <li><a href="/problems">Problems</a></li>
+	  <li><a href="/problems/classical">classical</a></li>
+	  <li class="active">Ohgas&#39 Fortune</li>
+	</ol>
+		
+	<ol class="navbar-right">
+						
+				<li><a href="/status/OFORTUNE/" class="">Status</li></a>
+		<li><a href="/ranks/OFORTUNE/" class="">Ranking</li></a>
+	</ol>
+</div>
+
+
+	<script type="text/javascript">
+		var number_of_voteboxes = "";
+	</script>
+
+
+<div class="row first-row">
+	<div class="col-lg-8 col-md-8">
+		<div class="prob" style="position: relative">
+
+			<!-- google_ad_section_start -->
+			<!-- plik z pomoca kontekstowa (cxhelp_*) dziedziczony po pindex.html -->
+
+
+
+<script type="text/javascript" src="/gfx/jscripts/tiny_mce/plugins/asciimath/js/ASCIIMathMLwFallback.js"></script>
+<!--script type="text/javascript" src="/gfx/jscripts/tiny_mce/plugins/asciisvg/js/ASCIIsvgPI.js"></script-->
+<script type="text/javascript">
+<!--
+var AScgiloc = 'http://www.imathas.com/imathas/filter/graph/svgimg.php';
+var AMTcgiloc = "/files/gif/";
+-->
+</script>
+
+
+<div class="text-center"><center>
+	<div class="aProblemTop c728x90"><div class="no_a_info"></div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-4453360425583535"
+     data-ad-slot="1073332635"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+	</center>
+</div>
+<br/>
+
+<h2 id="problem-name" class="text-center">OFORTUNE - Ohgas&#39 Fortune</h2>
+
+
+<div class="row">
+	<div id="problem-tags" class="col-lg-12 text-center">
+				<i>no tags</i>&nbsp;
+				</div>
+</div>
+<br/>
+
+<div id="problem-body">
+	<p>
+The Ohgas are a prestigious family based on Hachioji. The head of the family, Mr. Nemochi Ohga, a famous wealthy man, wishes to increase his fortune by depositing his money to an operation company. You are asked to help Mr. Ohga maximize his profit by operating the given money during a specified period. 
+<br>
+<br>From a given list of possible operations, you choose an operation to deposit the given fund to. You commit on the single operation throughout the period and deposit all the fund to it. Each operation specifies an annual interest rate, whether the interest is simple or compound, and an annual operation charge. An annual operation charge is a constant not depending on the balance of the fund. The amount of interest is calculated at the end of every year, by multiplying the balance of the fund under operation by the annual interest rate, and then rounding off its fractional part. For compound interest, it is added to the balance of the fund under operation, and thus becomes a subject of interest for the following years. For simple interest, on the other hand, it is saved somewhere else and does not enter the balance of the fund under operation (i.e. it is not a subject of interest in the following years). An operation charge is then subtracted from the balance of the fund under operation. You may assume here that you can always pay the operation charge (i.e. the balance of the fund under operation is never less than the operation charge). The amount of money you obtain after the specified years of operation is called ``the final amount of fund.'' For simple interest, it is the sum of the balance of the fund under operation at the end of the final year, plus the amount of interest accumulated throughout the period. For compound interest, it is simply the balance of the fund under operation at the end of the final year. 
+<br>
+<br>Operation companies use C, C++, Java, etc., to perform their calculations, so they pay a special attention to their interest rates. That is, in these companies, an interest rate is always an integral multiple of 0.0001220703125 and between 0.0001220703125 and 0.125 (inclusive). 0.0001220703125 is a decimal representation of 1/8192. Thus, interest rates' being its multiples means that they can be represented with no errors under the double-precision binary representation of floating-point numbers. 
+<br>
+<br>For example, if you operate 1000000 JPY for five years with an annual, compound interest rate of 0.03125 (3.125 %) and an annual operation charge of 3000 JPY, the balance changes as follows.
+
+<br><table border><tr align=right rowspan=2><td>The balance of the fund under operation(at the beginning of year)</td><td>Interest</td><td>The balance of the fund under operation (at the end of year)</td></tr><tr align=right><td>A</td><td>B = A × 0.03125 (and rounding off fractions)</td><td>A + B - 3000</td></tr><tr align=right><td>1000000</td><td>31250</td><td>1028250</td></tr><tr align=right><td>1028250</td><td>32132</td><td>1057382</td></tr><tr align=right><td>1057382</td><td>33043</td><td>1087425</td></tr><tr align=right><td>1087425</td><td>33982</td><td>1118407</td></tr><tr align=right><td>1118407</td><td>34950</td><td>1150357</td></tr></table>
+
+<br>After the five years of operation, the final amount of fund is 1150357 JPY. 
+<br>
+<br>If the interest is simple with all other parameters being equal, it looks like: 
+<br><table border><tr align=right rowspan=2><td>The balance of the fund under operation (at the beginning of year)</td><td>Interest</td><td>The balance of the fund under operation (at the end of year)</td><td>Cumulative interest </td></tr><tr align=right><td>A</td><td>B = A × 0.03125 (and rounding off fractions)</td><td>A - 3000</td><td></td></tr><tr align=right><td>1000000</td><td>31250</td><td>997000</td><td>31250</td></tr><tr align=right><td>997000</td><td>31156</td><td>994000</td><td>62406</td></tr><tr align=right><td>994000</td><td>31062</td><td>991000</td><td>93468</td></tr><tr align=right><td>991000</td><td>30968</td><td>988000</td><td>124436</td></tr><tr align=right><td>988000</td><td>30875</td><td>985000</td><td>155311</td></tr></table>
+
+<br>In this case the final amount of fund is the total of the fund under operation, 985000 JPY, and the cumulative interests, 155311 JPY, which is 1140311 JPY. </p>
+
+<h3>Input</h3>
+<p>
+The input consists of datasets. The entire input looks like: 
+<br><ul>the number of datasets (=m) 
+<br>1st dataset 
+<br>2nd dataset 
+<br>... 
+<br>m-th dataset </ul>
+<br>The number of datasets, m, is no more than 100. Each dataset is formatted as follows. 
+<br><ul>the initial amount of the fund for operation 
+<br>the number of years of operation 
+<br>the number of available operations (=n) 
+<br>operation 1 
+<br>operation 2 
+<br>... 
+
+<br>operation n </ul>
+<p><br>The initial amount of the fund for operation, the number of years of operation, and the number of available operations are all positive integers. The first is no more than 100000000, the second no more than 10, and the third no more than 100. 
+<br><ul>Each ``operation'' is formatted as follows. </ul>
+<br><p>simple-or-compound annual-interest-rate annual-operation-charge 
+<br>where simple-or-compound is a single character of either '0' or '1', with '0' indicating simple interest and '1' compound. annual-interest-rate is represented by a decimal fraction and is an integral multiple of 1/8192. annual-operation-charge is an integer not exceeding 100000. </p>
+<br>
+
+<h3>Output</h3>
+<p>
+For each dataset, print a line having a decimal integer indicating the final amount of fund for the best operation. The best operation is the one that yields the maximum final amount among the available operations. Each line should not have any character other than this number.
+
+<p><p>
+You may assume the final balance never exceeds 1000000000. You may also assume that at least one operation has the final amount of the fund no less than the initial amount of the fund. 
+
+<h3>Example</h3>
+
+<pre>
+<b>Input:</b>
+4
+1000000
+5
+2
+0 0.03125 3000
+1 0.03125 3000
+6620000
+7
+2
+0 0.0732421875 42307
+1 0.0740966796875 40942
+39677000
+4
+4
+0 0.0709228515625 30754
+1 0.00634765625 26165
+0 0.03662109375 79468
+0 0.0679931640625 10932
+10585000
+6
+4
+1 0.0054931640625 59759
+1 0.12353515625 56464
+0 0.0496826171875 98193
+0 0.0887451171875 78966
+
+<b>Output:</b>
+1150357
+10559683
+50796918
+20829397
+</pre>
+
+</div>
+
+<div class="text-center">
+	<a href="/submit/OFORTUNE/" class="btn btn-primary btn-lg"><i class="fa fa-send"></i> Submit solution!</a>
+</div>
+			<!-- google_ad_section_end -->
+			
+			<div id="ccontent">
+			<!-- google_ad_section_start -->
+			
+<hr style="clear:both;"/>
+<a href="#" onclick="toggleComments(); return false;"><span id="comments_sh">hide</span> comments</a><br/>
+
+<a id="comments"></a>
+<table id="comments_table" width="100%">
+		<tr>
+		<td colspan="2">
+		<ul class="pagination" style="">
+			<li class="disabled"><span>&lt;</span></li>
+		<li class="disabled"><span>Previous</span></li>
+						<li class="active"><span>1</span></li> 
+							<li><a href="/problems/OFORTUNE/cstart=10" class="pager_link">2</a></li> 
+						<li><a href="/problems/OFORTUNE/cstart=10" class="pager_link">Next</a></li>
+		<li><a href="/problems/OFORTUNE/cstart=10" class="pager_link">&gt;</a></li>
+	</ul>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+				</td>
+	</tr>
+	
+	<script language="JavaScript">
+	<!--
+	$(document).ready(function(){
+        $('.pager_link').bind('click', function(me){
+                var href=$(me.currentTarget).attr('href');
+		$('#ccontent').animate({opacity: 0.5},1);
+                $.ajax({
+                        type: "GET",
+                        url: href+",ajax=1",
+                        contentType: "application/x-www-form-urlencoded;charset=ISO-8859-2",
+                        success: function(data){
+                                $('#ccontent').html(data);
+				$('#ccontent').animate({opacity: 1.0},1);
+                        },
+                        error: function(err){
+                                alert('error');
+                        }
+                });
+                return false;
+        });
+	});
+	-->
+	</script>
+	
+
+
+
+			
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/edcdb383c99cf8c82b6c828788a36552?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/abinator_1308">abinator_1308</a>: 
+								<span style="font-size: 10px; color: #666;">2016-05-29 10:04:47</span>
+		<br/>
+				<p>use comments in the program</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/38d4b777d1002cabb37f5fe03ca3eb0e?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/raghav151997">raghav151997</a>: 
+								<span style="font-size: 10px; color: #666;">2016-01-27 15:12:05</span>
+		<br/>
+				<p>don't directly multiply the amount with input interest....instead multiply with k/8192. where(k=interest*8192)..Also use double.<br/>costed me 3 WA :(</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/23cd1d17d575e2a33f594a6191c376a1?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/rna">rahul_verma</a>: 
+								<span style="font-size: 10px; color: #666;">2015-09-17 19:41:43</span>
+		<br/>
+				<p>AC. in first go........</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/96fb65d9b30865376ec35e5cac3600df?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/sz27">Shivam Singh</a>: 
+								<span style="font-size: 10px; color: #666;">2015-08-19 08:34:16</span>
+		<br/>
+				<p>take initial fund,annual charge and the variables in between which you operate upon in long long, else it won't give AC.</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/1a69b6c28da25ad276dba97e34659b1f?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/varshubham">Vars</a>: 
+								<span style="font-size: 10px; color: #666;">2015-08-15 21:33:58</span>
+		<br/>
+				<p>reading question was bit difficult then solving it... ;)<br/></p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/182bcf5da96fe9d2081315f511c69b26?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/bjcs_bits028">Bhuvnesh Jain</a>: 
+								<span style="font-size: 10px; color: #666;">2015-06-02 13:02:06</span>
+		<br/>
+				<p>too easy....you can gain a lot of points</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/612e70cc406b7496bdb8207347bf2bd8?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/animeshlal">Animesh Lal</a>: 
+								<span style="font-size: 10px; color: #666;">2015-01-10 12:59:34</span>
+		<br/>
+				<p>AC in 1 go :) Very easy !</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/33d5b3b960e1b2afdc09af1b39b2663c?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/max0806-[delete">[deleted]</a>: 
+								<span style="font-size: 10px; color: #666;">2013-06-14 13:14:19</span>
+		<br/>
+				<p>finally wrote a code with comments ;)<br/></p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/dafe6d5c3d83775e6b8c248a2081e7ba?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/wasi0013">&#2451;&#2479;&#2492;&#2494;&#2488;&#2496; (Wasi)</a>: 
+								<span style="font-size: 10px; color: #666;">2013-04-11 10:49:42</span>
+		<br/>
+				<p>Oh man! after a lot of WA in C and python.<br/>solved it via python 3.2.3. <br/><br/>Nice and Simple problem!</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/ba34f68a0b7ba4f4e39d9a036d158a7d?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/sakku">saket diwakar</a>: 
+								<span style="font-size: 10px; color: #666;">2012-03-04 20:17:23</span>
+		<br/>
+				<p>no the given test cases are correct...</p>
+						</td>
+	</tr>
+			
+</table>
+
+
+<script language="javascript" type="text/javascript">
+<!--
+function getCookieVal (offset) {
+        var endstr = document.cookie.indexOf (";", offset);
+        if (endstr == -1) { 
+                endstr = document.cookie.length; 
+        }
+        return unescape(document.cookie.substring(offset, endstr));
+}
+
+function GetCookie (name) {
+  var arg = name + "=";
+  var alen = arg.length;
+  var clen = document.cookie.length;
+  var i = 0;
+  while (i < clen) {
+    var j = i + alen;
+    if (document.cookie.substring(i, j) == arg) {
+      return getCookieVal (j);
+      }
+    i = document.cookie.indexOf(" ", i) + 1;
+    if (i == 0) break; 
+    }
+  return null;
+}
+
+function toggleComments() {
+        var a = document.getElementById('comments_table');
+        var d = a.style.display;
+        if( d == "" || d == "block" ){
+                d = "none";
+                document.getElementById('comments_sh').innerHTML = 'show';
+        } else {
+                d = "block";
+                document.getElementById('comments_sh').innerHTML = 'hide';
+        }
+        a.style.display = d;
+        document.cookie="comments_table="+d+"; path=/;";
+}
+
+if( GetCookie('comments_table') == 'none' ){
+        document.getElementById('comments_sh').innerHTML = 'show';
+        document.getElementById('comments_table').style.display = 'hide';
+}
+
+-->
+</script>
+
+
+			<!-- google_ad_section_end -->
+			</div>
+			<table width="100%">
+        </table>
+<br/>
+		</div>
+	</div><!-- endof col-lg-8 col-md-8 -->
+	
+	<div class="col-lg-4 col-md-4">
+	
+				<div id="problem-btn-submit-box">
+			<a href="/submit/OFORTUNE/" id="problem-btn-submit" class="btn btn-primary" style="width: 100%; margin-bottom: 20px;"><i class="fa fa-send"></i> Submit solution!</a>
+		</div>
+				
+		<table border=0 cellspacing=0 cellpadding=0 style="margin-bottom:10px" class="probleminfo" id="problem-meta">
+			<colgroup>
+				<col width="120"/>
+				<col/>
+			</colgroup>
+			<tbody>
+			<tr><td>Added by:</td><td><a href="/users/steinersp">Camilo Andrés Varela León</a></td></tr>
+			<tr><td>Date:</td><td>2007-07-26</td></tr>
+			<tr><td>Time limit:</td><td>0.146s
+			</td></tr>
+			<tr><td>Source limit:</td><td>50000B</td></tr>
+						<tr><td>Memory limit:</td><td>1536MB</td></tr>
+										<tr>
+					<td>Cluster:</td>
+					<td>
+													<a href="/clusters/" target="_blank">Cube (Intel G860)</a>
+								
+					</td>
+				</tr>
+						<tr><td>Languages:</td><td>All except: ERL JS NODEJS PERL 6 VB.net </td></tr>
+			<tr><td>Resource:</td><td>Japan Domestic, 2005</td></tr>													</tbody>
+		</table>
+
+		<div class="right-box-hehe">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- spoj_problem_336x280_right2 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-4453360425583535"
+     data-ad-slot="3836605032"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+		</div>
+	
+		<!-- BEGIN: Voting for problem -->
+		
+				
+		<!-- END: Voting the problem -->
+		
+		<div class="right-box-hehe">
+							<div class="c336x280"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- spoj_problem_336x280_right -->
+	<ins class="adsbygoogle"
+			style="display:inline-block;width:336px;height:280px"
+					data-ad-client="ca-pub-4453360425583535"
+							data-ad-slot="7873511834"></ins>
+							<script>
+							(adsbygoogle = window.adsbygoogle || []).push({});
+	</script></div>
+						<br/>
+		</div>
+		
+				
+		
+		<script type="text/javascript">
+			function callback_after_vote(type, data)
+			{
+				var response = $.parseJSON(data);
+				manage_vote_interface(type);
+				//.html('<div class="vote-thank-you">Thank you!</div>');
+				
+
+				if (type == "problem" || type == "implementation") {
+					var progressBarValue = Math.round(2 + 98 * response.avg / 3);
+					var progressBarType;
+					if (progressBarValue < 25) progressBarType = "progress-bar-primary";
+					else if (progressBarValue < 50) progressBarType = "progress-bar-success";
+					else if (progressBarValue < 75) progressBarType = "progress-bar-warning";
+					else progressBarType = "progress-bar-danger";
+					
+					$("#rate-" + type + "-box .progress-bar").css("width", progressBarValue.toString() +"%");
+					$("#rate-" + type + "-box .progress-bar").attr("aria-valuenow", progressBarValue.toString());
+					$("#rate-" + type + "-box .progress-bar").attr("class", "progress-bar " + progressBarType);
+					$("#rate-" + type + "-box .progress-value").html(progressBarValue.toString() +"%");
+				}
+				else if (type == "quality") {
+					var quality_plus = response.sum_plus;
+					var quality_minus = response.sum_minus;
+
+					var box_content = '';
+
+					if (quality_plus > 0 || quality_minus > 0) {
+						if (quality_plus > 0) {
+							box_content += '<font size="+2"><span class="label label-success">' +
+								quality_plus.toString() + 
+								' <span class="fa fa-thumbs-o-up"></span></span></font>';
+						}
+						if (quality_minus > 0) {
+							box_content += '<font size="+2"><span class="label label-danger">' +
+								quality_minus.toString() + 
+								' <span class="fa fa-thumbs-o-down"></span></span></font>';
+						}
+					}
+
+					$( "#rate-" + type + "-box" ).empty().html(box_content);
+				}
+
+				// update count
+				if (response.update_count == 1) {
+					var count = parseInt($("#votes_count").html(), 10);
+					count++;
+					var votes_word = " vote";
+					if (count > 1) votes_word += "s";
+					$("#votes_count").empty().html(count.toString() + votes_word);
+				}
+			}
+			$( ".rate-btn" ).click(function() {
+				var rate_type = $(this).attr('data-rate-type').toString();
+				var rate_type_full = "";
+				var rate = $(this).attr('data-rate').toString();
+				if (rate_type == "p") rate_type_full = "problem";
+				else if (rate_type == "i") rate_type_full = "implementation";
+				else if (rate_type == "q") rate_type_full = "quality";
+				$.get( '/?a=vote&pid=1697&t=' + rate_type + '&r=' + rate, function( data ) {
+				  callback_after_vote(rate_type_full, data);
+				});
+			});
+			function manage_vote_interface(type) {
+				number_of_voteboxes--;
+				/*
+				if (number_of_voteboxes == 0) {
+					$( "#vote-box" ).fadeOut(1500, function() {
+						$(this).remove();
+					});
+				} else {
+					$( "#vote-" + type + "-box" ).fadeOut(1500, function() {
+						$(this).remove();
+					});
+				}
+				*/
+				var n = $('.vote-thank-you').length;
+				var offset = (n * 60).toString() + "px";
+				$(document.body).append(
+					'<div class="vote-thank-you" style="margin: 40%;">' +
+					'<div class="alert alert-success" style="position: fixed; top: '+offset+';">' +
+					'<strong>Thank you for voting!</strong>' +				
+					'</div></div>');
+				setTimeout(function(){$( ".vote-thank-you" ).fadeOut(1500, function() {
+					$(this).remove();
+				});},2000);
+			}
+		</script>
+		
+		
+	</div><!-- endof col-lg-4 col-md-4 -->
+</div>
+
+
+
+
+
+
+<style>
+ul.list-unstyled li{
+	margin-bottom: 5px;
+}
+ul.list-unstyled li a.btn{
+	width: 100%;
+}
+ul.ui-autocomplete{
+	z-index: 10000;
+	width: 200px !important;
+}
+</style>
+	<br/>
+</div>
+		
+		
+		<div class="container" id="footer">
+			<div class="row">
+				<div class="col-md-2">
+					
+				</div>
+				<div class="col-md-8 text-center">
+					<a href="/info">About</a> | <a href="/tutorials">Tutorial</a> | <a href="/tools">Tools</a> | <a href="/clusters">Clusters</a> | <a href="/credits">Credits</a> | <a href="/jobs">Jobs</a> | <a href="/sphereengine">API</a> | <a href="/gfx/spoj-terms.pdf" target="_blank">Terms</a>
+				</div>
+				<div class="col-md-2 text-right">
+					<a href="/rss/" ><img src="//stx1.spoj.com/gfx/rss10x10.gif" border=0>&nbsp;RSS</a>&nbsp;
+				</div>
+			</div>
+		</div>
+		
+		<div class="text-center" id="footer-srl">
+			
+	&copy; Spoj.com. All Rights Reserved. Spoj uses <a href="http://sphere-engine.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Engine</a>&trade; &copy; by <a href="http://sphere-research.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Research Labs</a>.
+
+		</div> 
+	</div>
+
+	<!-- JavaScripts -->
+	
+		
+	
+	<script type="text/javascript">
+	$(function(){
+		setTimeout(function(){
+			$('.no_a_info').css('visibility', 'visible');
+		}, 5000);
+		
+		if(!$('.aProblemTop').length && !$('.aProblemsTop').length && !$('.aSubmitTop').length && !$('.aStatusTop').length && !$('.aMainRight').length){
+			ga('send', 'event', 'ads', 'no-ads', 'main-contest');
+		}
+		if ($('.aProblemTop').height() == 0){
+			$('.aProblemTop').css({'border': '1px solid #ddd', 'background': '#f0f4e3', 'height': 90});
+			$('.aProblemTop').html($('<p class="text-center">using adblock?</p><h4 class="text-center">Online ads help us to maintain site.</h4><p class="text-center"><strong>please whitelist *.spoj.com</strong></p>'));
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemTop');
+		}
+		if ($('.aProblemsTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemsTop');
+		}
+		if ($('.aSubmitTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aSubmitTop');
+		}
+		if ($('.aStatusTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aStatusTop');
+		}
+		if ($('.aMainRight').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aMainRight');
+		}
+	});
+	</script>
+	
+	
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.timers.js"></script>
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.cookie.js"></script>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+	<script src="//crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
+	<script src="//stx1.spoj.com/gfx/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+	<script src="//stx1.spoj.com/gfx/scripts/tour.js"></script>
+	
+	
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&appId=321676846207&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	
+	
+
+
+<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-10507872-1', 'auto');
+	  ga('require', 'linkid', 'linkid.js');
+	  ga('send', 'pageview');
+	</script>
+<script type="text/javascript">
+	$(function(){
+		$(document).on('click', '.track', function(){
+			var event = $(this).attr('data-event');
+			var action = $(this).attr('data-action');
+			var value = $(this).attr('data-value');
+			ga('send', 'event', event, action, value);
+		});
+	});
+	</script>
+
+
+</body>
+</html>

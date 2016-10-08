@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="not-ie" lang="en"> <!--<![endif]-->
+<head>
+	<!-- main header -->
+	<meta charset="utf-8">
+	
+				<title>SPOJ.com - Problem AKBAR</title>
+		  
+	<meta name="keywords" content="language, algorithm, spoj, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  		<meta property="og:title" content="SPOJ.com - Problem AKBAR"/>
+    <meta property="fb:app_id"      content="321676846207" />
+	<meta property="og:type" content="spoj-pl:problem"/>
+	<meta property="og:url" content="http://www.spoj.com/problems/AKBAR/"/>
+	<meta property="og:image" content="//stx1.spoj.com/gfx/logo-cr.png"/>
+	<meta property="og:description" content="..."/>
+	<meta name="description" content="..."/>
+		<meta property="og:site_name" content="spoj.com"/>
+
+  <!--[if (gte IE 9)|!(IE)]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" id="metatag">
+  <![endif]--> 
+
+	  <!-- Favicon -->
+	  <link href="//stx1.spoj.com/gfx/favicon_new.png" rel="shortcut icon" type="image/x-icon" />
+	  
+	  <!-- RSS -->
+	  <link href="/rss/" rel="alternate" type="application/rss+xml" title="RSS Feed">
+	
+	  <!-- Web Fonts -->
+	  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">  
+
+	<!-- Internet Explorer condition - HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]--> 
+	
+	
+	
+	<!-- CSS: Bootstrap, Font-awesome, Bootstrap libs,  -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+  	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  	<link href="//stx1.spoj.com/gfx/bootstrap-tour/build/css/bootstrap-tour.min.css" rel="stylesheet" />
+  	<link href="//stx1.spoj.com/themes/bootstrap-social.css" rel="stylesheet" type="text/css" />
+  	
+	<link href="//stx1.spoj.com/themes/common.css?4" rel="stylesheet" type="text/css" id="theme0" />
+	<link href="//stx1.spoj.com/themes/en_new.css?4" rel="stylesheet" type="text/css" id="theme" />
+	
+	<!-- JS -->
+	<script type="text/javascript" src='//code.jquery.com/jquery-1.11.1.min.js'></script>
+	<script type="text/javascript" src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+	
+		
+		
+	<script type="text/javascript" language="javascript">
+	$(function () { 
+		$("#profile-menu").popover();
+	});
+	function UnCryptMailto(s) {
+		var n=0;
+		var r="";
+		for(var i=0;i<s.length;i++) {		
+			n=s.charCodeAt(i); 
+			if (n>=8364) {n = 128;}
+			r += String.fromCharCode(n+(2));	
+		}
+		return r;
+	}
+	function linkTo_UnCryptMailto(s)	{
+		location.href=UnCryptMailto(s);
+	}
+	</script>
+	
+	<script type="text/javascript">
+	function recordOutboundLink(link, category, action) {
+	  try {
+	    var pageTracker=_gat._getTracker("UA-XXXXX-X");
+	    pageTracker._trackEvent(category, action);
+	    setTimeout('document.location = "' + link.href + '"', 100)
+	  }catch(err){}
+	}
+	</script>
+	
+</head>
+
+<body>
+
+	
+	<!-- <div class="space30"></div> -->
+	
+	<!-- Content -->
+	<div class="content">
+		<div class="container" id="header">
+			<div class="row">
+				<div class="col-md-12 text-right">
+										<form method="post" style="display: none;" action="/login/" id="login-form">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-2">
+								<input type="hidden" name="next_raw" value="/"/>
+								<input type="hidden" name="autologin" value="1"/>
+								<input type="text" name="login_user" placeholder="Username" class="form-control input-sm" style="display: inline-block; width: 25%;"/>
+								<input type="password" name="password" placeholder="Password" class="form-control input-sm" style="display: inline-block; width: 25%;"/>
+																<button type="submit" class="btn btn-default btn-sm" style="display: inline-block; margin-right: 10px;"><span class="fa fa-sign-in fa-lg"></span> <strong>sign in</strong></button>
+																<a href="/register"><i class="fa fa-user-plus"></i> sign up</a>
+				        									</div>
+						</div>
+					</form>
+										
+					
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-md-4">
+					<a href="/" class="navbar-brand">
+						<img src="//stx1.spoj.com/gfx/2015e.png" style="height: 40px;"/>
+					</a>
+					<div class="navbar-header">
+				      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+				        <span class="sr-only">Toggle navigation</span>
+				        <i class="fa fa-bars"></i>
+				      </button>
+				    </div>
+				</div>
+				<div class="col-md-8" id="menu">
+				
+					
+					<div class="row">
+					<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation"  style="border: 0px;">
+				      <ul class="nav navbar-nav" style="  float: right; margin-top: 10px;">
+				      						        <li class="active">
+					          <a href="/problems"><i class="fa fa-puzzle-piece"></i> PROBLEMS</a>
+					        </li>
+					        					        <li >
+					          <a href="/status"><i class="fa fa-circle"></i> STATUS</a>
+					        </li>
+					        <li >
+					          <a href="/ranks"><i class="fa fa-trophy"></i> RANKS</a>
+					        </li>
+					        <li >
+					          <a href="http://spoj.com/forum"><i class="fa fa-comments-o"></i> DISCUSS</a>
+					        </li>
+					        
+					        <li >
+					          <a href="/contests">CONTESTS</a>
+					        </li>
+					        <!-- 
+					        <li >
+					          <a href="/jobs"><i class="fa fa-briefcase"></i> JOBS</a>
+					        </li>
+						-->
+											        					        <li >
+					        	<a href="/login" class="text-success" onclick="$('#login-form').show(); $('input[name=login_user]').focus(); return false;"><i class="fa fa-sign-in"></i> sign in</a>
+					        </li>
+					        						
+				        
+				      </ul>
+				    </nav>
+				    </div>
+				    
+				    
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="container" id="menu">
+			
+		</div>
+		
+		<div class="container" id="content">
+		<script type='text/javascript' src='/gfx/jquery.cxhelp2.js'></script>
+
+
+
+ <!-- wykorzystywane w pcontent.html (by wiele) -->
+
+<div class="submenu">
+	
+		<ol class="breadcrumb">
+	  <li><a href="/problems">Problems</a></li>
+	  <li><a href="/problems/classical">classical</a></li>
+	  <li class="active">Akbar , The great</li>
+	</ol>
+		
+	<ol class="navbar-right">
+						
+				<li><a href="/status/AKBAR/" class="">Status</li></a>
+		<li><a href="/ranks/AKBAR/" class="">Ranking</li></a>
+	</ol>
+</div>
+
+
+	<script type="text/javascript">
+		var number_of_voteboxes = "";
+	</script>
+
+
+<div class="row first-row">
+	<div class="col-lg-8 col-md-8">
+		<div class="prob" style="position: relative">
+
+			<!-- google_ad_section_start -->
+			<!-- plik z pomoca kontekstowa (cxhelp_*) dziedziczony po pindex.html -->
+
+
+
+<script type="text/javascript" src="/gfx/jscripts/tiny_mce/plugins/asciimath/js/ASCIIMathMLwFallback.js"></script>
+<!--script type="text/javascript" src="/gfx/jscripts/tiny_mce/plugins/asciisvg/js/ASCIIsvgPI.js"></script-->
+<script type="text/javascript">
+<!--
+var AScgiloc = 'http://www.imathas.com/imathas/filter/graph/svgimg.php';
+var AMTcgiloc = "/files/gif/";
+-->
+</script>
+
+
+<div class="text-center"><center>
+	<div class="aProblemTop c728x90"><div class="no_a_info"></div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-4453360425583535"
+     data-ad-slot="1073332635"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+	</center>
+</div>
+<br/>
+
+<h2 id="problem-name" class="text-center">AKBAR - Akbar , The great</h2>
+
+
+<div class="row">
+	<div id="problem-tags" class="col-lg-12 text-center">
+												
+					<a href="/problems/tag/graph"><span class=" tag-algorithm-datastructure- tag-link problem-tag" data-tagid="57">#graph<span class="fa fa-times manage-tag-ar" style="display: none"></span></span></a>
+									
+					<a href="/problems/tag/bfs"><span class=" tag-algorithm-datastructure- tag-link problem-tag" data-tagid="60">#bfs<span class="fa fa-times manage-tag-ar" style="display: none"></span></span></a>
+									
+					<a href="/problems/tag/dfs"><span class=" tag-algorithm-datastructure- tag-link problem-tag" data-tagid="61">#dfs<span class="fa fa-times manage-tag-ar" style="display: none"></span></span></a>
+						</div>
+</div>
+<br/>
+
+<div id="problem-body">
+	<p>&nbsp;</p>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">All of us are familiar with the reign of the great mughal ruler , Akbar. He was always concerned with the prosperity and safety of the people . Therefore to safeguard his kingdom (which consisted of N cities) he wanted to place secret soldiers all over his kingdom so as to protect the people . But since his kingdom is very large therefore he wanted to place as minimum of them as possible because the salary of these undercover soldiers was very high ,ie, in such a way that every city is protected by only one soldier .</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">&nbsp;As for these soldiers , they have varible strength .</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">The strength of a particular soldier is defined as the number of cities he can safeguard from a particular city along with that city.&nbsp;</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">Also the kingdom is connected with a network of secret two way roads for faster access only accessible to these soldiers. The length of any road on this network between any two cities is 1 kms .There are R such roads in the kingdom.&nbsp;</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">He had given this task to birbal to place the soldiers . Birbal didn't wanted to be a fool in front of the king , therefore took the job and placed M soldiers all over the kingdom but he was not very good at mathematics . But since he is very intelligent he somehow places the guards all over the kingdom and now turns to you (who is a genius mathematician ;) ) to check whether his placements are good or not.</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">Your task is to check if all the placements of the soldiers are optimum or not.</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">INPUT</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">The input consists of t test cases . Each test case then consists of 3 parts.The first line consists of N and R and M.</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">the next R lines consists of two numbers a and b denoting the two cities between which a road exists .</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">the next M lines consists of 2 numbers k and strength denoting the city number and the strength of that particular soldier respectively .</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">=&gt; strength 0 means it will only guard the city on which it is present .</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">=&gt; assume every city is accesible from every other city .</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">CONSTRAINTS</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;"><span style="white-space: pre;"> </span>t &lt;= 10;</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;"><span style="white-space: pre;"> </span>1 &lt;= N &lt;= 10^6;</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;"><span style="white-space: pre;"> </span>N-1 &lt;= R &lt;= min(10^9 , (N*(N-1))/2));</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;"><span style="white-space: pre;"> </span>1 &lt;= k &lt;= N;</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;"><span style="white-space: pre;"> </span>0 &lt;= strength &lt;= 10^6</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">OUTPUT</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">print "Yes" if the soldiers are placed optimumly else print "No". (quotes are for clearity)</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">SAMPLE INPUT</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">2&nbsp;</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">3 2 2</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">1 2</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">2 3</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">1 2</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">2 0</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">4 5 2</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">1 4</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">1 2</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">1 3</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">4 2</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">3 4</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">2 1</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">3 0</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">SAMPLE OUTPUT</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">No</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">Yes</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">WARNING ==&gt; Large input . Be careful with certain languages. Use scanf() for c/c++ ;</div>
+<p>All of us are familiar with the reign of the great mughal ruler , Akbar. He was always concerned with the prosperity and safety of the people . Therefore to safeguard his kingdom (which consisted of N cities) he wanted to place secret soldiers all over his kingdom so as to protect the people . But since his kingdom is very large therefore he wanted to place them in such a way that every city is protected by <strong>one and only one</strong> soldier.According to Akbar , this is the optimum placement.</p>
+<p>&nbsp;As for these soldiers they can protect multiple cities according to their strengths.</p>
+<p>The strength of a particular soldier is defined as the maximum distance upto which a guard can protect a city from its base city(base city is the city assigned to the guard). If there are 3 cities C1, C2 and C3 such that C1 C2 and C2 C3 are connected respectively, if a soldier with strength 1 is placed at C2 then all the cities C1, C2 and C3 are protected by that soldier.</p>
+<p>Also the kingdom is connected with a network of secret two way roads for faster access only accessible to these soldiers. The length of any road on this network between any two cities is 1 kms .There are R such roads in the kingdom.&nbsp;</p>
+<p>He had given this task to birbal to place the soldiers . Birbal didn't wanted to be a fool in front of the king , therefore took the job and placed M soldiers all over the kingdom but he was not very good at mathematics . But since he is very intelligent he somehow places the guards all over the kingdom and now turns to you (who is a genius mathematician ;) ) to check whether his placements are good or not.</p>
+<p>&nbsp;</p>
+<p>Your task is to check if the placements of the soldiers are optimum or not.</p>
+<p>&nbsp;</p>
+<p><strong>INPUT</strong></p>
+<p>&nbsp;</p>
+<p>The input consists of <strong>T</strong> test cases . Each test case then consists of 3 parts.The first line consists of <strong>N,&nbsp;R </strong>and<strong> M</strong>.</p>
+<p>the next <strong>R</strong> lines consists of two numbers <strong>A</strong>&nbsp;and <strong>B</strong>&nbsp;denoting the two cities between which a road exists .</p>
+<p>the next <strong>M</strong> lines consists of 2 numbers, city number&nbsp;<strong>K</strong> and strength <strong>S</strong>&nbsp;of that particular soldier.</p>
+<p>&nbsp;</p>
+<p>=&gt; strength 0 means it will only guard the city on which it is present .</p>
+<p>=&gt; assume every city is accesible from every other city .</p>
+<p>&nbsp;</p>
+<p><strong>CONSTRAINTS</strong></p>
+<p>&nbsp;</p>
+<p><span style="white-space: pre;"> <strong>T</strong></span>&nbsp;&lt;= 10;</p>
+<p><span style="white-space: pre;"> </span>1 &lt;= <strong>N</strong> &lt;= 10^6;</p>
+<p><span style="white-space: pre;"> </span><strong>N&nbsp;</strong>-1 &lt;= <strong>R</strong> &lt;= <strong>min</strong>( 10^7 , (&nbsp;<strong>N&nbsp;</strong>* (<strong>N&nbsp;</strong>- 1) ) / 2) );</p>
+<p><span style="white-space: pre;"> </span>1 &lt;= <strong>K</strong> &lt;= <strong>N</strong>;</p>
+<p><span style="white-space: pre;"> </span>0 &lt;= <strong>S</strong> &lt;= 10^6</p>
+<p>&nbsp;</p>
+<p><strong>OUTPUT</strong></p>
+<p>&nbsp;</p>
+<p>print "Yes" if the soldiers are placed optimumly else print "No". (quotes are for clarity)</p>
+<p>&nbsp;</p>
+<p><strong>SAMPLE INPUT</strong></p>
+<p>&nbsp;</p>
+<p>2</p>
+<p>3 2 2</p>
+<p>1 2</p>
+<p>2 3</p>
+<p>1 2</p>
+<p>2 0</p>
+<p>4 5 2</p>
+<p>1 4</p>
+<p>1 2</p>
+<p>1 3</p>
+<p>4 2</p>
+<p>3 4</p>
+<p>2 1</p>
+<p>3 0</p>
+<p>&nbsp;</p>
+<p><strong>SAMPLE OUTPUT</strong></p>
+<p>&nbsp;</p>
+<p>No</p>
+<p>Yes</p>
+<p>&nbsp;</p>
+<p><strong>WARNING</strong> ==&gt; Large input.</p>
+<p>&nbsp;</p>
+</div>
+
+<div class="text-center">
+	<a href="/submit/AKBAR/" class="btn btn-primary btn-lg"><i class="fa fa-send"></i> Submit solution!</a>
+</div>
+			<!-- google_ad_section_end -->
+			
+			<div id="ccontent">
+			<!-- google_ad_section_start -->
+			
+<hr style="clear:both;"/>
+<a href="#" onclick="toggleComments(); return false;"><span id="comments_sh">hide</span> comments</a><br/>
+
+<a id="comments"></a>
+<table id="comments_table" width="100%">
+		<tr>
+		<td colspan="2">
+		<ul class="pagination" style="">
+			<li class="disabled"><span>&lt;</span></li>
+		<li class="disabled"><span>Previous</span></li>
+						<li class="active"><span>1</span></li> 
+							<li><a href="/problems/AKBAR/cstart=10" class="pager_link">2</a></li> 
+						<li><a href="/problems/AKBAR/cstart=10" class="pager_link">Next</a></li>
+		<li><a href="/problems/AKBAR/cstart=10" class="pager_link">&gt;</a></li>
+	</ul>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+				</td>
+	</tr>
+	
+	<script language="JavaScript">
+	<!--
+	$(document).ready(function(){
+        $('.pager_link').bind('click', function(me){
+                var href=$(me.currentTarget).attr('href');
+		$('#ccontent').animate({opacity: 0.5},1);
+                $.ajax({
+                        type: "GET",
+                        url: href+",ajax=1",
+                        contentType: "application/x-www-form-urlencoded;charset=ISO-8859-2",
+                        success: function(data){
+                                $('#ccontent').html(data);
+				$('#ccontent').animate({opacity: 1.0},1);
+                        },
+                        error: function(err){
+                                alert('error');
+                        }
+                });
+                return false;
+        });
+	});
+	-->
+	</script>
+	
+
+
+
+			
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/22e60ce93008186a2219c7653e5ad00c?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/rahulpadhy">rahulpadhy</a>: 
+								<span style="font-size: 10px; color: #666;">2016-08-12 06:47:42</span>
+		<br/>
+				<p>In case of cyclic graphs, do we visit the already visited nodes again ?<br/></p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/a5fd9042a8dc98cb8db69f703bed4194?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/sumit_danish">sumit_danish</a>: 
+								<span style="font-size: 10px; color: #666;">2016-08-06 17:50:24</span>
+		<br/>
+				<p>is this bidirectional graph..?</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/a5fd9042a8dc98cb8db69f703bed4194?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/sumit_danish">sumit_danish</a>: 
+								<span style="font-size: 10px; color: #666;">2016-08-06 17:08:18</span>
+		<br/>
+				<p>can any one please tell me what is N ?</p>
+				<b>Last edit: 2016-08-06 17:08:40</b>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/a934704928fb905b6cf0a6f0d53ae203?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/akash125">akash125</a>: 
+								<span style="font-size: 10px; color: #666;">2016-07-26 20:39:24</span>
+		<br/>
+				<p></p>
+				<b>Last edit: 2016-07-27 16:57:01</b>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/9c150a8f4219ff1d391beabbd8389764?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/skmnc">Shubham Krishna</a>: 
+								<span style="font-size: 10px; color: #666;">2016-06-22 13:37:24</span>
+		<br/>
+				<p>I don't know why I am getting WA :| I have verified answers through Spoj Toolkit but isn't working.<br/>http://www.spoj.com/submit/AKBAR/id=17156724 is my code</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/03f216e791024306fbe1a3551ee2c072?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/hollapr">hollapr</a>: 
+								<span style="font-size: 10px; color: #666;">2016-05-14 21:15:30</span>
+		<br/>
+				<p>Catch...<br/>1. Check whether all the cities are visited before printing the result with solider covering all cities.<br/>2. Ensure for City A solider A reaches with strength 0 in 1 path and Strength 1 in other path. <br/></p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/bed66c83e72e1b5b3f533050f39c1355?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/kaspers">|RAMSDEN|</a>: 
+								<span style="font-size: 10px; color: #666;">2016-05-04 20:09:27</span>
+		<br/>
+				<p>i think testcases are very weak.. <br/>1<br/>3 2 2<br/>1 2<br/>2 3<br/>1 2<br/>Solution printing "yes" are getting accepted but i think solution should be "No" <br/><br/>2 2</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/60b8981be5ca0bdb186f9de605478752?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/regularnerd">Akshay Damle</a>: 
+								<span style="font-size: 10px; color: #666;">2016-04-22 23:21:15</span>
+		<br/>
+				<p>Nice problem! AC in 1 go :D Took a while though :/</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/754047e90c8d15afce6750ae29782d43?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/vikash039">vikash039</a>: 
+								<span style="font-size: 10px; color: #666;">2016-04-18 14:05:26</span>
+		<br/>
+				<p>can anyone help me with the test_cases?<br/><br/>getting WA, though for every tc posted here i am getting correct ans.... </p>
+				<b>Last edit: 2016-04-18 16:57:12</b>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/668ef385e64ce1bba5735d36753b1196?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/veeranjan_1">Veeranjaneyulu Toka</a>: 
+								<span style="font-size: 10px; color: #666;">2016-03-13 11:51:40</span>
+		<br/>
+				<p>HI, HOW DID YOU SOLVE sigsegv ISSUE?</p>
+						</td>
+	</tr>
+			
+</table>
+
+
+<script language="javascript" type="text/javascript">
+<!--
+function getCookieVal (offset) {
+        var endstr = document.cookie.indexOf (";", offset);
+        if (endstr == -1) { 
+                endstr = document.cookie.length; 
+        }
+        return unescape(document.cookie.substring(offset, endstr));
+}
+
+function GetCookie (name) {
+  var arg = name + "=";
+  var alen = arg.length;
+  var clen = document.cookie.length;
+  var i = 0;
+  while (i < clen) {
+    var j = i + alen;
+    if (document.cookie.substring(i, j) == arg) {
+      return getCookieVal (j);
+      }
+    i = document.cookie.indexOf(" ", i) + 1;
+    if (i == 0) break; 
+    }
+  return null;
+}
+
+function toggleComments() {
+        var a = document.getElementById('comments_table');
+        var d = a.style.display;
+        if( d == "" || d == "block" ){
+                d = "none";
+                document.getElementById('comments_sh').innerHTML = 'show';
+        } else {
+                d = "block";
+                document.getElementById('comments_sh').innerHTML = 'hide';
+        }
+        a.style.display = d;
+        document.cookie="comments_table="+d+"; path=/;";
+}
+
+if( GetCookie('comments_table') == 'none' ){
+        document.getElementById('comments_sh').innerHTML = 'show';
+        document.getElementById('comments_table').style.display = 'hide';
+}
+
+-->
+</script>
+
+
+			<!-- google_ad_section_end -->
+			</div>
+			<table width="100%">
+        </table>
+<br/>
+		</div>
+	</div><!-- endof col-lg-8 col-md-8 -->
+	
+	<div class="col-lg-4 col-md-4">
+	
+				<div id="problem-btn-submit-box">
+			<a href="/submit/AKBAR/" id="problem-btn-submit" class="btn btn-primary" style="width: 100%; margin-bottom: 20px;"><i class="fa fa-send"></i> Submit solution!</a>
+		</div>
+				
+		<table border=0 cellspacing=0 cellpadding=0 style="margin-bottom:10px" class="probleminfo" id="problem-meta">
+			<colgroup>
+				<col width="120"/>
+				<col/>
+			</colgroup>
+			<tbody>
+			<tr><td>Added by:</td><td><a href="/users/prayankmathur">Prayank Mathur</a></td></tr>
+			<tr><td>Date:</td><td>2014-10-12</td></tr>
+			<tr><td>Time limit:</td><td>1s
+			</td></tr>
+			<tr><td>Source limit:</td><td>50000B</td></tr>
+						<tr><td>Memory limit:</td><td>1536MB</td></tr>
+										<tr>
+					<td>Cluster:</td>
+					<td>
+													<a href="/clusters/" target="_blank">Cube (Intel G860)</a>
+								
+					</td>
+				</tr>
+						<tr><td>Languages:</td><td>All </td></tr>
+			<tr><td>Resource:</td><td>own</td></tr>													</tbody>
+		</table>
+
+		<div class="right-box-hehe">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- spoj_problem_336x280_right2 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-4453360425583535"
+     data-ad-slot="3836605032"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+		</div>
+	
+		<!-- BEGIN: Voting for problem -->
+		
+				
+		<!-- END: Voting the problem -->
+		
+		<div class="right-box-hehe">
+							<div class="c336x280"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- spoj_problem_336x280_right -->
+	<ins class="adsbygoogle"
+			style="display:inline-block;width:336px;height:280px"
+					data-ad-client="ca-pub-4453360425583535"
+							data-ad-slot="7873511834"></ins>
+							<script>
+							(adsbygoogle = window.adsbygoogle || []).push({});
+	</script></div>
+						<br/>
+		</div>
+		
+				
+		
+		<script type="text/javascript">
+			function callback_after_vote(type, data)
+			{
+				var response = $.parseJSON(data);
+				manage_vote_interface(type);
+				//.html('<div class="vote-thank-you">Thank you!</div>');
+				
+
+				if (type == "problem" || type == "implementation") {
+					var progressBarValue = Math.round(2 + 98 * response.avg / 3);
+					var progressBarType;
+					if (progressBarValue < 25) progressBarType = "progress-bar-primary";
+					else if (progressBarValue < 50) progressBarType = "progress-bar-success";
+					else if (progressBarValue < 75) progressBarType = "progress-bar-warning";
+					else progressBarType = "progress-bar-danger";
+					
+					$("#rate-" + type + "-box .progress-bar").css("width", progressBarValue.toString() +"%");
+					$("#rate-" + type + "-box .progress-bar").attr("aria-valuenow", progressBarValue.toString());
+					$("#rate-" + type + "-box .progress-bar").attr("class", "progress-bar " + progressBarType);
+					$("#rate-" + type + "-box .progress-value").html(progressBarValue.toString() +"%");
+				}
+				else if (type == "quality") {
+					var quality_plus = response.sum_plus;
+					var quality_minus = response.sum_minus;
+
+					var box_content = '';
+
+					if (quality_plus > 0 || quality_minus > 0) {
+						if (quality_plus > 0) {
+							box_content += '<font size="+2"><span class="label label-success">' +
+								quality_plus.toString() + 
+								' <span class="fa fa-thumbs-o-up"></span></span></font>';
+						}
+						if (quality_minus > 0) {
+							box_content += '<font size="+2"><span class="label label-danger">' +
+								quality_minus.toString() + 
+								' <span class="fa fa-thumbs-o-down"></span></span></font>';
+						}
+					}
+
+					$( "#rate-" + type + "-box" ).empty().html(box_content);
+				}
+
+				// update count
+				if (response.update_count == 1) {
+					var count = parseInt($("#votes_count").html(), 10);
+					count++;
+					var votes_word = " vote";
+					if (count > 1) votes_word += "s";
+					$("#votes_count").empty().html(count.toString() + votes_word);
+				}
+			}
+			$( ".rate-btn" ).click(function() {
+				var rate_type = $(this).attr('data-rate-type').toString();
+				var rate_type_full = "";
+				var rate = $(this).attr('data-rate').toString();
+				if (rate_type == "p") rate_type_full = "problem";
+				else if (rate_type == "i") rate_type_full = "implementation";
+				else if (rate_type == "q") rate_type_full = "quality";
+				$.get( '/?a=vote&pid=21326&t=' + rate_type + '&r=' + rate, function( data ) {
+				  callback_after_vote(rate_type_full, data);
+				});
+			});
+			function manage_vote_interface(type) {
+				number_of_voteboxes--;
+				/*
+				if (number_of_voteboxes == 0) {
+					$( "#vote-box" ).fadeOut(1500, function() {
+						$(this).remove();
+					});
+				} else {
+					$( "#vote-" + type + "-box" ).fadeOut(1500, function() {
+						$(this).remove();
+					});
+				}
+				*/
+				var n = $('.vote-thank-you').length;
+				var offset = (n * 60).toString() + "px";
+				$(document.body).append(
+					'<div class="vote-thank-you" style="margin: 40%;">' +
+					'<div class="alert alert-success" style="position: fixed; top: '+offset+';">' +
+					'<strong>Thank you for voting!</strong>' +				
+					'</div></div>');
+				setTimeout(function(){$( ".vote-thank-you" ).fadeOut(1500, function() {
+					$(this).remove();
+				});},2000);
+			}
+		</script>
+		
+		
+	</div><!-- endof col-lg-4 col-md-4 -->
+</div>
+
+
+
+
+
+
+<style>
+ul.list-unstyled li{
+	margin-bottom: 5px;
+}
+ul.list-unstyled li a.btn{
+	width: 100%;
+}
+ul.ui-autocomplete{
+	z-index: 10000;
+	width: 200px !important;
+}
+</style>
+	<br/>
+</div>
+		
+		
+		<div class="container" id="footer">
+			<div class="row">
+				<div class="col-md-2">
+					
+				</div>
+				<div class="col-md-8 text-center">
+					<a href="/info">About</a> | <a href="/tutorials">Tutorial</a> | <a href="/tools">Tools</a> | <a href="/clusters">Clusters</a> | <a href="/credits">Credits</a> | <a href="/jobs">Jobs</a> | <a href="/sphereengine">API</a> | <a href="/gfx/spoj-terms.pdf" target="_blank">Terms</a>
+				</div>
+				<div class="col-md-2 text-right">
+					<a href="/rss/" ><img src="//stx1.spoj.com/gfx/rss10x10.gif" border=0>&nbsp;RSS</a>&nbsp;
+				</div>
+			</div>
+		</div>
+		
+		<div class="text-center" id="footer-srl">
+			
+	&copy; Spoj.com. All Rights Reserved. Spoj uses <a href="http://sphere-engine.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Engine</a>&trade; &copy; by <a href="http://sphere-research.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Research Labs</a>.
+
+		</div> 
+	</div>
+
+	<!-- JavaScripts -->
+	
+		
+	
+	<script type="text/javascript">
+	$(function(){
+		setTimeout(function(){
+			$('.no_a_info').css('visibility', 'visible');
+		}, 5000);
+		
+		if(!$('.aProblemTop').length && !$('.aProblemsTop').length && !$('.aSubmitTop').length && !$('.aStatusTop').length && !$('.aMainRight').length){
+			ga('send', 'event', 'ads', 'no-ads', 'main-contest');
+		}
+		if ($('.aProblemTop').height() == 0){
+			$('.aProblemTop').css({'border': '1px solid #ddd', 'background': '#f0f4e3', 'height': 90});
+			$('.aProblemTop').html($('<p class="text-center">using adblock?</p><h4 class="text-center">Online ads help us to maintain site.</h4><p class="text-center"><strong>please whitelist *.spoj.com</strong></p>'));
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemTop');
+		}
+		if ($('.aProblemsTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemsTop');
+		}
+		if ($('.aSubmitTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aSubmitTop');
+		}
+		if ($('.aStatusTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aStatusTop');
+		}
+		if ($('.aMainRight').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aMainRight');
+		}
+	});
+	</script>
+	
+	
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.timers.js"></script>
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.cookie.js"></script>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+	<script src="//crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
+	<script src="//stx1.spoj.com/gfx/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+	<script src="//stx1.spoj.com/gfx/scripts/tour.js"></script>
+	
+	
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&appId=321676846207&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	
+	
+
+
+<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-10507872-1', 'auto');
+	  ga('require', 'linkid', 'linkid.js');
+	  ga('send', 'pageview');
+	</script>
+<script type="text/javascript">
+	$(function(){
+		$(document).on('click', '.track', function(){
+			var event = $(this).attr('data-event');
+			var action = $(this).attr('data-action');
+			var value = $(this).attr('data-value');
+			ga('send', 'event', event, action, value);
+		});
+	});
+	</script>
+
+
+</body>
+</html>

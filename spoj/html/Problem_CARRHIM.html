@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="not-ie" lang="en"> <!--<![endif]-->
+<head>
+	<!-- main header -->
+	<meta charset="utf-8">
+	
+				<title>SPOJ.com - Problem CARRHIM</title>
+		  
+	<meta name="keywords" content="language, algorithm, spoj, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  		<meta property="og:title" content="SPOJ.com - Problem CARRHIM"/>
+    <meta property="fb:app_id"      content="321676846207" />
+	<meta property="og:type" content="spoj-pl:problem"/>
+	<meta property="og:url" content="http://www.spoj.com/problems/CARRHIM/"/>
+	<meta property="og:image" content="//stx1.spoj.com/gfx/logo-cr.png"/>
+	<meta property="og:description" content="..."/>
+	<meta name="description" content="..."/>
+		<meta property="og:site_name" content="spoj.com"/>
+
+  <!--[if (gte IE 9)|!(IE)]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" id="metatag">
+  <![endif]--> 
+
+	  <!-- Favicon -->
+	  <link href="//stx1.spoj.com/gfx/favicon_new.png" rel="shortcut icon" type="image/x-icon" />
+	  
+	  <!-- RSS -->
+	  <link href="/rss/" rel="alternate" type="application/rss+xml" title="RSS Feed">
+	
+	  <!-- Web Fonts -->
+	  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">  
+
+	<!-- Internet Explorer condition - HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]--> 
+	
+	
+	
+	<!-- CSS: Bootstrap, Font-awesome, Bootstrap libs,  -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+  	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  	<link href="//stx1.spoj.com/gfx/bootstrap-tour/build/css/bootstrap-tour.min.css" rel="stylesheet" />
+  	<link href="//stx1.spoj.com/themes/bootstrap-social.css" rel="stylesheet" type="text/css" />
+  	
+	<link href="//stx1.spoj.com/themes/common.css?4" rel="stylesheet" type="text/css" id="theme0" />
+	<link href="//stx1.spoj.com/themes/en_new.css?4" rel="stylesheet" type="text/css" id="theme" />
+	
+	<!-- JS -->
+	<script type="text/javascript" src='//code.jquery.com/jquery-1.11.1.min.js'></script>
+	<script type="text/javascript" src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+	
+		
+		
+	<script type="text/javascript" language="javascript">
+	$(function () { 
+		$("#profile-menu").popover();
+	});
+	function UnCryptMailto(s) {
+		var n=0;
+		var r="";
+		for(var i=0;i<s.length;i++) {		
+			n=s.charCodeAt(i); 
+			if (n>=8364) {n = 128;}
+			r += String.fromCharCode(n+(2));	
+		}
+		return r;
+	}
+	function linkTo_UnCryptMailto(s)	{
+		location.href=UnCryptMailto(s);
+	}
+	</script>
+	
+	<script type="text/javascript">
+	function recordOutboundLink(link, category, action) {
+	  try {
+	    var pageTracker=_gat._getTracker("UA-XXXXX-X");
+	    pageTracker._trackEvent(category, action);
+	    setTimeout('document.location = "' + link.href + '"', 100)
+	  }catch(err){}
+	}
+	</script>
+	
+</head>
+
+<body>
+
+	
+	<!-- <div class="space30"></div> -->
+	
+	<!-- Content -->
+	<div class="content">
+		<div class="container" id="header">
+			<div class="row">
+				<div class="col-md-12 text-right">
+										<form method="post" style="display: none;" action="/login/" id="login-form">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-2">
+								<input type="hidden" name="next_raw" value="/"/>
+								<input type="hidden" name="autologin" value="1"/>
+								<input type="text" name="login_user" placeholder="Username" class="form-control input-sm" style="display: inline-block; width: 25%;"/>
+								<input type="password" name="password" placeholder="Password" class="form-control input-sm" style="display: inline-block; width: 25%;"/>
+																<button type="submit" class="btn btn-default btn-sm" style="display: inline-block; margin-right: 10px;"><span class="fa fa-sign-in fa-lg"></span> <strong>sign in</strong></button>
+																<a href="/register"><i class="fa fa-user-plus"></i> sign up</a>
+				        									</div>
+						</div>
+					</form>
+										
+					
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-md-4">
+					<a href="/" class="navbar-brand">
+						<img src="//stx1.spoj.com/gfx/2015e.png" style="height: 40px;"/>
+					</a>
+					<div class="navbar-header">
+				      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+				        <span class="sr-only">Toggle navigation</span>
+				        <i class="fa fa-bars"></i>
+				      </button>
+				    </div>
+				</div>
+				<div class="col-md-8" id="menu">
+				
+					
+					<div class="row">
+					<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation"  style="border: 0px;">
+				      <ul class="nav navbar-nav" style="  float: right; margin-top: 10px;">
+				      						        <li class="active">
+					          <a href="/problems"><i class="fa fa-puzzle-piece"></i> PROBLEMS</a>
+					        </li>
+					        					        <li >
+					          <a href="/status"><i class="fa fa-circle"></i> STATUS</a>
+					        </li>
+					        <li >
+					          <a href="/ranks"><i class="fa fa-trophy"></i> RANKS</a>
+					        </li>
+					        <li >
+					          <a href="http://spoj.com/forum"><i class="fa fa-comments-o"></i> DISCUSS</a>
+					        </li>
+					        
+					        <li >
+					          <a href="/contests">CONTESTS</a>
+					        </li>
+					        <!-- 
+					        <li >
+					          <a href="/jobs"><i class="fa fa-briefcase"></i> JOBS</a>
+					        </li>
+						-->
+											        					        <li >
+					        	<a href="/login" class="text-success" onclick="$('#login-form').show(); $('input[name=login_user]').focus(); return false;"><i class="fa fa-sign-in"></i> sign in</a>
+					        </li>
+					        						
+				        
+				      </ul>
+				    </nav>
+				    </div>
+				    
+				    
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="container" id="menu">
+			
+		</div>
+		
+		<div class="container" id="content">
+		<script type='text/javascript' src='/gfx/jquery.cxhelp2.js'></script>
+
+
+
+ <!-- wykorzystywane w pcontent.html (by wiele) -->
+
+<div class="submenu">
+	
+		<ol class="breadcrumb">
+	  <li><a href="/problems">Problems</a></li>
+	  <li><a href="/problems/classical">classical</a></li>
+	  <li class="active">Can you play carrom !!!</li>
+	</ol>
+		
+	<ol class="navbar-right">
+						
+				<li><a href="/status/CARRHIM/" class="">Status</li></a>
+		<li><a href="/ranks/CARRHIM/" class="">Ranking</li></a>
+	</ol>
+</div>
+
+
+	<script type="text/javascript">
+		var number_of_voteboxes = "";
+	</script>
+
+
+<div class="row first-row">
+	<div class="col-lg-8 col-md-8">
+		<div class="prob" style="position: relative">
+
+			<!-- google_ad_section_start -->
+			<!-- plik z pomoca kontekstowa (cxhelp_*) dziedziczony po pindex.html -->
+
+
+
+<script type="text/javascript" src="/gfx/jscripts/tiny_mce/plugins/asciimath/js/ASCIIMathMLwFallback.js"></script>
+<!--script type="text/javascript" src="/gfx/jscripts/tiny_mce/plugins/asciisvg/js/ASCIIsvgPI.js"></script-->
+<script type="text/javascript">
+<!--
+var AScgiloc = 'http://www.imathas.com/imathas/filter/graph/svgimg.php';
+var AMTcgiloc = "/files/gif/";
+-->
+</script>
+
+
+<div class="text-center"><center>
+	<div class="aProblemTop c728x90"><div class="no_a_info"></div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-4453360425583535"
+     data-ad-slot="1073332635"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+	</center>
+</div>
+<br/>
+
+<h2 id="problem-name" class="text-center">CARRHIM - Can you play carrom !!!</h2>
+
+
+<div class="row">
+	<div id="problem-tags" class="col-lg-12 text-center">
+								 
+				
+					<a href="/problems/tag/math"><span class=" tag-conception-paradigm- tag-link problem-tag" data-tagid="2">#math<span class="fa fa-times manage-tag-ar" style="display: none"></span></span></a>
+					 
+				
+					<a href="/problems/tag/carrom"><span class=" tag-conception-paradigm- tag-link problem-tag" data-tagid="330">#carrom<span class="fa fa-times manage-tag-ar" style="display: none"></span></span></a>
+					 
+				
+					<a href="/problems/tag/game"><span class=" tag-conception-paradigm- tag-link problem-tag" data-tagid="331">#game<span class="fa fa-times manage-tag-ar" style="display: none"></span></span></a>
+					 
+				
+					<a href="/problems/tag/board-game"><span class=" tag-conception-paradigm- tag-link problem-tag" data-tagid="333">#board-game<span class="fa fa-times manage-tag-ar" style="display: none"></span></span></a>
+						</div>
+</div>
+<br/>
+
+<div id="problem-body">
+	<p>Carrom board is a very popular game. There are four player in this game in dual player mode. In dual player game the team is pair with opposite side player.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img title="carrom" src="http://s10.postimg.org/l9ipohck9/carom.png" alt="carrom" width="600" height="600" /></p>
+<p>&nbsp;</p>
+<p>So, in picture you see the board and the player&rsquo;s.&nbsp; Where the player A and the player C in team-1, the player B and the player D in team-2.</p>
+<p>In this game a team is play with one color pawn. So, if team-1 start playing the board they take the white pawn, and the team-2 get the black pawn for the game. If team-1 can cover all the pawn before the team-2 and the red also covered by the time then the team-1 will win. Otherwise team-2 will win if they cover their all pawn in the game.</p>
+<p>Now, There are 9 white pawn and 9 black pawn and one red pawn in the board. The game is played by different rule.</p>
+<p>In my problem of this game the rule like,</p>
+<p>The point for the one pawn is 1 and for red is 5.</p>
+<p>You can assume that which player 1st start playing&nbsp; the game is start with the white pawn.one team must cover red pawn and this team will get the red point.And you know the penalty rule is If one player cover one pawn of opposite team then the turn goes to the next player.</p>
+<p>Now your task is to find the winner team &amp; points.</p>
+<p>The points count by the remaining of pawn in the board and plus the covered red pawn point by the winning team.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><span style="font-size: medium;"><strong>Input<br /></strong></span></p>
+<p>Input consists of pairs of lines (at most 100 lines). Each pair contains 1 charecter and 3 integer.A first charecter is the player id(A , B , C or D) and three integer is W, B, R (1&lt;= W, B&lt;=9) separated by a space that is number of white, black and red pawn the player cover in his turn.The end of one input occurs when the first sequence starts with an "#" character (without the quotes).</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><span style="font-size: medium;"><strong>Output</strong><br /></span></p>
+<p>For each case if the game complete then you have to print a string &ldquo;Team-1 win and the point is N.&rdquo; (without the quotes) when team-1 win , Otherwise&nbsp;&nbsp; &ldquo;Team-2 win and the point is N.&rdquo; (without the quotes).</p>
+<p>If the game is incomplete then print a string "Incomplete game." (without the quotes) when a team can not cover all the pawn of his turn.</p>
+<p>N is the total point of winner team. See the sample input/output for exact formatting.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><span style="font-size: medium;"><strong>Sample</strong></span></p>
+<p><strong> <span style="font-size: small;">Input :</span></strong></p>
+<p>A 5 1 0</p>
+<p>B 1 2 0</p>
+<p>C 2 1 1</p>
+<p>D 1 0 0</p>
+<p>#</p>
+<p>B 1 1 0</p>
+<p>C 1 2 0</p>
+<p>D 3 1 1</p>
+<p>A 1 2 0</p>
+<p>B 3 0 0</p>
+<p>#</p>
+<p>A 1 1 0</p>
+<p>B 1 5 1</p>
+<p>C 1 1 0</p>
+<p>#</p>
+<p><span style="font-size: small;"><strong>Output :</strong></span></p>
+<p>Team-1 win and the point is 10.</p>
+<p>Team-2 win and the point is 8.</p>
+<p>Incomplete game.</p>
+<p>&nbsp;</p>
+<p><span style="font-size: small;"><strong>Explanation :</strong></span><br /><br />For the first input player A start the game so the team-1 play with the white pawn.<br />After all input the team-1 cover all of white pawn also the red pawn.<br />and there are 5 black pawn remain in the board.<br />so, team-1 win and the point is 5+5=10.</p>
+<p>____________________________________________________________________________________________________________</p>
+<p><span style="white-space: normal;">&nbsp;</span><strong><span style="font-size: small;"><span style="font-family: 'comic sans ms', sans-serif;"><span style="text-decoration: underline;">Problem setter</span>: Md. Hashibul Amin Hemel, Dept. of CSE</span></span></strong><span style="white-space: normal;"> </span></p>
+<p><strong><em><span style="font-size: small;"><span style="font-family: 'comic sans ms', sans-serif;">Bangladesh University of Business and Technology (BUBT)</span></span></em></strong></p>
+<p><strong><span style="font-size: small;"><span style="font-family: 'comic sans ms', sans-serif;">&nbsp;</span></span></strong><span style="white-space: normal;"> </span></p>
+<pre><span style="white-space: normal;"><pre><span style="white-space: normal;">
+</span></pre>
+</span></pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+
+<div class="text-center">
+	<a href="/submit/CARRHIM/" class="btn btn-primary btn-lg"><i class="fa fa-send"></i> Submit solution!</a>
+</div>
+			<!-- google_ad_section_end -->
+			
+			<div id="ccontent">
+			<!-- google_ad_section_start -->
+			
+<hr style="clear:both;"/>
+<a href="#" onclick="toggleComments(); return false;"><span id="comments_sh">hide</span> comments</a><br/>
+
+<a id="comments"></a>
+<table id="comments_table" width="100%">
+		<tr>
+		<td colspan="2">
+				</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+				</td>
+	</tr>
+	
+	<script language="JavaScript">
+	<!--
+	$(document).ready(function(){
+        $('.pager_link').bind('click', function(me){
+                var href=$(me.currentTarget).attr('href');
+		$('#ccontent').animate({opacity: 0.5},1);
+                $.ajax({
+                        type: "GET",
+                        url: href+",ajax=1",
+                        contentType: "application/x-www-form-urlencoded;charset=ISO-8859-2",
+                        success: function(data){
+                                $('#ccontent').html(data);
+				$('#ccontent').animate({opacity: 1.0},1);
+                        },
+                        error: function(err){
+                                alert('error');
+                        }
+                });
+                return false;
+        });
+	});
+	-->
+	</script>
+	
+
+
+
+			
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/ca42a23ca747153e282f391ab5c1773b?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/get_right_jr">get_right_jr</a>: 
+								<span style="font-size: 10px; color: #666;">2016-06-07 18:47:07</span>
+		<br/>
+				<p>What a problem! So lengthy!</p>
+				<b>Last edit: 2016-08-18 13:34:04</b>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/ddd9c79e39fdebb07f5b4465acfce44a?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/hrishabh">hrishabh</a>: 
+								<span style="font-size: 10px; color: #666;">2015-08-02 10:31:42</span>
+		<br/>
+				<p>Nice pblm :)</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/cd5a4c06ed8a209fa3093ab2e54ce6c0?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/anuveshkothari">anuveshkothari</a>: 
+								<span style="font-size: 10px; color: #666;">2015-07-30 19:36:03</span>
+		<br/>
+				<p>hint: use string to check EOF instead of char in c++.. </p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/31c07b5399676361b16ce254306c9d4e?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/rajashekar007">RjlovesS</a>: 
+								<span style="font-size: 10px; color: #666;">2015-03-12 11:40:38</span>
+		<br/>
+				<p>It is to be noted that, red could be won by anyone, not required to be won by the team with all white or all black.</p>
+				<b>Last edit: 2015-04-07 02:20:24</b>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/e406ee218868f2ed1dd080866f9e9016?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/vikasgarg1996">vikas garg</a>: 
+								<span style="font-size: 10px; color: #666;">2015-01-25 09:06:08</span>
+		<br/>
+				<p>what if team 1 covers all white pawns and team 2 covers 7 black pawns and red one also.. then what shld be the answer???? <br/></p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/b26eed15967a3f39aa0a7f3ecd53b586?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/vamsi_ism">Vamsi Krishna Avula</a>: 
+								<span style="font-size: 10px; color: #666;">2014-12-28 16:08:33</span>
+		<br/>
+				<p>easily one of my longest codes!<br/>good problem :)</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/7f4a5c1e6f81fc65978ee568d8acb8cb?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/sacsachin789">Sachin Railhan</a>: 
+								<span style="font-size: 10px; color: #666;">2013-12-11 11:26:22</span>
+		<br/>
+				<p>What if red is not covered by any team but all white pawns are covered by team 1?<br/>Edit: In my AC solution i assume game to be incomplete if red pawn is not covered by any team.Hope it helps others. </p>
+				<b>Last edit: 2013-12-11 15:44:40</b>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/b5dec019744f9f806394f4efc96dcd8e?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/bhavik">Bhavik</a>: 
+								<span style="font-size: 10px; color: #666;">2013-10-21 14:51:50</span>
+		<br/>
+				<p>kindly chk my code id:10312435...giving tle after 8 test case!!<br/><br/>EDIT:-AC:)))becomes simpler if you play carrom...difficult for those who have not played this game</p>
+				<b>Last edit: 2013-10-21 16:25:00</b>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/f1fff91bce454228c75bc816b69bd666?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/mogers">Miguel Oliveira</a>: 
+								<span style="font-size: 10px; color: #666;">2013-09-25 10:14:29</span>
+		<br/>
+				<p>I'm not familiar to the game.<br/>Let's say team 1 plays first. They only win if all white pawns and the red one are covered? <br/>The red needs to be covered by team 1 in order for team 1 to win? Or does team 1 win anyway if the red if covered by team 2, but all white pawns were covered?<br/><br/>What if all black pawns are covered?</p>
+				<b>Last edit: 2016-08-18 13:34:49</b>
+						</td>
+	</tr>
+			
+</table>
+
+
+<script language="javascript" type="text/javascript">
+<!--
+function getCookieVal (offset) {
+        var endstr = document.cookie.indexOf (";", offset);
+        if (endstr == -1) { 
+                endstr = document.cookie.length; 
+        }
+        return unescape(document.cookie.substring(offset, endstr));
+}
+
+function GetCookie (name) {
+  var arg = name + "=";
+  var alen = arg.length;
+  var clen = document.cookie.length;
+  var i = 0;
+  while (i < clen) {
+    var j = i + alen;
+    if (document.cookie.substring(i, j) == arg) {
+      return getCookieVal (j);
+      }
+    i = document.cookie.indexOf(" ", i) + 1;
+    if (i == 0) break; 
+    }
+  return null;
+}
+
+function toggleComments() {
+        var a = document.getElementById('comments_table');
+        var d = a.style.display;
+        if( d == "" || d == "block" ){
+                d = "none";
+                document.getElementById('comments_sh').innerHTML = 'show';
+        } else {
+                d = "block";
+                document.getElementById('comments_sh').innerHTML = 'hide';
+        }
+        a.style.display = d;
+        document.cookie="comments_table="+d+"; path=/;";
+}
+
+if( GetCookie('comments_table') == 'none' ){
+        document.getElementById('comments_sh').innerHTML = 'show';
+        document.getElementById('comments_table').style.display = 'hide';
+}
+
+-->
+</script>
+
+
+			<!-- google_ad_section_end -->
+			</div>
+			<table width="100%">
+        </table>
+<br/>
+		</div>
+	</div><!-- endof col-lg-8 col-md-8 -->
+	
+	<div class="col-lg-4 col-md-4">
+	
+				<div id="problem-btn-submit-box">
+			<a href="/submit/CARRHIM/" id="problem-btn-submit" class="btn btn-primary" style="width: 100%; margin-bottom: 20px;"><i class="fa fa-send"></i> Submit solution!</a>
+		</div>
+				
+		<table border=0 cellspacing=0 cellpadding=0 style="margin-bottom:10px" class="probleminfo" id="problem-meta">
+			<colgroup>
+				<col width="120"/>
+				<col/>
+			</colgroup>
+			<tbody>
+			<tr><td>Added by:</td><td><a href="/users/holud_himu">hemel</a></td></tr>
+			<tr><td>Date:</td><td>2013-09-23</td></tr>
+			<tr><td>Time limit:</td><td>0.111s-0.223s</td></tr>
+			<tr><td>Source limit:</td><td>50000B</td></tr>
+						<tr><td>Memory limit:</td><td>1536MB</td></tr>
+										<tr>
+					<td>Cluster:</td>
+					<td>
+													<a href="/clusters/" target="_blank">Cube (Intel G860)</a>
+								
+					</td>
+				</tr>
+						<tr><td>Languages:</td><td>All </td></tr>
+			<tr><td>Resource:</td><td>Own problem</td></tr>													</tbody>
+		</table>
+
+		<div class="right-box-hehe">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- spoj_problem_336x280_right2 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-4453360425583535"
+     data-ad-slot="3836605032"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+		</div>
+	
+		<!-- BEGIN: Voting for problem -->
+		
+				
+		<!-- END: Voting the problem -->
+		
+		<div class="right-box-hehe">
+							<div class="c336x280"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- spoj_problem_336x280_right -->
+	<ins class="adsbygoogle"
+			style="display:inline-block;width:336px;height:280px"
+					data-ad-client="ca-pub-4453360425583535"
+							data-ad-slot="7873511834"></ins>
+							<script>
+							(adsbygoogle = window.adsbygoogle || []).push({});
+	</script></div>
+						<br/>
+		</div>
+		
+				
+		
+		<script type="text/javascript">
+			function callback_after_vote(type, data)
+			{
+				var response = $.parseJSON(data);
+				manage_vote_interface(type);
+				//.html('<div class="vote-thank-you">Thank you!</div>');
+				
+
+				if (type == "problem" || type == "implementation") {
+					var progressBarValue = Math.round(2 + 98 * response.avg / 3);
+					var progressBarType;
+					if (progressBarValue < 25) progressBarType = "progress-bar-primary";
+					else if (progressBarValue < 50) progressBarType = "progress-bar-success";
+					else if (progressBarValue < 75) progressBarType = "progress-bar-warning";
+					else progressBarType = "progress-bar-danger";
+					
+					$("#rate-" + type + "-box .progress-bar").css("width", progressBarValue.toString() +"%");
+					$("#rate-" + type + "-box .progress-bar").attr("aria-valuenow", progressBarValue.toString());
+					$("#rate-" + type + "-box .progress-bar").attr("class", "progress-bar " + progressBarType);
+					$("#rate-" + type + "-box .progress-value").html(progressBarValue.toString() +"%");
+				}
+				else if (type == "quality") {
+					var quality_plus = response.sum_plus;
+					var quality_minus = response.sum_minus;
+
+					var box_content = '';
+
+					if (quality_plus > 0 || quality_minus > 0) {
+						if (quality_plus > 0) {
+							box_content += '<font size="+2"><span class="label label-success">' +
+								quality_plus.toString() + 
+								' <span class="fa fa-thumbs-o-up"></span></span></font>';
+						}
+						if (quality_minus > 0) {
+							box_content += '<font size="+2"><span class="label label-danger">' +
+								quality_minus.toString() + 
+								' <span class="fa fa-thumbs-o-down"></span></span></font>';
+						}
+					}
+
+					$( "#rate-" + type + "-box" ).empty().html(box_content);
+				}
+
+				// update count
+				if (response.update_count == 1) {
+					var count = parseInt($("#votes_count").html(), 10);
+					count++;
+					var votes_word = " vote";
+					if (count > 1) votes_word += "s";
+					$("#votes_count").empty().html(count.toString() + votes_word);
+				}
+			}
+			$( ".rate-btn" ).click(function() {
+				var rate_type = $(this).attr('data-rate-type').toString();
+				var rate_type_full = "";
+				var rate = $(this).attr('data-rate').toString();
+				if (rate_type == "p") rate_type_full = "problem";
+				else if (rate_type == "i") rate_type_full = "implementation";
+				else if (rate_type == "q") rate_type_full = "quality";
+				$.get( '/?a=vote&pid=16102&t=' + rate_type + '&r=' + rate, function( data ) {
+				  callback_after_vote(rate_type_full, data);
+				});
+			});
+			function manage_vote_interface(type) {
+				number_of_voteboxes--;
+				/*
+				if (number_of_voteboxes == 0) {
+					$( "#vote-box" ).fadeOut(1500, function() {
+						$(this).remove();
+					});
+				} else {
+					$( "#vote-" + type + "-box" ).fadeOut(1500, function() {
+						$(this).remove();
+					});
+				}
+				*/
+				var n = $('.vote-thank-you').length;
+				var offset = (n * 60).toString() + "px";
+				$(document.body).append(
+					'<div class="vote-thank-you" style="margin: 40%;">' +
+					'<div class="alert alert-success" style="position: fixed; top: '+offset+';">' +
+					'<strong>Thank you for voting!</strong>' +				
+					'</div></div>');
+				setTimeout(function(){$( ".vote-thank-you" ).fadeOut(1500, function() {
+					$(this).remove();
+				});},2000);
+			}
+		</script>
+		
+		
+	</div><!-- endof col-lg-4 col-md-4 -->
+</div>
+
+
+
+
+
+
+<style>
+ul.list-unstyled li{
+	margin-bottom: 5px;
+}
+ul.list-unstyled li a.btn{
+	width: 100%;
+}
+ul.ui-autocomplete{
+	z-index: 10000;
+	width: 200px !important;
+}
+</style>
+	<br/>
+</div>
+		
+		
+		<div class="container" id="footer">
+			<div class="row">
+				<div class="col-md-2">
+					
+				</div>
+				<div class="col-md-8 text-center">
+					<a href="/info">About</a> | <a href="/tutorials">Tutorial</a> | <a href="/tools">Tools</a> | <a href="/clusters">Clusters</a> | <a href="/credits">Credits</a> | <a href="/jobs">Jobs</a> | <a href="/sphereengine">API</a> | <a href="/gfx/spoj-terms.pdf" target="_blank">Terms</a>
+				</div>
+				<div class="col-md-2 text-right">
+					<a href="/rss/" ><img src="//stx1.spoj.com/gfx/rss10x10.gif" border=0>&nbsp;RSS</a>&nbsp;
+				</div>
+			</div>
+		</div>
+		
+		<div class="text-center" id="footer-srl">
+			
+	&copy; Spoj.com. All Rights Reserved. Spoj uses <a href="http://sphere-engine.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Engine</a>&trade; &copy; by <a href="http://sphere-research.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Research Labs</a>.
+
+		</div> 
+	</div>
+
+	<!-- JavaScripts -->
+	
+		
+	
+	<script type="text/javascript">
+	$(function(){
+		setTimeout(function(){
+			$('.no_a_info').css('visibility', 'visible');
+		}, 5000);
+		
+		if(!$('.aProblemTop').length && !$('.aProblemsTop').length && !$('.aSubmitTop').length && !$('.aStatusTop').length && !$('.aMainRight').length){
+			ga('send', 'event', 'ads', 'no-ads', 'main-contest');
+		}
+		if ($('.aProblemTop').height() == 0){
+			$('.aProblemTop').css({'border': '1px solid #ddd', 'background': '#f0f4e3', 'height': 90});
+			$('.aProblemTop').html($('<p class="text-center">using adblock?</p><h4 class="text-center">Online ads help us to maintain site.</h4><p class="text-center"><strong>please whitelist *.spoj.com</strong></p>'));
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemTop');
+		}
+		if ($('.aProblemsTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemsTop');
+		}
+		if ($('.aSubmitTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aSubmitTop');
+		}
+		if ($('.aStatusTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aStatusTop');
+		}
+		if ($('.aMainRight').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aMainRight');
+		}
+	});
+	</script>
+	
+	
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.timers.js"></script>
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.cookie.js"></script>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+	<script src="//crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
+	<script src="//stx1.spoj.com/gfx/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+	<script src="//stx1.spoj.com/gfx/scripts/tour.js"></script>
+	
+	
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&appId=321676846207&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	
+	
+
+
+<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-10507872-1', 'auto');
+	  ga('require', 'linkid', 'linkid.js');
+	  ga('send', 'pageview');
+	</script>
+<script type="text/javascript">
+	$(function(){
+		$(document).on('click', '.track', function(){
+			var event = $(this).attr('data-event');
+			var action = $(this).attr('data-action');
+			var value = $(this).attr('data-value');
+			ga('send', 'event', event, action, value);
+		});
+	});
+	</script>
+
+
+</body>
+</html>

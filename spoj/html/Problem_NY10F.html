@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="not-ie" lang="en"> <!--<![endif]-->
+<head>
+	<!-- main header -->
+	<meta charset="utf-8">
+	
+				<title>SPOJ.com - Problem NY10F</title>
+		  
+	<meta name="keywords" content="language, algorithm, spoj, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  		<meta property="og:title" content="SPOJ.com - Problem NY10F"/>
+    <meta property="fb:app_id"      content="321676846207" />
+	<meta property="og:type" content="spoj-pl:problem"/>
+	<meta property="og:url" content="http://www.spoj.com/problems/NY10F/"/>
+	<meta property="og:image" content="//stx1.spoj.com/gfx/logo-cr.png"/>
+	<meta property="og:description" content="..."/>
+	<meta name="description" content="..."/>
+		<meta property="og:site_name" content="spoj.com"/>
+
+  <!--[if (gte IE 9)|!(IE)]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" id="metatag">
+  <![endif]--> 
+
+	  <!-- Favicon -->
+	  <link href="//stx1.spoj.com/gfx/favicon_new.png" rel="shortcut icon" type="image/x-icon" />
+	  
+	  <!-- RSS -->
+	  <link href="/rss/" rel="alternate" type="application/rss+xml" title="RSS Feed">
+	
+	  <!-- Web Fonts -->
+	  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">  
+
+	<!-- Internet Explorer condition - HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]--> 
+	
+	
+	
+	<!-- CSS: Bootstrap, Font-awesome, Bootstrap libs,  -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+  	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  	<link href="//stx1.spoj.com/gfx/bootstrap-tour/build/css/bootstrap-tour.min.css" rel="stylesheet" />
+  	<link href="//stx1.spoj.com/themes/bootstrap-social.css" rel="stylesheet" type="text/css" />
+  	
+	<link href="//stx1.spoj.com/themes/common.css?4" rel="stylesheet" type="text/css" id="theme0" />
+	<link href="//stx1.spoj.com/themes/en_new.css?4" rel="stylesheet" type="text/css" id="theme" />
+	
+	<!-- JS -->
+	<script type="text/javascript" src='//code.jquery.com/jquery-1.11.1.min.js'></script>
+	<script type="text/javascript" src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+	
+		
+		
+	<script type="text/javascript" language="javascript">
+	$(function () { 
+		$("#profile-menu").popover();
+	});
+	function UnCryptMailto(s) {
+		var n=0;
+		var r="";
+		for(var i=0;i<s.length;i++) {		
+			n=s.charCodeAt(i); 
+			if (n>=8364) {n = 128;}
+			r += String.fromCharCode(n+(2));	
+		}
+		return r;
+	}
+	function linkTo_UnCryptMailto(s)	{
+		location.href=UnCryptMailto(s);
+	}
+	</script>
+	
+	<script type="text/javascript">
+	function recordOutboundLink(link, category, action) {
+	  try {
+	    var pageTracker=_gat._getTracker("UA-XXXXX-X");
+	    pageTracker._trackEvent(category, action);
+	    setTimeout('document.location = "' + link.href + '"', 100)
+	  }catch(err){}
+	}
+	</script>
+	
+</head>
+
+<body>
+
+	
+	<!-- <div class="space30"></div> -->
+	
+	<!-- Content -->
+	<div class="content">
+		<div class="container" id="header">
+			<div class="row">
+				<div class="col-md-12 text-right">
+										<form method="post" style="display: none;" action="/login/" id="login-form">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-2">
+								<input type="hidden" name="next_raw" value="/"/>
+								<input type="hidden" name="autologin" value="1"/>
+								<input type="text" name="login_user" placeholder="Username" class="form-control input-sm" style="display: inline-block; width: 25%;"/>
+								<input type="password" name="password" placeholder="Password" class="form-control input-sm" style="display: inline-block; width: 25%;"/>
+																<button type="submit" class="btn btn-default btn-sm" style="display: inline-block; margin-right: 10px;"><span class="fa fa-sign-in fa-lg"></span> <strong>sign in</strong></button>
+																<a href="/register"><i class="fa fa-user-plus"></i> sign up</a>
+				        									</div>
+						</div>
+					</form>
+										
+					
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-md-4">
+					<a href="/" class="navbar-brand">
+						<img src="//stx1.spoj.com/gfx/2015e.png" style="height: 40px;"/>
+					</a>
+					<div class="navbar-header">
+				      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+				        <span class="sr-only">Toggle navigation</span>
+				        <i class="fa fa-bars"></i>
+				      </button>
+				    </div>
+				</div>
+				<div class="col-md-8" id="menu">
+				
+					
+					<div class="row">
+					<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation"  style="border: 0px;">
+				      <ul class="nav navbar-nav" style="  float: right; margin-top: 10px;">
+				      						        <li class="active">
+					          <a href="/problems"><i class="fa fa-puzzle-piece"></i> PROBLEMS</a>
+					        </li>
+					        					        <li >
+					          <a href="/status"><i class="fa fa-circle"></i> STATUS</a>
+					        </li>
+					        <li >
+					          <a href="/ranks"><i class="fa fa-trophy"></i> RANKS</a>
+					        </li>
+					        <li >
+					          <a href="http://spoj.com/forum"><i class="fa fa-comments-o"></i> DISCUSS</a>
+					        </li>
+					        
+					        <li >
+					          <a href="/contests">CONTESTS</a>
+					        </li>
+					        <!-- 
+					        <li >
+					          <a href="/jobs"><i class="fa fa-briefcase"></i> JOBS</a>
+					        </li>
+						-->
+											        					        <li >
+					        	<a href="/login" class="text-success" onclick="$('#login-form').show(); $('input[name=login_user]').focus(); return false;"><i class="fa fa-sign-in"></i> sign in</a>
+					        </li>
+					        						
+				        
+				      </ul>
+				    </nav>
+				    </div>
+				    
+				    
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="container" id="menu">
+			
+		</div>
+		
+		<div class="container" id="content">
+		<script type='text/javascript' src='/gfx/jquery.cxhelp2.js'></script>
+
+
+
+ <!-- wykorzystywane w pcontent.html (by wiele) -->
+
+<div class="submenu">
+	
+		<ol class="breadcrumb">
+	  <li><a href="/problems">Problems</a></li>
+	  <li><a href="/problems/classical">classical</a></li>
+	  <li class="active">I2C</li>
+	</ol>
+		
+	<ol class="navbar-right">
+						
+				<li><a href="/status/NY10F/" class="">Status</li></a>
+		<li><a href="/ranks/NY10F/" class="">Ranking</li></a>
+	</ol>
+</div>
+
+
+	<script type="text/javascript">
+		var number_of_voteboxes = "";
+	</script>
+
+
+<div class="row first-row">
+	<div class="col-lg-8 col-md-8">
+		<div class="prob" style="position: relative">
+
+			<!-- google_ad_section_start -->
+			<!-- plik z pomoca kontekstowa (cxhelp_*) dziedziczony po pindex.html -->
+
+
+
+<script type="text/javascript" src="/gfx/jscripts/tiny_mce/plugins/asciimath/js/ASCIIMathMLwFallback.js"></script>
+<!--script type="text/javascript" src="/gfx/jscripts/tiny_mce/plugins/asciisvg/js/ASCIIsvgPI.js"></script-->
+<script type="text/javascript">
+<!--
+var AScgiloc = 'http://www.imathas.com/imathas/filter/graph/svgimg.php';
+var AMTcgiloc = "/files/gif/";
+-->
+</script>
+
+
+<div class="text-center"><center>
+	<div class="aProblemTop c728x90"><div class="no_a_info"></div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-4453360425583535"
+     data-ad-slot="1073332635"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+	</center>
+</div>
+<br/>
+
+<h2 id="problem-name" class="text-center">NY10F - I2C</h2>
+
+
+<div class="row">
+	<div id="problem-tags" class="col-lg-12 text-center">
+				<i>no tags</i>&nbsp;
+				</div>
+</div>
+<br/>
+
+<div id="problem-body">
+	<p style="font-family: 'Times New Roman'; font-size: medium;">I<sup>2</sup>C&nbsp;(Inter-Integrated Circuit)&nbsp;is a serial communication protocol that is used to attach low-speed peripherals (100&nbsp;kbit/sec) to a motherboard, embedded system or cell phone. A single I<sup>2</sup>C data bus may have several devices attached, each with a different 7-bit address. One of the nice things about I<sup>2</sup>C is that it only requires two signal lines, SCL (clock) and SDA (data). One bit of data is presented on the I2C data bus (SDA line) per clock (SCL). Typically, one device on the bus is designated as the master, and the other devices are&nbsp;slaves. The&nbsp;master&nbsp;will initiate communication to a specific device on the bus by specifying its&nbsp;address&nbsp;in a transaction.</p>
+<p style="font-family: 'Times New Roman'; font-size: medium;">If there is no activity on the I<sup>2</sup>C bus, both the SCL and SDA signals are in a&nbsp;high&nbsp;state (1). The master initiates a transaction on the bus by pulling the SDA signal to a&nbsp;low&nbsp;state (0), while the SCL signal is&nbsp;high&nbsp;(1): this is called a&nbsp;START&nbsp;bit. At this point, all slaves on the bus must start paying attention to the signaling to see if the transaction is directed at them. The&nbsp;master&nbsp;will then send the 7bit slave address (most significant bit first), one bit at-a-time. This is done by bringing the SCL signal low (0), presenting the next bit value on the SDA line, then releasing the SCL signal so it goes high (1). The slaves will read the SDA signal as soon as the clock goes high (1). This operation is repeated 7 times, one for each bit of the desired slave address. Another data bit is presented on the bus in the same manner. This last bit is an indicator as to whether the master wants to read from (1) or write to (0) the addressed slave device. When a slave recognizes its address on the bus, it must acknowledge&nbsp;(ACK)&nbsp;that it is available and ready by pulling the SDA line low. The master will see this the next time it brings the clock high, at which point, the data transfer can begin. If no&nbsp;ACK&nbsp;is seen this means that the slave specified by the address does not exist. Note: If no device pulls a signal low, it will go high by default; a device simplyreleases&nbsp;a signal, and it will go high.</p>
+<p style="font-family: 'Times New Roman'; font-size: medium;">Data is always transferred as 8 bit bytes, 1 bit at-a-time, most significant bit first. After each byte, the slave must&nbsp;ACK&nbsp;the master by pulling the SDA line low. If the slave is not ready to transmit (or receive) the next byte of data, it may pull the SCL line low. This will cause the master to go into a&nbsp;wait mode&nbsp;until the slave is ready. The slave indicates it is ready by bringing SDA low, and releasing the SCL line so it goes high. The next byte of data can then be transferred. The sequence repeats until the master decides all the data has been transferred, at which point it will send a&nbsp;STOP&nbsp;bit. This is done when the master lets the SDA line go high while the SCL line is high.</p>
+<p style="font-family: 'Times New Roman'; font-size: medium;">For this problem, you will write a program that&nbsp;sniffs&nbsp;the&nbsp;<em>I</em><sup>2</sup><em>C</em>&nbsp;bus signals and displays the details of transactions.</p>
+<h2>Input</h2>
+<p style="font-family: 'Times New Roman'; font-size: medium;">The first line of input contains a single integer&nbsp;<em>P</em>,&nbsp;(1<img src="http://acmicpc-live-archive.uva.es/nuevoportal/data/4878img1.png" border="0" alt="$ \le$" width="18" height="31" align="MIDDLE" /><em>P</em><img src="http://acmicpc-live-archive.uva.es/nuevoportal/data/4878img1.png" border="0" alt="$ \le$" width="18" height="31" align="MIDDLE" />1000), which is the number of data sets that follow. Each data set consists of multiple lines which represents a single&nbsp;<em>I</em><sup>2</sup><em>C</em>&nbsp;transaction. The first line contains two (2) decimal integer values: the problem number, followed by a space, followed by the number of signal samples&nbsp;<em>S</em>,&nbsp;(1<img src="http://acmicpc-live-archive.uva.es/nuevoportal/data/4878img1.png" border="0" alt="$ \le$" width="18" height="31" align="MIDDLE" /><em>S</em><img src="http://acmicpc-live-archive.uva.es/nuevoportal/data/4878img1.png" border="0" alt="$ \le$" width="18" height="31" align="MIDDLE" />1161), for the transaction. The remaining line(s) contain(s) the signal samples. Each line of samples contains 40 samples (except the last which may contain less). Each sample consists of 2 binary digits characters representing SCL and SDA in that order.</p>
+<h2>Output</h2>
+<p style="font-family: 'Times New Roman'; font-size: medium;">For each data set, display a single line containing a decimal integer giving the data set number followed by a single space, followed by a description of the transaction. There will only be six different descriptions (two non-error cases, and four error cases):</p>
+<p style="font-family: 'Times New Roman'; font-size: medium;">Non-error cases:</p>
+<p style="font-family: 'Times New Roman'; font-size: medium;"><tt>WRITE OF</tt>&nbsp;<em>n</em>&nbsp;<tt>BYTES TO SLAVE</tt>&nbsp;<em>xx</em></p>
+<p style="font-family: 'Times New Roman'; font-size: medium;"><tt>READ OF</tt>&nbsp;<em>n</em>&nbsp;<tt>BYTES FROM SLAVE</tt>&nbsp;<em>xx</em></p>
+<p style="font-family: 'Times New Roman'; font-size: medium;">&nbsp;Error cases:</p>
+<p style="font-family: 'Times New Roman'; font-size: medium;"><tt>ERROR NO START BIT</tt></p>
+<p style="font-family: 'Times New Roman'; font-size: medium;"><tt>ERROR NO STOP BIT</tt></p>
+<p style="font-family: 'Times New Roman'; font-size: medium;"><tt>ERROR NO ACK FROM SLAVE</tt>&nbsp;<em>xx</em></p>
+<p style="font-family: 'Times New Roman'; font-size: medium;"><tt>ERROR NO ACK FOR DATA</tt></p>
+<p style="font-family: 'Times New Roman'; font-size: medium;"><em>n</em>&nbsp;is a decimal integer (1 - 128) representing the number of data bytes.&nbsp;<br /><em>xx</em>&nbsp;is a 2 digit hexadecimal value (00-7F) representing the slave address.&nbsp;<br />The&nbsp;<tt>ERROR NO ACK FROM SLAVE</tt>&nbsp;<em>xx</em>&nbsp;case occurs when there is no&nbsp;ACK&nbsp;for the supplied address&nbsp;<br />The&nbsp;<tt>ERROR NO ACK FOR DATA</tt>&nbsp;case occurs when there is no&nbsp;ACK&nbsp;after a data byte</p>
+<p style="font-family: 'Times New Roman'; font-size: medium;">For the error cases, only the first error detected should be displayed.</p>
+<h3>Example</h3>
+<pre><strong>Input:</strong>
+<pre>4 
+1 97 
+01111001110010001000100111011101110111001000100010011100100010001000100010001000 
+10001001110010001000100010011100100010001001110010001000100111001000100010001001 
+1100100010001001110111001000101111 
+2 169 
+01111000100010011100100010001001110010001000100010011100100010001000100010001000 
+10001001110010001000100010011100100010001001110010001000100111001000100010001001 
+11001000100010011101110010001000100111001000100111001000100010001000100111001000 
+10011100100111001000100010011100100010011101110010001000100010011100100010011101 
+110111001000101111 
+3 60 
+01111000100010001001110010011101110010001000100010011100100010001000100010001000 
+1000100111001000100010001001110010001111 
+4 40 
+01111000100010011101110010011100100111001111111111111111111111111111111111111111</pre>
+<strong>Output:</strong>
+<pre>1 READ OF 4 BYTES FROM SLAVE 47
+2 WRITE OF 8 BYTES TO SLAVE 11 
+3 ERROR NO STOP BIT 
+4 ERROR NO ACK FROM SLAVE 0B</pre>
+</pre>
+</div>
+
+<div class="text-center">
+	<a href="/submit/NY10F/" class="btn btn-primary btn-lg"><i class="fa fa-send"></i> Submit solution!</a>
+</div>
+			<!-- google_ad_section_end -->
+			
+			<div id="ccontent">
+			<!-- google_ad_section_start -->
+			
+<hr style="clear:both;"/>
+<a href="#" onclick="toggleComments(); return false;"><span id="comments_sh">hide</span> comments</a><br/>
+
+<a id="comments"></a>
+<table id="comments_table" width="100%">
+		<tr>
+		<td colspan="2">
+				</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+				</td>
+	</tr>
+	
+	<script language="JavaScript">
+	<!--
+	$(document).ready(function(){
+        $('.pager_link').bind('click', function(me){
+                var href=$(me.currentTarget).attr('href');
+		$('#ccontent').animate({opacity: 0.5},1);
+                $.ajax({
+                        type: "GET",
+                        url: href+",ajax=1",
+                        contentType: "application/x-www-form-urlencoded;charset=ISO-8859-2",
+                        success: function(data){
+                                $('#ccontent').html(data);
+				$('#ccontent').animate({opacity: 1.0},1);
+                        },
+                        error: function(err){
+                                alert('error');
+                        }
+                });
+                return false;
+        });
+	});
+	-->
+	</script>
+	
+
+
+
+			
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/a36fa5d6b3d626ad1af4ee7d93940685?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/mostafa_36a2">Mostafa 36a2</a>: 
+								<span style="font-size: 10px; color: #666;">2013-05-27 21:39:47</span>
+		<br/>
+				<p>btw what is the case 00 then 11 <br/>isn't it wrong ! if the data change before the clock so it is a 1 sended else if the clock change before the data it's a stop bit ... <br/>that occurs in 3rd,4th cases i consider it a NO_STOP_BIT_ERROR once i found it and it works</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/a36fa5d6b3d626ad1af4ee7d93940685?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/mostafa_36a2">Mostafa 36a2</a>: 
+								<span style="font-size: 10px; color: #666;">2013-05-27 21:36:06</span>
+		<br/>
+				<p>it's bad when submit the solution 100 times because of the BAD input handling</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/8e86125bdebcb6971012b23965be64a1?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/deckar01">Jared Deckard</a>: 
+								<span style="font-size: 10px; color: #666;">2012-01-18 03:10:48</span>
+		<br/>
+				<p>so the stop bit is 0010 THEN 11 i guess...</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/75801afcc21abcfb326c4ec4145faec2?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/avi0889">avinash choudhary</a>: 
+								<span style="font-size: 10px; color: #666;">2011-11-26 05:55:43</span>
+		<br/>
+				<p>@all:yup its 1A actually...:)</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/5b682a24b0f2e9092ed54fe2bd6fd0fd?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/zukow">:D</a>: 
+								<span style="font-size: 10px; color: #666;">2011-03-30 06:32:55</span>
+		<br/>
+				<p>I'm analyzing this problem right now and yes, I'm also getting 1A.<br/><br/>EDIT: Exactly as Pizza boy, I got ac with program giving 1A.</p>
+				<b>Last edit: 2011-03-30 07:06:05</b>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/408d63229b8aed3d93286be109b1cd99?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/leppyr64">LeppyR64</a>: 
+								<span style="font-size: 10px; color: #666;">2011-03-29 03:57:40</span>
+		<br/>
+				<p>I believe it's an error.  The address in test case 3 is 0B.</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/2349ff6d3d2259f4aa77a7a0850ba443?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/zobayer">&#2479;&#2507;&#2476;&#2494;&#2527;&#2503;&#2480;</a>: 
+								<span style="font-size: 10px; color: #666;">2011-03-28 14:31:41</span>
+		<br/>
+				<p>After wasting 6 hours to figure out why the address of 4th case is 0B, I just submitted my solution to see what it gets and it passed. I have tried many times with pen-paper and every time I've found 1A, not 0B, please correct the samples.</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/2349ff6d3d2259f4aa77a7a0850ba443?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/zobayer">&#2479;&#2507;&#2476;&#2494;&#2527;&#2503;&#2480;</a>: 
+								<span style="font-size: 10px; color: #666;">2011-03-28 09:37:43</span>
+		<br/>
+				<p>I don't really understand, why the address in case 4 is 0B, why it is not 1A ?</p>
+				<b>Last edit: 2011-03-28 09:40:15</b>
+						</td>
+	</tr>
+			
+</table>
+
+
+<script language="javascript" type="text/javascript">
+<!--
+function getCookieVal (offset) {
+        var endstr = document.cookie.indexOf (";", offset);
+        if (endstr == -1) { 
+                endstr = document.cookie.length; 
+        }
+        return unescape(document.cookie.substring(offset, endstr));
+}
+
+function GetCookie (name) {
+  var arg = name + "=";
+  var alen = arg.length;
+  var clen = document.cookie.length;
+  var i = 0;
+  while (i < clen) {
+    var j = i + alen;
+    if (document.cookie.substring(i, j) == arg) {
+      return getCookieVal (j);
+      }
+    i = document.cookie.indexOf(" ", i) + 1;
+    if (i == 0) break; 
+    }
+  return null;
+}
+
+function toggleComments() {
+        var a = document.getElementById('comments_table');
+        var d = a.style.display;
+        if( d == "" || d == "block" ){
+                d = "none";
+                document.getElementById('comments_sh').innerHTML = 'show';
+        } else {
+                d = "block";
+                document.getElementById('comments_sh').innerHTML = 'hide';
+        }
+        a.style.display = d;
+        document.cookie="comments_table="+d+"; path=/;";
+}
+
+if( GetCookie('comments_table') == 'none' ){
+        document.getElementById('comments_sh').innerHTML = 'show';
+        document.getElementById('comments_table').style.display = 'hide';
+}
+
+-->
+</script>
+
+
+			<!-- google_ad_section_end -->
+			</div>
+			<table width="100%">
+        </table>
+<br/>
+		</div>
+	</div><!-- endof col-lg-8 col-md-8 -->
+	
+	<div class="col-lg-4 col-md-4">
+	
+				<div id="problem-btn-submit-box">
+			<a href="/submit/NY10F/" id="problem-btn-submit" class="btn btn-primary" style="width: 100%; margin-bottom: 20px;"><i class="fa fa-send"></i> Submit solution!</a>
+		</div>
+				
+		<table border=0 cellspacing=0 cellpadding=0 style="margin-bottom:10px" class="probleminfo" id="problem-meta">
+			<colgroup>
+				<col width="120"/>
+				<col/>
+			</colgroup>
+			<tbody>
+			<tr><td>Added by:</td><td><a href="/users/disatoba">Diego Satoba</a></td></tr>
+			<tr><td>Date:</td><td>2011-03-23</td></tr>
+			<tr><td>Time limit:</td><td>0.666s
+			</td></tr>
+			<tr><td>Source limit:</td><td>50000B</td></tr>
+						<tr><td>Memory limit:</td><td>1536MB</td></tr>
+										<tr>
+					<td>Cluster:</td>
+					<td>
+													<a href="/clusters/" target="_blank">Cube (Intel G860)</a>
+								
+					</td>
+				</tr>
+						<tr><td>Languages:</td><td>All </td></tr>
+			<tr><td>Resource:</td><td>Greater New York Region 2010</td></tr>													</tbody>
+		</table>
+
+		<div class="right-box-hehe">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- spoj_problem_336x280_right2 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-4453360425583535"
+     data-ad-slot="3836605032"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+		</div>
+	
+		<!-- BEGIN: Voting for problem -->
+		
+				
+		<!-- END: Voting the problem -->
+		
+		<div class="right-box-hehe">
+							<div class="c336x280"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- spoj_problem_336x280_right -->
+	<ins class="adsbygoogle"
+			style="display:inline-block;width:336px;height:280px"
+					data-ad-client="ca-pub-4453360425583535"
+							data-ad-slot="7873511834"></ins>
+							<script>
+							(adsbygoogle = window.adsbygoogle || []).push({});
+	</script></div>
+						<br/>
+		</div>
+		
+				
+		
+		<script type="text/javascript">
+			function callback_after_vote(type, data)
+			{
+				var response = $.parseJSON(data);
+				manage_vote_interface(type);
+				//.html('<div class="vote-thank-you">Thank you!</div>');
+				
+
+				if (type == "problem" || type == "implementation") {
+					var progressBarValue = Math.round(2 + 98 * response.avg / 3);
+					var progressBarType;
+					if (progressBarValue < 25) progressBarType = "progress-bar-primary";
+					else if (progressBarValue < 50) progressBarType = "progress-bar-success";
+					else if (progressBarValue < 75) progressBarType = "progress-bar-warning";
+					else progressBarType = "progress-bar-danger";
+					
+					$("#rate-" + type + "-box .progress-bar").css("width", progressBarValue.toString() +"%");
+					$("#rate-" + type + "-box .progress-bar").attr("aria-valuenow", progressBarValue.toString());
+					$("#rate-" + type + "-box .progress-bar").attr("class", "progress-bar " + progressBarType);
+					$("#rate-" + type + "-box .progress-value").html(progressBarValue.toString() +"%");
+				}
+				else if (type == "quality") {
+					var quality_plus = response.sum_plus;
+					var quality_minus = response.sum_minus;
+
+					var box_content = '';
+
+					if (quality_plus > 0 || quality_minus > 0) {
+						if (quality_plus > 0) {
+							box_content += '<font size="+2"><span class="label label-success">' +
+								quality_plus.toString() + 
+								' <span class="fa fa-thumbs-o-up"></span></span></font>';
+						}
+						if (quality_minus > 0) {
+							box_content += '<font size="+2"><span class="label label-danger">' +
+								quality_minus.toString() + 
+								' <span class="fa fa-thumbs-o-down"></span></span></font>';
+						}
+					}
+
+					$( "#rate-" + type + "-box" ).empty().html(box_content);
+				}
+
+				// update count
+				if (response.update_count == 1) {
+					var count = parseInt($("#votes_count").html(), 10);
+					count++;
+					var votes_word = " vote";
+					if (count > 1) votes_word += "s";
+					$("#votes_count").empty().html(count.toString() + votes_word);
+				}
+			}
+			$( ".rate-btn" ).click(function() {
+				var rate_type = $(this).attr('data-rate-type').toString();
+				var rate_type_full = "";
+				var rate = $(this).attr('data-rate').toString();
+				if (rate_type == "p") rate_type_full = "problem";
+				else if (rate_type == "i") rate_type_full = "implementation";
+				else if (rate_type == "q") rate_type_full = "quality";
+				$.get( '/?a=vote&pid=8627&t=' + rate_type + '&r=' + rate, function( data ) {
+				  callback_after_vote(rate_type_full, data);
+				});
+			});
+			function manage_vote_interface(type) {
+				number_of_voteboxes--;
+				/*
+				if (number_of_voteboxes == 0) {
+					$( "#vote-box" ).fadeOut(1500, function() {
+						$(this).remove();
+					});
+				} else {
+					$( "#vote-" + type + "-box" ).fadeOut(1500, function() {
+						$(this).remove();
+					});
+				}
+				*/
+				var n = $('.vote-thank-you').length;
+				var offset = (n * 60).toString() + "px";
+				$(document.body).append(
+					'<div class="vote-thank-you" style="margin: 40%;">' +
+					'<div class="alert alert-success" style="position: fixed; top: '+offset+';">' +
+					'<strong>Thank you for voting!</strong>' +				
+					'</div></div>');
+				setTimeout(function(){$( ".vote-thank-you" ).fadeOut(1500, function() {
+					$(this).remove();
+				});},2000);
+			}
+		</script>
+		
+		
+	</div><!-- endof col-lg-4 col-md-4 -->
+</div>
+
+
+
+
+
+
+<style>
+ul.list-unstyled li{
+	margin-bottom: 5px;
+}
+ul.list-unstyled li a.btn{
+	width: 100%;
+}
+ul.ui-autocomplete{
+	z-index: 10000;
+	width: 200px !important;
+}
+</style>
+	<br/>
+</div>
+		
+		
+		<div class="container" id="footer">
+			<div class="row">
+				<div class="col-md-2">
+					
+				</div>
+				<div class="col-md-8 text-center">
+					<a href="/info">About</a> | <a href="/tutorials">Tutorial</a> | <a href="/tools">Tools</a> | <a href="/clusters">Clusters</a> | <a href="/credits">Credits</a> | <a href="/jobs">Jobs</a> | <a href="/sphereengine">API</a> | <a href="/gfx/spoj-terms.pdf" target="_blank">Terms</a>
+				</div>
+				<div class="col-md-2 text-right">
+					<a href="/rss/" ><img src="//stx1.spoj.com/gfx/rss10x10.gif" border=0>&nbsp;RSS</a>&nbsp;
+				</div>
+			</div>
+		</div>
+		
+		<div class="text-center" id="footer-srl">
+			
+	&copy; Spoj.com. All Rights Reserved. Spoj uses <a href="http://sphere-engine.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Engine</a>&trade; &copy; by <a href="http://sphere-research.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Research Labs</a>.
+
+		</div> 
+	</div>
+
+	<!-- JavaScripts -->
+	
+		
+	
+	<script type="text/javascript">
+	$(function(){
+		setTimeout(function(){
+			$('.no_a_info').css('visibility', 'visible');
+		}, 5000);
+		
+		if(!$('.aProblemTop').length && !$('.aProblemsTop').length && !$('.aSubmitTop').length && !$('.aStatusTop').length && !$('.aMainRight').length){
+			ga('send', 'event', 'ads', 'no-ads', 'main-contest');
+		}
+		if ($('.aProblemTop').height() == 0){
+			$('.aProblemTop').css({'border': '1px solid #ddd', 'background': '#f0f4e3', 'height': 90});
+			$('.aProblemTop').html($('<p class="text-center">using adblock?</p><h4 class="text-center">Online ads help us to maintain site.</h4><p class="text-center"><strong>please whitelist *.spoj.com</strong></p>'));
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemTop');
+		}
+		if ($('.aProblemsTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemsTop');
+		}
+		if ($('.aSubmitTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aSubmitTop');
+		}
+		if ($('.aStatusTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aStatusTop');
+		}
+		if ($('.aMainRight').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aMainRight');
+		}
+	});
+	</script>
+	
+	
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.timers.js"></script>
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.cookie.js"></script>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+	<script src="//crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
+	<script src="//stx1.spoj.com/gfx/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+	<script src="//stx1.spoj.com/gfx/scripts/tour.js"></script>
+	
+	
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&appId=321676846207&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	
+	
+
+
+<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-10507872-1', 'auto');
+	  ga('require', 'linkid', 'linkid.js');
+	  ga('send', 'pageview');
+	</script>
+<script type="text/javascript">
+	$(function(){
+		$(document).on('click', '.track', function(){
+			var event = $(this).attr('data-event');
+			var action = $(this).attr('data-action');
+			var value = $(this).attr('data-value');
+			ga('send', 'event', event, action, value);
+		});
+	});
+	</script>
+
+
+</body>
+</html>

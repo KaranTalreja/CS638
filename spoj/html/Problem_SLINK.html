@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="not-ie" lang="en"> <!--<![endif]-->
+<head>
+	<!-- main header -->
+	<meta charset="utf-8">
+	
+				<title>SPOJ.com - Problem SLINK</title>
+		  
+	<meta name="keywords" content="language, algorithm, spoj, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  		<meta property="og:title" content="SPOJ.com - Problem SLINK"/>
+    <meta property="fb:app_id"      content="321676846207" />
+	<meta property="og:type" content="spoj-pl:problem"/>
+	<meta property="og:url" content="http://www.spoj.com/problems/SLINK/"/>
+	<meta property="og:image" content="//stx1.spoj.com/gfx/logo-cr.png"/>
+	<meta property="og:description" content="..."/>
+	<meta name="description" content="..."/>
+		<meta property="og:site_name" content="spoj.com"/>
+
+  <!--[if (gte IE 9)|!(IE)]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" id="metatag">
+  <![endif]--> 
+
+	  <!-- Favicon -->
+	  <link href="//stx1.spoj.com/gfx/favicon_new.png" rel="shortcut icon" type="image/x-icon" />
+	  
+	  <!-- RSS -->
+	  <link href="/rss/" rel="alternate" type="application/rss+xml" title="RSS Feed">
+	
+	  <!-- Web Fonts -->
+	  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">  
+
+	<!-- Internet Explorer condition - HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]--> 
+	
+	
+	
+	<!-- CSS: Bootstrap, Font-awesome, Bootstrap libs,  -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+  	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  	<link href="//stx1.spoj.com/gfx/bootstrap-tour/build/css/bootstrap-tour.min.css" rel="stylesheet" />
+  	<link href="//stx1.spoj.com/themes/bootstrap-social.css" rel="stylesheet" type="text/css" />
+  	
+	<link href="//stx1.spoj.com/themes/common.css?4" rel="stylesheet" type="text/css" id="theme0" />
+	<link href="//stx1.spoj.com/themes/en_new.css?4" rel="stylesheet" type="text/css" id="theme" />
+	
+	<!-- JS -->
+	<script type="text/javascript" src='//code.jquery.com/jquery-1.11.1.min.js'></script>
+	<script type="text/javascript" src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+	
+		
+		
+	<script type="text/javascript" language="javascript">
+	$(function () { 
+		$("#profile-menu").popover();
+	});
+	function UnCryptMailto(s) {
+		var n=0;
+		var r="";
+		for(var i=0;i<s.length;i++) {		
+			n=s.charCodeAt(i); 
+			if (n>=8364) {n = 128;}
+			r += String.fromCharCode(n+(2));	
+		}
+		return r;
+	}
+	function linkTo_UnCryptMailto(s)	{
+		location.href=UnCryptMailto(s);
+	}
+	</script>
+	
+	<script type="text/javascript">
+	function recordOutboundLink(link, category, action) {
+	  try {
+	    var pageTracker=_gat._getTracker("UA-XXXXX-X");
+	    pageTracker._trackEvent(category, action);
+	    setTimeout('document.location = "' + link.href + '"', 100)
+	  }catch(err){}
+	}
+	</script>
+	
+</head>
+
+<body>
+
+	
+	<!-- <div class="space30"></div> -->
+	
+	<!-- Content -->
+	<div class="content">
+		<div class="container" id="header">
+			<div class="row">
+				<div class="col-md-12 text-right">
+										<form method="post" style="display: none;" action="/login/" id="login-form">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-2">
+								<input type="hidden" name="next_raw" value="/"/>
+								<input type="hidden" name="autologin" value="1"/>
+								<input type="text" name="login_user" placeholder="Username" class="form-control input-sm" style="display: inline-block; width: 25%;"/>
+								<input type="password" name="password" placeholder="Password" class="form-control input-sm" style="display: inline-block; width: 25%;"/>
+																<button type="submit" class="btn btn-default btn-sm" style="display: inline-block; margin-right: 10px;"><span class="fa fa-sign-in fa-lg"></span> <strong>sign in</strong></button>
+																<a href="/register"><i class="fa fa-user-plus"></i> sign up</a>
+				        									</div>
+						</div>
+					</form>
+										
+					
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-md-4">
+					<a href="/" class="navbar-brand">
+						<img src="//stx1.spoj.com/gfx/2015e.png" style="height: 40px;"/>
+					</a>
+					<div class="navbar-header">
+				      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+				        <span class="sr-only">Toggle navigation</span>
+				        <i class="fa fa-bars"></i>
+				      </button>
+				    </div>
+				</div>
+				<div class="col-md-8" id="menu">
+				
+					
+					<div class="row">
+					<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation"  style="border: 0px;">
+				      <ul class="nav navbar-nav" style="  float: right; margin-top: 10px;">
+				      						        <li class="active">
+					          <a href="/problems"><i class="fa fa-puzzle-piece"></i> PROBLEMS</a>
+					        </li>
+					        					        <li >
+					          <a href="/status"><i class="fa fa-circle"></i> STATUS</a>
+					        </li>
+					        <li >
+					          <a href="/ranks"><i class="fa fa-trophy"></i> RANKS</a>
+					        </li>
+					        <li >
+					          <a href="http://spoj.com/forum"><i class="fa fa-comments-o"></i> DISCUSS</a>
+					        </li>
+					        
+					        <li >
+					          <a href="/contests">CONTESTS</a>
+					        </li>
+					        <!-- 
+					        <li >
+					          <a href="/jobs"><i class="fa fa-briefcase"></i> JOBS</a>
+					        </li>
+						-->
+											        					        <li >
+					        	<a href="/login" class="text-success" onclick="$('#login-form').show(); $('input[name=login_user]').focus(); return false;"><i class="fa fa-sign-in"></i> sign in</a>
+					        </li>
+					        						
+				        
+				      </ul>
+				    </nav>
+				    </div>
+				    
+				    
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="container" id="menu">
+			
+		</div>
+		
+		<div class="container" id="content">
+		<script type='text/javascript' src='/gfx/jquery.cxhelp2.js'></script>
+
+
+
+ <!-- wykorzystywane w pcontent.html (by wiele) -->
+
+<div class="submenu">
+	
+		<ol class="breadcrumb">
+	  <li><a href="/problems">Problems</a></li>
+	  <li><a href="/problems/classical">classical</a></li>
+	  <li class="active">Slink</li>
+	</ol>
+		
+	<ol class="navbar-right">
+						
+				<li><a href="/status/SLINK/" class="">Status</li></a>
+		<li><a href="/ranks/SLINK/" class="">Ranking</li></a>
+	</ol>
+</div>
+
+
+	<script type="text/javascript">
+		var number_of_voteboxes = "";
+	</script>
+
+
+<div class="row first-row">
+	<div class="col-lg-8 col-md-8">
+		<div class="prob" style="position: relative">
+
+			<!-- google_ad_section_start -->
+			<!-- plik z pomoca kontekstowa (cxhelp_*) dziedziczony po pindex.html -->
+
+
+
+<script type="text/javascript" src="/gfx/jscripts/tiny_mce/plugins/asciimath/js/ASCIIMathMLwFallback.js"></script>
+<!--script type="text/javascript" src="/gfx/jscripts/tiny_mce/plugins/asciisvg/js/ASCIIsvgPI.js"></script-->
+<script type="text/javascript">
+<!--
+var AScgiloc = 'http://www.imathas.com/imathas/filter/graph/svgimg.php';
+var AMTcgiloc = "/files/gif/";
+-->
+</script>
+
+
+<div class="text-center"><center>
+	<div class="aProblemTop c728x90"><div class="no_a_info"></div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-4453360425583535"
+     data-ad-slot="1073332635"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+	</center>
+</div>
+<br/>
+
+<h2 id="problem-name" class="text-center">SLINK - Slink</h2>
+
+
+<div class="row">
+	<div id="problem-tags" class="col-lg-12 text-center">
+				<i>no tags</i>&nbsp;
+				</div>
+</div>
+<br/>
+
+<div id="problem-body">
+	<p>Slitherlink is a puzzle published by Nikoli, the Japanese company that
+   popularized Sudoku. Slitherlink puzzles are gaining momentum, and books of
+   Slitherlink puzzles have started showing up around the world. The puzzles
+   are simple to understand, but can be challenging to solve. The puzzle is
+   simply a rectangular grid of dots that forms a collection of cells, every
+   cell being either blank or containing an integer from zero to three. The
+   challenge is to connect the dots with line segments to form a cycle (a
+   connected path such that every vertex has precisely two incident edges), in
+   such a way that every cell with a value has exactly the number of incident
+   edges as the digit it contains. Cells with no value may have any number of
+   incident edges. A valid Slitherlink puzzle always contains sufficient
+   non-empty cells to guarantee a unique solution. Below is an example from the
+   Nikoli web site of a Slitherlink puzzle and its solution.</p>
+
+   <p><img alt="slitherlink example" src="/content/zukow:SLINK_original.png"></p>
+
+   <p>It was shown by Takayuki Yato at the University of Tokyo that the general
+   Slitherlink problem is NP-complete. (If you are not familiar with this
+   concept, informally it means there is no "efficient" algorithm to solve the
+   problem.) With a slight modification and some simple heuristics, however,
+   programmatic solutions are possible. Our new puzzle, which we will term
+   Slink, differs from Slitherlink only in that the puzzle may not have empty
+   cells. That is, every cell must specify the number of incident edges. Below
+   is the Slitherlink puzzle above converted to Slink (the added numbers are
+   shown in gray). Note that the solution does not change, only the information
+   given in the puzzle itself.</p>
+
+   <p><img alt="slink example" src="/content/zukow:SLINK_simple.png"></p>
+
+   <p>The heuristics for solving Slink arise from the nature of the puzzle
+   itself. For example, consider a cell containing a zero. There must be no
+   incident edges, therefore all edges incident to all zeros can be immediately
+   removed from consideration as part of the solution path. Consider a three
+   next to a zero. Because all the edges incident to the zero will be
+   eliminated, the common edge shared with the three is also eliminated. But
+   that leaves only three edges around the three, and therefore those three
+   edges must be part of the solution path. The following table specifies the
+   heuristic rules that must be properly applied to solve a Slink puzzle. The
+   "x" characters between vertices mark edges that are not part of the solution
+   path, while line segments between vertices mark edges that form part of the
+   solution. Grey elements are the pattern the rule is based on, black elements
+   indicate the additional edges that should be included or excluded if the
+   rule is matched. Note that the pictured examples are for demonstration
+   purposes only and do <i>not</i> illustrate every possible arrangement of the
+   stated rule!</p>
+
+   <table border="1" cellpadding="3">
+      <tr>
+         <th>Examples</th>
+
+         <th>Rule Specification</th>
+      </tr>
+
+      <tr>
+
+         <td><img alt="case 1" src="/content/zukow:SLINK_01.png"></td>
+
+         <td>The easiest and most obvious of all the rules. Cells containing a
+         zero have no incident edges, so all the edges around a zero should be
+         removed from consideration as part of the solution path.</td>
+      </tr>
+
+      <tr>
+         <td><img alt="case 2" src="/content/zukow:SLINK_02-1.png"><br>
+         <br>
+         <img alt="case 3" src="/content/zukow:SLINK_02-2.png"></td>
+
+         <td>If a cell contains the value <i>n</i> and only <i>n</i> incident
+         edges remain (i.e. have not been eliminated), then the <i>n</i>
+         remaining edges must be part of the solution path. Two examples of
+         this occurring are shown here.</td>
+      </tr>
+
+      <tr>
+         <td><img alt="case 4" src="/content/zukow:SLINK_03-1.png"><br>
+         <br>
+         <img alt="case 5" src="/content/zukow:SLINK_03-2.png"></td>
+
+         <td>If a cell contains the value <i>n</i> and <i>n</i> incident edges
+         have already been included in the path, the remaining edges can be
+         eliminated. Two examples of this occurring are shown here.</td>
+
+      </tr>
+
+      <tr>
+
+         <td><img alt="case 6" src="/content/zukow:SLINK_04.png"></td>
+         <td>If two 3's are adjacent to one another, the common edge between
+         the cells as well as the outer edges of both cells are part of the
+         solution path. One example of this arrangement occurring is shown
+         here.</td>
+      </tr>
+
+      <tr>
+         <td><img alt="case 7" src="/content/zukow:SLINK_05.png"></td>
+
+         <td>If two 3's occur diagonally adjacent, the opposing corners as
+         shown here must be part of the solution path. One example of such an
+         arrangement is shown here.</td>
+
+      </tr>
+
+      <tr>
+
+         <td><img alt="case 8" src="/content/zukow:SLINK_06-a.png"></td>
+
+         <td>If an edge enters a vertex for which only a single exit remains,
+         that exit must be part of the solution path. One such example is shown
+         here.</td>
+      </tr>
+
+      <tr>
+         <td><img alt="case 9" src="/content/zukow:SLINK_07-b.png"></td>
+
+         <td>If a vertex has two incident edges, the other edges can be
+         eliminated from consideration as part of the solution path. One such
+         example is shown here.</td>
+
+      </tr>
+
+      <tr>
+
+         <td><img alt="case 10" src="/content/zukow:SLINK_08.png"></td>
+
+         <td>If any vertex has three incident edges excluded, the fourth
+         incident edge can be excluded as well. One possible arrangement of
+         this occurring is shown here.</td>
+      </tr>
+
+      <tr>
+         <td><img alt="case 11" src="/content/zukow:SLINK_09.png"></td>
+
+         <td>A 3 for which two of the exits are blocked as shown, such as in a
+         corner of the puzzle, must include the two edges incident to the
+         blocked vertex.</td>
+
+      </tr>
+
+      <tr>
+
+         <td><img alt="case 12" src="/content/zukow:SLINK_10.png"></td>
+
+         <td>If the exits at one corner of a 2 are blocked, and one exit at an
+         adjacent vertex around the 2 is also blocked, then the unblocked exit
+         at that adjacent vertex must be part of the solution path. One example
+         of this arrangement is shown here.</td>
+      </tr>
+
+      <tr>
+         <td><img alt="case 13" src="/content/zukow:SLINK_11.png"></td>
+
+         <td>A 1 for which the exit paths at one of its incident vertices are
+         both blocked as shown, such as might occur in the corner of the
+         puzzle, must also eliminate the other two edges incident to that
+         vertex as shown.</td>
+
+      </tr>
+
+      <tr>
+
+         <td><img alt="case 14" src="/content/zukow:SLINK_12.png"></td>
+
+         <td>If the solution path enters the corner of a 3, and the exit that
+         goes away from the 3 at that same corner is blocked, then the two
+         edges around the three incident to the opposite corner must be part of
+         the solution path.</td>
+      </tr>
+
+      <tr>
+         <td><img alt="case 15" src="/content/zukow:SLINK_15.png"></td>
+
+         <td>If a 3 and 1 are diagonally adjacent, and the corner of the 3
+         furthest from the 1 has the exit segments blocked as shown, then the
+         edges incident to the far corner of the 1 becomes blocked. The
+         opposite is also true; if the far corner of the 1 had been blocked,
+         then the exit segments at the far corner of the 3 would become blocked
+         in the same manner.</td>
+
+      </tr>
+
+      <tr>
+
+         <td><img alt="case 16" src="/content/zukow:SLINK_16.png"></td>
+
+         <td>If the solution path enters the corner of 2 and the path leading
+         away from the 2 at the same corner is blocked, then if one of the
+         paths leading away from the 2 at the diagonally opposite corner is
+         also blocked, the other edge leading away from the 2 at that same
+         corner must be part of the solution path. One example of this
+         arrangement occurring is shown here.</td>
+      </tr>
+
+      <tr>
+         <td><img alt="case 17" src="/content/zukow:SLINK_14.png"></td>
+
+         <td>If the solution path enters the corner of a 1, and the exit that
+         goes away from the 1 at that same corner is blocked, then the two
+         edges around the three incident to the opposite corner must be
+         eliminated from the solution path.</td>
+
+      </tr>
+   </table>
+
+<h3>Input</h3>
+<p>The input for this problem is a set of Slink puzzles to be
+   solved. The first line of a Slink problem's input contains two integers,
+   <i>r</i> and <i>c</i>, separated by a space, the number of rows and the
+   number of columns in the puzzle. The next <i>r</i> rows of the input contain
+   <i>c</i> integers, space delimited, valued from 0 to 3, which specify the
+   content of the puzzle. The minimum dimension of a puzzle is 2 by 2 cells,
+   and the maximum dimension is 20 by 20 cells. It is guaranteed that a unique
+   solution to every input puzzle exists and can be determined with the above
+   rules if a rule is always applied when it can be applied. A line with values
+   of zero for <i>r</i> and <i>c</i> marks the end of the input.</p>
+
+<h3>Output</h3>
+<p>The output for this problem is a graphical representation
+   of the Slink puzzle solution. The first data set is 1, the second data set
+   is 2, etc. On a line by itself display the data set number, followed by the
+   solution in exactly the format demonstrated below. Vertical edges are output
+   as the vertical bar '|' character, horizontal edges are output as dash '-'
+   characters, vertices where the path changes direction are output as plus
+   signs '+', and cell numbers are always displayed with a blank to the left
+   and to the right. Further, surround the entire output with a border made up
+   of hash marks '#' such that the number in the upper left cell of the puzzle
+   always occurs four positions to the right of the border and three position
+   below the border, and the number in the lower right cell always occurs four
+   positions to the left of the border and three positions above the
+   border.<br></p>
+
+
+
+<h3>Example</h3>
+
+<pre>
+<b>Input:</b>
+
+8 8
+1 0 1 1 2 2 1 3
+3 3 3 3 2 3 3 2
+2 2 0 1 1 2 2 0
+2 3 1 1 0 1 2 2
+2 1 2 3 1 1 0 2
+1 2 2 2 2 3 2 1
+3 2 1 3 1 1 3 2
+1 0 0 2 3 2 3 2
+6 6
+0 0 1 1 0 0
+0 2 2 2 2 0
+1 2 0 0 2 1
+1 2 0 0 2 1
+0 2 2 2 2 0
+0 0 1 1 0 0
+2 2
+2 2
+2 2
+3 5
+3 3 3 2 3
+1 2 1 3 2
+3 3 2 2 2
+0 0
+
+
+<b>Output:</b>
+
+1
+#####################################
+#                                   #
+#                 +---------------+ #
+#   1   0   1   1 | 2   2   1   3 | #
+# +---+   +---+   |   +---+   +---+ #
+# | 3 | 3 | 3 | 3 | 2 | 3 | 3 | 2   #
+# |   +---+   +---+   |   +---+     #
+# | 2   2   0   1   1 | 2   2   0   #
+# +-------+           +-------+     #
+#   2   3 | 1   1   0   1   2 | 2   #
+# +-------+   +---+           +---+ #
+# | 2   1   2 | 3 | 1   1   0   2 | #
+# |       +---+   |   +---+       | #
+# | 1   2 | 2   2 | 2 | 3 | 2   1 | #
+# |   +---+   +---+   |   +---+   | #
+# | 3 | 2   1 | 3   1 | 1   3 | 2 | #
+# +---+       +---+   |   +---+   | #
+#   1   0   0   2 | 3 | 2 | 3   2 | #
+#                 +---+   +-------+ #
+#                                   #
+#####################################
+2
+#############################
+#                           #
+#                           #
+#   0   0   1   1   0   0   #
+#         +-------+         #
+#   0   2 | 2   2 | 2   0   #
+#     +---+       +---+     #
+#   1 | 2   0   0   2 | 1   #
+#     |               |     #
+#   1 | 2   0   0   2 | 1   #
+#     +---+       +---+     #
+#   0   2 | 2   2 | 2   0   #
+#         +-------+         #
+#   0   0   1   1   0   0   #
+#                           #
+#                           #
+#############################
+3
+#############
+#           #
+# +-------+ #
+# | 2   2 | #
+# |       | #
+# | 2   2 | #
+# +-------+ #
+#           #
+#############
+4
+#########################
+#                       #
+# +---+   +---+   +---+ #
+# | 3 | 3 | 3 | 2 | 3 | #
+# |   +---+   |   |   | #
+# | 1   2   1 | 3 | 2 | #
+# |   +---+   +---+   | #
+# | 3 | 3 | 2   2   2 | #
+# +---+   +-----------+ #
+#                       #
+#########################
+
+</pre>
+</div>
+
+<div class="text-center">
+	<a href="/submit/SLINK/" class="btn btn-primary btn-lg"><i class="fa fa-send"></i> Submit solution!</a>
+</div>
+			<!-- google_ad_section_end -->
+			
+			<div id="ccontent">
+			<!-- google_ad_section_start -->
+			
+<hr style="clear:both;"/>
+<a href="#" onclick="toggleComments(); return false;"><span id="comments_sh">hide</span> comments</a><br/>
+
+<a id="comments"></a>
+<table id="comments_table" width="100%">
+		<tr>
+		<td colspan="2">
+				</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+				</td>
+	</tr>
+	
+	<script language="JavaScript">
+	<!--
+	$(document).ready(function(){
+        $('.pager_link').bind('click', function(me){
+                var href=$(me.currentTarget).attr('href');
+		$('#ccontent').animate({opacity: 0.5},1);
+                $.ajax({
+                        type: "GET",
+                        url: href+",ajax=1",
+                        contentType: "application/x-www-form-urlencoded;charset=ISO-8859-2",
+                        success: function(data){
+                                $('#ccontent').html(data);
+				$('#ccontent').animate({opacity: 1.0},1);
+                        },
+                        error: function(err){
+                                alert('error');
+                        }
+                });
+                return false;
+        });
+	});
+	-->
+	</script>
+	
+
+
+
+			
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/a0adfa4142321618a92cb36c4b9ad1ae?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/carlosralv">Carlos Eduardo Rodrigues Alves [USJT]</a>: 
+								<span style="font-size: 10px; color: #666;">2010-08-06 12:55:54</span>
+		<br/>
+				<p>I got AC with less than 10 kBytes using Java and an OO approach, ignoring all rules and using just the basic idea of the puzzle. But I spent a lot of time in it.<br/><br/>My program still does not solve a general Slither Link problem (with blanks), because it does only "local" analysis. It ignores the "only one loop" rule, for example.</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/5b682a24b0f2e9092ed54fe2bd6fd0fd?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/zukow">:D</a>: 
+								<span style="font-size: 10px; color: #666;">2010-03-03 09:16:43</span>
+		<br/>
+				<p>That's not a problem since the specification states that only slink puzzles in the input can be solved with those rules, not any general puzzle.</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/9c0eb04272fa2b4164890c7b9b79895a?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/schiermike">schiermike</a>: 
+								<span style="font-size: 10px; color: #666;">2010-02-05 08:13:52</span>
+		<br/>
+				<p>i got the problem accepted (~15k bytes) without implementing all the rules plus no one of the above rules could solve the following problem:<br/><br/>6 5<br/>2 2 2 2 3<br/>2 2 2 2 2<br/>2 2 2 2 2<br/>2 2 3 3 2<br/>2 2 2 2 2<br/>2 2 2 2 2</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/8104ceef3df2332f573b3f9c3403e42d?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/john_jones">[Trichromatic] XilinX</a>: 
+								<span style="font-size: 10px; color: #666;">2009-03-29 03:18:34</span>
+		<br/>
+				<p>I spent almost 6 or 7 hours to do the programming... And ended up with a code whose length is 19433 byte.</p>
+						</td>
+	</tr>
+			
+</table>
+
+
+<script language="javascript" type="text/javascript">
+<!--
+function getCookieVal (offset) {
+        var endstr = document.cookie.indexOf (";", offset);
+        if (endstr == -1) { 
+                endstr = document.cookie.length; 
+        }
+        return unescape(document.cookie.substring(offset, endstr));
+}
+
+function GetCookie (name) {
+  var arg = name + "=";
+  var alen = arg.length;
+  var clen = document.cookie.length;
+  var i = 0;
+  while (i < clen) {
+    var j = i + alen;
+    if (document.cookie.substring(i, j) == arg) {
+      return getCookieVal (j);
+      }
+    i = document.cookie.indexOf(" ", i) + 1;
+    if (i == 0) break; 
+    }
+  return null;
+}
+
+function toggleComments() {
+        var a = document.getElementById('comments_table');
+        var d = a.style.display;
+        if( d == "" || d == "block" ){
+                d = "none";
+                document.getElementById('comments_sh').innerHTML = 'show';
+        } else {
+                d = "block";
+                document.getElementById('comments_sh').innerHTML = 'hide';
+        }
+        a.style.display = d;
+        document.cookie="comments_table="+d+"; path=/;";
+}
+
+if( GetCookie('comments_table') == 'none' ){
+        document.getElementById('comments_sh').innerHTML = 'show';
+        document.getElementById('comments_table').style.display = 'hide';
+}
+
+-->
+</script>
+
+
+			<!-- google_ad_section_end -->
+			</div>
+			<table width="100%">
+        </table>
+<br/>
+		</div>
+	</div><!-- endof col-lg-8 col-md-8 -->
+	
+	<div class="col-lg-4 col-md-4">
+	
+				<div id="problem-btn-submit-box">
+			<a href="/submit/SLINK/" id="problem-btn-submit" class="btn btn-primary" style="width: 100%; margin-bottom: 20px;"><i class="fa fa-send"></i> Submit solution!</a>
+		</div>
+				
+		<table border=0 cellspacing=0 cellpadding=0 style="margin-bottom:10px" class="probleminfo" id="problem-meta">
+			<colgroup>
+				<col width="120"/>
+				<col/>
+			</colgroup>
+			<tbody>
+			<tr><td>Added by:</td><td><a href="/users/nikola_borisof">Nikola P Borisov</a></td></tr>
+			<tr><td>Date:</td><td>2008-10-25</td></tr>
+			<tr><td>Time limit:</td><td>0.756s
+			</td></tr>
+			<tr><td>Source limit:</td><td>50000B</td></tr>
+						<tr><td>Memory limit:</td><td>1536MB</td></tr>
+										<tr>
+					<td>Cluster:</td>
+					<td>
+													<a href="/clusters/" target="_blank">Cube (Intel G860)</a>
+								
+					</td>
+				</tr>
+						<tr><td>Languages:</td><td>All except: ERL JS NODEJS PERL 6 VB.net </td></tr>
+			<tr><td>Resource:</td><td>Mid-Central Regional ACM-ICPC Contest 2007</td></tr>													</tbody>
+		</table>
+
+		<div class="right-box-hehe">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- spoj_problem_336x280_right2 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-4453360425583535"
+     data-ad-slot="3836605032"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+		</div>
+	
+		<!-- BEGIN: Voting for problem -->
+		
+				
+		<!-- END: Voting the problem -->
+		
+		<div class="right-box-hehe">
+							<div class="c336x280"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- spoj_problem_336x280_right -->
+	<ins class="adsbygoogle"
+			style="display:inline-block;width:336px;height:280px"
+					data-ad-client="ca-pub-4453360425583535"
+							data-ad-slot="7873511834"></ins>
+							<script>
+							(adsbygoogle = window.adsbygoogle || []).push({});
+	</script></div>
+						<br/>
+		</div>
+		
+				
+		
+		<script type="text/javascript">
+			function callback_after_vote(type, data)
+			{
+				var response = $.parseJSON(data);
+				manage_vote_interface(type);
+				//.html('<div class="vote-thank-you">Thank you!</div>');
+				
+
+				if (type == "problem" || type == "implementation") {
+					var progressBarValue = Math.round(2 + 98 * response.avg / 3);
+					var progressBarType;
+					if (progressBarValue < 25) progressBarType = "progress-bar-primary";
+					else if (progressBarValue < 50) progressBarType = "progress-bar-success";
+					else if (progressBarValue < 75) progressBarType = "progress-bar-warning";
+					else progressBarType = "progress-bar-danger";
+					
+					$("#rate-" + type + "-box .progress-bar").css("width", progressBarValue.toString() +"%");
+					$("#rate-" + type + "-box .progress-bar").attr("aria-valuenow", progressBarValue.toString());
+					$("#rate-" + type + "-box .progress-bar").attr("class", "progress-bar " + progressBarType);
+					$("#rate-" + type + "-box .progress-value").html(progressBarValue.toString() +"%");
+				}
+				else if (type == "quality") {
+					var quality_plus = response.sum_plus;
+					var quality_minus = response.sum_minus;
+
+					var box_content = '';
+
+					if (quality_plus > 0 || quality_minus > 0) {
+						if (quality_plus > 0) {
+							box_content += '<font size="+2"><span class="label label-success">' +
+								quality_plus.toString() + 
+								' <span class="fa fa-thumbs-o-up"></span></span></font>';
+						}
+						if (quality_minus > 0) {
+							box_content += '<font size="+2"><span class="label label-danger">' +
+								quality_minus.toString() + 
+								' <span class="fa fa-thumbs-o-down"></span></span></font>';
+						}
+					}
+
+					$( "#rate-" + type + "-box" ).empty().html(box_content);
+				}
+
+				// update count
+				if (response.update_count == 1) {
+					var count = parseInt($("#votes_count").html(), 10);
+					count++;
+					var votes_word = " vote";
+					if (count > 1) votes_word += "s";
+					$("#votes_count").empty().html(count.toString() + votes_word);
+				}
+			}
+			$( ".rate-btn" ).click(function() {
+				var rate_type = $(this).attr('data-rate-type').toString();
+				var rate_type_full = "";
+				var rate = $(this).attr('data-rate').toString();
+				if (rate_type == "p") rate_type_full = "problem";
+				else if (rate_type == "i") rate_type_full = "implementation";
+				else if (rate_type == "q") rate_type_full = "quality";
+				$.get( '/?a=vote&pid=3251&t=' + rate_type + '&r=' + rate, function( data ) {
+				  callback_after_vote(rate_type_full, data);
+				});
+			});
+			function manage_vote_interface(type) {
+				number_of_voteboxes--;
+				/*
+				if (number_of_voteboxes == 0) {
+					$( "#vote-box" ).fadeOut(1500, function() {
+						$(this).remove();
+					});
+				} else {
+					$( "#vote-" + type + "-box" ).fadeOut(1500, function() {
+						$(this).remove();
+					});
+				}
+				*/
+				var n = $('.vote-thank-you').length;
+				var offset = (n * 60).toString() + "px";
+				$(document.body).append(
+					'<div class="vote-thank-you" style="margin: 40%;">' +
+					'<div class="alert alert-success" style="position: fixed; top: '+offset+';">' +
+					'<strong>Thank you for voting!</strong>' +				
+					'</div></div>');
+				setTimeout(function(){$( ".vote-thank-you" ).fadeOut(1500, function() {
+					$(this).remove();
+				});},2000);
+			}
+		</script>
+		
+		
+	</div><!-- endof col-lg-4 col-md-4 -->
+</div>
+
+
+
+
+
+
+<style>
+ul.list-unstyled li{
+	margin-bottom: 5px;
+}
+ul.list-unstyled li a.btn{
+	width: 100%;
+}
+ul.ui-autocomplete{
+	z-index: 10000;
+	width: 200px !important;
+}
+</style>
+	<br/>
+</div>
+		
+		
+		<div class="container" id="footer">
+			<div class="row">
+				<div class="col-md-2">
+					
+				</div>
+				<div class="col-md-8 text-center">
+					<a href="/info">About</a> | <a href="/tutorials">Tutorial</a> | <a href="/tools">Tools</a> | <a href="/clusters">Clusters</a> | <a href="/credits">Credits</a> | <a href="/jobs">Jobs</a> | <a href="/sphereengine">API</a> | <a href="/gfx/spoj-terms.pdf" target="_blank">Terms</a>
+				</div>
+				<div class="col-md-2 text-right">
+					<a href="/rss/" ><img src="//stx1.spoj.com/gfx/rss10x10.gif" border=0>&nbsp;RSS</a>&nbsp;
+				</div>
+			</div>
+		</div>
+		
+		<div class="text-center" id="footer-srl">
+			
+	&copy; Spoj.com. All Rights Reserved. Spoj uses <a href="http://sphere-engine.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Engine</a>&trade; &copy; by <a href="http://sphere-research.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Research Labs</a>.
+
+		</div> 
+	</div>
+
+	<!-- JavaScripts -->
+	
+		
+	
+	<script type="text/javascript">
+	$(function(){
+		setTimeout(function(){
+			$('.no_a_info').css('visibility', 'visible');
+		}, 5000);
+		
+		if(!$('.aProblemTop').length && !$('.aProblemsTop').length && !$('.aSubmitTop').length && !$('.aStatusTop').length && !$('.aMainRight').length){
+			ga('send', 'event', 'ads', 'no-ads', 'main-contest');
+		}
+		if ($('.aProblemTop').height() == 0){
+			$('.aProblemTop').css({'border': '1px solid #ddd', 'background': '#f0f4e3', 'height': 90});
+			$('.aProblemTop').html($('<p class="text-center">using adblock?</p><h4 class="text-center">Online ads help us to maintain site.</h4><p class="text-center"><strong>please whitelist *.spoj.com</strong></p>'));
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemTop');
+		}
+		if ($('.aProblemsTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemsTop');
+		}
+		if ($('.aSubmitTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aSubmitTop');
+		}
+		if ($('.aStatusTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aStatusTop');
+		}
+		if ($('.aMainRight').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aMainRight');
+		}
+	});
+	</script>
+	
+	
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.timers.js"></script>
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.cookie.js"></script>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+	<script src="//crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
+	<script src="//stx1.spoj.com/gfx/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+	<script src="//stx1.spoj.com/gfx/scripts/tour.js"></script>
+	
+	
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&appId=321676846207&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	
+	
+
+
+<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-10507872-1', 'auto');
+	  ga('require', 'linkid', 'linkid.js');
+	  ga('send', 'pageview');
+	</script>
+<script type="text/javascript">
+	$(function(){
+		$(document).on('click', '.track', function(){
+			var event = $(this).attr('data-event');
+			var action = $(this).attr('data-action');
+			var value = $(this).attr('data-value');
+			ga('send', 'event', event, action, value);
+		});
+	});
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="not-ie" lang="en"> <!--<![endif]-->
+<head>
+	<!-- main header -->
+	<meta charset="utf-8">
+	
+				<title>SPOJ.com - Problem MAUMAU</title>
+		  
+	<meta name="keywords" content="language, algorithm, spoj, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  		<meta property="og:title" content="SPOJ.com - Problem MAUMAU"/>
+    <meta property="fb:app_id"      content="321676846207" />
+	<meta property="og:type" content="spoj-pl:problem"/>
+	<meta property="og:url" content="http://www.spoj.com/problems/MAUMAU/"/>
+	<meta property="og:image" content="//stx1.spoj.com/gfx/logo-cr.png"/>
+	<meta property="og:description" content="..."/>
+	<meta name="description" content="..."/>
+		<meta property="og:site_name" content="spoj.com"/>
+
+  <!--[if (gte IE 9)|!(IE)]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" id="metatag">
+  <![endif]--> 
+
+	  <!-- Favicon -->
+	  <link href="//stx1.spoj.com/gfx/favicon_new.png" rel="shortcut icon" type="image/x-icon" />
+	  
+	  <!-- RSS -->
+	  <link href="/rss/" rel="alternate" type="application/rss+xml" title="RSS Feed">
+	
+	  <!-- Web Fonts -->
+	  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">  
+
+	<!-- Internet Explorer condition - HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]--> 
+	
+	
+	
+	<!-- CSS: Bootstrap, Font-awesome, Bootstrap libs,  -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+  	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  	<link href="//stx1.spoj.com/gfx/bootstrap-tour/build/css/bootstrap-tour.min.css" rel="stylesheet" />
+  	<link href="//stx1.spoj.com/themes/bootstrap-social.css" rel="stylesheet" type="text/css" />
+  	
+	<link href="//stx1.spoj.com/themes/common.css?4" rel="stylesheet" type="text/css" id="theme0" />
+	<link href="//stx1.spoj.com/themes/en_new.css?4" rel="stylesheet" type="text/css" id="theme" />
+	
+	<!-- JS -->
+	<script type="text/javascript" src='//code.jquery.com/jquery-1.11.1.min.js'></script>
+	<script type="text/javascript" src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+	
+		
+		
+	<script type="text/javascript" language="javascript">
+	$(function () { 
+		$("#profile-menu").popover();
+	});
+	function UnCryptMailto(s) {
+		var n=0;
+		var r="";
+		for(var i=0;i<s.length;i++) {		
+			n=s.charCodeAt(i); 
+			if (n>=8364) {n = 128;}
+			r += String.fromCharCode(n+(2));	
+		}
+		return r;
+	}
+	function linkTo_UnCryptMailto(s)	{
+		location.href=UnCryptMailto(s);
+	}
+	</script>
+	
+	<script type="text/javascript">
+	function recordOutboundLink(link, category, action) {
+	  try {
+	    var pageTracker=_gat._getTracker("UA-XXXXX-X");
+	    pageTracker._trackEvent(category, action);
+	    setTimeout('document.location = "' + link.href + '"', 100)
+	  }catch(err){}
+	}
+	</script>
+	
+</head>
+
+<body>
+
+	
+	<!-- <div class="space30"></div> -->
+	
+	<!-- Content -->
+	<div class="content">
+		<div class="container" id="header">
+			<div class="row">
+				<div class="col-md-12 text-right">
+										<form method="post" style="display: none;" action="/login/" id="login-form">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-2">
+								<input type="hidden" name="next_raw" value="/"/>
+								<input type="hidden" name="autologin" value="1"/>
+								<input type="text" name="login_user" placeholder="Username" class="form-control input-sm" style="display: inline-block; width: 25%;"/>
+								<input type="password" name="password" placeholder="Password" class="form-control input-sm" style="display: inline-block; width: 25%;"/>
+																<button type="submit" class="btn btn-default btn-sm" style="display: inline-block; margin-right: 10px;"><span class="fa fa-sign-in fa-lg"></span> <strong>sign in</strong></button>
+																<a href="/register"><i class="fa fa-user-plus"></i> sign up</a>
+				        									</div>
+						</div>
+					</form>
+										
+					
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-md-4">
+					<a href="/" class="navbar-brand">
+						<img src="//stx1.spoj.com/gfx/2015e.png" style="height: 40px;"/>
+					</a>
+					<div class="navbar-header">
+				      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+				        <span class="sr-only">Toggle navigation</span>
+				        <i class="fa fa-bars"></i>
+				      </button>
+				    </div>
+				</div>
+				<div class="col-md-8" id="menu">
+				
+					
+					<div class="row">
+					<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation"  style="border: 0px;">
+				      <ul class="nav navbar-nav" style="  float: right; margin-top: 10px;">
+				      						        <li class="active">
+					          <a href="/problems"><i class="fa fa-puzzle-piece"></i> PROBLEMS</a>
+					        </li>
+					        					        <li >
+					          <a href="/status"><i class="fa fa-circle"></i> STATUS</a>
+					        </li>
+					        <li >
+					          <a href="/ranks"><i class="fa fa-trophy"></i> RANKS</a>
+					        </li>
+					        <li >
+					          <a href="http://spoj.com/forum"><i class="fa fa-comments-o"></i> DISCUSS</a>
+					        </li>
+					        
+					        <li >
+					          <a href="/contests">CONTESTS</a>
+					        </li>
+					        <!-- 
+					        <li >
+					          <a href="/jobs"><i class="fa fa-briefcase"></i> JOBS</a>
+					        </li>
+						-->
+											        					        <li >
+					        	<a href="/login" class="text-success" onclick="$('#login-form').show(); $('input[name=login_user]').focus(); return false;"><i class="fa fa-sign-in"></i> sign in</a>
+					        </li>
+					        						
+				        
+				      </ul>
+				    </nav>
+				    </div>
+				    
+				    
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="container" id="menu">
+			
+		</div>
+		
+		<div class="container" id="content">
+		<script type='text/javascript' src='/gfx/jquery.cxhelp2.js'></script>
+
+
+
+ <!-- wykorzystywane w pcontent.html (by wiele) -->
+
+<div class="submenu">
+	
+		<ol class="breadcrumb">
+	  <li><a href="/problems">Problems</a></li>
+	  <li><a href="/problems/classical">classical</a></li>
+	  <li class="active">Mau-Mau</li>
+	</ol>
+		
+	<ol class="navbar-right">
+						
+				<li><a href="/status/MAUMAU/" class="">Status</li></a>
+		<li><a href="/ranks/MAUMAU/" class="">Ranking</li></a>
+	</ol>
+</div>
+
+
+	<script type="text/javascript">
+		var number_of_voteboxes = "";
+	</script>
+
+
+<div class="row first-row">
+	<div class="col-lg-8 col-md-8">
+		<div class="prob" style="position: relative">
+
+			<!-- google_ad_section_start -->
+			<!-- plik z pomoca kontekstowa (cxhelp_*) dziedziczony po pindex.html -->
+
+
+
+<script type="text/javascript" src="/gfx/jscripts/tiny_mce/plugins/asciimath/js/ASCIIMathMLwFallback.js"></script>
+<!--script type="text/javascript" src="/gfx/jscripts/tiny_mce/plugins/asciisvg/js/ASCIIsvgPI.js"></script-->
+<script type="text/javascript">
+<!--
+var AScgiloc = 'http://www.imathas.com/imathas/filter/graph/svgimg.php';
+var AMTcgiloc = "/files/gif/";
+-->
+</script>
+
+
+<div class="text-center"><center>
+	<div class="aProblemTop c728x90"><div class="no_a_info"></div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-4453360425583535"
+     data-ad-slot="1073332635"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+	</center>
+</div>
+<br/>
+
+<h2 id="problem-name" class="text-center">MAUMAU - Mau-Mau</h2>
+
+
+<div class="row">
+	<div id="problem-tags" class="col-lg-12 text-center">
+				<i>no tags</i>&nbsp;
+				</div>
+</div>
+<br/>
+
+<div id="problem-body">
+	<p><img style="float:right; margin-left:50px; margin-bottom:8px; margin-right:10px; margin-top:10px;" src="http://s22.postimg.org/v0obf7b01/maumau_390t.png" width="350" alt="Mau-Mau Cards">
+One of the most famous German card games (also popular in some other countries) is called "Mau-Mau".  It is usually played by two to four players with a 32-card-deck of French playing cards. Your task will be to simulate a Mau-Mau game given a shuffled pile of cards, knowing the sequence of cards in the pile,  the number of players, the rules of the game and the players' rules of decision.</p>
+<p>The card-deck consists of <strong>four suits</strong> (clubs &clubs;, spades &spades;, hearts <span style="color:red">&hearts;</span>, diamonds <span style="color:red">&diams;</span>)  each with cards of <strong>eight ranks</strong> (seven [7], eight [8], nine [9], ten [10], jack [20], queen [3], king [4], ace [11]). Values (in square brackets) are important for decision rules  and the scoring at the end of the game. I will use a <strong>two-letter-notation</strong> for each card:  The first character is the first letter of the suit, the second one is the first letter of its rank, all upper-case, e.g.  <strong>CN</strong> (nine of clubs) or <strong>HK</strong> (king of hearts).</p>
+<p style="font-size:130%; font-weight:bold">Rules of playing</p>
+<p>All cards are shuffled and dealt clockwise one card at a time to each player. The number of cards for each player depends on the number of players.  Each of two players gets 7 cards, each of three players gets 6 cards and each of four players gets 5 cards.  The players take their cards, looking (only) at their own cards. After dealing cards to all players the topmost card of the pile is laid on the table faceup. This card is the first one on the <strong>discard pile</strong>.  The remaining cards are laid on the table facedown as <strong>draw pile</strong>.</p>
+<p>The player, who got the first card, starts playing. If one of his cards corresponds to the suit or value of the open card (i.e. the topmost card on the discard pile), he can play this card, which means, put it faceup on top of the discard pile. Be aware, that there are some additional rules, if an "action card" is played (see below). If the player has no matching  card, he must take the upmost card of the draw pile. If that card matches, it can be put down in the same turn.  Otherwise play moves on to the next player in turn. If one player puts his last card on the discard pile, he is the winner and the game is over.</p>
+<p>If the draw pile should be exhausted, the topmost card of the discard  pile is removed and the remaining discard pile is turned face down, forming the new draw pile. The removed open card is put down as new discard pile. This is done <em>immediately</em> after the last card is drawn, even if that card matches the open card and can be played in the same turn!   So the next card to draw from the draw pile will always be the bottom card of the former discard pile.  It is guaranteed that a game will not completely run out of cards. (In fact there exist a few "degenerated distributions" that lead to that state, but there is no such case among the testcases.)</p>
+<p style="font-size:130%; font-weight:bold">Action cards</p>
+<p><span style="color:red; font-weight:bold">Seven</span>: If a seven is played (or is the opening card on the discard pile after dealing the cards), the next player in turn has to take the two topmost cards from the draw pile as a <strong>penalty draw</strong>, even if one of his cards corresponds to the suit or is a jack.  The only card that can be played and thus will avoid the penalty draw, is another seven.  By playing another seven the move is "extended": The next player in turn now has to draw four cards &ndash; unless he has another seven and extends the move  once more by playing it. In that case the next player in turn has to draw six cards &ndash; unless he has another (the last) seven and can extend the move once again,  which results in a penalty draw of eight cards for the next player.<br /> Regardless of the number of cards to draw, the "punished player" is not allowed to put a card down on the discard pile after drawing the penalty cards. The turn moves on to the next player, and the seven has lost its effect. The next player can play any matching card.</p>
+<p><span style="color:red; font-weight:bold">Eight</span>: If an eight is played (or is the opening card on the discard pile after dealing the cards),   the next player in turn is skipped and the turn moves to the following player. So, if it's a two player game, the player, who played an eight, can play a second card (which again could be an eight, so he can play a third card etc.). After skipping, the eight has lost its effect. The next player can play any matching card.</p>
+<p><span style="color:red; font-weight:bold">Jack</span>: The jack matches to every card except another jack or an active seven regardless of its suit. You can consider a jack to be "suitless".  Moreover a jack has the power of choosing an arbitrary suit, independed from the jack's suit.  For example you can choose "spades" playing the jack of hearts. This suit is binding for the next player(s) in turn,  as long as the jack is the topmost card on the discard pile. The next player in turn has to put down any card (except another jack), that matches the chosen suit. If the opening card is a jack, the first player may play an arbitrary card (except a jack).</p>
+<p style="font-size:130%; font-weight:bold">Rules of decision</p>
+<p>For the purpose of the simulation we have to lay down some rules of decision for the player being in turn. Of course, all decisions must be taken within the limits of the game's rules!</p>
+<p><span style="color:red; font-weight:bold">Rule 1</span>: If you have to draw penalty cards because of an active seven and are able to extend that move by playing another seven, you do so.</p>
+<p><span style="color:red; font-weight:bold">Rule 2</span>:  If you have a card other than a jack that matches the open card, you play that card.  If you have more than one of those cards, you play one with highest value.</p>
+<p><span style="color:red; font-weight:bold">Rule 3</span>:  If you have no matching card other than a jack, you play a jack.</p>
+<p><span style="color:red; font-weight:bold">Rule 4</span>: If the next player in turn has only one card left, you play a jack, even if you have another matching card.</p>
+<p><span style="color:red; font-weight:bold">Rule 5</span>: If you play a jack, you choose the suit that is represented most among your cards as binding suit for the next player(s) in turn. If there is a tie, you choose a suit with the highest suit-rank (&rarr; rule 6). Remember that jacks are "suitless" and thus are not taken into account here.</p>
+<p><span style="color:red; font-weight:bold">Rule 6</span>: If you have more than one matching card with the same value at your disposal,  you always play the one with the highest suit-rank. The order of the suits is (from higher to lower rank): clubs, spades, hearts, diamonds.</p>
+<p style="font-size:130%; font-weight:bold">End of the game</p>
+<p>The game ends, when one player puts down his last card on the discard pile -  he is the winner of the game.  If this last card is an action card, that action is not executed. In particular, if this last card is a seven, the next player in turn does not have to draw the penalty cards, no matter how many that would be.</p>
+<p>Finally the score for each player has to be calculated as the sum of the values of his remaining cards. The winner has a score of 0 points. If the final card played by the winner is a jack, the score for each player is doubled. The more points, the worse.</p>
+<p>&nbsp;</p>
+<h3>Input</h3>
+<p>Input starts with the number t&lt;50 of testcases in a single line.  Then t lines follow, each line describing the initial state of a Mau-Mau game.  First the number of players (2, 3 or 4) followed by a single space, then 32 cards in two-letter-notation as explained above,  separated by single spaces. That sequence represents the draw pile before dealing the cards.  The first card in the sequence is the topmost card of the pile and will always be dealt to the first player.</p>
+<h3>Output</h3>
+<p>For each game you have to print the sequence of cards on the discard pile during the whole game in the order they were played, starting with the initial open card at the beginning of the game. You have to use the space separated two-letter-notation in a single line.<br /> In a second line you have to print the final scoring. The line starts with "Score: " (without quotes) followed by the  score of the first player, second player etc., separated by single spaces (see example below).</p>
+<h3>Example</h3>
+<pre><strong>Input:</strong>
+2
+2 SS HA SN HQ CE SQ CA DT CK CQ DJ CN HN DN CS SA CJ DA HJ HS DE HT SE DK HK ST SJ HE DS CT DQ SK
+3 SA SS CQ CT DA DJ ST HA SK HK DK DS DQ CE CK DE SQ DN DT SJ SE HN CJ CS HQ HJ CN HE CA HT SN HS 
+
+<strong>Output:</strong>
+CS SS SN SA CA HA HN CN CE CK CJ DA DJ HQ HS
+Score: 0 45
+DT CT CE DE DN DQ DA DS SS SA HA HN HK DK CK SJ SQ
+Score: 18 0 47
+</pre>
+<div style="background-color:#f8ffc9; padding:15px;margin-top:30px">
+<p style="font-weight:bold">Explanation of the first example</p>
+<p>After dealing, the cards are distributed as follows.</p>
+<pre style="font-weight:bold; color:green">player 1: SS SN CE CA CK DJ HN      player 2: HA HQ SQ DT CQ CN DN
+discard pile: CS
+draw pile:    SA CJ DA HJ HS DE HT SE DK HK ST SJ HE DS CT DQ SK</pre>
+<p>The order of the players' cards corresponds to the process of dealing. The discard pile grows to the right (bottom card is left), the draw pile has its topmost card on the left.<br /> The open card is an action card, player 1 has to draw two penalty cards. But as he has a seven, he plays SS and extends that move. Player 2 now has to draw four penalty cards. As he has no seven, he has to draw. After that the cards are distributed as follows:</p>
+<pre style="font-weight:bold; color:green">player 1: SN CE CA CK DJ HN         player 2: HA HQ SQ DT CQ CN DN SA CJ DA HJ
+discard pile: CS SS
+draw pile:    HS DE HT SE DK HK ST SJ HE DS CT DQ SK</pre>
+<p>Player 1 is in turn, because player 2 is not allowed to play a card after drawing penalty cards. The only (non-jack) card that matches is SN, so he has to play it. Player 2 has four matching cards (SQ CN DN SA) and plays SA as this card has the heighest value of all matching cards. After that the cards are distributed as follows:</p>
+<pre style="font-weight:bold; color:green">player 1: CE CA CK DJ HN            player 2: HA HQ SQ DT CQ CN DN CJ DA HJ
+discard pile: CS SS SN SA
+draw pile:    HS DE HT SE DK HK ST SJ HE DS CT DQ SK</pre>
+<p>Player 1 is in turn. The only card that matches is CA, so he plays it. Player 2 plays his highest value matching card which is HA. After that the cards are distributed as follows:</p>
+<pre style="font-weight:bold; color:green">player 1: CE CK DJ HN               player 2: HQ SQ DT CQ CN DN CJ DA HJ
+discard pile: CS SS SN SA CA HA
+draw pile:    HS DE HT SE DK HK ST SJ HE DS CT DQ SK</pre>
+<p>Player 1 is in turn. The only card that matches is HN, so he plays it. Player 2 plays his heighest value matching card which is CN. After that the cards are distributed as follows:</p>
+<pre style="font-weight:bold; color:green">player 1: CE CK DJ                  player 2: HQ SQ DT CQ DN CJ DA HJ
+discard pile: CS SS SN SA CA HA HN CN
+draw pile:    HS DE HT SE DK HK ST SJ HE DS CT DQ SK</pre>
+<p>Player 1 is in turn. He has two matching cards and plays CE because of the higher value. CE is an action card, the next player in turn is skipped, which is player 2. So, player 1 is in turn again. He plays CK as this is his only matching card. After that the cards are distributed as follows:</p>
+<pre style="font-weight:bold; color:green">player 1: DJ                        player 2: HQ SQ DT CQ DN CJ DA HJ
+discard pile: CS SS SN SA CA HA HN CN CE CK
+draw pile:    HS DE HT SE DK HK ST SJ HE DS CT DQ SK</pre>
+<p>Player 2 is in turn. He has a single matching non-jack card (CQ), but as the next player in turn has only one card left, he plays a jack instead. He has two jacks at his disposal, so he chooses the one with higher suit-rank and plays CJ. The suit represented most among his cards is diamonds, so he chooses diamonds as binding color. The last card of player 1 is a jack, but that can't be played, because of the jack on the discard pile. So he has to draw one card. Player 1 is still in turn, but the drawn card does not match to the binding color, so he looses his turn. After that the cards are distributed as follows:</p>
+<pre style="font-weight:bold; color:green">player 1: DJ HS                     player 2: HQ SQ DT CQ DN DA HJ
+discard pile: CS SS SN SA CA HA HN CN CE CK CJ
+draw pile:    DE HT SE DK HK ST SJ HE DS CT DQ SK</pre>
+<p>Player 2 is in turn. He has three matching cards and plays DA because of the highest value. Player 1 has no matching non-jack card, so he plays his jack. As his one and only left card is of hearts, he chooses hearts as binding color. After that the cards are distributed as follows:</p>
+<pre style="font-weight:bold; color:green">player 1: HS                        player 2: HQ SQ DT CQ DN HJ
+discard pile: CS SS SN SA CA HA HN CN CE CK CJ DA DJ
+draw pile:    DE HT SE DK HK ST SJ HE DS CT DQ SK</pre>
+<p>Player 2 is in turn. Again the next player has only one card left, so he decides to play a jack instead of another matching card. Unfortunately there is a jack on the discard pile, so he is not allowed to play a jack, and plays his only matching non-jack card HQ. Player 1 is in turn. His last card matches, so he plays it and is the winner of the game. Though his last card was an action card, player 2 does not have to draw the two penalty cards according to the rules. So, the final distribution is as follows:</p>
+<pre style="font-weight:bold; color:green">player 1:                           player 2: SQ DT CQ DN HJ
+discard pile: CS SS SN SA CA HA HN CN CE CK CJ DA DJ HQ HS
+draw pile:    DE HT SE DK HK ST SJ HE DS CT DQ SK</pre>
+<p>The scoring of player 2 is: 3+10+3+9+20 = 45</p>
+</div>
+</div>
+
+<div class="text-center">
+	<a href="/submit/MAUMAU/" class="btn btn-primary btn-lg"><i class="fa fa-send"></i> Submit solution!</a>
+</div>
+			<!-- google_ad_section_end -->
+			
+			<div id="ccontent">
+			<!-- google_ad_section_start -->
+			
+<hr style="clear:both;"/>
+<a href="#" onclick="toggleComments(); return false;"><span id="comments_sh">hide</span> comments</a><br/>
+
+<a id="comments"></a>
+<table id="comments_table" width="100%">
+		<tr>
+		<td colspan="2">
+				</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+				</td>
+	</tr>
+	
+	<script language="JavaScript">
+	<!--
+	$(document).ready(function(){
+        $('.pager_link').bind('click', function(me){
+                var href=$(me.currentTarget).attr('href');
+		$('#ccontent').animate({opacity: 0.5},1);
+                $.ajax({
+                        type: "GET",
+                        url: href+",ajax=1",
+                        contentType: "application/x-www-form-urlencoded;charset=ISO-8859-2",
+                        success: function(data){
+                                $('#ccontent').html(data);
+				$('#ccontent').animate({opacity: 1.0},1);
+                        },
+                        error: function(err){
+                                alert('error');
+                        }
+                });
+                return false;
+        });
+	});
+	-->
+	</script>
+	
+
+
+
+			
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/5b682a24b0f2e9092ed54fe2bd6fd0fd?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/zukow">:D</a>: 
+								<span style="font-size: 10px; color: #666;">2015-04-12 11:56:03</span>
+		<br/>
+				<p>This is probably a prime example of how to write a problem description. It's very challenging in this kind of specification / simulation tasks, but here everything is well organized and nothing is left to interpretation.</p>
+						</td>
+	</tr>
+			
+</table>
+
+
+<script language="javascript" type="text/javascript">
+<!--
+function getCookieVal (offset) {
+        var endstr = document.cookie.indexOf (";", offset);
+        if (endstr == -1) { 
+                endstr = document.cookie.length; 
+        }
+        return unescape(document.cookie.substring(offset, endstr));
+}
+
+function GetCookie (name) {
+  var arg = name + "=";
+  var alen = arg.length;
+  var clen = document.cookie.length;
+  var i = 0;
+  while (i < clen) {
+    var j = i + alen;
+    if (document.cookie.substring(i, j) == arg) {
+      return getCookieVal (j);
+      }
+    i = document.cookie.indexOf(" ", i) + 1;
+    if (i == 0) break; 
+    }
+  return null;
+}
+
+function toggleComments() {
+        var a = document.getElementById('comments_table');
+        var d = a.style.display;
+        if( d == "" || d == "block" ){
+                d = "none";
+                document.getElementById('comments_sh').innerHTML = 'show';
+        } else {
+                d = "block";
+                document.getElementById('comments_sh').innerHTML = 'hide';
+        }
+        a.style.display = d;
+        document.cookie="comments_table="+d+"; path=/;";
+}
+
+if( GetCookie('comments_table') == 'none' ){
+        document.getElementById('comments_sh').innerHTML = 'show';
+        document.getElementById('comments_table').style.display = 'hide';
+}
+
+-->
+</script>
+
+
+			<!-- google_ad_section_end -->
+			</div>
+			<table width="100%">
+        </table>
+<br/>
+		</div>
+	</div><!-- endof col-lg-8 col-md-8 -->
+	
+	<div class="col-lg-4 col-md-4">
+	
+				<div id="problem-btn-submit-box">
+			<a href="/submit/MAUMAU/" id="problem-btn-submit" class="btn btn-primary" style="width: 100%; margin-bottom: 20px;"><i class="fa fa-send"></i> Submit solution!</a>
+		</div>
+				
+		<table border=0 cellspacing=0 cellpadding=0 style="margin-bottom:10px" class="probleminfo" id="problem-meta">
+			<colgroup>
+				<col width="120"/>
+				<col/>
+			</colgroup>
+			<tbody>
+			<tr><td>Added by:</td><td><a href="/users/numerix">numerix</a></td></tr>
+			<tr><td>Date:</td><td>2015-01-03</td></tr>
+			<tr><td>Time limit:</td><td>1s
+			</td></tr>
+			<tr><td>Source limit:</td><td>50000B</td></tr>
+						<tr><td>Memory limit:</td><td>1536MB</td></tr>
+										<tr>
+					<td>Cluster:</td>
+					<td>
+													<a href="/clusters/" target="_blank">Cube (Intel G860)</a>
+								
+					</td>
+				</tr>
+						<tr><td>Languages:</td><td>All except: JS2 </td></tr>
+			<tr><td>Resource:</td><td>own problem</td></tr>													</tbody>
+		</table>
+
+		<div class="right-box-hehe">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- spoj_problem_336x280_right2 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-4453360425583535"
+     data-ad-slot="3836605032"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+		</div>
+	
+		<!-- BEGIN: Voting for problem -->
+		
+				
+		<!-- END: Voting the problem -->
+		
+		<div class="right-box-hehe">
+							<div class="c336x280"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- spoj_problem_336x280_right -->
+	<ins class="adsbygoogle"
+			style="display:inline-block;width:336px;height:280px"
+					data-ad-client="ca-pub-4453360425583535"
+							data-ad-slot="7873511834"></ins>
+							<script>
+							(adsbygoogle = window.adsbygoogle || []).push({});
+	</script></div>
+						<br/>
+		</div>
+		
+				
+		
+		<script type="text/javascript">
+			function callback_after_vote(type, data)
+			{
+				var response = $.parseJSON(data);
+				manage_vote_interface(type);
+				//.html('<div class="vote-thank-you">Thank you!</div>');
+				
+
+				if (type == "problem" || type == "implementation") {
+					var progressBarValue = Math.round(2 + 98 * response.avg / 3);
+					var progressBarType;
+					if (progressBarValue < 25) progressBarType = "progress-bar-primary";
+					else if (progressBarValue < 50) progressBarType = "progress-bar-success";
+					else if (progressBarValue < 75) progressBarType = "progress-bar-warning";
+					else progressBarType = "progress-bar-danger";
+					
+					$("#rate-" + type + "-box .progress-bar").css("width", progressBarValue.toString() +"%");
+					$("#rate-" + type + "-box .progress-bar").attr("aria-valuenow", progressBarValue.toString());
+					$("#rate-" + type + "-box .progress-bar").attr("class", "progress-bar " + progressBarType);
+					$("#rate-" + type + "-box .progress-value").html(progressBarValue.toString() +"%");
+				}
+				else if (type == "quality") {
+					var quality_plus = response.sum_plus;
+					var quality_minus = response.sum_minus;
+
+					var box_content = '';
+
+					if (quality_plus > 0 || quality_minus > 0) {
+						if (quality_plus > 0) {
+							box_content += '<font size="+2"><span class="label label-success">' +
+								quality_plus.toString() + 
+								' <span class="fa fa-thumbs-o-up"></span></span></font>';
+						}
+						if (quality_minus > 0) {
+							box_content += '<font size="+2"><span class="label label-danger">' +
+								quality_minus.toString() + 
+								' <span class="fa fa-thumbs-o-down"></span></span></font>';
+						}
+					}
+
+					$( "#rate-" + type + "-box" ).empty().html(box_content);
+				}
+
+				// update count
+				if (response.update_count == 1) {
+					var count = parseInt($("#votes_count").html(), 10);
+					count++;
+					var votes_word = " vote";
+					if (count > 1) votes_word += "s";
+					$("#votes_count").empty().html(count.toString() + votes_word);
+				}
+			}
+			$( ".rate-btn" ).click(function() {
+				var rate_type = $(this).attr('data-rate-type').toString();
+				var rate_type_full = "";
+				var rate = $(this).attr('data-rate').toString();
+				if (rate_type == "p") rate_type_full = "problem";
+				else if (rate_type == "i") rate_type_full = "implementation";
+				else if (rate_type == "q") rate_type_full = "quality";
+				$.get( '/?a=vote&pid=22303&t=' + rate_type + '&r=' + rate, function( data ) {
+				  callback_after_vote(rate_type_full, data);
+				});
+			});
+			function manage_vote_interface(type) {
+				number_of_voteboxes--;
+				/*
+				if (number_of_voteboxes == 0) {
+					$( "#vote-box" ).fadeOut(1500, function() {
+						$(this).remove();
+					});
+				} else {
+					$( "#vote-" + type + "-box" ).fadeOut(1500, function() {
+						$(this).remove();
+					});
+				}
+				*/
+				var n = $('.vote-thank-you').length;
+				var offset = (n * 60).toString() + "px";
+				$(document.body).append(
+					'<div class="vote-thank-you" style="margin: 40%;">' +
+					'<div class="alert alert-success" style="position: fixed; top: '+offset+';">' +
+					'<strong>Thank you for voting!</strong>' +				
+					'</div></div>');
+				setTimeout(function(){$( ".vote-thank-you" ).fadeOut(1500, function() {
+					$(this).remove();
+				});},2000);
+			}
+		</script>
+		
+		
+	</div><!-- endof col-lg-4 col-md-4 -->
+</div>
+
+
+
+
+
+
+<style>
+ul.list-unstyled li{
+	margin-bottom: 5px;
+}
+ul.list-unstyled li a.btn{
+	width: 100%;
+}
+ul.ui-autocomplete{
+	z-index: 10000;
+	width: 200px !important;
+}
+</style>
+	<br/>
+</div>
+		
+		
+		<div class="container" id="footer">
+			<div class="row">
+				<div class="col-md-2">
+					
+				</div>
+				<div class="col-md-8 text-center">
+					<a href="/info">About</a> | <a href="/tutorials">Tutorial</a> | <a href="/tools">Tools</a> | <a href="/clusters">Clusters</a> | <a href="/credits">Credits</a> | <a href="/jobs">Jobs</a> | <a href="/sphereengine">API</a> | <a href="/gfx/spoj-terms.pdf" target="_blank">Terms</a>
+				</div>
+				<div class="col-md-2 text-right">
+					<a href="/rss/" ><img src="//stx1.spoj.com/gfx/rss10x10.gif" border=0>&nbsp;RSS</a>&nbsp;
+				</div>
+			</div>
+		</div>
+		
+		<div class="text-center" id="footer-srl">
+			
+	&copy; Spoj.com. All Rights Reserved. Spoj uses <a href="http://sphere-engine.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Engine</a>&trade; &copy; by <a href="http://sphere-research.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Research Labs</a>.
+
+		</div> 
+	</div>
+
+	<!-- JavaScripts -->
+	
+		
+	
+	<script type="text/javascript">
+	$(function(){
+		setTimeout(function(){
+			$('.no_a_info').css('visibility', 'visible');
+		}, 5000);
+		
+		if(!$('.aProblemTop').length && !$('.aProblemsTop').length && !$('.aSubmitTop').length && !$('.aStatusTop').length && !$('.aMainRight').length){
+			ga('send', 'event', 'ads', 'no-ads', 'main-contest');
+		}
+		if ($('.aProblemTop').height() == 0){
+			$('.aProblemTop').css({'border': '1px solid #ddd', 'background': '#f0f4e3', 'height': 90});
+			$('.aProblemTop').html($('<p class="text-center">using adblock?</p><h4 class="text-center">Online ads help us to maintain site.</h4><p class="text-center"><strong>please whitelist *.spoj.com</strong></p>'));
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemTop');
+		}
+		if ($('.aProblemsTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemsTop');
+		}
+		if ($('.aSubmitTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aSubmitTop');
+		}
+		if ($('.aStatusTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aStatusTop');
+		}
+		if ($('.aMainRight').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aMainRight');
+		}
+	});
+	</script>
+	
+	
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.timers.js"></script>
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.cookie.js"></script>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+	<script src="//crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
+	<script src="//stx1.spoj.com/gfx/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+	<script src="//stx1.spoj.com/gfx/scripts/tour.js"></script>
+	
+	
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&appId=321676846207&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	
+	
+
+
+<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-10507872-1', 'auto');
+	  ga('require', 'linkid', 'linkid.js');
+	  ga('send', 'pageview');
+	</script>
+<script type="text/javascript">
+	$(function(){
+		$(document).on('click', '.track', function(){
+			var event = $(this).attr('data-event');
+			var action = $(this).attr('data-action');
+			var value = $(this).attr('data-value');
+			ga('send', 'event', event, action, value);
+		});
+	});
+	</script>
+
+
+</body>
+</html>

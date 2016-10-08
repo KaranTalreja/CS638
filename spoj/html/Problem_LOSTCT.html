@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="not-ie" lang="en"> <!--<![endif]-->
+<head>
+	<!-- main header -->
+	<meta charset="utf-8">
+	
+				<title>SPOJ.com - Problem LOSTCT</title>
+		  
+	<meta name="keywords" content="language, algorithm, spoj, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  		<meta property="og:title" content="SPOJ.com - Problem LOSTCT"/>
+    <meta property="fb:app_id"      content="321676846207" />
+	<meta property="og:type" content="spoj-pl:problem"/>
+	<meta property="og:url" content="http://www.spoj.com/problems/LOSTCT/"/>
+	<meta property="og:image" content="//stx1.spoj.com/gfx/logo-cr.png"/>
+	<meta property="og:description" content="..."/>
+	<meta name="description" content="..."/>
+		<meta property="og:site_name" content="spoj.com"/>
+
+  <!--[if (gte IE 9)|!(IE)]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" id="metatag">
+  <![endif]--> 
+
+	  <!-- Favicon -->
+	  <link href="//stx1.spoj.com/gfx/favicon_new.png" rel="shortcut icon" type="image/x-icon" />
+	  
+	  <!-- RSS -->
+	  <link href="/rss/" rel="alternate" type="application/rss+xml" title="RSS Feed">
+	
+	  <!-- Web Fonts -->
+	  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">  
+
+	<!-- Internet Explorer condition - HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]--> 
+	
+	
+	
+	<!-- CSS: Bootstrap, Font-awesome, Bootstrap libs,  -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+  	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  	<link href="//stx1.spoj.com/gfx/bootstrap-tour/build/css/bootstrap-tour.min.css" rel="stylesheet" />
+  	<link href="//stx1.spoj.com/themes/bootstrap-social.css" rel="stylesheet" type="text/css" />
+  	
+	<link href="//stx1.spoj.com/themes/common.css?4" rel="stylesheet" type="text/css" id="theme0" />
+	<link href="//stx1.spoj.com/themes/en_new.css?4" rel="stylesheet" type="text/css" id="theme" />
+	
+	<!-- JS -->
+	<script type="text/javascript" src='//code.jquery.com/jquery-1.11.1.min.js'></script>
+	<script type="text/javascript" src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+	
+		
+		
+	<script type="text/javascript" language="javascript">
+	$(function () { 
+		$("#profile-menu").popover();
+	});
+	function UnCryptMailto(s) {
+		var n=0;
+		var r="";
+		for(var i=0;i<s.length;i++) {		
+			n=s.charCodeAt(i); 
+			if (n>=8364) {n = 128;}
+			r += String.fromCharCode(n+(2));	
+		}
+		return r;
+	}
+	function linkTo_UnCryptMailto(s)	{
+		location.href=UnCryptMailto(s);
+	}
+	</script>
+	
+	<script type="text/javascript">
+	function recordOutboundLink(link, category, action) {
+	  try {
+	    var pageTracker=_gat._getTracker("UA-XXXXX-X");
+	    pageTracker._trackEvent(category, action);
+	    setTimeout('document.location = "' + link.href + '"', 100)
+	  }catch(err){}
+	}
+	</script>
+	
+</head>
+
+<body>
+
+	
+	<!-- <div class="space30"></div> -->
+	
+	<!-- Content -->
+	<div class="content">
+		<div class="container" id="header">
+			<div class="row">
+				<div class="col-md-12 text-right">
+										<form method="post" style="display: none;" action="/login/" id="login-form">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-2">
+								<input type="hidden" name="next_raw" value="/"/>
+								<input type="hidden" name="autologin" value="1"/>
+								<input type="text" name="login_user" placeholder="Username" class="form-control input-sm" style="display: inline-block; width: 25%;"/>
+								<input type="password" name="password" placeholder="Password" class="form-control input-sm" style="display: inline-block; width: 25%;"/>
+																<button type="submit" class="btn btn-default btn-sm" style="display: inline-block; margin-right: 10px;"><span class="fa fa-sign-in fa-lg"></span> <strong>sign in</strong></button>
+																<a href="/register"><i class="fa fa-user-plus"></i> sign up</a>
+				        									</div>
+						</div>
+					</form>
+										
+					
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-md-4">
+					<a href="/" class="navbar-brand">
+						<img src="//stx1.spoj.com/gfx/2015e.png" style="height: 40px;"/>
+					</a>
+					<div class="navbar-header">
+				      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+				        <span class="sr-only">Toggle navigation</span>
+				        <i class="fa fa-bars"></i>
+				      </button>
+				    </div>
+				</div>
+				<div class="col-md-8" id="menu">
+				
+					
+					<div class="row">
+					<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation"  style="border: 0px;">
+				      <ul class="nav navbar-nav" style="  float: right; margin-top: 10px;">
+				      						        <li class="active">
+					          <a href="/problems"><i class="fa fa-puzzle-piece"></i> PROBLEMS</a>
+					        </li>
+					        					        <li >
+					          <a href="/status"><i class="fa fa-circle"></i> STATUS</a>
+					        </li>
+					        <li >
+					          <a href="/ranks"><i class="fa fa-trophy"></i> RANKS</a>
+					        </li>
+					        <li >
+					          <a href="http://spoj.com/forum"><i class="fa fa-comments-o"></i> DISCUSS</a>
+					        </li>
+					        
+					        <li >
+					          <a href="/contests">CONTESTS</a>
+					        </li>
+					        <!-- 
+					        <li >
+					          <a href="/jobs"><i class="fa fa-briefcase"></i> JOBS</a>
+					        </li>
+						-->
+											        					        <li >
+					        	<a href="/login" class="text-success" onclick="$('#login-form').show(); $('input[name=login_user]').focus(); return false;"><i class="fa fa-sign-in"></i> sign in</a>
+					        </li>
+					        						
+				        
+				      </ul>
+				    </nav>
+				    </div>
+				    
+				    
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="container" id="menu">
+			
+		</div>
+		
+		<div class="container" id="content">
+		<script type='text/javascript' src='/gfx/jquery.cxhelp2.js'></script>
+
+
+
+ <!-- wykorzystywane w pcontent.html (by wiele) -->
+
+<div class="submenu">
+	
+		<ol class="breadcrumb">
+	  <li><a href="/problems">Problems</a></li>
+	  <li><a href="/problems/classical">classical</a></li>
+	  <li class="active">The Secret of a Lost City</li>
+	</ol>
+		
+	<ol class="navbar-right">
+						
+				<li><a href="/status/LOSTCT/" class="">Status</li></a>
+		<li><a href="/ranks/LOSTCT/" class="">Ranking</li></a>
+	</ol>
+</div>
+
+
+	<script type="text/javascript">
+		var number_of_voteboxes = "";
+	</script>
+
+
+<div class="row first-row">
+	<div class="col-lg-8 col-md-8">
+		<div class="prob" style="position: relative">
+
+			<!-- google_ad_section_start -->
+			<!-- plik z pomoca kontekstowa (cxhelp_*) dziedziczony po pindex.html -->
+
+
+
+<script type="text/javascript" src="/gfx/jscripts/tiny_mce/plugins/asciimath/js/ASCIIMathMLwFallback.js"></script>
+<!--script type="text/javascript" src="/gfx/jscripts/tiny_mce/plugins/asciisvg/js/ASCIIsvgPI.js"></script-->
+<script type="text/javascript">
+<!--
+var AScgiloc = 'http://www.imathas.com/imathas/filter/graph/svgimg.php';
+var AMTcgiloc = "/files/gif/";
+-->
+</script>
+
+
+<div class="text-center"><center>
+	<div class="aProblemTop c728x90"><div class="no_a_info"></div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-4453360425583535"
+     data-ad-slot="1073332635"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+	</center>
+</div>
+<br/>
+
+<h2 id="problem-name" class="text-center">LOSTCT - The Secret of a Lost City</h2>
+
+
+<div class="row">
+	<div id="problem-tags" class="col-lg-12 text-center">
+				<i>no tags</i>&nbsp;
+				</div>
+</div>
+<br/>
+
+<div id="problem-body">
+	<table class="problems" style="width: 100%;" border="0">
+<tbody>
+<tr class="navigation">
+<td width="50%"><a href="#" onclick="change2En()">English</a></td>
+<td width="50%"><a href="#" onclick="change2Vn()">Vietnamese</a></td>
+</tr>
+</tbody>
+</table>
+<div id="lang-vn" style="display:none">
+<h2>B&iacute; mật về th&agrave;nh phố biến mất</h2>
+<p>Nh&agrave; khảo cổ nổi tiếng Blue Mary vừa t&igrave;m thấy di t&iacute;ch một   th&agrave;nh phố bị biến mất. C&ocirc; t&igrave;m thấy 12 tấm bia lớn ở trung t&acirc;m   th&agrave;nh phố, m&agrave; c&ocirc; đặt t&ecirc;n l&agrave; th&agrave;nh phố Đỉnh-Băng (Ice-Peak   City). C&aacute;c tấm bia c&oacute; nhiều kiến tr&uacute;c kh&aacute;c nhau. Blue Mary đặt   t&ecirc;n c&aacute;c kiến tr&uacute;c n&agrave;y l&agrave; IPA (Ice-Peak Articles). Kh&ocirc;ng may l&agrave;   c&ocirc; kh&ocirc;ng thể t&igrave;m ra th&agrave;nh phố Đỉnh Băng nữa sau khi quay về   ph&ograve;ng th&iacute; nghiệm của m&igrave;nh.Điều duy nhất Blue Mary biết về th&agrave;nh phố Đỉnh Băng l&agrave;   h&igrave;nh dạng kiến tr&uacute;c của c&aacute;c tấm bia. Vốn th&ocirc;ng minh, c&ocirc; nhanh   ch&oacute;ng t&igrave;m ra c&uacute; ph&aacute;p của IPA. C&uacute; ph&aacute;p c&oacute; dạng như dưới   đ&acirc;y.</p>
+<pre>&lt;IPA&gt;        ::=&lt;c&acirc;u&gt;{&lt;c&acirc;u&gt;}
+&lt;c&acirc;u&gt;        ::=&lt;ngữ danh từ&gt;{&lt;ngữ động từ&gt;&lt;ngữ danh từ&gt;}[&lt;ngữ động từ&gt;]
+&lt;ngữ danh từ&gt;::=&lt;danh từ&gt;|[&lt;trạng từ&gt;]&lt;ngữ danh từ&gt;
+&lt;ngữ động từ&gt;::=&lt;động từ&gt;|[&lt;trạng từ&gt;]&lt;ngữ động từ&gt;
+&lt;từ&gt;         ::=&lt;động từ&gt;|&lt;danh từ&gt;|&lt;trạng từ&gt;
+</pre>
+<p>Trong đ&oacute;</p>
+<p>danh từ, động từ v&agrave; trạng từ được cho trước bởi một từ   điển m&agrave; ta sẽ n&ecirc;u sau.</p>
+<p>| k&yacute; hiệu "hoặc"</p>
+<p>&nbsp;</p>
+<p>C&aacute;c đối tượng trong dấu [] xuất hiện 0 hoặc 1 lần.</p>
+<p>C&aacute;c đối tượng trong dấu {} xuất hiện 0 hoặc nhiều   lần.</p>
+<p>Blue Mary đ&atilde; soạn một từ điển c&aacute;c từ trong IPA. Do c&aacute;c   k&yacute; tự trong IPA chỉ gồm 26 dạng kh&aacute;c nhau, ta sẽ d&ugrave;ng c&aacute;c   chữ c&aacute;i latin in thường từ 'a' đến 'z' để biểu diễn.</p>
+<p>Kh&ocirc;ng c&oacute; dấu c&acirc;u ngăn c&aacute;ch giữa c&aacute;c từ hoặc c&acirc;u, do đ&oacute;   Blue Mary nhờ bạn viết chương tr&igrave;nh ph&acirc;n t&aacute;ch chuỗi IPA cho   trước th&agrave;nh một số &iacute;t c&acirc;u nhất, sau đ&oacute; lại ph&acirc;n t&aacute;ch c&aacute;c c&acirc;u   n&agrave;y ra th&agrave;nh &iacute;t từ nhất.Dữ liệu</p>
+<p>D&ograve;ng đầu ti&ecirc;n chứa số từ trong từ điển, kh&ocirc;ng vượt qu&aacute;   1000.</p>
+<p>C&aacute;c d&ograve;ng tiếp theo chứa c&aacute;c từ c&oacute; dạng "X.Y", mỗi từ   tr&ecirc;n một d&ograve;ng, trong đ&oacute; X l&agrave; một trong c&aacute;c k&yacute; tự 'n', 'v', 'a',   cho biết từ tương ứng l&agrave; danh từ, động từ hay trạng từ, v&agrave; Y l&agrave;   chuỗi gồm c&aacute;c chữ c&aacute;i in thường thể hiện một từ, c&oacute; độ d&agrave;i   kh&ocirc;ng qu&aacute; 20.</p>
+<p>D&ograve;ng tiếp theo chứa một chuỗi IPA đ&uacute;ng (chỉ gồm c&aacute;c   chữ c&aacute;i latin in thường), kết th&uacute;c bởi dấu chấm (.). Độ d&agrave;i của   chuỗi IPA sẽ kh&ocirc;ng vượt qu&aacute; 5KB.</p>
+<h3>Kết quả</h3>
+<p>D&ograve;ng đầu ti&ecirc;n chứa số c&acirc;u &iacute;t nhất trong chuỗi IPA. D&ograve;ng   thứ hai chứa số từ &iacute;t nhất trong chuỗi IPA, sau khi chuỗi IPA   đ&atilde; được ph&acirc;n t&aacute;ch th&agrave;nh &iacute;t c&acirc;u nhất.</p>
+<h3>V&iacute; dụ</h3>
+<pre><strong>Dữ liệu</strong>
+11
+n.table
+n.baleine
+a.silly
+n.snoopy
+n.sillysnoopy
+v.is
+v.isnot
+n.kick
+v.kick
+a.big
+v.cry
+sillysnoopyisnotbigtablebaleinekicksnoopysillycry.
+
+<strong>Kết quả</strong>
+2
+9
+</pre>
+</div>
+<div id="lang-en">
+<p>The famous archaeologist Blue Mary has found a site of a   lost city. She found 12 huge steles in the center of the city -   called Ice-Peak City by her, on which there were many designs.   Blue Mary named these designs Ice-Peak Articles(IPA for   short). Unfortunately, she can't find Ice-Peak city any more   after she returns to her lab.</p>
+<p>The only thing Blue Mary knows about Ice-Peak city is   pictures of the designs on the steles. With her intelligence she   soon comes up with the syntax of IPA. Its BNF form is   below.</p>
+<pre>&lt;IPA&gt;        ::=&lt;sentence&gt;{&lt;sentence&gt;}
+&lt;sentence&gt;   ::=&lt;noun phrase&gt;{&lt;verb phrase&gt;&lt;noun phrase&gt;}[&lt;verb phrase&gt;]
+&lt;noun phrase&gt;::=&lt;noun&gt;|[&lt;adverb&gt;]&lt;noun phrase&gt;
+&lt;verb phrase&gt;::=&lt;verb&gt;|[&lt;adverb&gt;]&lt;verb phrase&gt;
+&lt;words&gt;      ::=&lt;verb&gt;|&lt;noun&gt;|&lt;adverb&gt;
+</pre>
+<p>Where</p>
+<p>nouns, verbs and adverbs are given by a dictionary which   we will discuss later.</p>
+<p>| denotes or.</p>
+<p>Things in [] will appear zero or one time.</p>
+<p>Things in {} will appear zero or more times.</p>
+<p>Blue Mary has compiled a dictionary of words in IPA.   Since characters appeared in IPA only contain 26 different   forms, we will use small latin letters 'a' to 'z' to represent.</p>
+<p>There are no seperators between words or sentences, so   Blue Mary asks you to write a program which will split a   correct IPA into minimum number of sentences, and split these   sentences into minimum number of words.</p>
+<h3>Input</h3>
+<p>The first line contains the number of words in the   dictionary, no more than 1000.</p>
+<p>Next lines contain the words in the form "X.Y", one per   line, where X is one of the characters 'n', 'v', 'a', denoting that   the corresponding word is noun, verb or adverb, and  Y is a   string of lowercase latin letters, whose length will be no nore   than 20.</p>
+<p>The next line contains a correct IPA (contains only   lowercase latin letters), ends with a dot(.). The length of the   IPA will be no more than 5KB.</p>
+<h3>Output</h3>
+<p>The first line contains the minimum number of sentences in   IPA. The second line contains the minimum number of words   in IPA, when given IPA is split into minimum number of   sentences.</p>
+<h3>Example</h3>
+<pre><strong>Input:</strong>
+11
+n.table
+n.baleine
+a.silly
+n.snoopy
+n.sillysnoopy
+v.is
+v.isnot
+n.kick
+v.kick
+a.big
+v.cry
+sillysnoopyisnotbigtablebaleinekicksnoopysillycry.
+
+<strong>Output:</strong>
+2
+9
+</pre>
+</div>
+<strong>Time limit has been changed to 200 ms in total for all tests.</strong>
+
+<script> 
+function change2En() {
+	document.getElementById("lang-vn").style.display="none";
+	document.getElementById("lang-en").style.display="block";
+}
+function change2Vn() {
+	document.getElementById("lang-en").style.display="none";
+	document.getElementById("lang-vn").style.display="block";
+}
+</script>
+</div>
+
+<div class="text-center">
+	<a href="/submit/LOSTCT/" class="btn btn-primary btn-lg"><i class="fa fa-send"></i> Submit solution!</a>
+</div>
+			<!-- google_ad_section_end -->
+			
+			<div id="ccontent">
+			<!-- google_ad_section_start -->
+			
+<hr style="clear:both;"/>
+
+<a id="comments"></a>
+<table id="comments_table" width="100%">
+	
+</table>
+
+
+<script language="javascript" type="text/javascript">
+<!--
+function getCookieVal (offset) {
+        var endstr = document.cookie.indexOf (";", offset);
+        if (endstr == -1) { 
+                endstr = document.cookie.length; 
+        }
+        return unescape(document.cookie.substring(offset, endstr));
+}
+
+function GetCookie (name) {
+  var arg = name + "=";
+  var alen = arg.length;
+  var clen = document.cookie.length;
+  var i = 0;
+  while (i < clen) {
+    var j = i + alen;
+    if (document.cookie.substring(i, j) == arg) {
+      return getCookieVal (j);
+      }
+    i = document.cookie.indexOf(" ", i) + 1;
+    if (i == 0) break; 
+    }
+  return null;
+}
+
+function toggleComments() {
+        var a = document.getElementById('comments_table');
+        var d = a.style.display;
+        if( d == "" || d == "block" ){
+                d = "none";
+                document.getElementById('comments_sh').innerHTML = 'show';
+        } else {
+                d = "block";
+                document.getElementById('comments_sh').innerHTML = 'hide';
+        }
+        a.style.display = d;
+        document.cookie="comments_table="+d+"; path=/;";
+}
+
+if( GetCookie('comments_table') == 'none' ){
+        document.getElementById('comments_sh').innerHTML = 'show';
+        document.getElementById('comments_table').style.display = 'hide';
+}
+
+-->
+</script>
+
+
+			<!-- google_ad_section_end -->
+			</div>
+			<table width="100%">
+        </table>
+<br/>
+		</div>
+	</div><!-- endof col-lg-8 col-md-8 -->
+	
+	<div class="col-lg-4 col-md-4">
+	
+				<div id="problem-btn-submit-box">
+			<a href="/submit/LOSTCT/" id="problem-btn-submit" class="btn btn-primary" style="width: 100%; margin-bottom: 20px;"><i class="fa fa-send"></i> Submit solution!</a>
+		</div>
+				
+		<table border=0 cellspacing=0 cellpadding=0 style="margin-bottom:10px" class="probleminfo" id="problem-meta">
+			<colgroup>
+				<col width="120"/>
+				<col/>
+			</colgroup>
+			<tbody>
+			<tr><td>Added by:</td><td><a href="/users/john_jones">Fudan University Problem Setters</a></td></tr>
+			<tr><td>Date:</td><td>2007-04-01</td></tr>
+			<tr><td>Time limit:</td><td>0.200s
+			</td></tr>
+			<tr><td>Source limit:</td><td>50000B</td></tr>
+						<tr><td>Memory limit:</td><td>1536MB</td></tr>
+										<tr>
+					<td>Cluster:</td>
+					<td>
+													<a href="/clusters/" target="_blank">Cube (Intel G860)</a>
+								
+					</td>
+				</tr>
+						<tr><td>Languages:</td><td>All </td></tr>
+			<tr><td>Resource:</td><td>Chinese National Olympiad in Informatics 2000, Day 1; translated by Blue Mary and Ngo Minh Duc</td></tr>													</tbody>
+		</table>
+
+		<div class="right-box-hehe">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- spoj_problem_336x280_right2 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-4453360425583535"
+     data-ad-slot="3836605032"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+		</div>
+	
+		<!-- BEGIN: Voting for problem -->
+		
+				
+		<!-- END: Voting the problem -->
+		
+		<div class="right-box-hehe">
+							<div class="c336x280"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- spoj_problem_336x280_right -->
+	<ins class="adsbygoogle"
+			style="display:inline-block;width:336px;height:280px"
+					data-ad-client="ca-pub-4453360425583535"
+							data-ad-slot="7873511834"></ins>
+							<script>
+							(adsbygoogle = window.adsbygoogle || []).push({});
+	</script></div>
+						<br/>
+		</div>
+		
+				
+		
+		<script type="text/javascript">
+			function callback_after_vote(type, data)
+			{
+				var response = $.parseJSON(data);
+				manage_vote_interface(type);
+				//.html('<div class="vote-thank-you">Thank you!</div>');
+				
+
+				if (type == "problem" || type == "implementation") {
+					var progressBarValue = Math.round(2 + 98 * response.avg / 3);
+					var progressBarType;
+					if (progressBarValue < 25) progressBarType = "progress-bar-primary";
+					else if (progressBarValue < 50) progressBarType = "progress-bar-success";
+					else if (progressBarValue < 75) progressBarType = "progress-bar-warning";
+					else progressBarType = "progress-bar-danger";
+					
+					$("#rate-" + type + "-box .progress-bar").css("width", progressBarValue.toString() +"%");
+					$("#rate-" + type + "-box .progress-bar").attr("aria-valuenow", progressBarValue.toString());
+					$("#rate-" + type + "-box .progress-bar").attr("class", "progress-bar " + progressBarType);
+					$("#rate-" + type + "-box .progress-value").html(progressBarValue.toString() +"%");
+				}
+				else if (type == "quality") {
+					var quality_plus = response.sum_plus;
+					var quality_minus = response.sum_minus;
+
+					var box_content = '';
+
+					if (quality_plus > 0 || quality_minus > 0) {
+						if (quality_plus > 0) {
+							box_content += '<font size="+2"><span class="label label-success">' +
+								quality_plus.toString() + 
+								' <span class="fa fa-thumbs-o-up"></span></span></font>';
+						}
+						if (quality_minus > 0) {
+							box_content += '<font size="+2"><span class="label label-danger">' +
+								quality_minus.toString() + 
+								' <span class="fa fa-thumbs-o-down"></span></span></font>';
+						}
+					}
+
+					$( "#rate-" + type + "-box" ).empty().html(box_content);
+				}
+
+				// update count
+				if (response.update_count == 1) {
+					var count = parseInt($("#votes_count").html(), 10);
+					count++;
+					var votes_word = " vote";
+					if (count > 1) votes_word += "s";
+					$("#votes_count").empty().html(count.toString() + votes_word);
+				}
+			}
+			$( ".rate-btn" ).click(function() {
+				var rate_type = $(this).attr('data-rate-type').toString();
+				var rate_type_full = "";
+				var rate = $(this).attr('data-rate').toString();
+				if (rate_type == "p") rate_type_full = "problem";
+				else if (rate_type == "i") rate_type_full = "implementation";
+				else if (rate_type == "q") rate_type_full = "quality";
+				$.get( '/?a=vote&pid=1456&t=' + rate_type + '&r=' + rate, function( data ) {
+				  callback_after_vote(rate_type_full, data);
+				});
+			});
+			function manage_vote_interface(type) {
+				number_of_voteboxes--;
+				/*
+				if (number_of_voteboxes == 0) {
+					$( "#vote-box" ).fadeOut(1500, function() {
+						$(this).remove();
+					});
+				} else {
+					$( "#vote-" + type + "-box" ).fadeOut(1500, function() {
+						$(this).remove();
+					});
+				}
+				*/
+				var n = $('.vote-thank-you').length;
+				var offset = (n * 60).toString() + "px";
+				$(document.body).append(
+					'<div class="vote-thank-you" style="margin: 40%;">' +
+					'<div class="alert alert-success" style="position: fixed; top: '+offset+';">' +
+					'<strong>Thank you for voting!</strong>' +				
+					'</div></div>');
+				setTimeout(function(){$( ".vote-thank-you" ).fadeOut(1500, function() {
+					$(this).remove();
+				});},2000);
+			}
+		</script>
+		
+		
+	</div><!-- endof col-lg-4 col-md-4 -->
+</div>
+
+
+
+
+
+
+<style>
+ul.list-unstyled li{
+	margin-bottom: 5px;
+}
+ul.list-unstyled li a.btn{
+	width: 100%;
+}
+ul.ui-autocomplete{
+	z-index: 10000;
+	width: 200px !important;
+}
+</style>
+	<br/>
+</div>
+		
+		
+		<div class="container" id="footer">
+			<div class="row">
+				<div class="col-md-2">
+					
+				</div>
+				<div class="col-md-8 text-center">
+					<a href="/info">About</a> | <a href="/tutorials">Tutorial</a> | <a href="/tools">Tools</a> | <a href="/clusters">Clusters</a> | <a href="/credits">Credits</a> | <a href="/jobs">Jobs</a> | <a href="/sphereengine">API</a> | <a href="/gfx/spoj-terms.pdf" target="_blank">Terms</a>
+				</div>
+				<div class="col-md-2 text-right">
+					<a href="/rss/" ><img src="//stx1.spoj.com/gfx/rss10x10.gif" border=0>&nbsp;RSS</a>&nbsp;
+				</div>
+			</div>
+		</div>
+		
+		<div class="text-center" id="footer-srl">
+			
+	&copy; Spoj.com. All Rights Reserved. Spoj uses <a href="http://sphere-engine.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Engine</a>&trade; &copy; by <a href="http://sphere-research.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Research Labs</a>.
+
+		</div> 
+	</div>
+
+	<!-- JavaScripts -->
+	
+		
+	
+	<script type="text/javascript">
+	$(function(){
+		setTimeout(function(){
+			$('.no_a_info').css('visibility', 'visible');
+		}, 5000);
+		
+		if(!$('.aProblemTop').length && !$('.aProblemsTop').length && !$('.aSubmitTop').length && !$('.aStatusTop').length && !$('.aMainRight').length){
+			ga('send', 'event', 'ads', 'no-ads', 'main-contest');
+		}
+		if ($('.aProblemTop').height() == 0){
+			$('.aProblemTop').css({'border': '1px solid #ddd', 'background': '#f0f4e3', 'height': 90});
+			$('.aProblemTop').html($('<p class="text-center">using adblock?</p><h4 class="text-center">Online ads help us to maintain site.</h4><p class="text-center"><strong>please whitelist *.spoj.com</strong></p>'));
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemTop');
+		}
+		if ($('.aProblemsTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemsTop');
+		}
+		if ($('.aSubmitTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aSubmitTop');
+		}
+		if ($('.aStatusTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aStatusTop');
+		}
+		if ($('.aMainRight').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aMainRight');
+		}
+	});
+	</script>
+	
+	
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.timers.js"></script>
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.cookie.js"></script>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+	<script src="//crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
+	<script src="//stx1.spoj.com/gfx/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+	<script src="//stx1.spoj.com/gfx/scripts/tour.js"></script>
+	
+	
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&appId=321676846207&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	
+	
+
+
+<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-10507872-1', 'auto');
+	  ga('require', 'linkid', 'linkid.js');
+	  ga('send', 'pageview');
+	</script>
+<script type="text/javascript">
+	$(function(){
+		$(document).on('click', '.track', function(){
+			var event = $(this).attr('data-event');
+			var action = $(this).attr('data-action');
+			var value = $(this).attr('data-value');
+			ga('send', 'event', event, action, value);
+		});
+	});
+	</script>
+
+
+</body>
+</html>
