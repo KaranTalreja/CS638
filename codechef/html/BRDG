@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="js"><head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js"></script><script>
+    (function (_, e, rr, s) {
+      _errs = [s];
+      var c = _.onerror;
+      _.onerror = function () {
+        var a = arguments;
+        _errs.push(a);
+        c &amp;&amp; c.apply(this, a)
+      };
+      var b = function () {
+        var c = e.createElement(rr), b = e.getElementsByTagName(rr)[0];
+        c.src = "//beacon.errorception.com/" + s + ".js";
+        c.async = !0;
+        b.parentNode.insertBefore(c, b)
+      };
+      _.addEventListener ? _.addEventListener("load", b, !1) : _.attachEvent("onload", b)
+    })
+    (window, document, "script", "4e7c8fce06a9ab05530008e5");
+  </script>
+
+  <link href="//codechef_shared.s3.amazonaws.com" rel="dns-prefetch" />
+  <link href="//beacon.errorception.com" rel="dns-prefetch" />
+  <link href="//static.ak.facebook.com" rel="dns-prefetch" />
+  <link href="//fbcdn-profile-a.akamaihd.net" rel="dns-prefetch" />
+  <script type="text/javascript">var _sf_startpt = (new Date()).getTime()</script>
+  <title>Contest Page | CodeChef</title>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <meta content="programming, language, algorithm, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM" name="keywords" />
+  <link type="image/x-icon" href="/misc/favicon.ico" rel="shortcut icon" />
+  <link href="/sites/all/modules/codechef_todo/css/todo_notification.css" rel="stylesheet" type="text/css" />
+  <link href="/Contests/css/main.css?q2=1465025661newversion" media="all" rel="stylesheet" type="text/css" />
+  <link href="/em/components/autocomplete/css/autocomplete.css?q2=1465025661newversion" rel="stylesheet" />
+  <link href="/em/components/datatable/css/datatable.css?q2=1465025661newversion" rel="stylesheet" />
+  <link href="/misc/font-awesome/css/font-awesome.css?q2=1465025661newversion" rel="stylesheet" />
+  <link href="/em/components/comment/css/comment.css?q2=1465025661newversion" rel="stylesheet" />
+  <link href="/sites/all/modules/codechef_open_register/css/register.css?q2=1465025661newversion" rel="stylesheet" />
+  <link href="/sites/all/modules/codechef_open_register/css/complete_registration.css?q2=1465025661newversion" rel="stylesheet" />
+  <script gapi_processed="true" defer="defer" async="" src="https://apis.google.com/js/platform.js"></script>
+  <script src="/em/libs/cryptojs/aes.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/em/libs/jquery/jquery.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/codechef_common_functions/js/localStorage.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/codechef_todo/js/todo_notification.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/em/libs/moment/moment.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/misc/marked/marked.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/em/libs/common/common.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/em/libs/handlebars/handlebars.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/em/libs/ember/prod.ember.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/em/components/autocomplete/js/autocomplete.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/em/components/datatable/js/datatable.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/em/components/comment/js/comment.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/misc/drupal.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/misc/jquery-popup-overlay/popupoverlay.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/codechef_common_functions/js/keybinding.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/codechef_common_functions/js/codechefGenericModal.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/fbmod/js/fb_sdk.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/codechef_common_functions/codechef_common_functions.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/nice_menus/nice_menus.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/tableofcontents/jquery.scrollTo-min.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/tableofcontents/jquery.localscroll-min.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/tableofcontents/tableofcontents.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/misc/common.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/contest_page/js/contest_page.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/misc/jquery-ui-1.10.0/js/jquery-ui-1.10.0.custom.min.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/problem_status/problemstatus.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/Contests/js/contest.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/misc/jquery.cookie.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/codechef_open_register/js/form.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/codechef_notifications/js/notifications.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/misc/todo-widget.js?q2=1465025661newversion" type="text/javascript"></script>
+  <link href="/misc/jquery.growl.css?q2=1465025661newversion" media="all" rel="stylesheet" type="text/css" />
+  <link href="/Contests/css/style.css?q2=1465025661newversion" rel="stylesheet" type="text/css" />
+  <link href="/sites/all/themes/abessive/new-login-bar.css?q2=1465025661newversion" rel="stylesheet" type="text/css" />
+  <link href="/misc/github-markdown-css/github-markdown.css?q2=1465025661newversion" rel="stylesheet" type="text/css" />
+  <style>
+
+    :root {
+      font-size: 62.5%;
+    }
+
+    .ccl-su-img-social-disconnect {
+      -webkit-filter: grayscale(95%);
+      -moz-filter: grayscale(95%);
+      -o-filter: grayscale(95%);
+      -ms-filter: grayscale(95%);
+      filter: grayscale(95%);
+    }
+
+    .ccl-su-img-social-connect {
+      -webkit-filter: grayscale(35%);
+      -moz-filter: grayscale(35%);
+      -o-filter: grayscale(35%);
+      -ms-filter: grayscale(35%);
+      filter: grayscale(35%);
+    }
+
+    .ccl-su-img-social:hover {
+      -webkit-filter: grayscale(0%);
+      -moz-filter: grayscale(0%);
+      -o-filter: grayscale(0%);
+      -ms-filter: grayscale(0%);
+      filter: grayscale(0%);
+    }
+
+    .ccl-su-img-social-small {
+      width: 3rem;
+    }
+
+    .ccl-su-img-social-mini {
+      width: 1rem;
+    }
+
+    .ccl-su-img-social-medium {
+      width: 5rem;
+    }
+
+    .ccl-su-img-social-large {
+      width: 7rem;
+    }
+
+    .oauth-buttons-header {
+      position: relative;
+      top: -0.5rem;
+    }
+
+    .oauth-button {
+      pading: 0;
+      padding: 0;
+      margin: 0;
+      border: 0;
+    }
+
+    .oauth-button-small {
+      width: 3rem;
+      height: 3rem;
+      margin-right: 0.6rem;
+      margin-left: 0.6rem;
+    }
+
+    .oauth-button-medium {
+      width: 5rem;
+      height: 5rem;
+      margin-right: 1rem;
+      margin-left: 1rem;
+    }
+
+    .oauth-button-large {
+      width: 7rem;
+      height: 7rem;
+      margin-right: 1.4rem;
+      margin-left: 1.4rem;
+    }
+
+    .oauth-button-mini {
+      width: 1rem;
+      height: 1rem;
+      margin-right: 0.2rem;
+      margin-left: 0.2rem;
+    }
+
+    /*this is to avoid padding and border of button in firefox*/
+    .oauth-button::-moz-focus-inner {
+      padding: 0;
+      border: 0
+    }
+
+
+  </style>
+  <script src="/misc/jquery.growl.js?q2=1465025661newversion" type="text/javascript"></script></head></html>
