@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="js"><head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <script async="" src="//connect.facebook.net/en_US/fp.js"></script><script type="text/javascript" async="" src="https://d31qbv1cthcecs.cloudfront.net/atrk.js"></script><script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js"></script><script>
+    (function (_, e, rr, s) {
+      _errs = [s];
+      var c = _.onerror;
+      _.onerror = function () {
+        var a = arguments;
+        _errs.push(a);
+        c &amp;&amp; c.apply(this, a)
+      };
+      var b = function () {
+        var c = e.createElement(rr), b = e.getElementsByTagName(rr)[0];
+        c.src = "//beacon.errorception.com/" + s + ".js";
+        c.async = !0;
+        b.parentNode.insertBefore(c, b)
+      };
+      _.addEventListener ? _.addEventListener("load", b, !1) : _.attachEvent("onload", b)
+    })
+    (window, document, "script", "4e7c8fce06a9ab05530008e5");
+  </script>
+
+  <link href="//codechef_shared.s3.amazonaws.com" rel="dns-prefetch" />
+  <link href="//beacon.errorception.com" rel="dns-prefetch" />
+  <link href="//static.ak.facebook.com" rel="dns-prefetch" />
+  <link href="//fbcdn-profile-a.akamaihd.net" rel="dns-prefetch" />
+  <script type="text/javascript">var _sf_startpt = (new Date()).getTime()</script>
+  <title>WordNinjas | CodeChef</title>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <meta content="programming, language, algorithm, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM" name="keywords" />
+  <link type="image/x-icon" href="/misc/favicon.ico" rel="shortcut icon" />
+  <link href="/sites/all/modules/codechef_todo/css/todo_notification.css" rel="stylesheet" type="text/css" />
+  <link href="/Contests/css/main.css?q2=1465025661newversion" media="all" rel="stylesheet" type="text/css" />
+  <link href="/em/components/autocomplete/css/autocomplete.css?q2=1465025661newversion" rel="stylesheet" />
+  <link href="/em/components/datatable/css/datatable.css?q2=1465025661newversion" rel="stylesheet" />
+  <link href="/misc/font-awesome/css/font-awesome.css?q2=1465025661newversion" rel="stylesheet" />
+  <link href="/em/components/comment/css/comment.css?q2=1465025661newversion" rel="stylesheet" />
+  <link href="/sites/all/modules/codechef_open_register/css/register.css?q2=1465025661newversion" rel="stylesheet" />
+  <link href="/sites/all/modules/codechef_open_register/css/complete_registration.css?q2=1465025661newversion" rel="stylesheet" />
+  <script gapi_processed="true" defer="defer" async="" src="https://apis.google.com/js/platform.js"></script>
+  <script src="/em/libs/cryptojs/aes.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/em/libs/jquery/jquery.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/codechef_common_functions/js/localStorage.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/codechef_todo/js/todo_notification.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/em/libs/moment/moment.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/misc/marked/marked.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/em/libs/common/common.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/em/libs/handlebars/handlebars.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/em/libs/ember/prod.ember.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/em/components/autocomplete/js/autocomplete.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/em/components/datatable/js/datatable.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/em/components/comment/js/comment.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/misc/drupal.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/misc/jquery-popup-overlay/popupoverlay.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/codechef_common_functions/js/keybinding.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/codechef_common_functions/js/codechefGenericModal.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/fbmod/js/fb_sdk.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/codechef_common_functions/codechef_common_functions.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/nice_menus/nice_menus.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/tableofcontents/jquery.scrollTo-min.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/tableofcontents/jquery.localscroll-min.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/tableofcontents/tableofcontents.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/misc/common.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/contest_page/js/contest_page.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/misc/jquery-ui-1.10.0/js/jquery-ui-1.10.0.custom.min.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/problem_status/problemstatus.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/Contests/js/contest.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/misc/jquery.cookie.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/codechef_open_register/js/form.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/codechef_notifications/js/notifications.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/misc/todo-widget.js?q2=1465025661newversion" type="text/javascript"></script>
+  <link href="/misc/jquery.growl.css?q2=1465025661newversion" media="all" rel="stylesheet" type="text/css" />
+  <link href="/Contests/css/style.css?q2=1465025661newversion" rel="stylesheet" type="text/css" />
+  <link href="/sites/all/themes/abessive/new-login-bar.css?q2=1465025661newversion" rel="stylesheet" type="text/css" />
+  <link href="/misc/github-markdown-css/github-markdown.css?q2=1465025661newversion" rel="stylesheet" type="text/css" />
+  <style>
+
+    :root {
+      font-size: 62.5%;
+    }
+
+    .ccl-su-img-social-disconnect {
+      -webkit-filter: grayscale(95%);
+      -moz-filter: grayscale(95%);
+      -o-filter: grayscale(95%);
+      -ms-filter: grayscale(95%);
+      filter: grayscale(95%);
+    }
+
+    .ccl-su-img-social-connect {
+      -webkit-filter: grayscale(35%);
+      -moz-filter: grayscale(35%);
+      -o-filter: grayscale(35%);
+      -ms-filter: grayscale(35%);
+      filter: grayscale(35%);
+    }
+
+    .ccl-su-img-social:hover {
+      -webkit-filter: grayscale(0%);
+      -moz-filter: grayscale(0%);
+      -o-filter: grayscale(0%);
+      -ms-filter: grayscale(0%);
+      filter: grayscale(0%);
+    }
+
+    .ccl-su-img-social-small {
+      width: 3rem;
+    }
+
+    .ccl-su-img-social-mini {
+      width: 1rem;
+    }
+
+    .ccl-su-img-social-medium {
+      width: 5rem;
+    }
+
+    .ccl-su-img-social-large {
+      width: 7rem;
+    }
+
+    .oauth-buttons-header {
+      position: relative;
+      top: -0.5rem;
+    }
+
+    .oauth-button {
+      pading: 0;
+      padding: 0;
+      margin: 0;
+      border: 0;
+    }
+
+    .oauth-button-small {
+      width: 3rem;
+      height: 3rem;
+      margin-right: 0.6rem;
+      margin-left: 0.6rem;
+    }
+
+    .oauth-button-medium {
+      width: 5rem;
+      height: 5rem;
+      margin-right: 1rem;
+      margin-left: 1rem;
+    }
+
+    .oauth-button-large {
+      width: 7rem;
+      height: 7rem;
+      margin-right: 1.4rem;
+      margin-left: 1.4rem;
+    }
+
+    .oauth-button-mini {
+      width: 1rem;
+      height: 1rem;
+      margin-right: 0.2rem;
+      margin-left: 0.2rem;
+    }
+
+    /*this is to avoid padding and border of button in firefox*/
+    .oauth-button::-moz-focus-inner {
+      padding: 0;
+      border: 0
+    }
+
+
+  </style>
+  <script src="/misc/jquery.growl.js?q2=1465025661newversion" type="text/javascript"></script>
+<script async="" src="//static.hotjar.com/c/hotjar-167687.js?sv=5"></script><script src="https://script.hotjar.com/modules-5c5dce7e883d8948924f218f5202a509.js"></script></head>
+<body class="sidebar-right">
+  <center>
+    <div class="ember-application" id="ember-root-shadow" style="display: none;">
+      <div class="ember-view">
+        <div class="wrapper" id="header">
+          <div class="inner-wrapper">
+            <!-- Header -->
+            <div class="cols-2" id="logo-floater">
+              <a title="" href="/"><img id="logo" alt="CodeChef is a non-commercial competitive programming community" src="/sites/all/themes/abessive/logo.png" /><span></span></a>
+              </div>
+              <div class="cols-2">
+                <div id="custom-login">
+                  <!--Hello <strong>Admin</strong>, Check your <strong><a href="">Account</a></strong> or <a href="/logout">Log Out</a>-->
+
+                  <img src="/Contests/images/Loader-Username.gif" style="position: relative;top: -64px;" />
+
+                </div>
+
+
+                <div class="block block-nice_menus block-header" id="block-nice_menus-1">
+                  <div class="content">
+                    <h2><span class="nice-menu-hide-title">Site Navigation</span></h2>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- /HEADER -->
+          <!-- BEGIN: CONTENT -->
+          <table cellspacing="0" cellpadding="10" class="maintable" id="maintable">
+            <tbody>
+              <tr>
+                <td width="99%" class="content">
+                  <div id="content-regions" class="wrapper">
+                    <img src="/Contests/images/Problem-Page.gif" id="content-loader-gif" />
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+      <div id="ember-root" class="ember-application">
+        
+          
+          
+          
+          
+        
+        <div id="ember242" class="ember-view">
+
+
+          <div class="header-container">
+            <div class="wrapper" id="header">
+              <div class="inner-wrapper">
+                <!-- Header -->
+                <div class="cols-2" id="logo-floater">
+                  <a title="" href="/"><img id="logo" alt="CodeChef is a non-commercial competitive programming community" src="/sites/all/themes/abessive/logo.png" /><span></span></a></div>
+                    <div class="cols-2">
+                      <div id="custom-login">
+                        
+                        <div id="user-bar">
+                          <form id="new-login-form" method="post" accept-charset="UTF-8" data-bindattr-259="259" action="/node?destination=/problems/WORDNINJ">
+                          <div>
+                            <div id="edit-name-wrapper" class="form-item">
+                              <input type="text" placeholder="Username" class="form-text required new-input" value="" size="60" id="edit-name" name="name" maxlength="60" />
+                            </div>
+                            <div id="edit-pass-wrapper" class="form-item">
+                              <label for="edit-pass">Password: <span title="This field is required." class="form-required">*</span></label>
+                               <input type="password" placeholder="Password" class="form-text required new-input" size="60" maxlength="128" id="edit-pass" name="pass" />
+                             </div>
+                             <a href="/user/password">Forgot Password</a><input type="hidden" value="form-OnsYcPGflPxGGJfmw6JjAbTAKf5Rxl2-qv23IsTPywY" id="form-OnsYcPGflPxGGJfmw6JjAbTAKf5Rxl2-qv23IsTPywY" name="form_build_id" />
+                             <input type="hidden" value="new_login_form" id="edit-new-login-form" name="form_id" />
+                             <input type="submit" class="form-submit btn new-input-button" value="Login" id="edit-submit" name="op" />
+
+                           </div>
+                         </form>
+                       </div>
+                       
+                       <div id="facebook-login">
+                        <div class="oauth-buttons-header" id="oauth-buttons">
+                          <button onclick="clearUserCache(); window.location='/OAuth/google?state=initiate';" id="button_google" title="Google Login" style="text-decoration: none;" class="oauth-button oauth-button-small"><img src="/sites/all/modules/codechef_open_register/images/google.png" class="ccl-su-img-social-connect ccl-su-img-social ccl-su-img-social-small" />  </button><button onclick="clearUserCache(); window.location='/OAuth/github?state=initiate';" id="button_github" title="Github Login" style="text-decoration: none;" class="oauth-button oauth-button-small"><img src="/sites/all/modules/codechef_open_register/images/github.png" class="ccl-su-img-social-connect ccl-su-img-social ccl-su-img-social-small" />  </button><button onclick="clearUserCache(); window.location='/fb/auth?src=';" id="button_facebook" title="Facebook Login" style="text-decoration: none;" class="oauth-button oauth-button-small"><img src="/sites/all/modules/codechef_open_register/images/facebook.png" class="ccl-su-img-social-connect ccl-su-img-social ccl-su-img-social-small" />  </button>
+                        </div>
+                      </div>
+                      
+                      <div class="signup"><a class="new-input-button btn" href="/signup">New User</a></div>
+                      
+                    </div>
+
+
+                    <div class="block block-nice_menus block-header" id="block-nice_menus-1">
+                      <div class="content">
+                        <h2><span class="nice-menu-hide-title">Site Navigation</span></h2>
+                        
+                        <ul id="nice-menu-0" class="nice-menu nice-menu-down"><li class="menuparent menu-path-problems-school" id="menu-302"><a title="" href="/problems/school">PRACTICE</a><ul><li class="menu-path-ide" id="menu-5215"><a title="" href="/ide">Code, Compile &amp; Run</a></li>
+<li class="menu-path-problems-school" id="menu-2602"><a title="" href="/problems/school">Beginner</a></li>
+<li class="menu-path-problems-easy" id="menu-303"><a title="" href="/problems/easy">Easy</a></li>
+<li class="menu-path-problems-medium" id="menu-304"><a title="" href="/problems/medium">Medium</a></li>
+<li class="menu-path-problems-hard" id="menu-305"><a title="" href="/problems/hard">Hard</a></li>
+<li class="menu-path-problems-challenge" id="menu-1819"><a title="" href="/problems/challenge">Challenge</a></li>
+<li class="menu-path-problems-extcontest" id="menu-1376"><a title="" href="/problems/extcontest">Peer</a></li>
+</ul>
+</li>
+<li class="menuparent menu-path-contests" id="menu-309"><a title="" href="/contests">COMPETE</a><ul><li class="menu-path-www.codechef.com-contests" id="menu-2203"><a title="" href="http://www.codechef.com/contests">All Contests</a></li>
+<li class="menu-path-https--www.codechef.com-OCT16utm_sourcenavigationutm_mediumoct16" id="menu-5225"><a title="" href="https://www.codechef.com/OCT16?utm_source=navigation&amp;utm_medium=oct16">October Challenge 2016</a></li>
+<li class="menu-path-www.codechef.com-COOK75" id="menu-5679"><a title="" href="http://www.codechef.com/COOK75">October Cook-Off 2016</a></li>
+<li class="menu-path-www.codechef.com-LTIME41" id="menu-5224"><a title="" href="http://www.codechef.com/LTIME41">OctoberLunchtime 2016</a></li>
+</ul>
+</li>
+<li class="menuparent menu-path-discuss.codechef.com-" id="menu-138"><a title="" href="http://discuss.codechef.com/">DISCUSS</a><ul><li class="menu-path-discuss.codechef.com-" id="menu-139"><a title="" href="http://discuss.codechef.com/">Forums</a></li>
+<li class="menu-path-blog.codechef.com-" id="menu-140"><a title="" href="http://blog.codechef.com/">Blog</a></li>
+<li class="menu-path-wiki-" id="menu-920"><a title="" href="/wiki/">Wiki</a></li>
+<li class="menu-path-https--www.facebook.com-CodeChef" id="menu-2202"><a title="" href="https://www.facebook.com/CodeChef">Facebook</a></li>
+<li class="menu-path-www.twitter.com-codechef" id="menu-141"><a title="" href="http://www.twitter.com/codechef">Twitter</a></li>
+</ul>
+</li>
+<li class="menuparent menu-path-node-124098" id="menu-143"><a title="" href="/community">COMMUNITY</a><ul><li class="menu-path-www.codechef.com-school" id="menu-5741"><a title="" href="http://www.codechef.com/school">CodeChef for Schools</a></li>
+<li class="menu-path-www.codechef.com-hostyourcontest" id="menu-733"><a title="Hosting Contest on CodeChef" href="http://www.codechef.com/hostyourcontest">Host your Contest</a></li>
+<li class="menu-path-www.codechef.com-goforgold" id="menu-2310"><a title="" href="http://www.codechef.com/goforgold">Go for Gold</a></li>
+<li class="menu-path-www.codechef.com-campus_chapter-about" id="menu-3830"><a title="" href="http://www.codechef.com/campus_chapter/about">Campus Chapter</a></li>
+</ul>
+</li>
+<li class="menuparent menu-path-node-3" id="menu-147"><a title="" href="/help">HELP</a><ul><li class="menu-path-www.codechef.com-wiki-faq" id="menu-643"><a title="" href="http://www.codechef.com/wiki/faq">Frequently Asked Questions</a></li>
+<li class="menu-path-www.codechef.com-wiki-faq-problem-setters" id="menu-710"><a title="" href="http://www.codechef.com/wiki/faq-problem-setters">FAQ for problem setters</a></li>
+<li class="menu-path-www.codechef.com-problemsetting" id="menu-1389"><a title="Codechef Problem Creation" href="http://www.codechef.com/problemsetting">Problem Setting</a></li>
+<li class="menu-path-www.codechef.com-wiki-tutorials" id="menu-850"><a title="" href="http://www.codechef.com/wiki/tutorials">Tutorials</a></li>
+<li class="menu-path-www.codechef.com-long-ranklist-AX" id="menu-2200"><a title="Long contest rankings list" href="http://www.codechef.com/long/ranklist/AX">Long Contest Ranks</a></li>
+<li class="menu-path-www.codechef.com-short-ranklist-AX" id="menu-2199"><a title="Short contest rankings list" href="http://www.codechef.com/short/ranklist/AX">Short Contest Ranks</a></li>
+<li class="menu-path-www.codechef.com-ltime-all-ranklist-AX" id="menu-4881"><a title="" href="http://www.codechef.com/ltime/all/ranklist/AX">Lunchtime Ranks (all)</a></li>
+<li class="menu-path-www.codechef.com-ltime-school-ranklist-AX" id="menu-4882"><a title="" href="http://www.codechef.com/ltime/school/ranklist/AX">Lunchtime Ranks (school)</a></li>
+<li class="menu-path-node-503865" id="menu-1820"><a title="Event Calendar" href="/event-calendar">Event Calendar</a></li>
+<li class="menu-path-discuss.codechef.com-top-users-" id="menu-2372"><a title="" href="http://discuss.codechef.com/top/users/">Top Contributors on Discuss</a></li>
+</ul>
+</li>
+<li class="menuparent menu-path-node-6479484" id="menu-5681"><a title="" href="/aboutus">ABOUT</a><ul><li class="menu-path-www.codechef.com-aboutus" id="menu-151"><a title="" href="http://www.codechef.com/aboutus">About CodeChef</a></li>
+<li class="menu-path-www.codechef.com-team" id="menu-849"><a title="Team CodeChef" href="http://www.codechef.com/team">Team CodeChef</a></li>
+<li class="menu-path-node-157468" id="menu-708"><a title="Press Room" href="/press">Press Room</a></li>
+<li class="menu-path-node-157470" id="menu-709"><a title="CEO's Corner" href="/ceoscorner">CEO's Corner</a></li>
+<li class="menu-path-www.codechef.com-contactus" id="menu-1858"><a title="" href="http://www.codechef.com/contactus">Contact Us</a></li>
+<li class="menu-path-www.directi.com-" id="menu-152"><a title="" href="http://www.directi.com/">About Directi</a></li>
+</ul>
+</li>
+</ul>
+
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div id="ember249" class="ember-view">
+          <!-- /HEADER -->
+          <!-- BEGIN: CONTENT -->
+          <table cellspacing="0" cellpadding="10" class="maintable" id="maintable">
+            <tbody><tr>
+              <td width="99%" class="content">
+                <div id="content-regions" class="wrapper">
+                  
+                  <div class="outer-box-problems">
+                    <div id="breadcrumbs">
+                      <a href="/">Home</a> » <a href="/problems/challenge/">Practice(Challenge)</a> » WordNinjas
+                    </div>
+                    <div class="box-white" id="main-content-problem">
+                      <table id="problem-page-top">
+                        <tbody><tr><td width="55%">
+                          <h1 class="title">WordNinjas
+                            <div style="display:inline-block;">
+                              
+                              <div style="visibility: visible; position: relative;top: 5px;" class="todo-widget"><input width="25" type="image" height="25" contest="" problem="WORDNINJ" class="todo-button" title="Add problem to Todo list" src="/sites/all/themes/abessive/images/add1.png" style="outline: none;" /><div class="todo-button-message"></div></div>
+                              
+                            </div>
+                          </h1>
+                          <div style="padding:0; overflow:hidden; margin-bottom:5px;">
+                            <div style="float:left; margin:3px 10px 0 0;">Problem code: <span id="problem-code">WORDNINJ</span></div>
+                            </div>
+                            
+                            <div data-bindattr-265="265" class="social-button-container cc-visible">
+                              <div class="social-button">
+                                <div style="width: 80px; height: 20px;margin-top: -2px;"><a data-via="codechef" class="twitter-share-button" href="https://twitter.com/share">Tweet</a></div>
+                                </div>
+                                <div class="social-button">
+                                  <div data-share="true" data-show-faces="true" data-action="like" data-layout="standard" data-width="370px" class="fb-like"></div>
+                                </div>
+                                <div class="clearfix"></div>
+                              </div>
+                            </td>
+                            <td width="45%">
+                              <ul class="button-list">
+                                
+                                <li><a data-bindattr-266="266" href="/status/WORDNINJ" class="button">All Submissions</a></li>
+                                
+                              </ul>
+                            </td>
+                          </tr></tbody></table>
+                          <div id="problem-page-complete">
+                            <div id="problem-left">
+                              
+                              <div class="content"><h3>All submissions for this problem are available.</h3><p style="text-align:justify">
+<b>Attention!</b> <i>This is challenge problem with the longest problem statement ever (it is even longer than for the legendary problem <a href="http://www.codechef.com/OCT12/problems/CIELHACK">CIELHACK</a>). You should invest some time in order to get all necessary points. But in the end there is a hint on how to get <b>Accepted</b>. So you will be awarded for your patience :)</i>
+</p>
+<p style="text-align:justify">
+Let's play <a href="https://itunes.apple.com/us/app/wordninjas/id472994571?mt=8">WordNinjas</a>! (<i><b>Note!</b> CodeChef is not affiliated with iTunes/Apple in any ways :)</i>)
+</p>
+<p style="text-align:justify">
+In short, you should create words from letters that your ninja will get by attacking tiles. Some special tiles contain bonuses.
+</p>
+<p style="text-align:justify">
+Here we consider some simplified version of the game where all the tiles are arranged in a line and we know their values in advance. Tiles are divided into blocks. At each move you can either skip the current block or take exactly one tile from it. Thus, you have a sequence of tile blocks as an input. Each block will be a string of characters where each character represents one tile. Each tile can be either a letter tile or some bonus tile. On each letter tile there will be written some letter of English alphabet and such tiles will be represented by the corresponding uppercase letters of English alphabet in the input. There exist 5 types of bonus tiles. The first one is a blank tile that behaves like an ordinary letter tile but you can write any letter on this tile when you create words (see below). The detailed description of all types of bonus tiles will be provided later.
+</p>
+<p style="text-align:justify">
+The main aim of the game is to score as many points as possible. Most of the points can be gained by creating words. For this you have an array of length 7 that can be filled by letter or blank tiles that you get from the tile blocks. Each cell of the array can be occupied by at most one tile. <b>If at some move you take some letter or blank tile but all 7 cells in the array are occupied, this tile will be thrown away, otherwise this tile will occupy the first unoccupied cell of the array.</b> Thus, tiles in array always occupy several first cells. We number the cells in the array by numbers from 1 to 7. So if you have 5 tiles in the array they will occupy cells 1, 2, 3, 4, 5. You can also throw away tiles from the array at any time if you need this. Remaining tiles will be moved preserving their relative order and still will occupy several first positions. For example, if you have 5 tiles in the array and you throw away tiles from the 2nd and the 4th cells then the tile from the 3rd cell will occupy the 2nd cell and the tile from the 5th cell will occupy the 3rd cell after this operation.
+</p>
+<p style="text-align:justify">
+Finally, you can arbitrarily rearrange tiles in the array. Once you write some letters on all your blank tiles and get the rearrangement of tiles such that the corresponding sequence of letters forms a correct word you can play this word to get some points that depends on letters you have in this word and some other factors (see below). After this all the tiles except the last one will be thrown away from the array and the last tile will occupy the first position of the array. If it was the blank tile you can erase the letter you have written on it before and write another letter. Of course, you will be given a dictionary of all correct words that you can play. Note, that in all official input files this dictionary will be the same (see <b>Test Case Generation</b> section for details). But in the example we will use some dummy dictionary that consists of only two words :)
+</p>
+<p style="text-align:justify">
+<b>Types of bonus tiles:</b></p>
+<ul>
+<li><b>Blank tile.</b> As mentioned before, it occupies one cell in the array and any letter can be written on it. You will get 5 points by taking a blank tile since the magic panda keeps this tile. It will be denoted by the character <b>?</b> (question mark) in the input. You can carry several blank tiles in the array at the same time. <b>When points for the played word are calculated it scores 0 points regardless of the letter that was written on it.</b></li>
+<li><b>Double letter tile.</b> It doubles points scored by the letter in the particular cell of the array. The tile that corresponds to the <b>i</b>-th cell will be represented by the digit <b>i</b> in the input.</li>
+<li><b>Triple letter tile.</b> It triples points scored by the letter in the particular cell of the array. Since there are no uppercase digits in the English alphabet we will represent the triple letter tiles by lowercase English letters. That is, the character <b>a</b> in the input means the tile that triples score of the letter written on the tile that occupies the first cell of the array, character <b>b</b> do the same for the second cell and so on. Note that the letter tiles are represented by uppercase letters so there will be no ambiguities.</li>
+<li><b>Double word tile.</b> It doubles points scored by all letters in the array. This tile will be represented by <b>+</b> character.</li>
+<li><b>Triple word tile.</b> It triples points scored by all letters in the array. This tile will be represented by <b>*</b> character.</li>
+</ul>
+
+<p style="text-align:justify">
+You will get 2 points by taking tiles of the last four types since each such tile is kept by baby dragon. To describe in detail how these tiles behave let us introduce a concept of multipliers. Namely, each array cell (there are 7 of them) has its multiplier. Initially all these multipliers are equal to 1. A double letter tile assigns the multiplier for the corresponding cell to 2 and a triple letter tile assigns this multiplier to 3. So if multiplier for some position was 3 and you take the double letter tile for this cell it will be assigned to 2 and you will possibly get lower score for the word. The whole array also has a multiplier that initially equals to 1 and changes by double and triple word tiles in the same way as multipliers for particular cells. <b>After you play a word all multipliers are reset to 1.</b>
+</p>
+<p style="text-align:justify">
+<b>How many points will you get for a particular word?</b> Each letter has some point value which is based on the letter's frequency in standard English writing: commonly used letters such as <b>A</b> or <b>S</b> are worth one point, while less common letters score higher, with <b>Q</b> and <b>Z</b> each worth 10 points. The full distribution of points by letters coincides with the standard Scrabble's one and can be found <a href="http://en.wikipedia.org/wiki/Scrabble_letter_distributions#English">here</a>. For the sake of completeness we provide it here:</p>
+<p style="text-align:justify">
+</p><ul>
+<li> <i>1 point</i>: <b>A</b>, <b>E</b>, <b>I</b>, <b>L</b>, <b>N</b>, <b>O</b>, <b>R</b>, <b>S</b>, <b>T</b>, <b>U</b></li>
+<li> <i>2 points</i>: <b>D</b>, <b>G</b></li>
+<li> <i>3 points</i>: <b>B</b>, <b>C</b>, <b>M</b>, <b>P</b></li>
+<li> <i>4 points</i>: <b>F</b>, <b>H</b>, <b>V</b>, <b>W</b>, <b>Y</b></li>
+<li> <i>5 points</i>: <b>K</b></li>
+<li> <i>8 points</i>: <b>J</b>, <b>X</b></li>
+<li> <i>10 points</i>: <b>Q</b>, <b>Z</b></li>
+</ul>
+<p></p>
+<p style="text-align:justify">
+Now assume that you play a word of length <b>L</b>, where <b>2 ≤ L ≤ 7</b> (there are no words of length 1 in SOWPODS). Denote by <b>C[i]</b> the score of the <b>i</b>-th letter in this word according to the distribution above. As mentioned above, if some letter is created from the blank tile then the corresponding score is 0. Further denote by <b>M[i]</b> the multiplier of the <b>i</b>-th cell of the array and by <b>M</b> the multiplier of the whole array. Then the number of points you will get for this word equals to
+</p>
+<p style="text-align:center">
+<b>M * (M[1] * C[1] + ... + M[L] * C[L]) + 3 * max(L − 3, 0) + 30 * max(L − 6, 0).</b>
+</p>
+<p style="text-align:justify">
+The second summand means bonus points for long words and equals to 3 for 4-letter words, 6 for 5-letter words, 9 for 6-letter words and 12 for 7 letter-words. The last summand is additional large bonus of 30 points for 7-letter words. (In the actual WordNinjas game the whole score of the word is 10 times higher as well as the points for taking bonus tiles, but we get rid of this 10 in this problem.)
+</p>
+<p style="text-align:justify">
+Thus, the total score you will get during the game is the sum of two sums, the first one is the sum of scores of all the played words during the game and the second one is the sum of points you got by taking bonus tiles.
+</p>
+<p style="text-align:justify">
+Your goal is to maximize your score. But this is a challenge problem and you don't need to find the optimal solution.
+</p>
+<h3>Input</h3>
+<p style="text-align:justify">
+The first line of the input contains an integer <b>N</b>, the number of words in the dictionary. Each of the following <b>N</b> lines contains one word composed of uppercase letters of English alphabet.
+</p>
+<p style="text-align:justify">
+The next line contains a positive integer <b>M</b>, the number of tile blocks. Each of the following <b>M</b> lines contains one non-empty string of at most 10 characters that represents the set of tiles in the current block. Each character in this string can be one of the following:
+</p>
+<p style="text-align:justify">
+</p><ul>
+<li>The uppercase letter of English alphabet, which represents the usual letter tile.</li>
+<li>The <b>?</b> character, which represents the blank tile.</li>
+<li>The <b>+</b> character, which represents the double word tile.</li>
+<li>The <b>*</b> character, which represents the triple word tile.</li>
+<li>The digit from 1 to 7, which represents the double letter tile for the corresponding cell of the array.</li>
+<li>The lowercase letter from the set <b>{a, b, c, d, e, f, g}</b>, which represents the triple letter tile for the corresponding cell of the array.</li>
+</ul>
+<p></p>
+<p style="text-align:justify">
+There will be no white space characters in the input other than new lines (ASCII code 10).
+</p>
+<h3>Output</h3>
+<p style="text-align:justify">
+For each tile block in the input, your output may consist of one, two or three lines. The first line should always contain one of the strings <b>"Take C"</b> or <b>"Skip"</b> depending on whether you take some tile from this block or skip it. Here <b>C</b> denotes the character from the block that you want to take. As was mentioned before if you take the letter or blank tile but all 7 cells in the array are occupied this tile will be thrown away. However you will get 5 points if you take a blank tile in any case. If you try to take the tile that is not present in this block your move will be ignored. But in any case <b>C</b> should be a character that represents some tile. Otherwise you will get <b>Wrong Answer</b>.
+</p>
+<p style="text-align:justify">
+If you want to throw away some tiles, then start the next line with the string <b>"Throw "</b> (the last character is a space) followed by the non-empty list of tiles you want to throw. You should denote them as they were denoted in the input: letter tiles by uppercase letters of English alphabet, blank tiles by question marks. You can list them in any order. If some of the tiles you want to throw are not present in your array they will be ignored. But this list should contain no more than 7 characters in any case (we don't want to analyze millions of characters if you decide to output some enormous list). Also each character in this list should be either an uppercase English letter or a question mark and you should not separate characters in this list by white spaces. Otherwise you will get <b>Wrong Answer</b>.
+</p>
+<p style="text-align:justify">
+If you want to play a word at this move, then start the next line with the string <b>"Play "</b> (the last character is a space) followed by a string composed of uppercase and lowercase letters of the English alphabet. The length of this word should be at least 2 and no more than 7. Here uppercase letters mean letters written on usual letter tiles and lowercase letters mean letters written on blank tiles. If you try to play incorrect word or the word that can not be created from available letter and blank tiles in your array your move will be ignored. If the word is correct and can be created from you tiles you will get the corresponding score for it. The word does not have to use all the tiles in the array. In this case the special judge will throw away all unnecessary tiles instead of you and then the word will be played. After you played the correct word only one tile remains in the array - the last tile of your word.
+</p>
+<p style="text-align:justify">
+Any additional white spaces in your output will be ignored.
+</p>
+<p style="text-align:justify">
+<b>Your output will be considered as correct if and only if it corresponds to the described format and you play at least one correct word during the game.</b> It is guaranteed that such output exists (see <b>Test Case Generation</b> section for details).
+</p>
+<h3>Scoring</h3>
+<p style="text-align:justify">
+Your score for a particular test file is the score that your output will get for the whole game. The total score for a submission is the average score across all the test files. Your goal is to maximize the total score.
+</p>
+<h3>Example</h3>
+<pre><b>Input:</b>
+2
+CODE
+CHEF
+13
+*+
+CC
+OA
+D?
+E
++
+F
+abcdefg
+H
+E
+???
+E
+QZ321??
+
+<b>Output 1:</b>
+Take *
+Take C
+Take O
+Take D
+Take E
+Take +
+Play CODE
+Take F
+Take a
+Take H
+Skip
+Play CHEF
+Take ?
+Play sIstEr
+Take E
+Play cHEF
+Take ?
+
+<b>Output 2:</b>
+Take *
+Take C
+Take O
+Take D
+Take E
+Skip
+Take F
+Take d
+Take H
+Take E
+Take ?
+Take E
+Take 2
+Throw ED
+Play CHEF
+</pre><h3>Explanation</h3>
+<p><b>Output 1:</b></p>
+<p style="text-align:justify">
+Here we have two correct words <b>CODE</b> and <b>CHEF</b>. At first we take triple word tile, which bring us 2 points, then 4 letters <b>C</b>, <b>O</b>, <b>D</b>, <b>E</b> and double word tile which bring us 2 points. Then we play the word <b>CODE</b>, which bring us <b>2 * (3 + 1 + 2 + 1) + 3 = 17</b> points. After this we have letter <b>E</b> in the array. Note that if we would skip double word tile then the multiplier for the array would be 3 and we get <b>24</b> points for the word.
+</p>
+<p style="text-align:justify">
+Next we want to play the word <b>CHEF</b>. At the next moves we take the letter <b>F</b>, then the triple letter tile <b>a</b> that corresponds to the first cell of the array and brings us 2 points, and the letter <b>H</b>, but skip <b>E</b> since we already have it. Then our little sister accidentally tries to play the word <b>CHEF</b>. Though this is a correct word we have only letters <b>E</b>, <b>F</b> and <b>H</b> in our possession and can't play this word. Luckily the special judge is kind and simply ignores this move.
+</p>
+<p style="text-align:justify">
+At the next move we kick the magic panda and take the blank tile, which brings us 5 additional points. Now we can play the word <b>cHEF</b> by writing letter <b>C</b> on the blank tile but just before playing the word little sister again plays tricks on us and at first try to play word <b>sIstEr</b> (having 4 blank tiles!) which is incorrect according to our dictionary and then take the next letter <b>E</b>. So we try to play the word <b>cHEF</b> having letters <b>E, E, F, H</b> and one blank tile in our possession. Luckily special judge is kind and forgive us this mistake. It threw away unnecessary letter <b>E</b> and only then played the word which bring us <b>(3 * 0 + 4 + 1 + 4) + 3 = 12</b> points. Note that the blank tile gives 0 points with any letter written on it. So we waste triple letter tile by playing this word.
+</p>
+<p style="text-align:justify">
+At the last move we take the blank tile from the last block and receive additional 5 points. Game over. The total score for the game is <b>2 + 2 + 17 + 2 + 5 + 12 + 5 = 45</b>.
+</p>
+<p><b>Output 2:</b></p>
+<p style="text-align:justify">
+Here we take some tile from each block except the double word tile from the 6th block. In particular, we take the triple word tile from the first block, the triple letter tile corresponding to the 4th cell from the 8th block and the double letter tile corresponding to the second cell from the last block. Note that taking blank tile brings us 5 points but since we already have 7 tiles in the array we did not get this tile in our possession, the same is true for last letter <b>E</b> - taking this letter is simply ignored. After that we throw away letters <b>D</b> and <b>E</b> and are left with letters <b>C</b>, <b>E</b>, <b>F</b>, <b>H</b> and <b>O</b>. Finally we play the word <b>CHEF</b> which bring us <b>3 * (3 + 2 * 4 + 1 + 3 * 4) + 3 = 75</b> points since we have multiplier 3 for the whole array, multiplier 2 for the second cell and multiplier 3 for the 4th cell. As in the previous example unnecessary letter <b>O</b> was automatically thrown away before playing the word. Thus the total score for the game is <b>2 + 2 + 5 + 2 + 75 = 86</b>. As you can see playing just one word during the game can be better than playing two words even if one of them coincide with that only word :)
+</p>
+<h3>Test Case Generation</h3>
+<p style="text-align:justify">
+The dictionary will be the same in all official test files and can be found <a href="http://www.codechef.com/download/WORDNINJ_dict.txt">here</a>. It consists of all <b>74414</b> words in <a href="http://en.wikipedia.org/wiki/SOWPODS">SOWPODS</a> list that have length from 2 to 7. Also, note that in each official input file words are sorted by their length and words of the same length are sorted in the alphabetical order. In generating tiles we have followed Scrabble standards. The total number of tiles in blocks of each official test file will be exactly 10000. There will be exactly 9000 letter and blank tiles. They together form 90 full English-language sets for Scrabble. Each such set consists of 98 letter tiles and 2 blank tiles. The distribution of letters in this set can be found <a href="http://en.wikipedia.org/wiki/Scrabble_letter_distributions#English">here</a>. In particular, each input file will have exactly 180 blank tiles, exactly 90 letters <b>Z</b>, exactly 810 letters <b>A</b> and so on. The remaining tiles are bonus tiles that affect multipliers. There will be exactly 30 triple word tiles, 70 double word tiles, 300 triple letter tiles and 600 double letter tiles. Each double or triple letter tile will correspond to each cell of the array uniformly at random. To get the input sequence of block tiles some random permutation of mentioned 10000 tiles are taken and then it is divided by blocks, where each block has size from 1 to 10 uniformly at random.
+</p>
+<h3>Hint</h3>
+<p style="text-align:justify">
+<i>In order to get <b>Accepted</b> you can simply output <b>M</b> times string <b>Take A</b> and then output <b>Play AA</b></i>.
+</p>
+<p style="text-align:justify">
+Why is this correct? Since special judge ignores tries to take incorrect tiles, all your moves for blocks that do not contain tile with letter <b>A</b> will be considered as skip moves. In the end you will definitely have all 7 positions in the array filled by letters <b>A</b> since there are <b>810</b> tiles with letter <b>A</b> in the input. Since <b>AA</b> is a correct word and the special judge will throw away unnecessary tiles before playing the word, you will successfully play the word <b>AA</b> in the end.
+</p>
+
+                                
+                                <hr />
+                                <table align="left" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    
+                                    <tr>
+                                      <td width="14%">Author:</td>
+                                      <td>
+                                        <a data-bindattr-273="273" href="/users/anton_lunyov">anton_lunyov</a>
+                                      </td>
+                                    </tr>
+                                    
+                                    
+                                    <tr>
+                                      <td width="14%">Tester:</td>
+                                      <td>
+                                        <a data-bindattr-275="275" href="/users/laycurse">laycurse</a>
+                                      </td>
+                                    </tr>
+                                    
+                                    
+                                    <tr>
+                                      <td width="14%">Editorial:</td>
+                                      <td>
+                                        <a data-bindattr-277="277" href="http://discuss.codechef.com/problems/WORDNINJ">http://discuss.codechef.com/problems/WORDNINJ</a>
+                                      </td>
+                                    </tr>
+                                    
+                                    
+                                    <tr>
+                                      <td width="14%">Tags:</td>
+                                      <td><a href="/tags/problems/anton_lunyov" class="problem-tag-small ">
+                    anton_lunyov
+                </a><a href="/tags/problems/challenge" class="problem-tag-small ">
+                    challenge
+                </a><a href="/tags/problems/dec12" class="problem-tag-small ">
+                    dec12
+                </a></td>
+                                    </tr>
+                                    
+                                    
+                                    <tr>
+                                      <td width="14%">Date Added:</td>
+                                      <td>7-11-2012</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                      <td width="14%">Time Limit:</td>
+                                      <td>1 sec</td>
+                                    </tr>
+                                    <tr>
+                                      <td width="14%">Source Limit:</td>
+                                      <td>50000 Bytes</td>
+                                    </tr>
+                                    <tr>
+                                      <td width="14%">Languages:</td>
+                                      <td>ADA, ASM, BASH, BF, C, C99 strict, CAML, CLOJ, CLPS, CPP 4.3.2, CPP 4.9.2, CPP14, CS2, D, ERL, FORT, FS, GO, HASK, ICK, ICON, JAVA, JS, LISP clisp, LISP sbcl, LUA, NEM, NICE, NODEJS, PAS fpc, PAS gpc, PERL, PERL6, PHP, PIKE, PRLG, PYTH, PYTH 3.4, RUBY, SCALA, SCM guile, SCM qobi, ST, TCL, TEXT, WSPC</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <ul class="button-list bottom-bttn">
+                                <input type="hidden" data-bindattr-272="272" value="value" />
+                                
+                                <li><a data-bindattr-281="281" href="/submit/WORDNINJ" class="button">Submit</a></li>
+                                
+                              </ul>
+                              
+
+                            </div>
+                            <div id="problem-right">
+                              <div id="sidebar-problem">
+                                <div id="success-submissions">
+                                  
+                                  <div data-ember-action="282">
+                                  <h3>SUCCESSFUL SUBMISSIONS
+                                    <button class="toogle-button fa fa-plus-square-o"></button>
+                                  </h3>
+                                </div>
+                                
+                                <div id="rankContentDiv"></div>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr />
+                        <div id="problem-comments">
+                          
+                          <div id="ember301" class="ember-view"><section class="cc-comments-section"><div class="comment-topmost-header"><h2 data-ember-action="302" class="noselect cc-comments-title">Comments <i class="fa fa-caret-right"></i></h2></div></section></div>
+                          
+                        </div>
+                      </div>
+
+                    </div>
+                    
+                  </div>
+                </td>
+              </tr>
+            </tbody></table>
+          </div>
+          </div></div>
+        <div class="footer-container">
+          <div class="wrapper" id="footer">
+            <!--<div class="r1 t"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div><div class="r5"></div>-->
+            <script type="text/javascript">
+              String.prototype.capitalize = function () {
+                return this.charAt(0).toUpperCase() + this.slice(1);
+              };
+
+              disconnectOauth = function (event, account) {
+                if (event != undefined) {
+                  event.preventDefault();
+                }
+                var r = confirm("Are you sure you want to disconnect " + account.capitalize() + " account?");
+                if (r == true) {
+                  clearUserCache();
+                  $.ajax({
+                    url: '/OAuth/' + account,
+                    type: 'DELETE',
+                    success: function () {
+                      window.location.reload();
+                    },
+                    error: function () {
+                      invokeGenericModal({
+                        message: "Couldn't complete your request. Please try again.",
+                        id: account + '-error-message'
+                      });
+                    }
+                  });
+                }
+              };
+            </script>
+            <div class="content clear-block">
+              <!-- Footer Contents -->
+              <div class="block block-block block-header" id="block-block-13">
+                <div class="content">
+                  <script type="text/javascript" language="javascript">
+                    function formatTime(ts) {
+                      now = new Date(ts);
+
+                      localtime = new Date();
+                      hour = now.getHours();
+                      min = now.getMinutes();
+                      sec = now.getSeconds();
+
+                      if (min &lt;= 9) {
+                        min = "0" + min;
+                      }
+                      if (sec &lt;= 9) {
+                        sec = "0" + sec;
+                      }
+                      if (hour &gt; 12) {
+                        hour = hour - 12;
+                        add = " PM";
+                      } else {
+                        hour = hour;
+                        add = " AM";
+                      }
+                      if (hour == 12) {
+                        add = " PM";
+                      }
+                      if (hour == 00) {
+                        hour = "12";
+                      }
+
+                      $('#server-time').html(((hour &lt;= 9) ? "0" + hour : hour) + ":" + min + ":" + sec + add);
+
+                      nextSec = (now.getTime() + 1000);
+
+                      setTimeout("formatTime(" + nextSec + ")", 1000);
+                    }
+                    function getDtTimeZone() {
+                      var rightNow = new Date();
+                      var toDay = new Date(rightNow.getFullYear(), 0, 1, 0, 0, 0, 0);
+                      var temp = toDay.toGMTString();
+                      var date2 = new Date(temp.substring(0, temp.lastIndexOf(" ") - 1));
+                      var stdTime = (toDay - date2) / (1000 * 60 * 60);
+                      return stdTime;
+                    }
+            /*var d=new Date();
+             $.ajax({
+             url: '/umtza',
+             type:'POST',
+             data: 'umtza='+d.toString(),
+             });
+             */
+           </script>
+           <div id="disclaimer">CodeChef is a non-commercial competitive programming community</div>
+           <div class="inner-wrapper">
+            <div class="cols-2">
+              <div id="secondary-nav">
+                <ul>
+                  <li><a href="http://www.codechef.com/aboutus/">About CodeChef</a></li>
+                  <li><a href="http://www.directi.com/" target="_blank">About Directi</a></li>
+                  <li><a href="http://www.codechef.com/ceoscorner/">CEO's Corner</a></li>
+                  <li><a href="http://www.codechef.com/c-programming">C-Programming</a></li>
+                  <li><a href="http://www.codechef.com/Programming-Languages">Programming
+                    Languages</a></li>
+                    <li><a href="http://www.codechef.com/contactus">Contact Us</a></li>
+                  </ul>
+                </div>
+                <div class="cols-2" id="copyright">© 2009
+                  <a href="http://www.directi.com" style="color: rgb(0, 0, 0);">Directi
+                  Group</a>
+                  . All Rights Reserved. CodeChef uses SPOJ © by
+                  <a href="http://www.sphere-research.com" style="color: rgb(0, 0, 0);">Sphere
+                  Research Labs</a>
+                </div>
+                <div id="copyright-msg">In order to report copyright violations of any kind, send in an
+                  email to <a href="mailto:copyright@codechef.com">copyright@codechef.com</a></div>
+                </div>
+                <div align="right" style="float:right;" class="cols-2-right">
+                  <div id="sponsor-strip">
+                    <a href="http://www.directi.com" target="_blank"><img src="/sites/all/themes/abessive/images/directi-logo.png" alt="CodeChef a product of Directi" style="width:120px" /></a><br />
+                      <span>The time now is: <span id="server-time">06:46:49 PM</span></span><br />
+                      <span>Your IP: <span id="client-ip">24.240.38.152</span></span>
+                    </div>
+                  </div>
+                </div>
+                <script type="text/javascript">
+
+                  var _gaq = _gaq || [];
+                  _gaq.push(['_setAccount', 'UA-53602-42']);
+                  _gaq.push(['_trackPageview']);
+
+                  (function () {
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript';
+                    ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(ga, s);
+                  })();
+
+                </script>
+
+
+                <!-- Google Code for Visitors that do not sign-up Remarketing List -->
+                <script type="text/javascript">
+                  /* &lt;![CDATA[ */
+                  var google_conversion_id = 1066618556;
+                  var google_conversion_language = "en";
+                  var google_conversion_format = "3";
+                  var google_conversion_color = "666666";
+                  var google_conversion_label = "gbUUCPTlhAIQvJ3N_AM";
+                  var google_conversion_value = 0;
+                  /* ]]&gt; */
+                </script>
+                <script src="//www.googleadservices.com/pagead/conversion.js" type="text/javascript">
+                </script><img width="1" height="1" border="0" style="display:none" src="https://www.googleadservices.com/pagead/conversion/1066618556/?random=1476143225378&amp;cv=8&amp;fst=1476143225378&amp;num=1&amp;fmt=3&amp;value=0&amp;label=gbUUCPTlhAIQvJ3N_AM&amp;bg=666666&amp;hl=en&amp;guid=ON&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1056&amp;u_aw=1855&amp;u_cd=24&amp;u_his=50&amp;u_tz=-300&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;frm=0&amp;url=https%3A%2F%2Fwww.codechef.com%2Fproblems%2FWORDNINJ&amp;tiba=Contest%20Page%20%7C%20CodeChef" alt="" />
+                <noscript>
+                  &lt;div style="display:inline;"&gt;
+                    &lt;img height="1" width="1" style="border-style:none;" alt=""
+                    src="//www.googleadservices.com/pagead/conversion/1066618556/?label=gbUUCPTlhAIQvJ3N_AM&amp;amp;guid=ON&amp;amp;script=0"/&gt;
+                  &lt;/div&gt;
+                </noscript>
+
+                <!-- Google Code for RM codechef Remarketing List -->
+                <script type="text/javascript">
+                  /* &lt;![CDATA[ */
+                  var google_conversion_id = 968176136;
+                  var google_conversion_language = "en";
+                  var google_conversion_format = "3";
+                  var google_conversion_color = "ffffff";
+                  var google_conversion_label = "iDk7CPDZ7wMQiOTUzQM";
+                  var google_conversion_value = 0;
+                  /* ]]&gt; */
+                </script>
+                <script src="//www.googleadservices.com/pagead/conversion.js" type="text/javascript">
+                </script><img width="1" height="1" border="0" style="display:none" src="https://www.googleadservices.com/pagead/conversion/968176136/?random=1476143225400&amp;cv=8&amp;fst=1476143225378&amp;num=2&amp;fmt=3&amp;value=0&amp;label=iDk7CPDZ7wMQiOTUzQM&amp;bg=ffffff&amp;hl=en&amp;guid=ON&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1056&amp;u_aw=1855&amp;u_cd=24&amp;u_his=50&amp;u_tz=-300&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;frm=0&amp;url=https%3A%2F%2Fwww.codechef.com%2Fproblems%2FWORDNINJ&amp;tiba=Contest%20Page%20%7C%20CodeChef" alt="" />
+                <noscript>
+                  &lt;div style="display:inline;"&gt;
+                    &lt;img height="1" width="1" style="border-style:none;" alt=""
+                    src="//www.googleadservices.com/pagead/conversion/968176136/?label=iDk7CPDZ7wMQiOTUzQM&amp;amp;guid=ON&amp;amp;script=0"/&gt;
+                  &lt;/div&gt;
+                </noscript>
+
+                <!-- Google Code for Snackdown -->
+                <script type="text/javascript">
+                  /* &lt;![CDATA[ */
+                  var google_conversion_id = 960072479;
+                  var google_custom_params = window.google_tag_params;
+                  var google_remarketing_only = true;
+                  /* ]]&gt; */
+                </script>
+                <script src="//www.googleadservices.com/pagead/conversion.js" type="text/javascript">
+                </script><img width="1" height="1" border="0" style="display:none" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/960072479/?random=1476143225447&amp;cv=8&amp;fst=1476143225378&amp;num=3&amp;fmt=1&amp;guid=ON&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1056&amp;u_aw=1855&amp;u_cd=24&amp;u_his=50&amp;u_tz=-300&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;frm=0&amp;url=https%3A%2F%2Fwww.codechef.com%2Fproblems%2FWORDNINJ&amp;tiba=Contest%20Page%20%7C%20CodeChef" alt="" />
+                <noscript>
+                  &lt;div style="display:inline;"&gt;
+                    &lt;img height="1" width="1" style="border-style:none;" alt=""
+                    src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/960072479/?value=0&amp;amp;guid=ON&amp;amp;script=0"/&gt;
+                  &lt;/div&gt;
+                </noscript>
+
+
+                <!-- Google Code for .tech domain -->
+                <script type="text/javascript">
+                  /* &lt;![CDATA[ */
+                  var google_conversion_id = 951716012;
+                  var google_conversion_label = "OiW5COr2yFsQrJHoxQM";
+                  var google_custom_params = window.google_tag_params;
+                  var google_remarketing_only = true;
+                  /* ]]&gt; */
+                </script>
+                <script src="//www.googleadservices.com/pagead/conversion.js" type="text/javascript">
+                </script><img width="1" height="1" border="0" style="display:none" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/951716012/?random=1476143225466&amp;cv=8&amp;fst=1476143225378&amp;num=4&amp;fmt=1&amp;label=OiW5COr2yFsQrJHoxQM&amp;guid=ON&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1056&amp;u_aw=1855&amp;u_cd=24&amp;u_his=50&amp;u_tz=-300&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;frm=0&amp;url=https%3A%2F%2Fwww.codechef.com%2Fproblems%2FWORDNINJ&amp;tiba=Contest%20Page%20%7C%20CodeChef" alt="" />
+                <noscript>
+                  &lt;div style="display:inline;"&gt;
+                    &lt;img height="1" width="1" style="border-style:none;" alt=""
+                    src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/951716012/?value=1.00&amp;amp;currency_code=USD&amp;amp;label=OiW5COr2yFsQrJHoxQM&amp;amp;guid=ON&amp;amp;script=0"/&gt;
+                  &lt;/div&gt;
+                </noscript>
+
+                <!-- Start Alexa Certify Javascript -->
+                <script type="text/javascript">
+                  _atrk_opts = {atrk_acct: "q16Cj1a8gN00iz", domain: "codechef.com", dynamic: true};
+                  (function () {
+                    var as = document.createElement('script');
+                    as.type = 'text/javascript';
+                    as.async = true;
+                    as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js";
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(as, s);
+                  })();
+                </script>
+                <noscript>&lt;img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=q16Cj1a8gN00iz"
+                 style="display:none" height="1" width="1" alt=""/&gt;</noscript>
+                 <!-- End Alexa Certify Javascript -->
+
+                 <div class="cc-footer-seo">
+                  <style scoped="">
+                    .cc-footer-seo table tr th {
+                      font-weight: bold;
+                      font-size: 13px;
+                      border: 0px;
+                      padding-left: 0px;
+                      text-decoration: underline;
+                    }
+
+                    .cc-footer-seo table tr td {
+                      font-size: 12px;
+                      padding-left: 0px;
+                    }
+                  </style>
+                  <span><a href="/">CodeChef</a> - A Platform for Aspiring Programmers</span>
+
+                  <p>CodeChef was created as a platform to help programmers make it big in the world of
+                    algorithms, <strong>computer programming</strong> and <strong>programming
+                    contests</strong>. At CodeChef we work hard to revive the geek in you by hosting a
+                    <strong>programming contest</strong> at the start of the month and another smaller
+                    programming challenge in the middle of the month. We also aim to have training sessions
+                    and discussions related to <strong>algorithms, binary search</strong>, technicalities
+                    like <strong>array size</strong> and the likes. Apart from providing a platform for
+                    <strong>programming competitions</strong>, CodeChef also has various algorithm tutorials
+                    and forum discussions to help those who are new to the world of <strong>computer
+                    programming</strong>.</p>
+
+                    <p></p>
+                    <span><a href="/problems/easy">Practice Section</a> - A Place to hone your 'Computer Programming Skills'</span>
+
+                    <p>Try your hand at one of our many practice problems and submit your solution in a language
+                      of your choice. Our <strong>programming contest</strong> judge accepts solutions in over
+                      35+ programming languages. Preparing for coding contests were never this much fun!
+                      Receive points, and move up through the CodeChef ranks. Use our practice section to
+                      better prepare yourself for the multiple <strong>programming challenges</strong> that
+                      take place through-out the month on CodeChef. </p>
+
+                      <p></p>
+                      <span><a href="/contests/">Compete</a> - Monthly Programming Contests and Cook-offs</span>
+
+                      <p>Here is where you can show off your <strong>computer programming</strong> skills. Take
+                        part in our 10 day long monthly <strong>coding contest</strong> and the shorter format
+                        Cook-off <strong>coding contest</strong>. Put yourself up for recognition and win great
+                        prizes. Our <strong>programming contests</strong> have prizes worth up to INR 20,000
+                        (for Indian Community), $700 (for Global Community) and lots more CodeChef goodies up
+                        for grabs.</p>
+
+                        <p></p><br />
+                        <table width="60%" border="0" cellspacing="5" cellpadding="5">
+                          <tbody><tr>
+                            <th>Programming Tools</th>
+                            <th>Practice Problems</th>
+                            <th>Initiatives</th>
+                          </tr>
+                          <tr>
+                            <td><a href="/ide">Online IDE</a></td>
+                            <td><a href="/problems/easy">Easy</a></td>
+                            <td><a href="http://www.codechef.com/goforgold">Go for Gold</a></td>
+                          </tr>
+                          <tr>
+                            <td><a href="http://www.codechef.com/contests#FurtureContests">Upcoming Coding
+                              Contests</a></td>
+                              <td><a href="/problems/medium">Medium</a></td>
+                              <td><a href="http://www.codechef.com/school">CodeChef for Schools</a></td>
+                            </tr>
+                            <tr>
+                              <td><a href="http://www.codechef.com/hostyourcontest">Contest Hosting</a></td>
+                              <td><a href="/problems/hard">Hard</a></td>
+                              <td><a href="http://www.codechef.com/campus_chapter/about">Campus Chapters</a></td>
+                            </tr>
+                            <tr>
+                              <td><a href="http://www.codechef.com/problemsetting">Problem Setting</a></td>
+                              <td><a href="/problems/challenge">Challenge</a></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td><a href="http://www.codechef.com/wiki/tutorials">CodeChef Tutorials</a></td>
+                              <td><a href="/problems/extcontest">Peer</a></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td><a href="/wiki">CodeChef Wiki</a></td>
+                              <td><a href="/problems/school">School</a></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td><a href="/wiki/faq">FAQ's</a></td>
+                              <td></td>
+                            </tr>
+                          </tbody></table>
+                          <p></p>
+                        </div>
+                      </div>
+                      <div class="block block-block block-header" id="block-block-48">
+                        <div class="content">
+                          <script src="/misc/jquery.cookie.js" type="text/javascript"></script>
+                          <script src="/misc/contest-notification.js?t=1" type="text/javascript"></script>
+                        </div>
+                      </div>
+                      <div class="block block-block block-header" id="block-block-51">
+                        <div class="content">
+                          <script type="text/javascript">var _sf_startpt = (new Date()).getTime()</script>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <script type="text/javascript">
+                    var fb_param = {};
+                    fb_param.pixel_id = '6009000769402';
+                    fb_param.value = '0.00';
+                    (function () {
+                      var fpw = document.createElement('script');
+                      fpw.async = true;
+                      fpw.src = '//connect.facebook.net/en_US/fp.js';
+                      var ref = document.getElementsByTagName('script')[0];
+                      ref.parentNode.insertBefore(fpw, ref);
+                    })();
+                  </script>
+                  <noscript>&lt;img height="1" width="1" alt="" style="display:none"
+                   src="https://www.facebook.com/offsite_event.php?id=6009000769402&amp;amp;value=0"/&gt;</noscript>
+                 </div>
+               </div>
+             </center>
+             <script>
+
+              var sscache = {};
+              function getPage(url, data, page) {
+                var cacheId = url + JSON.stringify(data);
+                var cache = sscache;
+                var success = function (data) {
+                  cache[cacheId] = data;
+                  $('#rankContentDiv').html(data['content']);
+                  var newpage = page === undefined ? 1 : (parseInt(page) + 1);
+                  var pageinfo = "&lt;div align='center' class='pageinfo'&gt;&lt;center&gt; - &lt;/center&gt;&lt;/div&gt;";
+                  if (data['max_page'] &gt; 0) {
+                    pageinfo = "&lt;div align='center' class='pageinfo'&gt;&lt;center&gt;" + newpage + " of " + data['max_page'] + "&lt;/center&gt;&lt;/div&gt;";
+                  }
+                  $("#loader").html(pageinfo);
+
+                };
+
+                var error = function (request, errorType) {
+                  try {
+                    if (page === undefined) {
+                      retryButton = '&lt;center&gt;&lt;input id="retryButton" type="button" value="Retry"/&gt;&lt;/center&gt;';
+                      $('#rankContentDiv').html(retryButton);
+                      $('#retryButton').click(function () {
+                        $('#rankContentDiv').html('&lt;p align="center"&gt;&lt;img src="/sites/all/themes/abessive/images/ajax-loader.gif" /&gt; Fetching content&lt;/p&gt;');
+                        getPage(url, data, page);
+                      });
+                    }
+                    else {
+                      $("#loader").html("&lt;center&gt;Oops! It couldn't load. Try again.&lt;/center&gt;");
+                    }
+                  }
+                  catch (e) {
+                  }
+                };
+
+                if (cache.hasOwnProperty(cacheId)) {
+                  success(cache[cacheId]);
+                  return;
+                }
+
+                cAjax({
+                  url: url,
+                  type: "GET",
+                  data: data,
+                  cache: false,
+                  timeout: 10000,
+                  dataType: "json",
+                  success: success,
+                  error: error
+                });
+
+              }
+
+
+              function set_page(element) {
+                var page;
+
+                if (element == "prev")
+                  page = $("#prev_p").val();
+                else if (element == "next")
+                  page = $("#next_p").val();
+
+                return page;
+              }
+
+              function onload_getpage_ssubmissions(element) {
+                $('#loader').html('&lt;p&gt;&lt;img src="/misc/ajax_loader_d.gif" style="width: 120px; height:15px;"/&gt;&lt;/p&gt;');
+                var contest = "";
+                if ($("#ccode").length != 0) {
+                  contest = '&amp;ccode=' + $("#ccode").val();
+                }
+
+                var page = set_page(element);
+                var data = "page=" + page + "&amp;pcode=" + $("#pcode").val() + contest;
+                var url = "/ssubmission/prob";
+                getPage(url, data, page);
+              }
+            </script>
+            <script>
+              var split_count = window.location.pathname.split("/").length;
+              var image = '/Contests/images/Loader-content.gif';
+              if (split_count &gt; 2) {
+                image = '/Contests/images/Problem-Page.gif';
+                document.title = "Problem Page | CodeChef";
+                document.getElementById('content-loader-gif').setAttribute('src', image);
+              }
+            </script>
+            <script>
+              (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:167687,hjsv:5};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+              })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+            </script>
+          
+          
+</body></html>

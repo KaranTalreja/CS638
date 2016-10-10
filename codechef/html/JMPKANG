@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="js"><head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <script src="//beacon.errorception.com/4e7c8fce06a9ab05530008e5.js" async=""></script><script async="" src="//connect.facebook.net/en_US/fp.js"></script><script type="text/javascript" async="" src="https://d31qbv1cthcecs.cloudfront.net/atrk.js"></script><script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js"></script><script>
+    (function (_, e, rr, s) {
+      _errs = [s];
+      var c = _.onerror;
+      _.onerror = function () {
+        var a = arguments;
+        _errs.push(a);
+        c &amp;&amp; c.apply(this, a)
+      };
+      var b = function () {
+        var c = e.createElement(rr), b = e.getElementsByTagName(rr)[0];
+        c.src = "//beacon.errorception.com/" + s + ".js";
+        c.async = !0;
+        b.parentNode.insertBefore(c, b)
+      };
+      _.addEventListener ? _.addEventListener("load", b, !1) : _.attachEvent("onload", b)
+    })
+    (window, document, "script", "4e7c8fce06a9ab05530008e5");
+  </script>
+
+  <link href="//codechef_shared.s3.amazonaws.com" rel="dns-prefetch" />
+  <link href="//beacon.errorception.com" rel="dns-prefetch" />
+  <link href="//static.ak.facebook.com" rel="dns-prefetch" />
+  <link href="//fbcdn-profile-a.akamaihd.net" rel="dns-prefetch" />
+  <script type="text/javascript">var _sf_startpt = (new Date()).getTime()</script>
+  <title>The Jumping Kangaroos | CodeChef</title>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <meta content="programming, language, algorithm, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM" name="keywords" />
+  <link type="image/x-icon" href="/misc/favicon.ico" rel="shortcut icon" />
+  <link href="/sites/all/modules/codechef_todo/css/todo_notification.css" rel="stylesheet" type="text/css" />
+  <link href="/Contests/css/main.css?q2=1465025661newversion" media="all" rel="stylesheet" type="text/css" />
+  <link href="/em/components/autocomplete/css/autocomplete.css?q2=1465025661newversion" rel="stylesheet" />
+  <link href="/em/components/datatable/css/datatable.css?q2=1465025661newversion" rel="stylesheet" />
+  <link href="/misc/font-awesome/css/font-awesome.css?q2=1465025661newversion" rel="stylesheet" />
+  <link href="/em/components/comment/css/comment.css?q2=1465025661newversion" rel="stylesheet" />
+  <link href="/sites/all/modules/codechef_open_register/css/register.css?q2=1465025661newversion" rel="stylesheet" />
+  <link href="/sites/all/modules/codechef_open_register/css/complete_registration.css?q2=1465025661newversion" rel="stylesheet" />
+  <script gapi_processed="true" defer="defer" async="" src="https://apis.google.com/js/platform.js"></script>
+  <script src="/em/libs/cryptojs/aes.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/em/libs/jquery/jquery.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/codechef_common_functions/js/localStorage.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/codechef_todo/js/todo_notification.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/em/libs/moment/moment.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/misc/marked/marked.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/em/libs/common/common.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/em/libs/handlebars/handlebars.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/em/libs/ember/prod.ember.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/em/components/autocomplete/js/autocomplete.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/em/components/datatable/js/datatable.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/em/components/comment/js/comment.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/misc/drupal.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/misc/jquery-popup-overlay/popupoverlay.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/codechef_common_functions/js/keybinding.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/codechef_common_functions/js/codechefGenericModal.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/fbmod/js/fb_sdk.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/codechef_common_functions/codechef_common_functions.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/nice_menus/nice_menus.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/tableofcontents/jquery.scrollTo-min.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/tableofcontents/jquery.localscroll-min.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/tableofcontents/tableofcontents.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/misc/common.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/contest_page/js/contest_page.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/misc/jquery-ui-1.10.0/js/jquery-ui-1.10.0.custom.min.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/problem_status/problemstatus.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/Contests/js/contest.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/misc/jquery.cookie.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/codechef_open_register/js/form.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/sites/all/modules/codechef_notifications/js/notifications.js?q2=1465025661newversion" type="text/javascript"></script>
+  <script src="/misc/todo-widget.js?q2=1465025661newversion" type="text/javascript"></script>
+  <link href="/misc/jquery.growl.css?q2=1465025661newversion" media="all" rel="stylesheet" type="text/css" />
+  <link href="/Contests/css/style.css?q2=1465025661newversion" rel="stylesheet" type="text/css" />
+  <link href="/sites/all/themes/abessive/new-login-bar.css?q2=1465025661newversion" rel="stylesheet" type="text/css" />
+  <link href="/misc/github-markdown-css/github-markdown.css?q2=1465025661newversion" rel="stylesheet" type="text/css" />
+  <style>
+
+    :root {
+      font-size: 62.5%;
+    }
+
+    .ccl-su-img-social-disconnect {
+      -webkit-filter: grayscale(95%);
+      -moz-filter: grayscale(95%);
+      -o-filter: grayscale(95%);
+      -ms-filter: grayscale(95%);
+      filter: grayscale(95%);
+    }
+
+    .ccl-su-img-social-connect {
+      -webkit-filter: grayscale(35%);
+      -moz-filter: grayscale(35%);
+      -o-filter: grayscale(35%);
+      -ms-filter: grayscale(35%);
+      filter: grayscale(35%);
+    }
+
+    .ccl-su-img-social:hover {
+      -webkit-filter: grayscale(0%);
+      -moz-filter: grayscale(0%);
+      -o-filter: grayscale(0%);
+      -ms-filter: grayscale(0%);
+      filter: grayscale(0%);
+    }
+
+    .ccl-su-img-social-small {
+      width: 3rem;
+    }
+
+    .ccl-su-img-social-mini {
+      width: 1rem;
+    }
+
+    .ccl-su-img-social-medium {
+      width: 5rem;
+    }
+
+    .ccl-su-img-social-large {
+      width: 7rem;
+    }
+
+    .oauth-buttons-header {
+      position: relative;
+      top: -0.5rem;
+    }
+
+    .oauth-button {
+      pading: 0;
+      padding: 0;
+      margin: 0;
+      border: 0;
+    }
+
+    .oauth-button-small {
+      width: 3rem;
+      height: 3rem;
+      margin-right: 0.6rem;
+      margin-left: 0.6rem;
+    }
+
+    .oauth-button-medium {
+      width: 5rem;
+      height: 5rem;
+      margin-right: 1rem;
+      margin-left: 1rem;
+    }
+
+    .oauth-button-large {
+      width: 7rem;
+      height: 7rem;
+      margin-right: 1.4rem;
+      margin-left: 1.4rem;
+    }
+
+    .oauth-button-mini {
+      width: 1rem;
+      height: 1rem;
+      margin-right: 0.2rem;
+      margin-left: 0.2rem;
+    }
+
+    /*this is to avoid padding and border of button in firefox*/
+    .oauth-button::-moz-focus-inner {
+      padding: 0;
+      border: 0
+    }
+
+
+  </style>
+  <script src="/misc/jquery.growl.js?q2=1465025661newversion" type="text/javascript"></script>
+<script async="" src="//static.hotjar.com/c/hotjar-167687.js?sv=5"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset&gt;div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title&gt;span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style><script src="https://script.hotjar.com/modules-5c5dce7e883d8948924f218f5202a509.js"></script></head>
+<body class="sidebar-right">
+  <center>
+    <div class="ember-application" id="ember-root-shadow" style="display: none;">
+      <div class="ember-view">
+        <div class="wrapper" id="header">
+          <div class="inner-wrapper">
+            <!-- Header -->
+            <div class="cols-2" id="logo-floater">
+              <a title="" href="/"><img id="logo" alt="CodeChef is a non-commercial competitive programming community" src="/sites/all/themes/abessive/logo.png" /><span></span></a>
+              </div>
+              <div class="cols-2">
+                <div id="custom-login">
+                  <!--Hello <strong>Admin</strong>, Check your <strong><a href="">Account</a></strong> or <a href="/logout">Log Out</a>-->
+
+                  <img src="/Contests/images/Loader-Username.gif" style="position: relative;top: -64px;" />
+
+                </div>
+
+
+                <div class="block block-nice_menus block-header" id="block-nice_menus-1">
+                  <div class="content">
+                    <h2><span class="nice-menu-hide-title">Site Navigation</span></h2>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- /HEADER -->
+          <!-- BEGIN: CONTENT -->
+          <table cellspacing="0" cellpadding="10" class="maintable" id="maintable">
+            <tbody>
+              <tr>
+                <td width="99%" class="content">
+                  <div id="content-regions" class="wrapper">
+                    <img src="/Contests/images/Problem-Page.gif" id="content-loader-gif" />
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+      <div id="ember-root" class="ember-application">
+        
+          
+          
+          
+          
+        
+        <div id="ember242" class="ember-view">
+
+
+          <div class="header-container">
+            <div class="wrapper" id="header">
+              <div class="inner-wrapper">
+                <!-- Header -->
+                <div class="cols-2" id="logo-floater">
+                  <a title="" href="/"><img id="logo" alt="CodeChef is a non-commercial competitive programming community" src="/sites/all/themes/abessive/logo.png" /><span></span></a></div>
+                    <div class="cols-2">
+                      <div id="custom-login">
+                        
+                        <div id="user-bar">
+                          <form id="new-login-form" method="post" accept-charset="UTF-8" data-bindattr-259="259" action="/node?destination=/problems/JMPKANG">
+                          <div>
+                            <div id="edit-name-wrapper" class="form-item">
+                              <input type="text" placeholder="Username" class="form-text required new-input" value="" size="60" id="edit-name" name="name" maxlength="60" />
+                            </div>
+                            <div id="edit-pass-wrapper" class="form-item">
+                              <label for="edit-pass">Password: <span title="This field is required." class="form-required">*</span></label>
+                               <input type="password" placeholder="Password" class="form-text required new-input" size="60" maxlength="128" id="edit-pass" name="pass" />
+                             </div>
+                             <a href="/user/password">Forgot Password</a><input type="hidden" value="form-OnsYcPGflPxGGJfmw6JjAbTAKf5Rxl2-qv23IsTPywY" id="form-OnsYcPGflPxGGJfmw6JjAbTAKf5Rxl2-qv23IsTPywY" name="form_build_id" />
+                             <input type="hidden" value="new_login_form" id="edit-new-login-form" name="form_id" />
+                             <input type="submit" class="form-submit btn new-input-button" value="Login" id="edit-submit" name="op" />
+
+                           </div>
+                         </form>
+                       </div>
+                       
+                       <div id="facebook-login">
+                        <div class="oauth-buttons-header" id="oauth-buttons">
+                          <button onclick="clearUserCache(); window.location='/OAuth/google?state=initiate';" id="button_google" title="Google Login" style="text-decoration: none;" class="oauth-button oauth-button-small"><img src="/sites/all/modules/codechef_open_register/images/google.png" class="ccl-su-img-social-connect ccl-su-img-social ccl-su-img-social-small" />  </button><button onclick="clearUserCache(); window.location='/OAuth/github?state=initiate';" id="button_github" title="Github Login" style="text-decoration: none;" class="oauth-button oauth-button-small"><img src="/sites/all/modules/codechef_open_register/images/github.png" class="ccl-su-img-social-connect ccl-su-img-social ccl-su-img-social-small" />  </button><button onclick="clearUserCache(); window.location='/fb/auth?src=';" id="button_facebook" title="Facebook Login" style="text-decoration: none;" class="oauth-button oauth-button-small"><img src="/sites/all/modules/codechef_open_register/images/facebook.png" class="ccl-su-img-social-connect ccl-su-img-social ccl-su-img-social-small" />  </button>
+                        </div>
+                      </div>
+                      
+                      <div class="signup"><a class="new-input-button btn" href="/signup">New User</a></div>
+                      
+                    </div>
+
+
+                    <div class="block block-nice_menus block-header" id="block-nice_menus-1">
+                      <div class="content">
+                        <h2><span class="nice-menu-hide-title">Site Navigation</span></h2>
+                        
+                        <ul id="nice-menu-0" class="nice-menu nice-menu-down"><li class="menuparent menu-path-problems-school" id="menu-302"><a title="" href="/problems/school">PRACTICE</a><ul><li class="menu-path-ide" id="menu-5215"><a title="" href="/ide">Code, Compile &amp; Run</a></li>
+<li class="menu-path-problems-school" id="menu-2602"><a title="" href="/problems/school">Beginner</a></li>
+<li class="menu-path-problems-easy" id="menu-303"><a title="" href="/problems/easy">Easy</a></li>
+<li class="menu-path-problems-medium" id="menu-304"><a title="" href="/problems/medium">Medium</a></li>
+<li class="menu-path-problems-hard" id="menu-305"><a title="" href="/problems/hard">Hard</a></li>
+<li class="menu-path-problems-challenge" id="menu-1819"><a title="" href="/problems/challenge">Challenge</a></li>
+<li class="menu-path-problems-extcontest" id="menu-1376"><a title="" href="/problems/extcontest">Peer</a></li>
+</ul>
+</li>
+<li class="menuparent menu-path-contests" id="menu-309"><a title="" href="/contests">COMPETE</a><ul><li class="menu-path-www.codechef.com-contests" id="menu-2203"><a title="" href="http://www.codechef.com/contests">All Contests</a></li>
+<li class="menu-path-https--www.codechef.com-OCT16utm_sourcenavigationutm_mediumoct16" id="menu-5225"><a title="" href="https://www.codechef.com/OCT16?utm_source=navigation&amp;utm_medium=oct16">October Challenge 2016</a></li>
+<li class="menu-path-www.codechef.com-COOK75" id="menu-5679"><a title="" href="http://www.codechef.com/COOK75">October Cook-Off 2016</a></li>
+<li class="menu-path-www.codechef.com-LTIME41" id="menu-5224"><a title="" href="http://www.codechef.com/LTIME41">OctoberLunchtime 2016</a></li>
+</ul>
+</li>
+<li class="menuparent menu-path-discuss.codechef.com-" id="menu-138"><a title="" href="http://discuss.codechef.com/">DISCUSS</a><ul><li class="menu-path-discuss.codechef.com-" id="menu-139"><a title="" href="http://discuss.codechef.com/">Forums</a></li>
+<li class="menu-path-blog.codechef.com-" id="menu-140"><a title="" href="http://blog.codechef.com/">Blog</a></li>
+<li class="menu-path-wiki-" id="menu-920"><a title="" href="/wiki/">Wiki</a></li>
+<li class="menu-path-https--www.facebook.com-CodeChef" id="menu-2202"><a title="" href="https://www.facebook.com/CodeChef">Facebook</a></li>
+<li class="menu-path-www.twitter.com-codechef" id="menu-141"><a title="" href="http://www.twitter.com/codechef">Twitter</a></li>
+</ul>
+</li>
+<li class="menuparent menu-path-node-124098" id="menu-143"><a title="" href="/community">COMMUNITY</a><ul><li class="menu-path-www.codechef.com-school" id="menu-5741"><a title="" href="http://www.codechef.com/school">CodeChef for Schools</a></li>
+<li class="menu-path-www.codechef.com-hostyourcontest" id="menu-733"><a title="Hosting Contest on CodeChef" href="http://www.codechef.com/hostyourcontest">Host your Contest</a></li>
+<li class="menu-path-www.codechef.com-goforgold" id="menu-2310"><a title="" href="http://www.codechef.com/goforgold">Go for Gold</a></li>
+<li class="menu-path-www.codechef.com-campus_chapter-about" id="menu-3830"><a title="" href="http://www.codechef.com/campus_chapter/about">Campus Chapter</a></li>
+</ul>
+</li>
+<li class="menuparent menu-path-node-3" id="menu-147"><a title="" href="/help">HELP</a><ul><li class="menu-path-www.codechef.com-wiki-faq" id="menu-643"><a title="" href="http://www.codechef.com/wiki/faq">Frequently Asked Questions</a></li>
+<li class="menu-path-www.codechef.com-wiki-faq-problem-setters" id="menu-710"><a title="" href="http://www.codechef.com/wiki/faq-problem-setters">FAQ for problem setters</a></li>
+<li class="menu-path-www.codechef.com-problemsetting" id="menu-1389"><a title="Codechef Problem Creation" href="http://www.codechef.com/problemsetting">Problem Setting</a></li>
+<li class="menu-path-www.codechef.com-wiki-tutorials" id="menu-850"><a title="" href="http://www.codechef.com/wiki/tutorials">Tutorials</a></li>
+<li class="menu-path-www.codechef.com-long-ranklist-AX" id="menu-2200"><a title="Long contest rankings list" href="http://www.codechef.com/long/ranklist/AX">Long Contest Ranks</a></li>
+<li class="menu-path-www.codechef.com-short-ranklist-AX" id="menu-2199"><a title="Short contest rankings list" href="http://www.codechef.com/short/ranklist/AX">Short Contest Ranks</a></li>
+<li class="menu-path-www.codechef.com-ltime-all-ranklist-AX" id="menu-4881"><a title="" href="http://www.codechef.com/ltime/all/ranklist/AX">Lunchtime Ranks (all)</a></li>
+<li class="menu-path-www.codechef.com-ltime-school-ranklist-AX" id="menu-4882"><a title="" href="http://www.codechef.com/ltime/school/ranklist/AX">Lunchtime Ranks (school)</a></li>
+<li class="menu-path-node-503865" id="menu-1820"><a title="Event Calendar" href="/event-calendar">Event Calendar</a></li>
+<li class="menu-path-discuss.codechef.com-top-users-" id="menu-2372"><a title="" href="http://discuss.codechef.com/top/users/">Top Contributors on Discuss</a></li>
+</ul>
+</li>
+<li class="menuparent menu-path-node-6479484" id="menu-5681"><a title="" href="/aboutus">ABOUT</a><ul><li class="menu-path-www.codechef.com-aboutus" id="menu-151"><a title="" href="http://www.codechef.com/aboutus">About CodeChef</a></li>
+<li class="menu-path-www.codechef.com-team" id="menu-849"><a title="Team CodeChef" href="http://www.codechef.com/team">Team CodeChef</a></li>
+<li class="menu-path-node-157468" id="menu-708"><a title="Press Room" href="/press">Press Room</a></li>
+<li class="menu-path-node-157470" id="menu-709"><a title="CEO's Corner" href="/ceoscorner">CEO's Corner</a></li>
+<li class="menu-path-www.codechef.com-contactus" id="menu-1858"><a title="" href="http://www.codechef.com/contactus">Contact Us</a></li>
+<li class="menu-path-www.directi.com-" id="menu-152"><a title="" href="http://www.directi.com/">About Directi</a></li>
+</ul>
+</li>
+</ul>
+
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div id="ember249" class="ember-view">
+          <!-- /HEADER -->
+          <!-- BEGIN: CONTENT -->
+          <table cellspacing="0" cellpadding="10" class="maintable" id="maintable">
+            <tbody><tr>
+              <td width="99%" class="content">
+                <div id="content-regions" class="wrapper">
+                  
+                  <div class="outer-box-problems">
+                    <div id="breadcrumbs">
+                      <a href="/">Home</a> » <a href="/problems/extcontest/">Practice(Extcontest)</a> » The Jumping Kangaroos
+                    </div>
+                    <div class="box-white" id="main-content-problem">
+                      <table id="problem-page-top">
+                        <tbody><tr><td width="55%">
+                          <h1 class="title">The Jumping Kangaroos
+                            <div style="display:inline-block;">
+                              
+                              <div style="visibility: visible; position: relative;top: 5px;" class="todo-widget"><input width="25" type="image" height="25" contest="" problem="JMPKANG" class="todo-button" title="Add problem to Todo list" src="/sites/all/themes/abessive/images/add1.png" style="outline: none;" /><div class="todo-button-message"></div></div>
+                              
+                            </div>
+                          </h1>
+                          <div style="padding:0; overflow:hidden; margin-bottom:5px;">
+                            <div style="float:left; margin:3px 10px 0 0;">Problem code: <span id="problem-code">JMPKANG</span></div>
+                            </div>
+                            
+                            <div data-bindattr-265="265" class="social-button-container cc-visible">
+                              <div class="social-button">
+                                <div style="width: 80px; height: 20px;margin-top: -2px;"><a data-via="codechef" class="twitter-share-button" href="https://twitter.com/share">Tweet</a></div>
+                                </div>
+                                <div class="social-button">
+                                  <div data-share="true" data-show-faces="true" data-action="like" data-layout="standard" data-width="370px" class="fb-like"></div>
+                                </div>
+                                <div class="clearfix"></div>
+                              </div>
+                            </td>
+                            <td width="45%">
+                              <ul class="button-list">
+                                
+                                <li><a data-bindattr-266="266" href="/status/JMPKANG" class="button">All Submissions</a></li>
+                                
+                              </ul>
+                            </td>
+                          </tr></tbody></table>
+                          <div id="problem-page-complete">
+                            <div id="problem-left">
+                              
+                              <div class="content"><h3>All submissions for this problem are available.</h3><div class="content-text challenge-text mlB">
+                <div class="challenge_problem_statement"><div class="msB challenge_problem_statement_body"><div class="hackdown-content"><style id="MathJax_SVG_styles">.MathJax_SVG_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax_SVG .MJX-monospace {font-family: monospace}
+.MathJax_SVG .MJX-sans-serif {font-family: sans-serif}
+.MathJax_SVG {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax_SVG * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.mjx-svg-href {fill: blue; stroke: blue}
+</style><svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs id="MathJax_SVG_glyphs"/></svg><p>There are two kangaroos on an x-axis ready to jump in the positive direction (i.e, toward positive infinity). The first kangaroo starts at location <span id="MathJax-Element-1-Frame" class="MathJax_SVG" style="font-size: 100%; display: inline-block;"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" role="img" viewBox="0 -576.1 1026.4 865.1" style="vertical-align: -0.671ex;" height="2.009ex" width="2.384ex" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="matrix(1 0 0 -1 0 0)" stroke-width="0" fill="currentColor" stroke="currentColor"><path d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z" stroke-width="1"/><g transform="translate(572,-150)"><path d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" transform="scale(0.707)" stroke-width="1"/></g></g></svg></span> and moves at a rate of <span id="MathJax-Element-2-Frame" class="MathJax_SVG" style="font-size: 100%; display: inline-block;"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" role="img" viewBox="0 -576.1 939.4 865.1" style="vertical-align: -0.671ex;" height="2.009ex" width="2.182ex" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="matrix(1 0 0 -1 0 0)" stroke-width="0" fill="currentColor" stroke="currentColor"><path d="M173 380Q173 405 154 405Q130 405 104 376T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Q21 294 29 316T53 368T97 419T160 441Q202 441 225 417T249 361Q249 344 246 335Q246 329 231 291T200 202T182 113Q182 86 187 69Q200 26 250 26Q287 26 319 60T369 139T398 222T409 277Q409 300 401 317T383 343T365 361T357 383Q357 405 376 424T417 443Q436 443 451 425T467 367Q467 340 455 284T418 159T347 40T241 -11Q177 -11 139 22Q102 54 102 117Q102 148 110 181T151 298Q173 362 173 380Z" stroke-width="1"/><g transform="translate(485,-150)"><path d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" transform="scale(0.707)" stroke-width="1"/></g></g></svg></span> meters per jump. The second kangaroo starts at location <span id="MathJax-Element-3-Frame" class="MathJax_SVG" style="font-size: 100%; display: inline-block;"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" role="img" viewBox="0 -576.1 1026.4 865.1" style="vertical-align: -0.671ex;" height="2.009ex" width="2.384ex" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="matrix(1 0 0 -1 0 0)" stroke-width="0" fill="currentColor" stroke="currentColor"><path d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z" stroke-width="1"/><g transform="translate(572,-150)"><path d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" transform="scale(0.707)" stroke-width="1"/></g></g></svg></span> and moves at a rate of <span id="MathJax-Element-4-Frame" class="MathJax_SVG" style="font-size: 100%; display: inline-block;"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" role="img" viewBox="0 -576.1 939.4 865.1" style="vertical-align: -0.671ex;" height="2.009ex" width="2.182ex" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="matrix(1 0 0 -1 0 0)" stroke-width="0" fill="currentColor" stroke="currentColor"><path d="M173 380Q173 405 154 405Q130 405 104 376T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Q21 294 29 316T53 368T97 419T160 441Q202 441 225 417T249 361Q249 344 246 335Q246 329 231 291T200 202T182 113Q182 86 187 69Q200 26 250 26Q287 26 319 60T369 139T398 222T409 277Q409 300 401 317T383 343T365 361T357 383Q357 405 376 424T417 443Q436 443 451 425T467 367Q467 340 455 284T418 159T347 40T241 -11Q177 -11 139 22Q102 54 102 117Q102 148 110 181T151 298Q173 362 173 380Z" stroke-width="1"/><g transform="translate(485,-150)"><path d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" transform="scale(0.707)" stroke-width="1"/></g></g></svg></span> meters per jump. Given the starting locations and movement rates for each kangaroo, can you determine if they'll ever land <em>at the same location at the same time</em>?</p></div></div></div><div class="challenge_input_format"><div class="msB challenge_input_format_title"><p><strong>Input Format</strong></p></div><div class="msB challenge_input_format_body"><div class="hackdown-content"><style id="MathJax_SVG_styles">.MathJax_SVG_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax_SVG .MJX-monospace {font-family: monospace}
+.MathJax_SVG .MJX-sans-serif {font-family: sans-serif}
+.MathJax_SVG {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax_SVG * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.mjx-svg-href {fill: blue; stroke: blue}
+</style><svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs id="MathJax_SVG_glyphs"/></svg><p>A single line of four space-separated integers denoting the respective values of <span id="MathJax-Element-1-Frame" class="MathJax_SVG" style="font-size: 100%; display: inline-block;"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" role="img" viewBox="0 -576.1 1026.4 865.1" style="vertical-align: -0.671ex;" height="2.009ex" width="2.384ex" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="matrix(1 0 0 -1 0 0)" stroke-width="0" fill="currentColor" stroke="currentColor"><path d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z" stroke-width="1"/><g transform="translate(572,-150)"><path d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" transform="scale(0.707)" stroke-width="1"/></g></g></svg></span>, <span id="MathJax-Element-2-Frame" class="MathJax_SVG" style="font-size: 100%; display: inline-block;"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" role="img" viewBox="0 -576.1 939.4 865.1" style="vertical-align: -0.671ex;" height="2.009ex" width="2.182ex" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="matrix(1 0 0 -1 0 0)" stroke-width="0" fill="currentColor" stroke="currentColor"><path d="M173 380Q173 405 154 405Q130 405 104 376T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Q21 294 29 316T53 368T97 419T160 441Q202 441 225 417T249 361Q249 344 246 335Q246 329 231 291T200 202T182 113Q182 86 187 69Q200 26 250 26Q287 26 319 60T369 139T398 222T409 277Q409 300 401 317T383 343T365 361T357 383Q357 405 376 424T417 443Q436 443 451 425T467 367Q467 340 455 284T418 159T347 40T241 -11Q177 -11 139 22Q102 54 102 117Q102 148 110 181T151 298Q173 362 173 380Z" stroke-width="1"/><g transform="translate(485,-150)"><path d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" transform="scale(0.707)" stroke-width="1"/></g></g></svg></span>, <span id="MathJax-Element-3-Frame" class="MathJax_SVG" style="font-size: 100%; display: inline-block;"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" role="img" viewBox="0 -576.1 1026.4 865.1" style="vertical-align: -0.671ex;" height="2.009ex" width="2.384ex" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="matrix(1 0 0 -1 0 0)" stroke-width="0" fill="currentColor" stroke="currentColor"><path d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z" stroke-width="1"/><g transform="translate(572,-150)"><path d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" transform="scale(0.707)" stroke-width="1"/></g></g></svg></span>, and <span id="MathJax-Element-4-Frame" class="MathJax_SVG" style="font-size: 100%; display: inline-block;"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" role="img" viewBox="0 -576.1 939.4 865.1" style="vertical-align: -0.671ex;" height="2.009ex" width="2.182ex" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="matrix(1 0 0 -1 0 0)" stroke-width="0" fill="currentColor" stroke="currentColor"><path d="M173 380Q173 405 154 405Q130 405 104 376T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Q21 294 29 316T53 368T97 419T160 441Q202 441 225 417T249 361Q249 344 246 335Q246 329 231 291T200 202T182 113Q182 86 187 69Q200 26 250 26Q287 26 319 60T369 139T398 222T409 277Q409 300 401 317T383 343T365 361T357 383Q357 405 376 424T417 443Q436 443 451 425T467 367Q467 340 455 284T418 159T347 40T241 -11Q177 -11 139 22Q102 54 102 117Q102 148 110 181T151 298Q173 362 173 380Z" stroke-width="1"/><g transform="translate(485,-150)"><path d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" transform="scale(0.707)" stroke-width="1"/></g></g></svg></span>.</p></div></div></div><div class="challenge_constraints"><div class="msB challenge_constraints_title"><p><strong>Constraints</strong></p></div><div class="msB challenge_constraints_body"><div class="hackdown-content"><style id="MathJax_SVG_styles">.MathJax_SVG_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax_SVG .MJX-monospace {font-family: monospace}
+.MathJax_SVG .MJX-sans-serif {font-family: sans-serif}
+.MathJax_SVG {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax_SVG * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.mjx-svg-href {fill: blue; stroke: blue}
+</style><svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs id="MathJax_SVG_glyphs"/></svg><ul>
+<li><span id="MathJax-Element-1-Frame" class="MathJax_SVG" style="font-size: 100%; display: inline-block;"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" role="img" viewBox="0 -791.3 9058 1080.4" style="vertical-align: -0.671ex;" height="2.509ex" width="21.038ex" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="matrix(1 0 0 -1 0 0)" stroke-width="0" fill="currentColor" stroke="currentColor"><path d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" stroke-width="1"/><g transform="translate(778,0)"><path d="M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z" stroke-width="1"/></g><g transform="translate(1834,0)"><path d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z" stroke-width="1"/><g transform="translate(572,-150)"><path d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" transform="scale(0.707)" stroke-width="1"/></g></g><g transform="translate(3138,0)"><path d="M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z" stroke-width="1"/></g><g transform="translate(4195,0)"><path d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z" stroke-width="1"/><g transform="translate(572,-150)"><path d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" transform="scale(0.707)" stroke-width="1"/></g></g><g transform="translate(5499,0)"><path d="M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z" stroke-width="1"/></g><g transform="translate(6555,0)"><path d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" stroke-width="1"/><path transform="translate(500,0)" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" stroke-width="1"/><path transform="translate(1001,0)" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" stroke-width="1"/><path transform="translate(1501,0)" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" stroke-width="1"/><path transform="translate(2002,0)" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" stroke-width="1"/></g></g></svg></span>  </li>
+<li><span id="MathJax-Element-2-Frame" class="MathJax_SVG" style="font-size: 100%; display: inline-block;"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" role="img" viewBox="0 -791.3 6610.5 1080.4" style="vertical-align: -0.671ex;" height="2.509ex" width="15.354ex" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="matrix(1 0 0 -1 0 0)" stroke-width="0" fill="currentColor" stroke="currentColor"><path d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" stroke-width="1"/><g transform="translate(778,0)"><path d="M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z" stroke-width="1"/></g><g transform="translate(1834,0)"><path d="M173 380Q173 405 154 405Q130 405 104 376T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Q21 294 29 316T53 368T97 419T160 441Q202 441 225 417T249 361Q249 344 246 335Q246 329 231 291T200 202T182 113Q182 86 187 69Q200 26 250 26Q287 26 319 60T369 139T398 222T409 277Q409 300 401 317T383 343T365 361T357 383Q357 405 376 424T417 443Q436 443 451 425T467 367Q467 340 455 284T418 159T347 40T241 -11Q177 -11 139 22Q102 54 102 117Q102 148 110 181T151 298Q173 362 173 380Z" stroke-width="1"/><g transform="translate(485,-150)"><path d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" transform="scale(0.707)" stroke-width="1"/></g></g><g transform="translate(3051,0)"><path d="M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z" stroke-width="1"/></g><g transform="translate(4108,0)"><path d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" stroke-width="1"/><path transform="translate(500,0)" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" stroke-width="1"/><path transform="translate(1001,0)" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" stroke-width="1"/><path transform="translate(1501,0)" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" stroke-width="1"/><path transform="translate(2002,0)" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" stroke-width="1"/></g></g></svg></span>  </li>
+<li><span id="MathJax-Element-3-Frame" class="MathJax_SVG" style="font-size: 100%; display: inline-block;"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" role="img" viewBox="0 -791.3 6610.5 1080.4" style="vertical-align: -0.671ex;" height="2.509ex" width="15.354ex" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="matrix(1 0 0 -1 0 0)" stroke-width="0" fill="currentColor" stroke="currentColor"><path d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" stroke-width="1"/><g transform="translate(778,0)"><path d="M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z" stroke-width="1"/></g><g transform="translate(1834,0)"><path d="M173 380Q173 405 154 405Q130 405 104 376T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Q21 294 29 316T53 368T97 419T160 441Q202 441 225 417T249 361Q249 344 246 335Q246 329 231 291T200 202T182 113Q182 86 187 69Q200 26 250 26Q287 26 319 60T369 139T398 222T409 277Q409 300 401 317T383 343T365 361T357 383Q357 405 376 424T417 443Q436 443 451 425T467 367Q467 340 455 284T418 159T347 40T241 -11Q177 -11 139 22Q102 54 102 117Q102 148 110 181T151 298Q173 362 173 380Z" stroke-width="1"/><g transform="translate(485,-150)"><path d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" transform="scale(0.707)" stroke-width="1"/></g></g><g transform="translate(3051,0)"><path d="M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z" stroke-width="1"/></g><g transform="translate(4108,0)"><path d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" stroke-width="1"/><path transform="translate(500,0)" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" stroke-width="1"/><path transform="translate(1001,0)" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" stroke-width="1"/><path transform="translate(1501,0)" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" stroke-width="1"/><path transform="translate(2002,0)" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" stroke-width="1"/></g></g></svg></span>  </li>
+</ul></div></div></div><div class="challenge_output_format"><div class="msB challenge_output_format_title"><p><strong>Output Format</strong></p></div><div class="msB challenge_output_format_body"><div class="hackdown-content"><style id="MathJax_SVG_styles">.MathJax_SVG_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax_SVG .MJX-monospace {font-family: monospace}
+.MathJax_SVG .MJX-sans-serif {font-family: sans-serif}
+.MathJax_SVG {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax_SVG * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.mjx-svg-href {fill: blue; stroke: blue}
+</style><svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs id="MathJax_SVG_glyphs"/></svg><p>Print <code>YES</code> if they can land on the same location at the same time; otherwise, print <code>NO</code>.</p>
+
+<p><strong>Note:</strong> The two kangaroos must land at the same location <em>after making the same number of jumps</em>.</p>
+
+<p><strong>Sample Input 0</strong></p>
+
+<pre><code>0 3 4 2
+</code></pre>
+
+<p><strong>Sample Output 0</strong></p>
+
+<pre><code>YES
+</code></pre>
+
+<p><strong>Explanation 0</strong></p>
+
+<p>The two kangaroos jump through the following sequence of locations:</p>
+
+<ol>
+<li><span id="MathJax-Element-1-Frame" class="MathJax_SVG" style="font-size: 100%; display: inline-block;"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" role="img" viewBox="0 -791.3 9227.2 936.9" style="vertical-align: -0.338ex;" height="2.176ex" width="21.431ex" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="matrix(1 0 0 -1 0 0)" stroke-width="0" fill="currentColor" stroke="currentColor"><path d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" stroke-width="1"/><g transform="translate(778,0)"><path d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z" stroke-width="1"/></g><g transform="translate(2056,0)"><path d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z" stroke-width="1"/></g><g transform="translate(2834,0)"><path d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z" stroke-width="1"/></g><g transform="translate(4113,0)"><path d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z" stroke-width="1"/></g><g transform="translate(4891,0)"><path d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z" stroke-width="1"/></g><g transform="translate(6169,0)"><path d="M352 287Q304 211 232 211Q154 211 104 270T44 396Q42 412 42 436V444Q42 537 111 606Q171 666 243 666Q245 666 249 666T257 665H261Q273 665 286 663T323 651T370 619T413 560Q456 472 456 334Q456 194 396 97Q361 41 312 10T208 -22Q147 -22 108 7T68 93T121 149Q143 149 158 135T173 96Q173 78 164 65T148 49T135 44L131 43Q131 41 138 37T164 27T206 22H212Q272 22 313 86Q352 142 352 280V287ZM244 248Q292 248 321 297T351 430Q351 508 343 542Q341 552 337 562T323 588T293 615T246 625Q208 625 181 598Q160 576 154 546T147 441Q147 358 152 329T172 282Q197 248 244 248Z" stroke-width="1"/></g><g transform="translate(6947,0)"><path d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z" stroke-width="1"/></g><g transform="translate(8226,0)"><path d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" stroke-width="1"/><path transform="translate(500,0)" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" stroke-width="1"/></g></g></svg></span>     </li>
+<li><span id="MathJax-Element-2-Frame" class="MathJax_SVG" style="font-size: 100%; display: inline-block;"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" role="img" viewBox="0 -791.3 9727.7 936.9" style="vertical-align: -0.338ex;" height="2.176ex" width="22.594ex" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="matrix(1 0 0 -1 0 0)" stroke-width="0" fill="currentColor" stroke="currentColor"><path d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z" stroke-width="1"/><g transform="translate(778,0)"><path d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z" stroke-width="1"/></g><g transform="translate(2056,0)"><path d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z" stroke-width="1"/></g><g transform="translate(2834,0)"><path d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z" stroke-width="1"/></g><g transform="translate(4113,0)"><path d="M70 417T70 494T124 618T248 666Q319 666 374 624T429 515Q429 485 418 459T392 417T361 389T335 371T324 363L338 354Q352 344 366 334T382 323Q457 264 457 174Q457 95 399 37T249 -22Q159 -22 101 29T43 155Q43 263 172 335L154 348Q133 361 127 368Q70 417 70 494ZM286 386L292 390Q298 394 301 396T311 403T323 413T334 425T345 438T355 454T364 471T369 491T371 513Q371 556 342 586T275 624Q268 625 242 625Q201 625 165 599T128 534Q128 511 141 492T167 463T217 431Q224 426 228 424L286 386ZM250 21Q308 21 350 55T392 137Q392 154 387 169T375 194T353 216T330 234T301 253T274 270Q260 279 244 289T218 306L210 311Q204 311 181 294T133 239T107 157Q107 98 150 60T250 21Z" stroke-width="1"/></g><g transform="translate(4891,0)"><path d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z" stroke-width="1"/></g><g transform="translate(6169,0)"><path d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" stroke-width="1"/><path transform="translate(500,0)" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" stroke-width="1"/></g><g transform="translate(7448,0)"><path d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z" stroke-width="1"/></g><g transform="translate(8726,0)"><path d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" stroke-width="1"/><path transform="translate(500,0)" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" stroke-width="1"/></g></g></svg></span></li>
+</ol>
+
+<p>Thus, the kangaroos meet after <span id="MathJax-Element-3-Frame" class="MathJax_SVG" style="font-size: 100%; display: inline-block;"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" role="img" viewBox="0 -791.3 500.5 936.9" style="vertical-align: -0.338ex;" height="2.176ex" width="1.162ex" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="matrix(1 0 0 -1 0 0)" stroke-width="0" fill="currentColor" stroke="currentColor"><path d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z" stroke-width="1"/></g></svg></span> jumps and we print <em>YES</em>.     </p>
+
+<p><strong>Sample Input 1</strong></p>
+
+<pre><code>0 2 5 3
+</code></pre>
+
+<p><strong>Sample Output 1</strong></p>
+
+<pre><code>NO
+</code></pre>
+
+<p><strong>Explanation 1</strong></p>
+
+<p>The second kangaroo has a starting location that is ahead (further to the right) of the first kangaroo's starting location (i.e., <span id="MathJax-Element-4-Frame" class="MathJax_SVG" style="font-size: 100%; display: inline-block;"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" role="img" viewBox="0 -647.8 3386.9 936.9" style="vertical-align: -0.671ex;" height="2.176ex" width="7.866ex" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="matrix(1 0 0 -1 0 0)" stroke-width="0" fill="currentColor" stroke="currentColor"><path d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z" stroke-width="1"/><g transform="translate(572,-150)"><path d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" transform="scale(0.707)" stroke-width="1"/></g><g transform="translate(1304,0)"><path d="M84 520Q84 528 88 533T96 539L99 540Q106 540 253 471T544 334L687 265Q694 260 694 250T687 235Q685 233 395 96L107 -40H101Q83 -38 83 -20Q83 -19 83 -17Q82 -10 98 -1Q117 9 248 71Q326 108 378 132L626 250L378 368Q90 504 86 509Q84 513 84 520Z" stroke-width="1"/></g><g transform="translate(2360,0)"><path d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z" stroke-width="1"/><g transform="translate(572,-150)"><path d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" transform="scale(0.707)" stroke-width="1"/></g></g></g></svg></span>). Because the second kangaroo moves at a faster rate (meaning <span id="MathJax-Element-5-Frame" class="MathJax_SVG" style="font-size: 100%; display: inline-block;"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" role="img" viewBox="0 -647.8 3212.9 936.9" style="vertical-align: -0.671ex;" height="2.176ex" width="7.462ex" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="matrix(1 0 0 -1 0 0)" stroke-width="0" fill="currentColor" stroke="currentColor"><path d="M173 380Q173 405 154 405Q130 405 104 376T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Q21 294 29 316T53 368T97 419T160 441Q202 441 225 417T249 361Q249 344 246 335Q246 329 231 291T200 202T182 113Q182 86 187 69Q200 26 250 26Q287 26 319 60T369 139T398 222T409 277Q409 300 401 317T383 343T365 361T357 383Q357 405 376 424T417 443Q436 443 451 425T467 367Q467 340 455 284T418 159T347 40T241 -11Q177 -11 139 22Q102 54 102 117Q102 148 110 181T151 298Q173 362 173 380Z" stroke-width="1"/><g transform="translate(485,-150)"><path d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" transform="scale(0.707)" stroke-width="1"/></g><g transform="translate(1217,0)"><path d="M84 520Q84 528 88 533T96 539L99 540Q106 540 253 471T544 334L687 265Q694 260 694 250T687 235Q685 233 395 96L107 -40H101Q83 -38 83 -20Q83 -19 83 -17Q82 -10 98 -1Q117 9 248 71Q326 108 378 132L626 250L378 368Q90 504 86 509Q84 513 84 520Z" stroke-width="1"/></g><g transform="translate(2273,0)"><path d="M173 380Q173 405 154 405Q130 405 104 376T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Q21 294 29 316T53 368T97 419T160 441Q202 441 225 417T249 361Q249 344 246 335Q246 329 231 291T200 202T182 113Q182 86 187 69Q200 26 250 26Q287 26 319 60T369 139T398 222T409 277Q409 300 401 317T383 343T365 361T357 383Q357 405 376 424T417 443Q436 443 451 425T467 367Q467 340 455 284T418 159T347 40T241 -11Q177 -11 139 22Q102 54 102 117Q102 148 110 181T151 298Q173 362 173 380Z" stroke-width="1"/><g transform="translate(485,-150)"><path d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" transform="scale(0.707)" stroke-width="1"/></g></g></g></svg></span>) <em>and</em> is already ahead of the first kangaroo, the first kangaroo will never be able to catch up. Thus, we print <em>NO</em>. </p></div></div></div>
+            </div>
+                                
+                                <hr />
+                                <table align="left" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    
+                                    <tr>
+                                      <td width="14%">Author:</td>
+                                      <td>
+                                        <a data-bindattr-273="273" href="/users/hrupanjan">hrupanjan</a>
+                                      </td>
+                                    </tr>
+                                    
+                                    
+                                    
+                                    
+                                    <tr>
+                                      <td width="14%">Tags:</td>
+                                      <td><a href="/tags/problems/hrupanjan" class="problem-tag-small ">
+                    hrupanjan
+                </a></td>
+                                    </tr>
+                                    
+                                    
+                                    <tr>
+                                      <td width="14%">Date Added:</td>
+                                      <td>26-09-2016</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                      <td width="14%">Time Limit:</td>
+                                      <td>1 sec</td>
+                                    </tr>
+                                    <tr>
+                                      <td width="14%">Source Limit:</td>
+                                      <td>5000 Bytes</td>
+                                    </tr>
+                                    <tr>
+                                      <td width="14%">Languages:</td>
+                                      <td>C, C99 strict, CPP 4.3.2, CPP 4.9.2, CPP14, CS2, FORT, JAVA, JS, NODEJS, PERL, PERL6, PHP, PYTH, PYTH 3.4, RUBY, TEXT</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <ul class="button-list bottom-bttn">
+                                <input type="hidden" data-bindattr-272="272" value="value" />
+                                
+                                <li><a data-bindattr-277="277" href="/submit/JMPKANG" class="button">Submit</a></li>
+                                
+                              </ul>
+                              
+
+                            </div>
+                            <div id="problem-right">
+                              <div id="sidebar-problem">
+                                <div id="success-submissions">
+                                  
+                                  <div data-ember-action="278">
+                                  <h3>SUCCESSFUL SUBMISSIONS
+                                    <button class="toogle-button fa fa-plus-square-o"></button>
+                                  </h3>
+                                </div>
+                                
+                                <div id="rankContentDiv"></div>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr />
+                        <div id="problem-comments">
+                          
+                          <div id="ember297" class="ember-view"><section class="cc-comments-section"><div class="comment-topmost-header"><h2 data-ember-action="298" class="noselect cc-comments-title">Comments <i class="fa fa-caret-right"></i></h2></div></section></div>
+                          
+                        </div>
+                      </div>
+
+                    </div>
+                    
+                  </div>
+                </td>
+              </tr>
+            </tbody></table>
+          </div>
+          </div></div>
+        <div class="footer-container">
+          <div class="wrapper" id="footer">
+            <!--<div class="r1 t"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div><div class="r5"></div>-->
+            <script type="text/javascript">
+              String.prototype.capitalize = function () {
+                return this.charAt(0).toUpperCase() + this.slice(1);
+              };
+
+              disconnectOauth = function (event, account) {
+                if (event != undefined) {
+                  event.preventDefault();
+                }
+                var r = confirm("Are you sure you want to disconnect " + account.capitalize() + " account?");
+                if (r == true) {
+                  clearUserCache();
+                  $.ajax({
+                    url: '/OAuth/' + account,
+                    type: 'DELETE',
+                    success: function () {
+                      window.location.reload();
+                    },
+                    error: function () {
+                      invokeGenericModal({
+                        message: "Couldn't complete your request. Please try again.",
+                        id: account + '-error-message'
+                      });
+                    }
+                  });
+                }
+              };
+            </script>
+            <div class="content clear-block">
+              <!-- Footer Contents -->
+              <div class="block block-block block-header" id="block-block-13">
+                <div class="content">
+                  <script type="text/javascript" language="javascript">
+                    function formatTime(ts) {
+                      now = new Date(ts);
+
+                      localtime = new Date();
+                      hour = now.getHours();
+                      min = now.getMinutes();
+                      sec = now.getSeconds();
+
+                      if (min &lt;= 9) {
+                        min = "0" + min;
+                      }
+                      if (sec &lt;= 9) {
+                        sec = "0" + sec;
+                      }
+                      if (hour &gt; 12) {
+                        hour = hour - 12;
+                        add = " PM";
+                      } else {
+                        hour = hour;
+                        add = " AM";
+                      }
+                      if (hour == 12) {
+                        add = " PM";
+                      }
+                      if (hour == 00) {
+                        hour = "12";
+                      }
+
+                      $('#server-time').html(((hour &lt;= 9) ? "0" + hour : hour) + ":" + min + ":" + sec + add);
+
+                      nextSec = (now.getTime() + 1000);
+
+                      setTimeout("formatTime(" + nextSec + ")", 1000);
+                    }
+                    function getDtTimeZone() {
+                      var rightNow = new Date();
+                      var toDay = new Date(rightNow.getFullYear(), 0, 1, 0, 0, 0, 0);
+                      var temp = toDay.toGMTString();
+                      var date2 = new Date(temp.substring(0, temp.lastIndexOf(" ") - 1));
+                      var stdTime = (toDay - date2) / (1000 * 60 * 60);
+                      return stdTime;
+                    }
+            /*var d=new Date();
+             $.ajax({
+             url: '/umtza',
+             type:'POST',
+             data: 'umtza='+d.toString(),
+             });
+             */
+           </script>
+           <div id="disclaimer">CodeChef is a non-commercial competitive programming community</div>
+           <div class="inner-wrapper">
+            <div class="cols-2">
+              <div id="secondary-nav">
+                <ul>
+                  <li><a href="http://www.codechef.com/aboutus/">About CodeChef</a></li>
+                  <li><a href="http://www.directi.com/" target="_blank">About Directi</a></li>
+                  <li><a href="http://www.codechef.com/ceoscorner/">CEO's Corner</a></li>
+                  <li><a href="http://www.codechef.com/c-programming">C-Programming</a></li>
+                  <li><a href="http://www.codechef.com/Programming-Languages">Programming
+                    Languages</a></li>
+                    <li><a href="http://www.codechef.com/contactus">Contact Us</a></li>
+                  </ul>
+                </div>
+                <div class="cols-2" id="copyright">© 2009
+                  <a href="http://www.directi.com" style="color: rgb(0, 0, 0);">Directi
+                  Group</a>
+                  . All Rights Reserved. CodeChef uses SPOJ © by
+                  <a href="http://www.sphere-research.com" style="color: rgb(0, 0, 0);">Sphere
+                  Research Labs</a>
+                </div>
+                <div id="copyright-msg">In order to report copyright violations of any kind, send in an
+                  email to <a href="mailto:copyright@codechef.com">copyright@codechef.com</a></div>
+                </div>
+                <div align="right" style="float:right;" class="cols-2-right">
+                  <div id="sponsor-strip">
+                    <a href="http://www.directi.com" target="_blank"><img src="/sites/all/themes/abessive/images/directi-logo.png" alt="CodeChef a product of Directi" style="width:120px" /></a><br />
+                      <span>The time now is: <span id="server-time">05:23:56 PM</span></span><br />
+                      <span>Your IP: <span id="client-ip">24.240.38.152</span></span>
+                    </div>
+                  </div>
+                </div>
+                <script type="text/javascript">
+
+                  var _gaq = _gaq || [];
+                  _gaq.push(['_setAccount', 'UA-53602-42']);
+                  _gaq.push(['_trackPageview']);
+
+                  (function () {
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript';
+                    ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(ga, s);
+                  })();
+
+                </script>
+
+
+                <!-- Google Code for Visitors that do not sign-up Remarketing List -->
+                <script type="text/javascript">
+                  /* &lt;![CDATA[ */
+                  var google_conversion_id = 1066618556;
+                  var google_conversion_language = "en";
+                  var google_conversion_format = "3";
+                  var google_conversion_color = "666666";
+                  var google_conversion_label = "gbUUCPTlhAIQvJ3N_AM";
+                  var google_conversion_value = 0;
+                  /* ]]&gt; */
+                </script>
+                <script src="//www.googleadservices.com/pagead/conversion.js" type="text/javascript">
+                </script><img width="1" height="1" border="0" style="display:none" src="https://www.googleadservices.com/pagead/conversion/1066618556/?random=1476138237715&amp;cv=8&amp;fst=1476138237715&amp;num=1&amp;fmt=3&amp;value=0&amp;label=gbUUCPTlhAIQvJ3N_AM&amp;bg=666666&amp;hl=en&amp;guid=ON&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1056&amp;u_aw=1855&amp;u_cd=24&amp;u_his=50&amp;u_tz=-300&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;frm=0&amp;url=https%3A%2F%2Fwww.codechef.com%2Fproblems%2FJMPKANG&amp;tiba=Contest%20Page%20%7C%20CodeChef" alt="" />
+                <noscript>
+                  &lt;div style="display:inline;"&gt;
+                    &lt;img height="1" width="1" style="border-style:none;" alt=""
+                    src="//www.googleadservices.com/pagead/conversion/1066618556/?label=gbUUCPTlhAIQvJ3N_AM&amp;amp;guid=ON&amp;amp;script=0"/&gt;
+                  &lt;/div&gt;
+                </noscript>
+
+                <!-- Google Code for RM codechef Remarketing List -->
+                <script type="text/javascript">
+                  /* &lt;![CDATA[ */
+                  var google_conversion_id = 968176136;
+                  var google_conversion_language = "en";
+                  var google_conversion_format = "3";
+                  var google_conversion_color = "ffffff";
+                  var google_conversion_label = "iDk7CPDZ7wMQiOTUzQM";
+                  var google_conversion_value = 0;
+                  /* ]]&gt; */
+                </script>
+                <script src="//www.googleadservices.com/pagead/conversion.js" type="text/javascript">
+                </script><img width="1" height="1" border="0" style="display:none" src="https://www.googleadservices.com/pagead/conversion/968176136/?random=1476138237760&amp;cv=8&amp;fst=1476138237715&amp;num=2&amp;fmt=3&amp;value=0&amp;label=iDk7CPDZ7wMQiOTUzQM&amp;bg=ffffff&amp;hl=en&amp;guid=ON&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1056&amp;u_aw=1855&amp;u_cd=24&amp;u_his=50&amp;u_tz=-300&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;frm=0&amp;url=https%3A%2F%2Fwww.codechef.com%2Fproblems%2FJMPKANG&amp;tiba=Contest%20Page%20%7C%20CodeChef" alt="" />
+                <noscript>
+                  &lt;div style="display:inline;"&gt;
+                    &lt;img height="1" width="1" style="border-style:none;" alt=""
+                    src="//www.googleadservices.com/pagead/conversion/968176136/?label=iDk7CPDZ7wMQiOTUzQM&amp;amp;guid=ON&amp;amp;script=0"/&gt;
+                  &lt;/div&gt;
+                </noscript>
+
+                <!-- Google Code for Snackdown -->
+                <script type="text/javascript">
+                  /* &lt;![CDATA[ */
+                  var google_conversion_id = 960072479;
+                  var google_custom_params = window.google_tag_params;
+                  var google_remarketing_only = true;
+                  /* ]]&gt; */
+                </script>
+                <script src="//www.googleadservices.com/pagead/conversion.js" type="text/javascript">
+                </script><img width="1" height="1" border="0" style="display:none" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/960072479/?random=1476138237808&amp;cv=8&amp;fst=1476138237715&amp;num=3&amp;fmt=1&amp;guid=ON&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1056&amp;u_aw=1855&amp;u_cd=24&amp;u_his=50&amp;u_tz=-300&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;frm=0&amp;url=https%3A%2F%2Fwww.codechef.com%2Fproblems%2FJMPKANG&amp;tiba=Contest%20Page%20%7C%20CodeChef" alt="" />
+                <noscript>
+                  &lt;div style="display:inline;"&gt;
+                    &lt;img height="1" width="1" style="border-style:none;" alt=""
+                    src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/960072479/?value=0&amp;amp;guid=ON&amp;amp;script=0"/&gt;
+                  &lt;/div&gt;
+                </noscript>
+
+
+                <!-- Google Code for .tech domain -->
+                <script type="text/javascript">
+                  /* &lt;![CDATA[ */
+                  var google_conversion_id = 951716012;
+                  var google_conversion_label = "OiW5COr2yFsQrJHoxQM";
+                  var google_custom_params = window.google_tag_params;
+                  var google_remarketing_only = true;
+                  /* ]]&gt; */
+                </script>
+                <script src="//www.googleadservices.com/pagead/conversion.js" type="text/javascript">
+                </script><img width="1" height="1" border="0" style="display:none" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/951716012/?random=1476138237824&amp;cv=8&amp;fst=1476138237715&amp;num=4&amp;fmt=1&amp;label=OiW5COr2yFsQrJHoxQM&amp;guid=ON&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1056&amp;u_aw=1855&amp;u_cd=24&amp;u_his=50&amp;u_tz=-300&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;frm=0&amp;url=https%3A%2F%2Fwww.codechef.com%2Fproblems%2FJMPKANG&amp;tiba=Contest%20Page%20%7C%20CodeChef" alt="" />
+                <noscript>
+                  &lt;div style="display:inline;"&gt;
+                    &lt;img height="1" width="1" style="border-style:none;" alt=""
+                    src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/951716012/?value=1.00&amp;amp;currency_code=USD&amp;amp;label=OiW5COr2yFsQrJHoxQM&amp;amp;guid=ON&amp;amp;script=0"/&gt;
+                  &lt;/div&gt;
+                </noscript>
+
+                <!-- Start Alexa Certify Javascript -->
+                <script type="text/javascript">
+                  _atrk_opts = {atrk_acct: "q16Cj1a8gN00iz", domain: "codechef.com", dynamic: true};
+                  (function () {
+                    var as = document.createElement('script');
+                    as.type = 'text/javascript';
+                    as.async = true;
+                    as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js";
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(as, s);
+                  })();
+                </script>
+                <noscript>&lt;img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=q16Cj1a8gN00iz"
+                 style="display:none" height="1" width="1" alt=""/&gt;</noscript>
+                 <!-- End Alexa Certify Javascript -->
+
+                 <div class="cc-footer-seo">
+                  <style scoped="">
+                    .cc-footer-seo table tr th {
+                      font-weight: bold;
+                      font-size: 13px;
+                      border: 0px;
+                      padding-left: 0px;
+                      text-decoration: underline;
+                    }
+
+                    .cc-footer-seo table tr td {
+                      font-size: 12px;
+                      padding-left: 0px;
+                    }
+                  </style>
+                  <span><a href="/">CodeChef</a> - A Platform for Aspiring Programmers</span>
+
+                  <p>CodeChef was created as a platform to help programmers make it big in the world of
+                    algorithms, <strong>computer programming</strong> and <strong>programming
+                    contests</strong>. At CodeChef we work hard to revive the geek in you by hosting a
+                    <strong>programming contest</strong> at the start of the month and another smaller
+                    programming challenge in the middle of the month. We also aim to have training sessions
+                    and discussions related to <strong>algorithms, binary search</strong>, technicalities
+                    like <strong>array size</strong> and the likes. Apart from providing a platform for
+                    <strong>programming competitions</strong>, CodeChef also has various algorithm tutorials
+                    and forum discussions to help those who are new to the world of <strong>computer
+                    programming</strong>.</p>
+
+                    <p></p>
+                    <span><a href="/problems/easy">Practice Section</a> - A Place to hone your 'Computer Programming Skills'</span>
+
+                    <p>Try your hand at one of our many practice problems and submit your solution in a language
+                      of your choice. Our <strong>programming contest</strong> judge accepts solutions in over
+                      35+ programming languages. Preparing for coding contests were never this much fun!
+                      Receive points, and move up through the CodeChef ranks. Use our practice section to
+                      better prepare yourself for the multiple <strong>programming challenges</strong> that
+                      take place through-out the month on CodeChef. </p>
+
+                      <p></p>
+                      <span><a href="/contests/">Compete</a> - Monthly Programming Contests and Cook-offs</span>
+
+                      <p>Here is where you can show off your <strong>computer programming</strong> skills. Take
+                        part in our 10 day long monthly <strong>coding contest</strong> and the shorter format
+                        Cook-off <strong>coding contest</strong>. Put yourself up for recognition and win great
+                        prizes. Our <strong>programming contests</strong> have prizes worth up to INR 20,000
+                        (for Indian Community), $700 (for Global Community) and lots more CodeChef goodies up
+                        for grabs.</p>
+
+                        <p></p><br />
+                        <table width="60%" border="0" cellspacing="5" cellpadding="5">
+                          <tbody><tr>
+                            <th>Programming Tools</th>
+                            <th>Practice Problems</th>
+                            <th>Initiatives</th>
+                          </tr>
+                          <tr>
+                            <td><a href="/ide">Online IDE</a></td>
+                            <td><a href="/problems/easy">Easy</a></td>
+                            <td><a href="http://www.codechef.com/goforgold">Go for Gold</a></td>
+                          </tr>
+                          <tr>
+                            <td><a href="http://www.codechef.com/contests#FurtureContests">Upcoming Coding
+                              Contests</a></td>
+                              <td><a href="/problems/medium">Medium</a></td>
+                              <td><a href="http://www.codechef.com/school">CodeChef for Schools</a></td>
+                            </tr>
+                            <tr>
+                              <td><a href="http://www.codechef.com/hostyourcontest">Contest Hosting</a></td>
+                              <td><a href="/problems/hard">Hard</a></td>
+                              <td><a href="http://www.codechef.com/campus_chapter/about">Campus Chapters</a></td>
+                            </tr>
+                            <tr>
+                              <td><a href="http://www.codechef.com/problemsetting">Problem Setting</a></td>
+                              <td><a href="/problems/challenge">Challenge</a></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td><a href="http://www.codechef.com/wiki/tutorials">CodeChef Tutorials</a></td>
+                              <td><a href="/problems/extcontest">Peer</a></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td><a href="/wiki">CodeChef Wiki</a></td>
+                              <td><a href="/problems/school">School</a></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td><a href="/wiki/faq">FAQ's</a></td>
+                              <td></td>
+                            </tr>
+                          </tbody></table>
+                          <p></p>
+                        </div>
+                      </div>
+                      <div class="block block-block block-header" id="block-block-48">
+                        <div class="content">
+                          <script src="/misc/jquery.cookie.js" type="text/javascript"></script>
+                          <script src="/misc/contest-notification.js?t=1" type="text/javascript"></script>
+                        </div>
+                      </div>
+                      <div class="block block-block block-header" id="block-block-51">
+                        <div class="content">
+                          <script type="text/javascript">var _sf_startpt = (new Date()).getTime()</script>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <script type="text/javascript">
+                    var fb_param = {};
+                    fb_param.pixel_id = '6009000769402';
+                    fb_param.value = '0.00';
+                    (function () {
+                      var fpw = document.createElement('script');
+                      fpw.async = true;
+                      fpw.src = '//connect.facebook.net/en_US/fp.js';
+                      var ref = document.getElementsByTagName('script')[0];
+                      ref.parentNode.insertBefore(fpw, ref);
+                    })();
+                  </script>
+                  <noscript>&lt;img height="1" width="1" alt="" style="display:none"
+                   src="https://www.facebook.com/offsite_event.php?id=6009000769402&amp;amp;value=0"/&gt;</noscript>
+                 </div>
+               </div>
+             </center><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe frameborder="0" name="fb_xdm_frame_https" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" style="border: medium none;" src="https://staticxx.facebook.com/connect/xd_arbiter/r/P5DLcu0KGJB.js?version=42#channel=f1b465a44bf910c&amp;origin=https%3A%2F%2Fwww.codechef.com"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+             <script>
+
+              var sscache = {};
+              function getPage(url, data, page) {
+                var cacheId = url + JSON.stringify(data);
+                var cache = sscache;
+                var success = function (data) {
+                  cache[cacheId] = data;
+                  $('#rankContentDiv').html(data['content']);
+                  var newpage = page === undefined ? 1 : (parseInt(page) + 1);
+                  var pageinfo = "&lt;div align='center' class='pageinfo'&gt;&lt;center&gt; - &lt;/center&gt;&lt;/div&gt;";
+                  if (data['max_page'] &gt; 0) {
+                    pageinfo = "&lt;div align='center' class='pageinfo'&gt;&lt;center&gt;" + newpage + " of " + data['max_page'] + "&lt;/center&gt;&lt;/div&gt;";
+                  }
+                  $("#loader").html(pageinfo);
+
+                };
+
+                var error = function (request, errorType) {
+                  try {
+                    if (page === undefined) {
+                      retryButton = '&lt;center&gt;&lt;input id="retryButton" type="button" value="Retry"/&gt;&lt;/center&gt;';
+                      $('#rankContentDiv').html(retryButton);
+                      $('#retryButton').click(function () {
+                        $('#rankContentDiv').html('&lt;p align="center"&gt;&lt;img src="/sites/all/themes/abessive/images/ajax-loader.gif" /&gt; Fetching content&lt;/p&gt;');
+                        getPage(url, data, page);
+                      });
+                    }
+                    else {
+                      $("#loader").html("&lt;center&gt;Oops! It couldn't load. Try again.&lt;/center&gt;");
+                    }
+                  }
+                  catch (e) {
+                  }
+                };
+
+                if (cache.hasOwnProperty(cacheId)) {
+                  success(cache[cacheId]);
+                  return;
+                }
+
+                cAjax({
+                  url: url,
+                  type: "GET",
+                  data: data,
+                  cache: false,
+                  timeout: 10000,
+                  dataType: "json",
+                  success: success,
+                  error: error
+                });
+
+              }
+
+
+              function set_page(element) {
+                var page;
+
+                if (element == "prev")
+                  page = $("#prev_p").val();
+                else if (element == "next")
+                  page = $("#next_p").val();
+
+                return page;
+              }
+
+              function onload_getpage_ssubmissions(element) {
+                $('#loader').html('&lt;p&gt;&lt;img src="/misc/ajax_loader_d.gif" style="width: 120px; height:15px;"/&gt;&lt;/p&gt;');
+                var contest = "";
+                if ($("#ccode").length != 0) {
+                  contest = '&amp;ccode=' + $("#ccode").val();
+                }
+
+                var page = set_page(element);
+                var data = "page=" + page + "&amp;pcode=" + $("#pcode").val() + contest;
+                var url = "/ssubmission/prob";
+                getPage(url, data, page);
+              }
+            </script>
+            <script>
+              var split_count = window.location.pathname.split("/").length;
+              var image = '/Contests/images/Loader-content.gif';
+              if (split_count &gt; 2) {
+                image = '/Contests/images/Problem-Page.gif';
+                document.title = "Problem Page | CodeChef";
+                document.getElementById('content-loader-gif').setAttribute('src', image);
+              }
+            </script>
+            <script>
+              (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:167687,hjsv:5};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+              })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+            </script>
+          
+          
+</body></html>
