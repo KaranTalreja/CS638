@@ -307,10 +307,71 @@ var AMTcgiloc = "/files/gif/";
 			<!-- google_ad_section_start -->
 			
 <hr style="clear:both;"/>
+<a href="#" onclick="toggleComments(); return false;"><span id="comments_sh">hide</span> comments</a><br/>
 
 <a id="comments"></a>
 <table id="comments_table" width="100%">
+		<tr>
+		<td colspan="2">
+				</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+				</td>
+	</tr>
 	
+	<script language="JavaScript">
+	<!--
+	$(document).ready(function(){
+        $('.pager_link').bind('click', function(me){
+                var href=$(me.currentTarget).attr('href');
+		$('#ccontent').animate({opacity: 0.5},1);
+                $.ajax({
+                        type: "GET",
+                        url: href+",ajax=1",
+                        contentType: "application/x-www-form-urlencoded;charset=ISO-8859-2",
+                        success: function(data){
+                                $('#ccontent').html(data);
+				$('#ccontent').animate({opacity: 1.0},1);
+                        },
+                        error: function(err){
+                                alert('error');
+                        }
+                });
+                return false;
+        });
+	});
+	-->
+	</script>
+	
+
+
+
+			
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/19530426d9797a57443b1028bdf3192b?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/wisfaq">wisfaq</a>: 
+								<span style="font-size: 10px; color: #666;">2016-10-12 10:03:23</span>
+		<br/>
+				<p>Permutatitons?</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/0286d3cc9e3d7c5cf70e8df93ce7f959?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/devilwolverine">Vipul Srivastava</a>: 
+								<span style="font-size: 10px; color: #666;">2016-10-10 08:21:17</span>
+		<br/>
+				<p>@Rezwan can you please check my submission I don't know why I am getting WA</p>
+						</td>
+	</tr>
+			
 </table>
 
 

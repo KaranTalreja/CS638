@@ -22,19 +22,19 @@ if __name__ == "__main__":
     userCounter = 0
     tagCounter = 0
     for problem in allProblems.values():
-        if "AddedBy" in problem.keys():        
-            for name,link in problem["AddedBy"].iteritems():
+        if "added_by" in problem.keys():
+            for name,link in problem["added_by"].iteritems():
                 if name in userNameToUserId.keys():
-                    problem["AddedBy"] = userNameToUserId[name]
+                    problem["added_by"] = name
                 else:                
                     userCounter += 1
                     userIdToNameAndLink[str(userCounter)] = (name,link)
                     userNameToUserId[name] = str(userCounter) 
-                    problem["AddedBy"] = str(userCounter)
+                    problem["added_by"] = name
         else:
-            problem["AddedBy"] = "0"
+            problem["added_by"] = "NA"
         listOfTags = []
-        for tag, tagLink in problem["Tags"].iteritems():
+        for tag, tagLink in problem["tags"].iteritems():
             if tag in tagNameToTagId.keys():
                 listOfTags.append(tagNameToTagId[tag])
             else:
@@ -44,7 +44,7 @@ if __name__ == "__main__":
                 listOfTags.append(str(tagCounter))
         if len(listOfTags) == 0:
             listOfTags.append("0")
-        problem["Tags"] = ','.join(listOfTags)
+        problem["tags"] = ','.join(listOfTags)
     
     dfProblems = pd.DataFrame.from_dict(allProblems, orient='index')
     dfProblems.to_csv("json/problems.csv",index=False)

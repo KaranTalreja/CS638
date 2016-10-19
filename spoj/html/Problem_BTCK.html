@@ -246,27 +246,28 @@ var AMTcgiloc = "/files/gif/";
 
 <div id="problem-body">
 	<p>You have to solve the following problem with Backtracking. You're given a sequence of &nbsp;<strong>10</strong>&nbsp;positive integers n<sub>1 &nbsp;</sub>, n<sub>2</sub> , n<sub>3 </sub>,&nbsp;... ,n<sub>9</sub>, n<sub>10&nbsp;</sub>and a positive value&nbsp;<strong>K. </strong>&nbsp;</p>
-<p>To solve this problem you need to print a permutation a<sub>1 &nbsp;</sub>, a<sub>2</sub>&nbsp;, a<sub>3&nbsp;</sub>,&nbsp;... ,a<sub>10</sub>&nbsp;of the numbers {0,1,2,3,4,5,6,7,8,9} such that<strong> a<sub>1 </sub>* n<sub>1</sub><sub>&nbsp; +</sub>&nbsp;a<sub>2</sub>&nbsp;* n<span style="font-size: 8.33333px;"><sub>2 +</sub></span>&nbsp;a<sub>3 </sub>*n<span style="font-size: 8.33333px;"><sub>3 +</sub></span>&nbsp;... &nbsp;+ a<sub>10</sub>*n<sub>10&nbsp;</sub>&lt;= K</strong></p>
+<p>To solve this problem you need to print a permutation a<sub>1 &nbsp;</sub>, a<sub>2</sub>&nbsp;, a<sub>3&nbsp;</sub>,&nbsp;... ,a<sub>10</sub>&nbsp;of the numbers {0,1,2,3,4,5,6,7,8,9} such that<strong> a<sub>1 </sub>* n<sub>1</sub><sub>&nbsp; +</sub>&nbsp;a<sub>2</sub>&nbsp;* n<span style="font-size: 8.33333px;"><sub>2 +</sub></span>&nbsp;a<sub>3 </sub>*n<span style="font-size: 8.33333px;"><sub>3 +</sub></span>&nbsp;... &nbsp;+ a<sub>10</sub>*n<sub>10&nbsp;</sub>&le; K</strong></p>
 <h3>&nbsp;Input</h3>
 <p>In the first line, a single interger T, the number of test cases.</p>
 <p>For each test case there will be two lines:</p>
-<p>In the first one, 10 positive integers ( 1 &lt;= n_i &lt;= 10^9 ) separeted by spaces.</p>
-<p>In the second one, a single positive integer K (1 &lt;= K &lt;= 10^9).</p>
+<p>In the first one, 10 positive integers ( 1 &le; n_i &le; 10^9 ) separeted by spaces.</p>
+<p>In the second one, a single positive integer K (1 &le; K &le; 10^9).</p>
 <h3>Output</h3>
 <p>For each test case print a line with the answer for that test case as following:</p>
 <p>Among all the permutations that solve the problem according to the description above, print the lexicographically smallest.</p>
 <p>You've to print the permutation in a single line, separating each integer by a simple space.</p>
 <p>If no such permutation exists, print a single line with "-1".</p>
 <h3>Example</h3>
-<pre><strong>Input:</strong></pre>
-<pre><strong>2</strong></pre>
-<pre><div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">150672 430033 714281 624050 705208 854123 296497 339700 497136 486249</div><div id="_mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">50621201</div>1 2 3 4 5 6 7 8 9 10</pre>
-<pre>200</pre>
-<pre>1 2 3 4 5 6 7 8 9 10</pre>
-<pre>100</pre>
-<pre><strong>Output:</strong></pre>
-<pre>2 6 8 9 7 5 4 3 1 0<br /></pre>
-<pre>-1</pre>
+<pre><strong>Input:</strong>
+2
+1 2 3 4 5 6 7 8 9 10
+200
+1 2 3 4 5 6 7 8 9 10
+100
+
+<strong>Output:</strong>
+2 6 8 9 7 5 4 3 1 0
+-1</pre>
 </div>
 
 <div class="text-center">

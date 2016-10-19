@@ -185,7 +185,7 @@
 		<ol class="breadcrumb">
 	  <li><a href="/problems">Problems</a></li>
 	  <li><a href="/problems/tutorial">tutorial</a></li>
-	  <li class="active">6-Coloring of Planar Graphs</li>
+	  <li class="active">6-Kolorowanie Grafów Planarnych</li>
 	</ol>
 		
 	<ol class="navbar-right">
@@ -233,7 +233,7 @@ var AMTcgiloc = "/files/gif/";
 </div>
 <br/>
 
-<h2 id="problem-name" class="text-center">PL6COL - 6-Coloring of Planar Graphs</h2>
+<h2 id="problem-name" class="text-center">PL6COL - 6-Kolorowanie Grafów Planarnych</h2>
 
 
 <div class="row">
@@ -252,10 +252,10 @@ var AMTcgiloc = "/files/gif/";
 <h3>Wyjście</h3>
 <p>Dla każdego przypadku testowego podaj 6-kolorowanie odpowiedniego grafu planarnego. Pokolorowanie grafu o <em>n</em> wierzchołkach powinno być podane w kolejnych <em>n</em> liniach, z kt&oacute;rych każda zawiera dwie liczby całkowite <em>v</em> <em>c(v)</em>, oznaczające numer wierzchołka oraz wartość koloru przydzielonego temu wierzchołkowi.</p>
 <h3>Przykład</h3>
-<pre><strong>Wejście:</strong><br />2<br />Graph with 3 nodes and 3 edges: [graf z 3 wierzchołkami i 3 krawędziami]<br />{0,1},{1,2},{2,0}<br />Graph with 9 nodes and 14 edges: [graf z 9 wierzchołkami i 14 krawędziami]<br />{0,1},{0,2},{0,5},{0,8},{1,2},{2,3},{2,4},{3,4},{4,5},{4,8},{5,6},{5,7},{5,8},{6,7}<br /><br /><strong>Wyjście:</strong><br />0 1<br />1 2<br />2 3<br /><br />0 1<br />1 2<br />2 3<br />3 4<br />4 5<br />5 3<br />6 1<br />7 4<br />8 2<br /><br /></pre>
+<pre><strong>Wejście:</strong><br />2<br />Graph with 3 nodes and 3 edges: [graf z 3 wierzchołkami i 3 krawędziami]<br />{0,1},{1,2},{2,0}<br />Graph with 9 nodes and 14 edges: [graf z 9 wierzchołkami i 14 krawędziami]<br />{0,1},{0,2},{0,5},{0,8},{1,2},{2,3},{2,4},{3,4},{4,5},{4,8},{5,6},{5,7},{5,8},{6,7}<br /><br /><strong>Wyjście:</strong><br />0 1<br />1 2<br />2 3<br /><br />0 1<br />1 2<br />2 3<br />3 4<br />4 5<br />5 3<br />6 1<br />7 4<br />8 2<br /></pre>
 <h3>Wskaz&oacute;wki</h3>
 <p>Algorytm SL (Smallest Last) rozwiązuje sformułowany problem.</p>
-<p>Przykładowe testy można pobrać ze <a href="http://www.sphere.pl/~deren/gms06w/pl6col_in.zip">strony</a>.   {/literal}{else}{literal}</p>
+<p>&nbsp;</p>
 <p>A function <em>c</em> mapping the set of vertices of a graph <em>G</em> into integers 1,...,<em>k</em> is called a <em>k-coloring</em> of <em>G</em> if for every pair of adjacent vertices <em>u</em>,<em>v</em> we have that <em>c(u)</em> is not equal to <em>c(v)</em>. Find 6-coloring of a given planar graph.</p>
 <h3>Input</h3>
 <p>The first line contains an integer 1&lt;=<em>t</em>&lt;=100 denoting the number of test cases. Then, <em>t</em> planar graphs are given. Each graph is described by two lines. First line contains a string of the form:</p>
@@ -266,10 +266,9 @@ var AMTcgiloc = "/files/gif/";
 <p><em>v</em> <em>c(v)</em></p>
 <p>the number of a vertex and the color assigned to this vertex.</p>
 <h3>Example</h3>
-<pre><strong>Input:</strong><br />2<br />Graph with 3 nodes and 3 edges:<br />{0,1},{1,2},{2,0}<br />Graph with 9 nodes and 14 edges:<br />{0,1},{0,2},{0,5},{0,8},{1,2},{2,3},{2,4},{3,4},{4,5},{4,8},{5,6},{5,7},{5,8},{6,7}<br /><br /><strong>Output:</strong><br />0 1<br />1 2<br />2 3<br /><br />0 1<br />1 2<br />2 3<br />3 4<br />4 5<br />5 3<br />6 1<br />7 4<br />8 2<br /><br /></pre>
+<pre><strong>Input:</strong><br />2<br />Graph with 3 nodes and 3 edges:<br />{0,1},{1,2},{2,0}<br />Graph with 9 nodes and 14 edges:<br />{0,1},{0,2},{0,5},{0,8},{1,2},{2,3},{2,4},{3,4},{4,5},{4,8},{5,6},{5,7},{5,8},{6,7}<br /><br /><strong>Output:</strong><br />0 1<br />1 2<br />2 3<br /><br />0 1<br />1 2<br />2 3<br />3 4<br />4 5<br />5 3<br />6 1<br />7 4<br />8 2<br /></pre>
 <h3>Hints</h3>
 <p>The SL algorithm (Smallest Last) solves the problem</p>
-<p>Some tests are <a href="http://www.kaims.pl/~deren/gms/tests/pl6col_in.zip">here</a></p>
 </div>
 
 <div class="text-center">

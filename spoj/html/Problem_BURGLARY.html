@@ -251,7 +251,7 @@ var AMTcgiloc = "/files/gif/";
 <h3>Input</h3>
 <p>The first line of the input consists of the number of test cases, T. T  test cases follow. Each case consists of two lines, the first one  containing two integers N and D, separated by a space. 	Then second line contains n integers, representing the weights of all  items, separated by space.</p>
 <p>The input satisfies the following limits.</p>
-<p>1&lt;=T&lt;=20 	<br /> 1&lt;=N&lt;=30 	<br /> 0&lt;=W<sub>i</sub>&lt;=10<sup>9</sup></p>
+<p>1&le;T&le;20<br />1&le;N&le;30<br />0&le;D&le;3*10<sup>10</sup><br /> 0&le;W<sub>i&le;</sub>10<sup>9</sup></p>
 <h3>Output</h3>
 <p><span lang="en">For each test case output  one line containing "Case #x: y", where x is the case number (starting  from 1).  If the number of missing items could be determined, then y is  this number.  If there are several answers to the problem y is the  string "AMBIGIOUS" and if there is no answer y is the string  "IMPOSSIBLE" (quotes added for clarity and are not part of the output). </span></p>
 <h3>Example</h3>
@@ -326,9 +326,70 @@ Case #4: IMPOSSIBLE
 			
 	<tr>
 		<td width="50" style="vertical-align:top;">
-			<img src="http://www.gravatar.com/avatar/5b682a24b0f2e9092ed54fe2bd6fd0fd?s=40&20150116"/>
+			<img src="http://www.gravatar.com/avatar/3430bbf0f1a783cfe1f01bf6402909c8?s=40&20150116"/>
 		</td>
 		<td class="comm comm_odd">
+			<a href="/users/xtof_durr">Christoph Dürr</a>: 
+								<span style="font-size: 10px; color: #666;">2016-10-12 10:46:06</span>
+		<br/>
+				<p>Dear dwij28, I added the constraint on D. Indeed you can do all computations with 64 bits integers.<br/><br/>Dear Poog and abhi2296, <br/>try to generate an instance with N=30, Wi=uniform random chosen integers among [0, 10^9] and D the sum of the first 15 among those numbers. Will your code run correctly on it?<br/><br/></p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/8b1ef4863700b6121d2667ef8a4ca9de?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/poog">Poog</a>: 
+								<span style="font-size: 10px; color: #666;">2016-10-11 11:54:36</span>
+		<br/>
+				<p>My code, is running on Ideone.com (and get the right answer), but here i get SIGABRT on runtime, any hints?</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/9941f0b135170f1724dfe06b5e44ab80?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/abhi2296">abhi2296</a>: 
+								<span style="font-size: 10px; color: #666;">2016-10-10 06:51:32</span>
+		<br/>
+				<p>Can you please check my solution</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/5b682a24b0f2e9092ed54fe2bd6fd0fd?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/zukow">:D</a>: 
+								<span style="font-size: 10px; color: #666;">2016-10-08 20:06:27</span>
+		<br/>
+				<p>I assumed it fits into signed 64b integer.</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/dbc419f403ccd4bfea1f227516127883?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/dwij28">dwij28</a>: 
+								<span style="font-size: 10px; color: #666;">2016-10-08 15:54:02</span>
+		<br/>
+				<p>What is the constraint on D ?</p>
+				<b>Last edit: 2016-10-08 17:58:15</b>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/5b682a24b0f2e9092ed54fe2bd6fd0fd?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
 			<a href="/users/zukow">:D</a>: 
 								<span style="font-size: 10px; color: #666;">2016-10-07 21:09:45</span>
 		<br/>
@@ -340,7 +401,7 @@ Case #4: IMPOSSIBLE
 		<td width="50" style="vertical-align:top;">
 			<img src="http://www.gravatar.com/avatar/3430bbf0f1a783cfe1f01bf6402909c8?s=40&20150116"/>
 		</td>
-		<td class="comm comm_even">
+		<td class="comm comm_odd">
 			<a href="/users/xtof_durr">Christoph Dürr</a>: 
 								<span style="font-size: 10px; color: #666;">2016-10-07 16:56:37</span>
 		<br/>
@@ -352,7 +413,7 @@ Case #4: IMPOSSIBLE
 		<td width="50" style="vertical-align:top;">
 			<img src="http://www.gravatar.com/avatar/5b682a24b0f2e9092ed54fe2bd6fd0fd?s=40&20150116"/>
 		</td>
-		<td class="comm comm_odd">
+		<td class="comm comm_even">
 			<a href="/users/zukow">:D</a>: 
 								<span style="font-size: 10px; color: #666;">2016-10-07 16:38:16</span>
 		<br/>
@@ -364,7 +425,7 @@ Case #4: IMPOSSIBLE
 		<td width="50" style="vertical-align:top;">
 			<img src="http://www.gravatar.com/avatar/be39921cf0678d403812f65d379bc8e3?s=40&20150116"/>
 		</td>
-		<td class="comm comm_even">
+		<td class="comm comm_odd">
 			<a href="/users/iit2014087">Vikas Kumar</a>: 
 								<span style="font-size: 10px; color: #666;">2016-10-07 07:39:18</span>
 		<br/>
@@ -377,7 +438,7 @@ Case #4: IMPOSSIBLE
 		<td width="50" style="vertical-align:top;">
 			<img src="http://www.gravatar.com/avatar/5b682a24b0f2e9092ed54fe2bd6fd0fd?s=40&20150116"/>
 		</td>
-		<td class="comm comm_odd">
+		<td class="comm comm_even">
 			<a href="/users/zukow">:D</a>: 
 								<span style="font-size: 10px; color: #666;">2016-10-07 00:30:39</span>
 		<br/>
