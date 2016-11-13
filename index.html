@@ -18,6 +18,7 @@
       </br>
       <a href="#deliverable1" class="btn">Deliverable 1</a>
       <a href="#deliverable2" class="btn">Deliverable 2</a>
+      <a href="#deliverable3" class="btn">Deliverable 3</a>
     </section>
 
     <section class="main-content">
@@ -87,6 +88,26 @@
       </br>
       <a href="https://drive.google.com/open?id=0Bz-XmqxvlCnGNE1xNi14VER3ZEE">Attribute Analysis - Python Notebook</a>
       
+      <h2 id="deliverable3">Deliverable 3</h2>
+      <h3>Steps in Blocking</h3>
+      <ol>
+        <li>Pre-processing on both tables</li>
+        <li>Generated features "solve_rate_normalized" and "difficulty_normalized"</li>
+        <li>Attempted Blocking on "solve_rate_normalized"</li>
+        <li>Converted "description", "input" and "output" into bag of words using nltk</li>
+        <li>Generated an inverted index on both tables based on a similarity score on overlap</li>
+        <li>Blocked on the inverted index table to find out probable candidates for matching</li>
+      </ol>
+      <h3>Result of Blocking</h3>
+      Table A (spoj problems) : 5158 problems </br>
+      Table B (code chef problems) : 5395 problems </br>
+      Cartesian Product for matching : 27827410 pairs </br>
+      Table C (Probable matching pairs) : 153929 pairs </br>
+      <a href="https://drive.google.com/open?id=0Bx3QvliMPL1OUDR4RXk3WEV3aE0">Table C: Probable Candidates</a> </br>
+      <a href="https://drive.google.com/a/wisc.edu/file/d/0Bx3QvliMPL1OTHNxQ1ZGR1dpOGc/view?usp=sharing">Blocking Attempt#1 - Python Notebook</a></br>
+      <a href="https://drive.google.com/open?id=0Bx3QvliMPL1OaHZFZ3BHcWhJZDg">Blocking Final - Python Notebook</a></br>
+      <a href="https://drive.google.com/open?id=0Bx3QvliMPL1OUVZ6VjVNYmI5Mzg">Blocking - Preprocessing Spoj - Python Notebook</a></br>
+      <a href="https://drive.google.com/open?id=0Bx3QvliMPL1OdWJVNnJNS0lHY1E">Blocking - Preprocessing Codechef - Python Notebook</a></br>
 
 
       <footer class="site-footer">
