@@ -114,12 +114,24 @@
       <h2 id="deliverable4">Deliverable 4</h2>
       <h3>Steps in Matching</h3>
       <ol>
-        <li>Pre-processing on both tables</li>
-        <li>Generated features "solve_rate_normalized" and "difficulty_normalized"</li>
-        <li>Attempted Blocking on "solve_rate_normalized"</li>
-        <li>Converted "description", "input" and "output" into bag of words using nltk</li>
-        <li>Generated an inverted index on both tables based on a similarity score on overlap</li>
-        <li>Blocked on the inverted index table to find out probable candidates for matching</li>
+        <li>Labeled 400 instances of the blocked data in order to create "Golden Data"</li>
+        <li>Create features to compare instances across tables</li>
+        <ul>
+          <li>Exact match of problem titles (binary 0/1)</li>
+          <li>Absolute differences in the word counts of the two instances’ descriptions (integer)</li>
+          <li>Jaccard similarity of the two instances’ descriptions</li>
+          <li>Edit distance for between the two instances’ titles</li>
+        </ul>
+        <li>Train 5 Machine Learning Algorithms on 350 training instances and evaluate on precision, recall & F-1 scores</li>
+        <ul>
+          <li>Logistic Regression Classifier</li>
+          <li>SVM Classifier</li>
+          <li>Decision Tree Classifier</li>
+          <li>Random Forest Classifier</li>
+          <li>Naïve Bayes Classifier</li>
+        </ul>
+        <li>Tune model parameters and re-evaluate precision, recall & F-1 scores</li>
+        <li>Use remaining 50 labeled instances and evaluate each model's final precision, recall & F-1 scores</li>
       </ol>
       <h3>Final Results of Matching (on 50 testing instances)</h3>
       <ul>
