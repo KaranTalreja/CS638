@@ -110,6 +110,53 @@
       <a href="https://drive.google.com/open?id=0Bx3QvliMPL1OdWJVNnJNS0lHY1E">Blocking - Preprocessing Codechef - Python Notebook</a></br>
       <a href="https://drive.google.com/file/d/0B5FiEpLwfybPYkp5Vlh2VkJiSlk/view?usp=sharing">Blocking Explanation PDF</a></br>
 
+      <h2 id="deliverable3">Deliverable 4</h2>
+      <h3>Steps in Matching</h3>
+      <ol>
+        <li>Pre-processing on both tables</li>
+        <li>Generated features "solve_rate_normalized" and "difficulty_normalized"</li>
+        <li>Attempted Blocking on "solve_rate_normalized"</li>
+        <li>Converted "description", "input" and "output" into bag of words using nltk</li>
+        <li>Generated an inverted index on both tables based on a similarity score on overlap</li>
+        <li>Blocked on the inverted index table to find out probable candidates for matching</li>
+      </ol>
+      <h3>Final Results of Matching (on 50 testing instances)</h3>
+      <ul>
+        <li><b>Logistic Regression Classifier</b></li>
+        <ul>
+          <li>Precision: 0.98</li>
+          <li>Recall: 0.98</li>
+          <li>F-1 Score: 0.98</li>
+        </ul>
+        <li><b>SVM Classifier</b></li>
+        <ul>
+          <li>Precision: 0.96</li>
+          <li>Recall: 0.96</li>
+          <li>F-1 Score: 0.96</li>
+        </ul>
+        <li><b>Decision Tree Classifier</b></li>
+        <ul>
+          <li>Precision: 0.96</li>
+          <li>Recall: 0.96</li>
+          <li>F-1 Score: 0.96</li>
+        </ul>
+        <li><b>Random Forest Classifier</b></li>
+        <ul>
+          <li>Precision: 0.95</li>
+          <li>Recall: 0.94</li>
+          <li>F-1 Score: 0.94</li>
+        </ul>
+        <li><b>Naïve Bayes Classifier</b></li>
+        <ul>
+          <li>Precision: 0.95</li>
+          <li>Recall: 0.94</li>
+          <li>F-1 Score: 0.94</li>
+        </ul>
+      </ul>
+      <a href="https://github.com/KaranTalreja/CS638/blob/master/Stage_4_-_Matching_Algorithms.ipynb">Matching Python Notebook</a> </br>
+      <a href="https://docs.google.com/spreadsheets/d/1If8D4-9M-hFv9cSpP0-0_cpN3OloP55uh1NszOhcHPk/view">Labeled Dataset (i.e. "Golden Data")</a> </br>
+      <a href="">Matching Report</a></br>
+
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/KaranTalreja/CS638">Cs638 repo</a> is maintained by <a href="https://github.com/KaranTalreja">KaranTalreja</a>.</span>
 
