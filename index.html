@@ -171,6 +171,31 @@
       <a href="https://docs.google.com/spreadsheets/d/1WGWZPFmxzjSaVTBdNbMXPd6G3nF8xBWqUGuad_VmbBw/edit?usp=sharing">Labeled Dataset (i.e. "Golden Data")</a> </br>
       <a href="https://docs.google.com/document/d/1OHcKZKZbIQmnFQKkzMBEFtzi1mUVsE35c4hyVZ0rhwc/edit?usp=sharing">Matching Report</a></br>
 
+      <h2 id="deliverable5">Deliverable 5</h2>
+      <h3>Merging Tables and Analysis of Results</h3>
+      <ol>
+        <li>Used both Spoj and Codechef tables to load in required raw data</li>
+        <li>Applied data transformations to prepare data for trained matching algorithm. We needed to create the following columns:</li>
+        <ul>
+          <li><b>exact_title_match</b> - Exact match of problem titles (binary 0/1)</li>
+          <li><b>diff_in_words_len</b> - Absolute differences in the word counts of the two instances’ descriptions (integer)</li>
+          <li><b>jaccard_sim</b> - Jaccard similarity of the two instances’ descriptions</li>
+          <li><b>edit_dist</b> - Edit distance for between the two instances’ titles</li>
+        </ul>
+        <li>Applied our Machine Learning Algorithm (Logistic Regression Classifier) on 1200 pre-blocked instances to predict whether they were matches or not.</li>
+        <li>Once we had the matches, we were able to preform analyses on the results.</li>
+        <ul>
+          <li><b>Calculate the correlation between matched problems' solved rates</b> - found out that the solved rates (i.e. number of correct solutions over the number of days since the problem was created) were not strongly correlated. In doing this calculation, we decided to remove the TEST problem from the dataset since it was such an outlier and was swaying our results.</li>
+          <li><b>Create word cloud and histogram of word frequency for the least solved problems</b> - we chose to preform this task in order to compare the similarities of the most difficult problems (top 25%). With 9/10 of the top words overlapping, it seems that these problems may be somewhat similar.</li>
+        </ul>
+      </ol>
+      <h3></h3>
+      <ul>
+
+      <a href="https://github.com/KaranTalreja/CS638/blob/master/Stage_5_-_Creating_Table_E.ipynb">Table_E and Analysis Python Notebook</a> </br>
+      <a href="https://github.com/KaranTalreja/CS638/blob/master/table_E.csv">Table_E - All found Matches</a> </br>
+      <a href="https://docs.google.com/document/d/1qSxeymyOyIcFOCRyfbeLBm8I2SAoXUieN1riSc9QhMA/edit?usp=sharing">Stage 5 Report</a></br>
+
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/KaranTalreja/CS638">Cs638 repo</a> is maintained by <a href="https://github.com/KaranTalreja">KaranTalreja</a>.</span>
 
